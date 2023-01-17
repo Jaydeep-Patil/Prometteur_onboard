@@ -1,0 +1,4705 @@
+"city_id","state_id","country_id","city_name","active","reason"
+"1","1",NULL,"Adilabad","1",NULL
+"2","1",NULL,"Adoni","1",NULL
+"3","1",NULL,"Amadalavalasa","1",NULL
+"4","1",NULL,"Amalapuram","1",NULL
+"5","1",NULL,"Anakapalle","1",NULL
+"6","1",NULL,"Anantapur","1",NULL
+"7","1",NULL,"Badepalle","1",NULL
+"8","1",NULL,"Banganapalle","1",NULL
+"9","1",NULL,"Bapatla","1",NULL
+"10","1",NULL,"Bellampalle","1",NULL
+"11","1",NULL,"Bethamcherla","1",NULL
+"12","1",NULL,"Bhadrachalam","1",NULL
+"13","1",NULL,"Bhainsa","1",NULL
+"14","1",NULL,"Bheemunipatnam","1",NULL
+"15","1",NULL,"Bhimavaram","1",NULL
+"16","1",NULL,"Bhongir","1",NULL
+"17","1",NULL,"Bobbili","1",NULL
+"18","1",NULL,"Bodhan","1",NULL
+"19","1",NULL,"Chilakaluripet","1",NULL
+"20","1",NULL,"Chirala","1",NULL
+"21","1",NULL,"Chittoor","1",NULL
+"22","1",NULL,"Cuddapah","1",NULL
+"23","1",NULL,"Devarakonda","1",NULL
+"24","1",NULL,"Dharmavaram","1",NULL
+"25","1",NULL,"Eluru","1",NULL
+"26","1",NULL,"Farooqnagar","1",NULL
+"27","1",NULL,"Gadwal","1",NULL
+"28","1",NULL,"Gooty","1",NULL
+"29","1",NULL,"Gudivada","1",NULL
+"30","1",NULL,"Gudur","1",NULL
+"31","1",NULL,"Guntakal","1",NULL
+"32","1",NULL,"Guntur","1",NULL
+"33","1",NULL,"Hanuman Junction","1",NULL
+"34","1",NULL,"Hindupur","1",NULL
+"35","1",NULL,"Hyderabad","1",NULL
+"36","1",NULL,"Ichchapuram","1",NULL
+"37","1",NULL,"Jaggaiahpet","1",NULL
+"38","1",NULL,"Jagtial","1",NULL
+"39","1",NULL,"Jammalamadugu","1",NULL
+"40","1",NULL,"Jangaon","1",NULL
+"41","1",NULL,"Kadapa","1",NULL
+"42","1",NULL,"Kadiri","1",NULL
+"43","1",NULL,"Kagaznagar","1",NULL
+"44","1",NULL,"Kakinada","1",NULL
+"45","1",NULL,"Kalyandurg","1",NULL
+"46","1",NULL,"Kamareddy","1",NULL
+"47","1",NULL,"Kandukur","1",NULL
+"48","1",NULL,"Karimnagar","1",NULL
+"49","1",NULL,"Kavali","1",NULL
+"50","1",NULL,"Khammam","1",NULL
+"51","1",NULL,"Koratla","1",NULL
+"52","1",NULL,"Kothagudem","1",NULL
+"53","1",NULL,"Kothapeta","1",NULL
+"54","1",NULL,"Kovvur","1",NULL
+"55","1",NULL,"Kurnool","1",NULL
+"56","1",NULL,"Kyathampalle","1",NULL
+"57","1",NULL,"Macherla","1",NULL
+"58","1",NULL,"Machilipatnam","1",NULL
+"59","1",NULL,"Madanapalle","1",NULL
+"60","1",NULL,"Mahbubnagar","1",NULL
+"61","1",NULL,"Mancherial","1",NULL
+"62","1",NULL,"Mandamarri","1",NULL
+"63","1",NULL,"Mandapeta","1",NULL
+"64","1",NULL,"Manuguru","1",NULL
+"65","1",NULL,"Markapur","1",NULL
+"66","1",NULL,"Medak","1",NULL
+"67","1",NULL,"Miryalaguda","1",NULL
+"68","1",NULL,"Mogalthur","1",NULL
+"69","1",NULL,"Nagari","1",NULL
+"70","1",NULL,"Nagarkurnool","1",NULL
+"71","1",NULL,"Nandyal","1",NULL
+"72","1",NULL,"Narasapur","1",NULL
+"73","1",NULL,"Narasaraopet","1",NULL
+"74","1",NULL,"Narayanpet","1",NULL
+"75","1",NULL,"Narsipatnam","1",NULL
+"76","1",NULL,"Nellore","1",NULL
+"77","1",NULL,"Nidadavole","1",NULL
+"78","1",NULL,"Nirmal","1",NULL
+"79","1",NULL,"Nizamabad","1",NULL
+"80","1",NULL,"Nuzvid","1",NULL
+"81","1",NULL,"Ongole","1",NULL
+"82","1",NULL,"Palacole","1",NULL
+"83","1",NULL,"Palasa Kasibugga","1",NULL
+"84","1",NULL,"Palwancha","1",NULL
+"85","1",NULL,"Parvathipuram","1",NULL
+"86","1",NULL,"Pedana","1",NULL
+"87","1",NULL,"Peddapuram","1",NULL
+"88","1",NULL,"Pithapuram","1",NULL
+"89","1",NULL,"Pondur","1",NULL
+"90","1",NULL,"Ponnur","1",NULL
+"91","1",NULL,"Proddatur","1",NULL
+"92","1",NULL,"Punganur","1",NULL
+"93","1",NULL,"Puttur","1",NULL
+"94","1",NULL,"Rajahmundry","1",NULL
+"95","1",NULL,"Rajam","1",NULL
+"96","1",NULL,"Ramachandrapuram","1",NULL
+"97","1",NULL,"Ramagundam","1",NULL
+"98","1",NULL,"Rayachoti","1",NULL
+"99","1",NULL,"Rayadurg","1",NULL
+"100","1",NULL,"Renigunta","1",NULL
+"101","1",NULL,"Repalle","1",NULL
+"102","1",NULL,"Sadasivpet","1",NULL
+"103","1",NULL,"Salur","1",NULL
+"104","1",NULL,"Samalkot","1",NULL
+"105","1",NULL,"Sangareddy","1",NULL
+"106","1",NULL,"Sattenapalle","1",NULL
+"107","1",NULL,"Siddipet","1",NULL
+"108","1",NULL,"Singapur","1",NULL
+"109","1",NULL,"Sircilla","1",NULL
+"110","1",NULL,"Srikakulam","1",NULL
+"111","1",NULL,"Srikalahasti","1",NULL
+"112","1",NULL,"Suryapet","1",NULL
+"113","1",NULL,"Tadepalligudem","1",NULL
+"114","1",NULL,"Tadpatri","1",NULL
+"115","1",NULL,"Tandur","1",NULL
+"116","1",NULL,"Tanuku","1",NULL
+"117","1",NULL,"Tenali","1",NULL
+"118","1",NULL,"Tirupati","1",NULL
+"119","1",NULL,"Tuni","1",NULL
+"120","1",NULL,"Uravakonda","1",NULL
+"121","1",NULL,"Venkatagiri","1",NULL
+"122","1",NULL,"Vicarabad","1",NULL
+"123","1",NULL,"Vijayawada","1",NULL
+"124","1",NULL,"Vinukonda","1",NULL
+"125","1",NULL,"Visakhapatnam","1",NULL
+"126","1",NULL,"Vizianagaram","1",NULL
+"127","1",NULL,"Wanaparthy","1",NULL
+"128","1",NULL,"Warangal","1",NULL
+"129","1",NULL,"Yellandu","1",NULL
+"130","1",NULL,"Yemmiganur","1",NULL
+"131","1",NULL,"Yerraguntla","1",NULL
+"132","1",NULL,"Zahirabad","1",NULL
+"133","4",NULL,"Abhayapuri","1",NULL
+"134","4",NULL,"Amguri","1",NULL
+"135","4",NULL,"Anandnagaar","1",NULL
+"136","4",NULL,"Barpeta","1",NULL
+"137","4",NULL,"Barpeta Road","1",NULL
+"138","4",NULL,"Bilasipara","1",NULL
+"139","4",NULL,"Bongaigaon","1",NULL
+"140","4",NULL,"Dhekiajuli","1",NULL
+"141","4",NULL,"Dhubri","1",NULL
+"142","4",NULL,"Dibrugarh","1",NULL
+"143","4",NULL,"Digboi","1",NULL
+"144","4",NULL,"Diphu","1",NULL
+"145","4",NULL,"Dispur","1",NULL
+"146","4",NULL,"Gauripur","1",NULL
+"147","4",NULL,"Goalpara","1",NULL
+"148","4",NULL,"Golaghat","1",NULL
+"149","4",NULL,"Guwahati","1",NULL
+"150","4",NULL,"Haflong","1",NULL
+"151","4",NULL,"Hailakandi","1",NULL
+"152","4",NULL,"Hojai","1",NULL
+"153","4",NULL,"Jorhat","1",NULL
+"154","4",NULL,"Karimganj","1",NULL
+"155","4",NULL,"Kokrajhar","1",NULL
+"156","4",NULL,"Lanka","1",NULL
+"157","4",NULL,"Lumding","1",NULL
+"158","4",NULL,"Mangaldoi","1",NULL
+"159","4",NULL,"Mankachar","1",NULL
+"160","4",NULL,"Margherita","1",NULL
+"161","4",NULL,"Mariani","1",NULL
+"162","4",NULL,"Marigaon","1",NULL
+"163","4",NULL,"Nagaon","1",NULL
+"164","4",NULL,"Nalbari","1",NULL
+"165","4",NULL,"North Lakhimpur","1",NULL
+"166","4",NULL,"Rangia","1",NULL
+"167","4",NULL,"Sibsagar","1",NULL
+"168","4",NULL,"Silapathar","1",NULL
+"169","4",NULL,"Silchar","1",NULL
+"170","4",NULL,"Tezpur","1",NULL
+"171","4",NULL,"Tinsukia","1",NULL
+"172","2",NULL,"Along","1",NULL
+"173","2",NULL,"Bomdila","1",NULL
+"174","2",NULL,"Itanagar","1",NULL
+"175","2",NULL,"Naharlagun","1",NULL
+"176","2",NULL,"Pasighat","1",NULL
+"177","12",NULL,"Ahmedabad","1",NULL
+"178","12",NULL,"Amreli","1",NULL
+"179","12",NULL,"Anand","1",NULL
+"180","12",NULL,"Ankleshwar","1",NULL
+"181","12",NULL,"Bharuch","1",NULL
+"182","12",NULL,"Bhavnagar","1",NULL
+"183","12",NULL,"Bhuj","1",NULL
+"184","12",NULL,"Cambay","1",NULL
+"185","12",NULL,"Dahod","1",NULL
+"186","12",NULL,"Deesa","1",NULL
+"187","12",NULL,"Dholka","1",NULL
+"188","12",NULL,"Gandhinagar","1",NULL
+"189","12",NULL,"Godhra","1",NULL
+"190","12",NULL,"Himatnagar","1",NULL
+"191","12",NULL,"Idar","1",NULL
+"192","12",NULL,"Jamnagar","1",NULL
+"193","12",NULL,"Junagadh","1",NULL
+"194","12",NULL,"Kadi","1",NULL
+"195","12",NULL,"Kalavad","1",NULL
+"196","12",NULL,"Kalol","1",NULL
+"197","12",NULL,"Kapadvanj","1",NULL
+"198","12",NULL,"Karjan","1",NULL
+"199","12",NULL,"Keshod","1",NULL
+"200","12",NULL,"Khambhalia","1",NULL
+"201","12",NULL,"Khambhat","1",NULL
+"202","12",NULL,"Kheda","1",NULL
+"203","12",NULL,"Khedbrahma","1",NULL
+"204","12",NULL,"Kheralu","1",NULL
+"205","12",NULL,"Kodinar","1",NULL
+"206","12",NULL,"Lathi","1",NULL
+"207","12",NULL,"Limbdi","1",NULL
+"208","12",NULL,"Lunawada","1",NULL
+"209","12",NULL,"Mahesana","1",NULL
+"210","12",NULL,"Mahuva","1",NULL
+"211","12",NULL,"Manavadar","1",NULL
+"212","12",NULL,"Mandvi","1",NULL
+"213","12",NULL,"Mangrol","1",NULL
+"214","12",NULL,"Mansa","1",NULL
+"215","12",NULL,"Mehmedabad","1",NULL
+"216","12",NULL,"Modasa","1",NULL
+"217","12",NULL,"Morvi","1",NULL
+"218","12",NULL,"Nadiad","1",NULL
+"219","12",NULL,"Navsari","1",NULL
+"220","12",NULL,"Padra","1",NULL
+"221","12",NULL,"Palanpur","1",NULL
+"222","12",NULL,"Palitana","1",NULL
+"223","12",NULL,"Pardi","1",NULL
+"224","12",NULL,"Patan","1",NULL
+"225","12",NULL,"Petlad","1",NULL
+"226","12",NULL,"Porbandar","1",NULL
+"227","12",NULL,"Radhanpur","1",NULL
+"228","12",NULL,"Rajkot","1",NULL
+"229","12",NULL,"Rajpipla","1",NULL
+"230","12",NULL,"Rajula","1",NULL
+"231","12",NULL,"Ranavav","1",NULL
+"232","12",NULL,"Rapar","1",NULL
+"233","12",NULL,"Salaya","1",NULL
+"234","12",NULL,"Sanand","1",NULL
+"235","12",NULL,"Savarkundla","1",NULL
+"236","12",NULL,"Sidhpur","1",NULL
+"237","12",NULL,"Sihor","1",NULL
+"238","12",NULL,"Songadh","1",NULL
+"239","12",NULL,"Surat","1",NULL
+"240","12",NULL,"Talaja","1",NULL
+"241","12",NULL,"Thangadh","1",NULL
+"242","12",NULL,"Tharad","1",NULL
+"243","12",NULL,"Umbergaon","1",NULL
+"244","12",NULL,"Umreth","1",NULL
+"245","12",NULL,"Una","1",NULL
+"246","12",NULL,"Unjha","1",NULL
+"247","12",NULL,"Upleta","1",NULL
+"248","12",NULL,"Vadnagar","1",NULL
+"249","12",NULL,"Vadodara","1",NULL
+"250","12",NULL,"Valsad","1",NULL
+"251","12",NULL,"Vapi","1",NULL
+"252","12",NULL,"Vapi","1",NULL
+"253","12",NULL,"Veraval","1",NULL
+"254","12",NULL,"Vijapur","1",NULL
+"255","12",NULL,"Viramgam","1",NULL
+"256","12",NULL,"Visnagar","1",NULL
+"257","12",NULL,"Vyara","1",NULL
+"258","12",NULL,"Wadhwan","1",NULL
+"259","12",NULL,"Wankaner","1",NULL
+"260","5",NULL,"Amarpur","1",NULL
+"261","5",NULL,"Araria","1",NULL
+"262","5",NULL,"Areraj","1",NULL
+"263","5",NULL,"Arrah","1",NULL
+"264","5",NULL,"Asarganj","1",NULL
+"265","5",NULL,"Aurangabad","1",NULL
+"266","5",NULL,"Bagaha","1",NULL
+"267","5",NULL,"Bahadurganj","1",NULL
+"268","5",NULL,"Bairgania","1",NULL
+"269","5",NULL,"Bakhtiarpur","1",NULL
+"270","5",NULL,"Banka","1",NULL
+"271","5",NULL,"Banmankhi Bazar","1",NULL
+"272","5",NULL,"Barahiya","1",NULL
+"273","5",NULL,"Barauli","1",NULL
+"274","5",NULL,"Barbigha","1",NULL
+"275","5",NULL,"Barh","1",NULL
+"276","5",NULL,"Begusarai","1",NULL
+"277","5",NULL,"Behea","1",NULL
+"278","5",NULL,"Bettiah","1",NULL
+"279","5",NULL,"Bhabua","1",NULL
+"280","5",NULL,"Bhagalpur","1",NULL
+"281","5",NULL,"Bihar Sharif","1",NULL
+"282","5",NULL,"Bikramganj","1",NULL
+"283","5",NULL,"Bodh Gaya","1",NULL
+"284","5",NULL,"Buxar","1",NULL
+"285","5",NULL,"Chandan Bara","1",NULL
+"286","5",NULL,"Chanpatia","1",NULL
+"287","5",NULL,"Chhapra","1",NULL
+"288","5",NULL,"Colgong","1",NULL
+"289","5",NULL,"Dalsinghsarai","1",NULL
+"290","5",NULL,"Darbhanga","1",NULL
+"291","5",NULL,"Daudnagar","1",NULL
+"292","5",NULL,"Dehri-on-Sone","1",NULL
+"293","5",NULL,"Dhaka","1",NULL
+"294","5",NULL,"Dighwara","1",NULL
+"295","5",NULL,"Dumraon","1",NULL
+"296","5",NULL,"Fatwah","1",NULL
+"297","5",NULL,"Forbesganj","1",NULL
+"298","5",NULL,"Gaya","1",NULL
+"299","5",NULL,"Gogri Jamalpur","1",NULL
+"300","5",NULL,"Gopalganj","1",NULL
+"301","5",NULL,"Hajipur","1",NULL
+"302","5",NULL,"Hilsa","1",NULL
+"303","5",NULL,"Hisua","1",NULL
+"304","5",NULL,"Islampur","1",NULL
+"305","5",NULL,"Jagdispur","1",NULL
+"306","5",NULL,"Jamalpur","1",NULL
+"307","5",NULL,"Jamui","1",NULL
+"308","5",NULL,"Jehanabad","1",NULL
+"309","5",NULL,"Jhajha","1",NULL
+"310","5",NULL,"Jhanjharpur","1",NULL
+"311","5",NULL,"Jogabani","1",NULL
+"312","5",NULL,"Kanti","1",NULL
+"313","5",NULL,"Katihar","1",NULL
+"314","5",NULL,"Khagaria","1",NULL
+"315","5",NULL,"Kharagpur","1",NULL
+"316","5",NULL,"Kishanganj","1",NULL
+"317","5",NULL,"Lakhisarai","1",NULL
+"318","5",NULL,"Lalganj","1",NULL
+"319","5",NULL,"Madhepura","1",NULL
+"320","5",NULL,"Madhubani","1",NULL
+"321","5",NULL,"Maharajganj","1",NULL
+"322","5",NULL,"Mahnar Bazar","1",NULL
+"323","5",NULL,"Makhdumpur","1",NULL
+"324","5",NULL,"Maner","1",NULL
+"325","5",NULL,"Manihari","1",NULL
+"326","5",NULL,"Marhaura","1",NULL
+"327","5",NULL,"Masaurhi","1",NULL
+"328","5",NULL,"Mirganj","1",NULL
+"329","5",NULL,"Mokameh","1",NULL
+"330","5",NULL,"Motihari","1",NULL
+"331","5",NULL,"Motipur","1",NULL
+"332","5",NULL,"Munger","1",NULL
+"333","5",NULL,"Murliganj","1",NULL
+"334","5",NULL,"Muzaffarpur","1",NULL
+"335","5",NULL,"Narkatiaganj","1",NULL
+"336","5",NULL,"Naugachhia","1",NULL
+"337","5",NULL,"Nawada","1",NULL
+"338","5",NULL,"Nokha","1",NULL
+"339","5",NULL,"Patna","1",NULL
+"340","5",NULL,"Piro","1",NULL
+"341","5",NULL,"Purnia","1",NULL
+"342","5",NULL,"Rafiganj","1",NULL
+"343","5",NULL,"Rajgir","1",NULL
+"344","5",NULL,"Ramnagar","1",NULL
+"345","5",NULL,"Raxaul Bazar","1",NULL
+"346","5",NULL,"Revelganj","1",NULL
+"347","5",NULL,"Rosera","1",NULL
+"348","5",NULL,"Saharsa","1",NULL
+"349","5",NULL,"Samastipur","1",NULL
+"350","5",NULL,"Sasaram","1",NULL
+"351","5",NULL,"Sheikhpura","1",NULL
+"352","5",NULL,"Sheohar","1",NULL
+"353","5",NULL,"Sherghati","1",NULL
+"354","5",NULL,"Silao","1",NULL
+"355","5",NULL,"Sitamarhi","1",NULL
+"356","5",NULL,"Siwan","1",NULL
+"357","5",NULL,"Sonepur","1",NULL
+"358","5",NULL,"Sugauli","1",NULL
+"359","5",NULL,"Sultanganj","1",NULL
+"360","5",NULL,"Supaul","1",NULL
+"361","5",NULL,"Warisaliganj","1",NULL
+"362","13",NULL,"Ambala","1",NULL
+"363","13",NULL,"Ambala","1",NULL
+"364","13",NULL,"Asankhurd","1",NULL
+"365","13",NULL,"Assandh","1",NULL
+"366","13",NULL,"Ateli","1",NULL
+"367","13",NULL,"Babiyal","1",NULL
+"368","13",NULL,"Bahadurgarh","1",NULL
+"369","13",NULL,"Barwala","1",NULL
+"370","13",NULL,"Bhiwani","1",NULL
+"371","13",NULL,"Charkhi Dadri","1",NULL
+"372","13",NULL,"Cheeka","1",NULL
+"373","13",NULL,"Ellenabad 2","1",NULL
+"374","13",NULL,"Faridabad","1",NULL
+"375","13",NULL,"Fatehabad","1",NULL
+"376","13",NULL,"Ganaur","1",NULL
+"377","13",NULL,"Gharaunda","1",NULL
+"378","13",NULL,"Gohana","1",NULL
+"379","13",NULL,"Gurgaon","1",NULL
+"380","13",NULL,"Haibat(Yamuna Nagar)","1",NULL
+"381","13",NULL,"Hansi","1",NULL
+"382","13",NULL,"Hisar","1",NULL
+"383","13",NULL,"Hodal","1",NULL
+"384","13",NULL,"Jhajjar","1",NULL
+"385","13",NULL,"Jind","1",NULL
+"386","13",NULL,"Kaithal","1",NULL
+"387","13",NULL,"Kalan Wali","1",NULL
+"388","13",NULL,"Kalka","1",NULL
+"389","13",NULL,"Karnal","1",NULL
+"390","13",NULL,"Ladwa","1",NULL
+"391","13",NULL,"Mahendragarh","1",NULL
+"392","13",NULL,"Mandi Dabwali","1",NULL
+"393","13",NULL,"Narnaul","1",NULL
+"394","13",NULL,"Narwana","1",NULL
+"395","13",NULL,"Palwal","1",NULL
+"396","13",NULL,"Panchkula","1",NULL
+"397","13",NULL,"Panipat","1",NULL
+"398","13",NULL,"Pehowa","1",NULL
+"399","13",NULL,"Pinjore","1",NULL
+"400","13",NULL,"Rania","1",NULL
+"401","13",NULL,"Ratia","1",NULL
+"402","13",NULL,"Rewari","1",NULL
+"403","13",NULL,"Rohtak","1",NULL
+"404","13",NULL,"Safidon","1",NULL
+"405","13",NULL,"Samalkha","1",NULL
+"406","13",NULL,"Shahbad","1",NULL
+"407","13",NULL,"Sirsa","1",NULL
+"408","13",NULL,"Sohna","1",NULL
+"409","13",NULL,"Sonipat","1",NULL
+"410","13",NULL,"Taraori","1",NULL
+"411","13",NULL,"Thanesar","1",NULL
+"412","13",NULL,"Tohana","1",NULL
+"413","13",NULL,"Yamunanagar","1",NULL
+"414","14",NULL,"Arki","1",NULL
+"415","14",NULL,"Baddi","1",NULL
+"416","14",NULL,"Bilaspur","1",NULL
+"417","14",NULL,"Chamba","1",NULL
+"418","14",NULL,"Dalhousie","1",NULL
+"419","14",NULL,"Dharamsala","1",NULL
+"420","14",NULL,"Hamirpur","1",NULL
+"421","14",NULL,"Mandi","1",NULL
+"422","14",NULL,"Nahan","1",NULL
+"423","14",NULL,"Shimla","1",NULL
+"424","14",NULL,"Solan","1",NULL
+"425","14",NULL,"Sundarnagar","1",NULL
+"426","15",NULL,"Achabbal","1",NULL
+"427","15",NULL,"Akhnoor","1",NULL
+"428","15",NULL,"Anantnag","1",NULL
+"429","15",NULL,"Arnia","1",NULL
+"430","15",NULL,"Awantipora","1",NULL
+"431","15",NULL,"Bandipore","1",NULL
+"432","15",NULL,"Baramula","1",NULL
+"433","15",NULL,"Kathua","1",NULL
+"434","15",NULL,"Leh","1",NULL
+"435","15",NULL,"Punch","1",NULL
+"436","15",NULL,"Rajauri","1",NULL
+"437","15",NULL,"Sopore","1",NULL
+"438","15",NULL,"Srinagar","1",NULL
+"439","15",NULL,"Udhampur","1",NULL
+"440","17",NULL,"Arasikere","1",NULL
+"441","17",NULL,"Bangalore","1",NULL
+"442","17",NULL,"Belgaum","1",NULL
+"443","17",NULL,"Bellary","1",NULL
+"444","17",NULL,"Chamrajnagar","1",NULL
+"445","17",NULL,"Chikkaballapur","1",NULL
+"446","17",NULL,"Chintamani","1",NULL
+"447","17",NULL,"Chitradurga","1",NULL
+"448","17",NULL,"Gulbarga","1",NULL
+"449","17",NULL,"Gundlupet","1",NULL
+"450","17",NULL,"Hassan","1",NULL
+"451","17",NULL,"Hospet","1",NULL
+"452","17",NULL,"Hubli","1",NULL
+"453","17",NULL,"Karkala","1",NULL
+"454","17",NULL,"Karwar","1",NULL
+"455","17",NULL,"Kolar","1",NULL
+"456","17",NULL,"Kota","1",NULL
+"457","17",NULL,"Lakshmeshwar","1",NULL
+"458","17",NULL,"Lingsugur","1",NULL
+"459","17",NULL,"Maddur","1",NULL
+"460","17",NULL,"Madhugiri","1",NULL
+"461","17",NULL,"Madikeri","1",NULL
+"462","17",NULL,"Magadi","1",NULL
+"463","17",NULL,"Mahalingpur","1",NULL
+"464","17",NULL,"Malavalli","1",NULL
+"465","17",NULL,"Malur","1",NULL
+"466","17",NULL,"Mandya","1",NULL
+"467","17",NULL,"Mangalore","1",NULL
+"468","17",NULL,"Manvi","1",NULL
+"469","17",NULL,"Mudalgi","1",NULL
+"470","17",NULL,"Mudbidri","1",NULL
+"471","17",NULL,"Muddebihal","1",NULL
+"472","17",NULL,"Mudhol","1",NULL
+"473","17",NULL,"Mulbagal","1",NULL
+"474","17",NULL,"Mundargi","1",NULL
+"475","17",NULL,"Mysore","1",NULL
+"476","17",NULL,"Nanjangud","1",NULL
+"477","17",NULL,"Pavagada","1",NULL
+"478","17",NULL,"Puttur","1",NULL
+"479","17",NULL,"Rabkavi Banhatti","1",NULL
+"480","17",NULL,"Raichur","1",NULL
+"481","17",NULL,"Ramanagaram","1",NULL
+"482","17",NULL,"Ramdurg","1",NULL
+"483","17",NULL,"Ranibennur","1",NULL
+"484","17",NULL,"Robertson Pet","1",NULL
+"485","17",NULL,"Ron","1",NULL
+"486","17",NULL,"Sadalgi","1",NULL
+"487","17",NULL,"Sagar","1",NULL
+"488","17",NULL,"Sakleshpur","1",NULL
+"489","17",NULL,"Sandur","1",NULL
+"490","17",NULL,"Sankeshwar","1",NULL
+"491","17",NULL,"Saundatti-Yellamma","1",NULL
+"492","17",NULL,"Savanur","1",NULL
+"493","17",NULL,"Sedam","1",NULL
+"494","17",NULL,"Shahabad","1",NULL
+"495","17",NULL,"Shahpur","1",NULL
+"496","17",NULL,"Shiggaon","1",NULL
+"497","17",NULL,"Shikapur","1",NULL
+"498","17",NULL,"Shimoga","1",NULL
+"499","17",NULL,"Shorapur","1",NULL
+"500","17",NULL,"Shrirangapattana","1",NULL
+"501","17",NULL,"Sidlaghatta","1",NULL
+"502","17",NULL,"Sindgi","1",NULL
+"503","17",NULL,"Sindhnur","1",NULL
+"504","17",NULL,"Sira","1",NULL
+"505","17",NULL,"Sirsi","1",NULL
+"506","17",NULL,"Siruguppa","1",NULL
+"507","17",NULL,"Srinivaspur","1",NULL
+"508","17",NULL,"Talikota","1",NULL
+"509","17",NULL,"Tarikere","1",NULL
+"510","17",NULL,"Tekkalakota","1",NULL
+"511","17",NULL,"Terdal","1",NULL
+"512","17",NULL,"Tiptur","1",NULL
+"513","17",NULL,"Tumkur","1",NULL
+"514","17",NULL,"Udupi","1",NULL
+"515","17",NULL,"Vijayapura","1",NULL
+"516","17",NULL,"Wadi","1",NULL
+"517","17",NULL,"Yadgir","1",NULL
+"518","17",NULL,"Chikmagalur","1",NULL
+"519","17",NULL,"Davanagere","1",NULL
+"520","17",NULL,"Dharwad","1",NULL
+"521","17",NULL,"Gadag","1",NULL
+"522","18",NULL,"Adoor","1",NULL
+"523","18",NULL,"Akathiyoor","1",NULL
+"524","18",NULL,"Alappuzha","1",NULL
+"525","18",NULL,"Ancharakandy","1",NULL
+"526","18",NULL,"Aroor","1",NULL
+"527","18",NULL,"Ashtamichira","1",NULL
+"528","18",NULL,"Attingal","1",NULL
+"529","18",NULL,"Avinissery","1",NULL
+"530","18",NULL,"Chalakudy","1",NULL
+"531","18",NULL,"Changanassery","1",NULL
+"532","18",NULL,"Chendamangalam","1",NULL
+"533","18",NULL,"Chengannur","1",NULL
+"534","18",NULL,"Cherthala","1",NULL
+"535","18",NULL,"Cheruthazham","1",NULL
+"536","18",NULL,"Chittur-Thathamangalam","1",NULL
+"537","18",NULL,"Chockli","1",NULL
+"538","18",NULL,"Erattupetta","1",NULL
+"539","18",NULL,"Guruvayoor","1",NULL
+"540","18",NULL,"Irinjalakuda","1",NULL
+"541","18",NULL,"Kadirur","1",NULL
+"542","18",NULL,"Kalliasseri","1",NULL
+"543","18",NULL,"Kalpetta","1",NULL
+"544","18",NULL,"Kanhangad","1",NULL
+"545","18",NULL,"Kanjikkuzhi","1",NULL
+"546","18",NULL,"Kannur","1",NULL
+"547","18",NULL,"Kasaragod","1",NULL
+"548","18",NULL,"Kayamkulam","1",NULL
+"549","18",NULL,"Kochi","1",NULL
+"550","18",NULL,"Kodungallur","1",NULL
+"551","18",NULL,"Kollam","1",NULL
+"552","18",NULL,"Koothuparamba","1",NULL
+"553","18",NULL,"Kothamangalam","1",NULL
+"554","18",NULL,"Kottayam","1",NULL
+"555","18",NULL,"Kozhikode","1",NULL
+"556","18",NULL,"Kunnamkulam","1",NULL
+"557","18",NULL,"Malappuram","1",NULL
+"558","18",NULL,"Mattannur","1",NULL
+"559","18",NULL,"Mavelikkara","1",NULL
+"560","18",NULL,"Mavoor","1",NULL
+"561","18",NULL,"Muvattupuzha","1",NULL
+"562","18",NULL,"Nedumangad","1",NULL
+"563","18",NULL,"Neyyattinkara","1",NULL
+"564","18",NULL,"Ottappalam","1",NULL
+"565","18",NULL,"Palai","1",NULL
+"566","18",NULL,"Palakkad","1",NULL
+"567","18",NULL,"Panniyannur","1",NULL
+"568","18",NULL,"Pappinisseri","1",NULL
+"569","18",NULL,"Paravoor","1",NULL
+"570","18",NULL,"Pathanamthitta","1",NULL
+"571","18",NULL,"Payyannur","1",NULL
+"572","18",NULL,"Peringathur","1",NULL
+"573","18",NULL,"Perinthalmanna","1",NULL
+"574","18",NULL,"Perumbavoor","1",NULL
+"575","18",NULL,"Ponnani","1",NULL
+"576","18",NULL,"Punalur","1",NULL
+"577","18",NULL,"Quilandy","1",NULL
+"578","18",NULL,"Shoranur","1",NULL
+"579","18",NULL,"Taliparamba","1",NULL
+"580","18",NULL,"Thiruvalla","1",NULL
+"581","18",NULL,"Thiruvananthapuram","1",NULL
+"582","18",NULL,"Thodupuzha","1",NULL
+"583","18",NULL,"Thrissur","1",NULL
+"584","18",NULL,"Tirur","1",NULL
+"585","18",NULL,"Vadakara","1",NULL
+"586","18",NULL,"Vaikom","1",NULL
+"587","18",NULL,"Varkala","1",NULL
+"588","20",NULL,"Ashok Nagar","1",NULL
+"589","20",NULL,"Balaghat","1",NULL
+"590","20",NULL,"Betul","1",NULL
+"591","20",NULL,"Bhopal","1",NULL
+"592","20",NULL,"Burhanpur","1",NULL
+"593","20",NULL,"Chhatarpur","1",NULL
+"594","20",NULL,"Dabra","1",NULL
+"595","20",NULL,"Datia","1",NULL
+"596","20",NULL,"Dewas","1",NULL
+"597","20",NULL,"Dhar","1",NULL
+"598","20",NULL,"Fatehabad","1",NULL
+"599","20",NULL,"Gwalior","1",NULL
+"600","20",NULL,"Indore","1",NULL
+"601","20",NULL,"Itarsi","1",NULL
+"602","20",NULL,"Jabalpur","1",NULL
+"603","20",NULL,"Katni","1",NULL
+"604","20",NULL,"Kotma","1",NULL
+"605","20",NULL,"Lahar","1",NULL
+"606","20",NULL,"Lundi","1",NULL
+"607","20",NULL,"Maharajpur","1",NULL
+"608","20",NULL,"Mahidpur","1",NULL
+"609","20",NULL,"Maihar","1",NULL
+"610","20",NULL,"Malajkhand","1",NULL
+"611","20",NULL,"Manasa","1",NULL
+"612","20",NULL,"Manawar","1",NULL
+"613","20",NULL,"Mandideep","1",NULL
+"614","20",NULL,"Mandla","1",NULL
+"615","20",NULL,"Mandsaur","1",NULL
+"616","20",NULL,"Mauganj","1",NULL
+"617","20",NULL,"Mhow Cantonment","1",NULL
+"618","20",NULL,"Mhowgaon","1",NULL
+"619","20",NULL,"Morena","1",NULL
+"620","20",NULL,"Multai","1",NULL
+"621","20",NULL,"Murwara","1",NULL
+"622","20",NULL,"Nagda","1",NULL
+"623","20",NULL,"Nainpur","1",NULL
+"624","20",NULL,"Narsinghgarh","1",NULL
+"625","20",NULL,"Narsinghgarh","1",NULL
+"626","20",NULL,"Neemuch","1",NULL
+"627","20",NULL,"Nepanagar","1",NULL
+"628","20",NULL,"Niwari","1",NULL
+"629","20",NULL,"Nowgong","1",NULL
+"630","20",NULL,"Nowrozabad","1",NULL
+"631","20",NULL,"Pachore","1",NULL
+"632","20",NULL,"Pali","1",NULL
+"633","20",NULL,"Panagar","1",NULL
+"634","20",NULL,"Pandhurna","1",NULL
+"635","20",NULL,"Panna","1",NULL
+"636","20",NULL,"Pasan","1",NULL
+"637","20",NULL,"Pipariya","1",NULL
+"638","20",NULL,"Pithampur","1",NULL
+"639","20",NULL,"Porsa","1",NULL
+"640","20",NULL,"Prithvipur","1",NULL
+"641","20",NULL,"Raghogarh-Vijaypur","1",NULL
+"642","20",NULL,"Rahatgarh","1",NULL
+"643","20",NULL,"Raisen","1",NULL
+"644","20",NULL,"Rajgarh","1",NULL
+"645","20",NULL,"Ratlam","1",NULL
+"646","20",NULL,"Rau","1",NULL
+"647","20",NULL,"Rehli","1",NULL
+"648","20",NULL,"Rewa","1",NULL
+"649","20",NULL,"Sabalgarh","1",NULL
+"650","20",NULL,"Sagar","1",NULL
+"651","20",NULL,"Sanawad","1",NULL
+"652","20",NULL,"Sarangpur","1",NULL
+"653","20",NULL,"Sarni","1",NULL
+"654","20",NULL,"Satna","1",NULL
+"655","20",NULL,"Sausar","1",NULL
+"656","20",NULL,"Sehore","1",NULL
+"657","20",NULL,"Sendhwa","1",NULL
+"658","20",NULL,"Seoni","1",NULL
+"659","20",NULL,"Seoni-Malwa","1",NULL
+"660","20",NULL,"Shahdol","1",NULL
+"661","20",NULL,"Shajapur","1",NULL
+"662","20",NULL,"Shamgarh","1",NULL
+"663","20",NULL,"Sheopur","1",NULL
+"664","20",NULL,"Shivpuri","1",NULL
+"665","20",NULL,"Shujalpur","1",NULL
+"666","20",NULL,"Sidhi","1",NULL
+"667","20",NULL,"Sihora","1",NULL
+"668","20",NULL,"Singrauli","1",NULL
+"669","20",NULL,"Sironj","1",NULL
+"670","20",NULL,"Sohagpur","1",NULL
+"671","20",NULL,"Tarana","1",NULL
+"672","20",NULL,"Tikamgarh","1",NULL
+"673","20",NULL,"Ujhani","1",NULL
+"674","20",NULL,"Ujjain","1",NULL
+"675","20",NULL,"Umaria","1",NULL
+"676","20",NULL,"Vidisha","1",NULL
+"677","20",NULL,"Wara Seoni","1",NULL
+"678","21",NULL,"Kolhapur","1",NULL
+"679","21",NULL,"Ahmednagar","1",NULL
+"680","21",NULL,"Akola","1",NULL
+"681","21",NULL,"Amravati","1",NULL
+"682","21",NULL,"Aurangabad","1",NULL
+"683","21",NULL,"Baramati","1",NULL
+"684","21",NULL,"Chalisgaon","1",NULL
+"685","21",NULL,"Chinchani","1",NULL
+"686","21",NULL,"Devgarh","1",NULL
+"687","21",NULL,"Dhule","1",NULL
+"688","21",NULL,"Dombivli","1",NULL
+"689","21",NULL,"Durgapur","1",NULL
+"690","21",NULL,"Ichalkaranji","1",NULL
+"691","21",NULL,"Jalna","1",NULL
+"692","21",NULL,"Kalyan","1",NULL
+"693","21",NULL,"Latur","1",NULL
+"694","21",NULL,"Loha","1",NULL
+"695","21",NULL,"Lonar","1",NULL
+"696","21",NULL,"Lonavla","1",NULL
+"697","21",NULL,"Mahad","1",NULL
+"698","21",NULL,"Mahuli","1",NULL
+"699","21",NULL,"Malegaon","1",NULL
+"700","21",NULL,"Malkapur","1",NULL
+"701","21",NULL,"Manchar","1",NULL
+"702","21",NULL,"Mangalvedhe","1",NULL
+"703","21",NULL,"Mangrulpir","1",NULL
+"704","21",NULL,"Manjlegaon","1",NULL
+"705","21",NULL,"Manmad","1",NULL
+"706","21",NULL,"Manwath","1",NULL
+"707","21",NULL,"Mehkar","1",NULL
+"708","21",NULL,"Mhaswad","1",NULL
+"709","21",NULL,"Miraj","1",NULL
+"710","21",NULL,"Morshi","1",NULL
+"711","21",NULL,"Mukhed","1",NULL
+"712","21",NULL,"Mul","1",NULL
+"713","21",NULL,"Mumbai","1",NULL
+"714","21",NULL,"Murtijapur","1",NULL
+"715","21",NULL,"Nagpur","1",NULL
+"716","21",NULL,"Nalasopara","1",NULL
+"717","21",NULL,"Nanded-Waghala","1",NULL
+"718","21",NULL,"Nandgaon","1",NULL
+"719","21",NULL,"Nandura","1",NULL
+"720","21",NULL,"Nandurbar","1",NULL
+"721","21",NULL,"Narkhed","1",NULL
+"722","21",NULL,"Nashik","1",NULL
+"723","21",NULL,"Navi Mumbai","1",NULL
+"724","21",NULL,"Nawapur","1",NULL
+"725","21",NULL,"Nilanga","1",NULL
+"726","21",NULL,"Osmanabad","1",NULL
+"727","21",NULL,"Ozar","1",NULL
+"728","21",NULL,"Pachora","1",NULL
+"729","21",NULL,"Paithan","1",NULL
+"730","21",NULL,"Palghar","1",NULL
+"731","21",NULL,"Pandharkaoda","1",NULL
+"732","21",NULL,"Pandharpur","1",NULL
+"733","21",NULL,"Panvel","1",NULL
+"734","21",NULL,"Parbhani","1",NULL
+"735","21",NULL,"Parli","1",NULL
+"736","21",NULL,"Parola","1",NULL
+"737","21",NULL,"Partur","1",NULL
+"738","21",NULL,"Pathardi","1",NULL
+"739","21",NULL,"Pathri","1",NULL
+"740","21",NULL,"Patur","1",NULL
+"741","21",NULL,"Pauni","1",NULL
+"742","21",NULL,"Pen","1",NULL
+"743","21",NULL,"Phaltan","1",NULL
+"744","21",NULL,"Pulgaon","1",NULL
+"745","21",NULL,"Pune","1",NULL
+"746","21",NULL,"Purna","1",NULL
+"747","21",NULL,"Pusad","1",NULL
+"748","21",NULL,"Rahuri","1",NULL
+"749","21",NULL,"Rajura","1",NULL
+"750","21",NULL,"Ramtek","1",NULL
+"751","21",NULL,"Ratnagiri","1",NULL
+"752","21",NULL,"Raver","1",NULL
+"753","21",NULL,"Risod","1",NULL
+"754","21",NULL,"Sailu","1",NULL
+"755","21",NULL,"Sangamner","1",NULL
+"756","21",NULL,"Sangli","1",NULL
+"757","21",NULL,"Sangole","1",NULL
+"758","21",NULL,"Sasvad","1",NULL
+"759","21",NULL,"Satana","1",NULL
+"760","21",NULL,"Satara","1",NULL
+"761","21",NULL,"Savner","1",NULL
+"762","21",NULL,"Sawantwadi","1",NULL
+"763","21",NULL,"Shahade","1",NULL
+"764","21",NULL,"Shegaon","1",NULL
+"765","21",NULL,"Shendurjana","1",NULL
+"766","21",NULL,"Shirdi","1",NULL
+"767","21",NULL,"Shirpur-Warwade","1",NULL
+"768","21",NULL,"Shirur","1",NULL
+"769","21",NULL,"Shrigonda","1",NULL
+"770","21",NULL,"Shrirampur","1",NULL
+"771","21",NULL,"Sillod","1",NULL
+"772","21",NULL,"Sinnar","1",NULL
+"773","21",NULL,"Solapur","1",NULL
+"774","21",NULL,"Soyagaon","1",NULL
+"775","21",NULL,"Talegaon Dabhade","1",NULL
+"776","21",NULL,"Talode","1",NULL
+"777","21",NULL,"Tasgaon","1",NULL
+"778","21",NULL,"Tirora","1",NULL
+"779","21",NULL,"Tuljapur","1",NULL
+"780","21",NULL,"Tumsar","1",NULL
+"781","21",NULL,"Uran","1",NULL
+"782","21",NULL,"Uran Islampur","1",NULL
+"783","21",NULL,"Wadgaon Road","1",NULL
+"784","21",NULL,"Wai","1",NULL
+"785","21",NULL,"Wani","1",NULL
+"786","21",NULL,"Wardha","1",NULL
+"787","21",NULL,"Warora","1",NULL
+"788","21",NULL,"Warud","1",NULL
+"789","21",NULL,"Washim","1",NULL
+"790","21",NULL,"Yevla","1",NULL
+"791","22",NULL,"Kakching","1",NULL
+"792","22",NULL,"Lilong","1",NULL
+"793","22",NULL,"Mayang Imphal","1",NULL
+"794","22",NULL,"Thoubal","1",NULL
+"795","23",NULL,"Jowai","1",NULL
+"796","23",NULL,"Nongstoin","1",NULL
+"797","23",NULL,"Shillong","1",NULL
+"798","23",NULL,"Tura","1",NULL
+"799","24",NULL,"Aizawl","1",NULL
+"800","24",NULL,"Champhai","1",NULL
+"801","24",NULL,"Lunglei","1",NULL
+"802","24",NULL,"Saiha","1",NULL
+"803","25",NULL,"Dimapur","1",NULL
+"804","25",NULL,"Kohima","1",NULL
+"805","25",NULL,"Mokokchung","1",NULL
+"806","25",NULL,"Tuensang","1",NULL
+"807","25",NULL,"Wokha","1",NULL
+"808","25",NULL,"Zunheboto","1",NULL
+"809","26",NULL,"Anandapur","1",NULL
+"810","26",NULL,"Anugul","1",NULL
+"811","26",NULL,"Asika","1",NULL
+"812","26",NULL,"Balangir","1",NULL
+"813","26",NULL,"Balasore","1",NULL
+"814","26",NULL,"Baleshwar","1",NULL
+"815","26",NULL,"Bamra","1",NULL
+"816","26",NULL,"Barbil","1",NULL
+"817","26",NULL,"Bargarh","1",NULL
+"818","26",NULL,"Bargarh","1",NULL
+"819","26",NULL,"Baripada","1",NULL
+"820","26",NULL,"Basudebpur","1",NULL
+"821","26",NULL,"Belpahar","1",NULL
+"822","26",NULL,"Bhadrak","1",NULL
+"823","26",NULL,"Bhawanipatna","1",NULL
+"824","26",NULL,"Bhuban","1",NULL
+"825","26",NULL,"Bhubaneswar","1",NULL
+"826","26",NULL,"Biramitrapur","1",NULL
+"827","26",NULL,"Brahmapur","1",NULL
+"828","26",NULL,"Brajrajnagar","1",NULL
+"829","26",NULL,"Byasanagar","1",NULL
+"830","26",NULL,"Cuttack","1",NULL
+"831","26",NULL,"Debagarh","1",NULL
+"832","26",NULL,"Dhenkanal","1",NULL
+"833","26",NULL,"Gunupur","1",NULL
+"834","26",NULL,"Hinjilicut","1",NULL
+"835","26",NULL,"Jagatsinghapur","1",NULL
+"836","26",NULL,"Jajapur","1",NULL
+"837","26",NULL,"Jaleswar","1",NULL
+"838","26",NULL,"Jatani","1",NULL
+"839","26",NULL,"Jeypur","1",NULL
+"840","26",NULL,"Jharsuguda","1",NULL
+"841","26",NULL,"Joda","1",NULL
+"842","26",NULL,"Kantabanji","1",NULL
+"843","26",NULL,"Karanjia","1",NULL
+"844","26",NULL,"Kendrapara","1",NULL
+"845","26",NULL,"Kendujhar","1",NULL
+"846","26",NULL,"Khordha","1",NULL
+"847","26",NULL,"Koraput","1",NULL
+"848","26",NULL,"Malkangiri","1",NULL
+"849","26",NULL,"Nabarangapur","1",NULL
+"850","26",NULL,"Paradip","1",NULL
+"851","26",NULL,"Parlakhemundi","1",NULL
+"852","26",NULL,"Pattamundai","1",NULL
+"853","26",NULL,"Phulabani","1",NULL
+"854","26",NULL,"Puri","1",NULL
+"855","26",NULL,"Rairangpur","1",NULL
+"856","26",NULL,"Rajagangapur","1",NULL
+"857","26",NULL,"Raurkela","1",NULL
+"858","26",NULL,"Rayagada","1",NULL
+"859","26",NULL,"Sambalpur","1",NULL
+"860","26",NULL,"Soro","1",NULL
+"861","26",NULL,"Sunabeda","1",NULL
+"862","26",NULL,"Sundargarh","1",NULL
+"863","26",NULL,"Talcher","1",NULL
+"864","26",NULL,"Titlagarh","1",NULL
+"865","26",NULL,"Umarkote","1",NULL
+"866","28",NULL,"Ahmedgarh","1",NULL
+"867","28",NULL,"Amritsar","1",NULL
+"868","28",NULL,"Barnala","1",NULL
+"869","28",NULL,"Batala","1",NULL
+"870","28",NULL,"Bathinda","1",NULL
+"871","28",NULL,"Bhagha Purana","1",NULL
+"872","28",NULL,"Budhlada","1",NULL
+"873","28",NULL,"Chandigarh","1",NULL
+"874","28",NULL,"Dasua","1",NULL
+"875","28",NULL,"Dhuri","1",NULL
+"876","28",NULL,"Dinanagar","1",NULL
+"877","28",NULL,"Faridkot","1",NULL
+"878","28",NULL,"Fazilka","1",NULL
+"879","28",NULL,"Firozpur","1",NULL
+"880","28",NULL,"Firozpur Cantt.","1",NULL
+"881","28",NULL,"Giddarbaha","1",NULL
+"882","28",NULL,"Gobindgarh","1",NULL
+"883","28",NULL,"Gurdaspur","1",NULL
+"884","28",NULL,"Hoshiarpur","1",NULL
+"885","28",NULL,"Jagraon","1",NULL
+"886","28",NULL,"Jaitu","1",NULL
+"887","28",NULL,"Jalalabad","1",NULL
+"888","28",NULL,"Jalandhar","1",NULL
+"889","28",NULL,"Jalandhar Cantt.","1",NULL
+"890","28",NULL,"Jandiala","1",NULL
+"891","28",NULL,"Kapurthala","1",NULL
+"892","28",NULL,"Karoran","1",NULL
+"893","28",NULL,"Kartarpur","1",NULL
+"894","28",NULL,"Khanna","1",NULL
+"895","28",NULL,"Kharar","1",NULL
+"896","28",NULL,"Kot Kapura","1",NULL
+"897","28",NULL,"Kurali","1",NULL
+"898","28",NULL,"Longowal","1",NULL
+"899","28",NULL,"Ludhiana","1",NULL
+"900","28",NULL,"Malerkotla","1",NULL
+"901","28",NULL,"Malout","1",NULL
+"902","28",NULL,"Mansa","1",NULL
+"903","28",NULL,"Maur","1",NULL
+"904","28",NULL,"Moga","1",NULL
+"905","28",NULL,"Mohali","1",NULL
+"906","28",NULL,"Morinda","1",NULL
+"907","28",NULL,"Mukerian","1",NULL
+"908","28",NULL,"Muktsar","1",NULL
+"909","28",NULL,"Nabha","1",NULL
+"910","28",NULL,"Nakodar","1",NULL
+"911","28",NULL,"Nangal","1",NULL
+"912","28",NULL,"Nawanshahr","1",NULL
+"913","28",NULL,"Pathankot","1",NULL
+"914","28",NULL,"Patiala","1",NULL
+"915","28",NULL,"Patran","1",NULL
+"916","28",NULL,"Patti","1",NULL
+"917","28",NULL,"Phagwara","1",NULL
+"918","28",NULL,"Phillaur","1",NULL
+"919","28",NULL,"Qadian","1",NULL
+"920","28",NULL,"Raikot","1",NULL
+"921","28",NULL,"Rajpura","1",NULL
+"922","28",NULL,"Rampura Phul","1",NULL
+"923","28",NULL,"Rupnagar","1",NULL
+"924","28",NULL,"Samana","1",NULL
+"925","28",NULL,"Sangrur","1",NULL
+"926","28",NULL,"Sirhind Fatehgarh Sahib","1",NULL
+"927","28",NULL,"Sujanpur","1",NULL
+"928","28",NULL,"Sunam","1",NULL
+"929","28",NULL,"Talwara","1",NULL
+"930","28",NULL,"Tarn Taran","1",NULL
+"931","28",NULL,"Urmar Tanda","1",NULL
+"932","28",NULL,"Zira","1",NULL
+"933","28",NULL,"Zirakpur","1",NULL
+"934","29",NULL,"Ajmer","1",NULL
+"935","29",NULL,"Alwar","1",NULL
+"936","29",NULL,"Bandikui","1",NULL
+"937","29",NULL,"Baran","1",NULL
+"938","29",NULL,"Barmer","1",NULL
+"939","29",NULL,"Bikaner","1",NULL
+"940","29",NULL,"Fatehpur","1",NULL
+"941","29",NULL,"Jaipur","1",NULL
+"942","29",NULL,"Jaisalmer","1",NULL
+"943","29",NULL,"Jodhpur","1",NULL
+"944","29",NULL,"Kota","1",NULL
+"945","29",NULL,"Lachhmangarh","1",NULL
+"946","29",NULL,"Ladnu","1",NULL
+"947","29",NULL,"Lakheri","1",NULL
+"948","29",NULL,"Lalsot","1",NULL
+"949","29",NULL,"Losal","1",NULL
+"950","29",NULL,"Makrana","1",NULL
+"951","29",NULL,"Malpura","1",NULL
+"952","29",NULL,"Mandalgarh","1",NULL
+"953","29",NULL,"Mandawa","1",NULL
+"954","29",NULL,"Mangrol","1",NULL
+"955","29",NULL,"Merta City","1",NULL
+"956","29",NULL,"Mount Abu","1",NULL
+"957","29",NULL,"Nadbai","1",NULL
+"958","29",NULL,"Nagar","1",NULL
+"959","29",NULL,"Nagaur","1",NULL
+"960","29",NULL,"Nargund","1",NULL
+"961","29",NULL,"Nasirabad","1",NULL
+"962","29",NULL,"Nathdwara","1",NULL
+"963","29",NULL,"Navalgund","1",NULL
+"964","29",NULL,"Nawalgarh","1",NULL
+"965","29",NULL,"Neem-Ka-Thana","1",NULL
+"966","29",NULL,"Nelamangala","1",NULL
+"967","29",NULL,"Nimbahera","1",NULL
+"968","29",NULL,"Nipani","1",NULL
+"969","29",NULL,"Niwai","1",NULL
+"970","29",NULL,"Nohar","1",NULL
+"971","29",NULL,"Nokha","1",NULL
+"972","29",NULL,"Pali","1",NULL
+"973","29",NULL,"Phalodi","1",NULL
+"974","29",NULL,"Phulera","1",NULL
+"975","29",NULL,"Pilani","1",NULL
+"976","29",NULL,"Pilibanga","1",NULL
+"977","29",NULL,"Pindwara","1",NULL
+"978","29",NULL,"Pipar City","1",NULL
+"979","29",NULL,"Prantij","1",NULL
+"980","29",NULL,"Pratapgarh","1",NULL
+"981","29",NULL,"Raisinghnagar","1",NULL
+"982","29",NULL,"Rajakhera","1",NULL
+"983","29",NULL,"Rajaldesar","1",NULL
+"984","29",NULL,"Rajgarh (Alwar)","1",NULL
+"985","29",NULL,"Rajgarh (Churu","1",NULL
+"986","29",NULL,"Rajsamand","1",NULL
+"987","29",NULL,"Ramganj Mandi","1",NULL
+"988","29",NULL,"Ramngarh","1",NULL
+"989","29",NULL,"Ratangarh","1",NULL
+"990","29",NULL,"Rawatbhata","1",NULL
+"991","29",NULL,"Rawatsar","1",NULL
+"992","29",NULL,"Reengus","1",NULL
+"993","29",NULL,"Sadri","1",NULL
+"994","29",NULL,"Sadulshahar","1",NULL
+"995","29",NULL,"Sagwara","1",NULL
+"996","29",NULL,"Sambhar","1",NULL
+"997","29",NULL,"Sanchore","1",NULL
+"998","29",NULL,"Sangaria","1",NULL
+"999","29",NULL,"Sardarshahar","1",NULL
+"1000","29",NULL,"Sawai Madhopur","1",NULL
+"1001","29",NULL,"Shahpura","1",NULL
+"1002","29",NULL,"Shahpura","1",NULL
+"1003","29",NULL,"Sheoganj","1",NULL
+"1004","29",NULL,"Sikar","1",NULL
+"1005","29",NULL,"Sirohi","1",NULL
+"1006","29",NULL,"Sojat","1",NULL
+"1007","29",NULL,"Sri Madhopur","1",NULL
+"1008","29",NULL,"Sujangarh","1",NULL
+"1009","29",NULL,"Sumerpur","1",NULL
+"1010","29",NULL,"Suratgarh","1",NULL
+"1011","29",NULL,"Taranagar","1",NULL
+"1012","29",NULL,"Todabhim","1",NULL
+"1013","29",NULL,"Todaraisingh","1",NULL
+"1014","29",NULL,"Tonk","1",NULL
+"1015","29",NULL,"Udaipur","1",NULL
+"1016","29",NULL,"Udaipurwati","1",NULL
+"1017","29",NULL,"Vijainagar","1",NULL
+"1018","30",NULL,"Gangtok","1",NULL
+"1019","31",NULL,"Arakkonam","1",NULL
+"1020","31",NULL,"Arcot","1",NULL
+"1021","31",NULL,"Aruppukkottai","1",NULL
+"1022","31",NULL,"Bhavani","1",NULL
+"1023","31",NULL,"Chengalpattu","1",NULL
+"1024","31",NULL,"Chennai","1",NULL
+"1025","31",NULL,"Chinna salem","1",NULL
+"1026","31",NULL,"Coimbatore","1",NULL
+"1027","31",NULL,"Coonoor","1",NULL
+"1028","31",NULL,"Cuddalore","1",NULL
+"1029","31",NULL,"Dharmapuri","1",NULL
+"1030","31",NULL,"Dindigul","1",NULL
+"1031","31",NULL,"Erode","1",NULL
+"1032","31",NULL,"Gudalur","1",NULL
+"1033","31",NULL,"Gudalur","1",NULL
+"1034","31",NULL,"Gudalur","1",NULL
+"1035","31",NULL,"Kanchipuram","1",NULL
+"1036","31",NULL,"Karaikudi","1",NULL
+"1037","31",NULL,"Karungal","1",NULL
+"1038","31",NULL,"Karur","1",NULL
+"1039","31",NULL,"Kollankodu","1",NULL
+"1040","31",NULL,"Lalgudi","1",NULL
+"1041","31",NULL,"Madurai","1",NULL
+"1042","31",NULL,"Nagapattinam","1",NULL
+"1043","31",NULL,"Nagercoil","1",NULL
+"1044","31",NULL,"Namagiripettai","1",NULL
+"1045","31",NULL,"Namakkal","1",NULL
+"1046","31",NULL,"Nandivaram-Guduvancheri","1",NULL
+"1047","31",NULL,"Nanjikottai","1",NULL
+"1048","31",NULL,"Natham","1",NULL
+"1049","31",NULL,"Nellikuppam","1",NULL
+"1050","31",NULL,"Neyveli","1",NULL
+"1051","31",NULL,"O Valley","1",NULL
+"1052","31",NULL,"Oddanchatram","1",NULL
+"1053","31",NULL,"P.N.Patti","1",NULL
+"1054","31",NULL,"Pacode","1",NULL
+"1055","31",NULL,"Padmanabhapuram","1",NULL
+"1056","31",NULL,"Palani","1",NULL
+"1057","31",NULL,"Palladam","1",NULL
+"1058","31",NULL,"Pallapatti","1",NULL
+"1059","31",NULL,"Pallikonda","1",NULL
+"1060","31",NULL,"Panagudi","1",NULL
+"1061","31",NULL,"Panruti","1",NULL
+"1062","31",NULL,"Paramakudi","1",NULL
+"1063","31",NULL,"Parangipettai","1",NULL
+"1064","31",NULL,"Pattukkottai","1",NULL
+"1065","31",NULL,"Perambalur","1",NULL
+"1066","31",NULL,"Peravurani","1",NULL
+"1067","31",NULL,"Periyakulam","1",NULL
+"1068","31",NULL,"Periyasemur","1",NULL
+"1069","31",NULL,"Pernampattu","1",NULL
+"1070","31",NULL,"Pollachi","1",NULL
+"1071","31",NULL,"Polur","1",NULL
+"1072","31",NULL,"Ponneri","1",NULL
+"1073","31",NULL,"Pudukkottai","1",NULL
+"1074","31",NULL,"Pudupattinam","1",NULL
+"1075","31",NULL,"Puliyankudi","1",NULL
+"1076","31",NULL,"Punjaipugalur","1",NULL
+"1077","31",NULL,"Rajapalayam","1",NULL
+"1078","31",NULL,"Ramanathapuram","1",NULL
+"1079","31",NULL,"Rameshwaram","1",NULL
+"1080","31",NULL,"Rasipuram","1",NULL
+"1081","31",NULL,"Salem","1",NULL
+"1082","31",NULL,"Sankarankoil","1",NULL
+"1083","31",NULL,"Sankari","1",NULL
+"1084","31",NULL,"Sathyamangalam","1",NULL
+"1085","31",NULL,"Sattur","1",NULL
+"1086","31",NULL,"Shenkottai","1",NULL
+"1087","31",NULL,"Sholavandan","1",NULL
+"1088","31",NULL,"Sholingur","1",NULL
+"1089","31",NULL,"Sirkali","1",NULL
+"1090","31",NULL,"Sivaganga","1",NULL
+"1091","31",NULL,"Sivagiri","1",NULL
+"1092","31",NULL,"Sivakasi","1",NULL
+"1093","31",NULL,"Srivilliputhur","1",NULL
+"1094","31",NULL,"Surandai","1",NULL
+"1095","31",NULL,"Suriyampalayam","1",NULL
+"1096","31",NULL,"Tenkasi","1",NULL
+"1097","31",NULL,"Thammampatti","1",NULL
+"1098","31",NULL,"Thanjavur","1",NULL
+"1099","31",NULL,"Tharamangalam","1",NULL
+"1100","31",NULL,"Tharangambadi","1",NULL
+"1101","31",NULL,"Theni Allinagaram","1",NULL
+"1102","31",NULL,"Thirumangalam","1",NULL
+"1103","31",NULL,"Thirunindravur","1",NULL
+"1104","31",NULL,"Thiruparappu","1",NULL
+"1105","31",NULL,"Thirupuvanam","1",NULL
+"1106","31",NULL,"Thiruthuraipoondi","1",NULL
+"1107","31",NULL,"Thiruvallur","1",NULL
+"1108","31",NULL,"Thiruvarur","1",NULL
+"1109","31",NULL,"Thoothukudi","1",NULL
+"1110","31",NULL,"Thuraiyur","1",NULL
+"1111","31",NULL,"Tindivanam","1",NULL
+"1112","31",NULL,"Tiruchendur","1",NULL
+"1113","31",NULL,"Tiruchengode","1",NULL
+"1114","31",NULL,"Tiruchirappalli","1",NULL
+"1115","31",NULL,"Tirukalukundram","1",NULL
+"1116","31",NULL,"Tirukkoyilur","1",NULL
+"1117","31",NULL,"Tirunelveli","1",NULL
+"1118","31",NULL,"Tirupathur","1",NULL
+"1119","31",NULL,"Tirupathur","1",NULL
+"1120","31",NULL,"Tiruppur","1",NULL
+"1121","31",NULL,"Tiruttani","1",NULL
+"1122","31",NULL,"Tiruvannamalai","1",NULL
+"1123","31",NULL,"Tiruvethipuram","1",NULL
+"1124","31",NULL,"Tittakudi","1",NULL
+"1125","31",NULL,"Udhagamandalam","1",NULL
+"1126","31",NULL,"Udumalaipettai","1",NULL
+"1127","31",NULL,"Unnamalaikadai","1",NULL
+"1128","31",NULL,"Usilampatti","1",NULL
+"1129","31",NULL,"Uthamapalayam","1",NULL
+"1130","31",NULL,"Uthiramerur","1",NULL
+"1131","31",NULL,"Vadakkuvalliyur","1",NULL
+"1132","31",NULL,"Vadalur","1",NULL
+"1133","31",NULL,"Vadipatti","1",NULL
+"1134","31",NULL,"Valparai","1",NULL
+"1135","31",NULL,"Vandavasi","1",NULL
+"1136","31",NULL,"Vaniyambadi","1",NULL
+"1137","31",NULL,"Vedaranyam","1",NULL
+"1138","31",NULL,"Vellakoil","1",NULL
+"1139","31",NULL,"Vellore","1",NULL
+"1140","31",NULL,"Vikramasingapuram","1",NULL
+"1141","31",NULL,"Viluppuram","1",NULL
+"1142","31",NULL,"Virudhachalam","1",NULL
+"1143","31",NULL,"Virudhunagar","1",NULL
+"1144","31",NULL,"Viswanatham","1",NULL
+"1145","31",NULL,"Chennai","1",NULL
+"1146","31",NULL,"Coimbatore","1",NULL
+"1147","32",NULL,"Agartala","1",NULL
+"1148","32",NULL,"Badharghat","1",NULL
+"1149","32",NULL,"Dharmanagar","1",NULL
+"1150","32",NULL,"Indranagar","1",NULL
+"1151","32",NULL,"Jogendranagar","1",NULL
+"1152","32",NULL,"Kailasahar","1",NULL
+"1153","32",NULL,"Khowai","1",NULL
+"1154","32",NULL,"Pratapgarh","1",NULL
+"1155","32",NULL,"Udaipur","1",NULL
+"1156","34",NULL,"Achhnera","1",NULL
+"1157","34",NULL,"Adari","1",NULL
+"1158","34",NULL,"Agra","1",NULL
+"1159","34",NULL,"Aligarh","1",NULL
+"1160","34",NULL,"Allahabad","1",NULL
+"1161","34",NULL,"Amroha","1",NULL
+"1162","34",NULL,"Azamgarh","1",NULL
+"1163","34",NULL,"Bahraich","1",NULL
+"1164","34",NULL,"Ballia","1",NULL
+"1165","34",NULL,"Balrampur","1",NULL
+"1166","34",NULL,"Banda","1",NULL
+"1167","34",NULL,"Bareilly","1",NULL
+"1168","34",NULL,"Chandausi","1",NULL
+"1169","34",NULL,"Dadri","1",NULL
+"1170","34",NULL,"Deoria","1",NULL
+"1171","34",NULL,"Etawah","1",NULL
+"1172","34",NULL,"Fatehabad","1",NULL
+"1173","34",NULL,"Fatehpur","1",NULL
+"1174","34",NULL,"Fatehpur","1",NULL
+"1175","34",NULL,"Greater Noida","1",NULL
+"1176","34",NULL,"Hamirpur","1",NULL
+"1177","34",NULL,"Hardoi","1",NULL
+"1178","34",NULL,"Jajmau","1",NULL
+"1179","34",NULL,"Jaunpur","1",NULL
+"1180","34",NULL,"Jhansi","1",NULL
+"1181","34",NULL,"Kalpi","1",NULL
+"1182","34",NULL,"Kanpur","1",NULL
+"1183","34",NULL,"Kota","1",NULL
+"1184","34",NULL,"Laharpur","1",NULL
+"1185","34",NULL,"Lakhimpur","1",NULL
+"1186","34",NULL,"Lal Gopalganj Nindaura","1",NULL
+"1187","34",NULL,"Lalganj","1",NULL
+"1188","34",NULL,"Lalitpur","1",NULL
+"1189","34",NULL,"Lar","1",NULL
+"1190","34",NULL,"Loni","1",NULL
+"1191","34",NULL,"Lucknow","1",NULL
+"1192","34",NULL,"Mathura","1",NULL
+"1193","34",NULL,"Meerut","1",NULL
+"1194","34",NULL,"Modinagar","1",NULL
+"1195","34",NULL,"Muradnagar","1",NULL
+"1196","34",NULL,"Nagina","1",NULL
+"1197","34",NULL,"Najibabad","1",NULL
+"1198","34",NULL,"Nakur","1",NULL
+"1199","34",NULL,"Nanpara","1",NULL
+"1200","34",NULL,"Naraura","1",NULL
+"1201","34",NULL,"Naugawan Sadat","1",NULL
+"1202","34",NULL,"Nautanwa","1",NULL
+"1203","34",NULL,"Nawabganj","1",NULL
+"1204","34",NULL,"Nehtaur","1",NULL
+"1205","34",NULL,"NOIDA","1",NULL
+"1206","34",NULL,"Noorpur","1",NULL
+"1207","34",NULL,"Obra","1",NULL
+"1208","34",NULL,"Orai","1",NULL
+"1209","34",NULL,"Padrauna","1",NULL
+"1210","34",NULL,"Palia Kalan","1",NULL
+"1211","34",NULL,"Parasi","1",NULL
+"1212","34",NULL,"Phulpur","1",NULL
+"1213","34",NULL,"Pihani","1",NULL
+"1214","34",NULL,"Pilibhit","1",NULL
+"1215","34",NULL,"Pilkhuwa","1",NULL
+"1216","34",NULL,"Powayan","1",NULL
+"1217","34",NULL,"Pukhrayan","1",NULL
+"1218","34",NULL,"Puranpur","1",NULL
+"1219","34",NULL,"Purquazi","1",NULL
+"1220","34",NULL,"Purwa","1",NULL
+"1221","34",NULL,"Rae Bareli","1",NULL
+"1222","34",NULL,"Rampur","1",NULL
+"1223","34",NULL,"Rampur Maniharan","1",NULL
+"1224","34",NULL,"Rasra","1",NULL
+"1225","34",NULL,"Rath","1",NULL
+"1226","34",NULL,"Renukoot","1",NULL
+"1227","34",NULL,"Reoti","1",NULL
+"1228","34",NULL,"Robertsganj","1",NULL
+"1229","34",NULL,"Rudauli","1",NULL
+"1230","34",NULL,"Rudrapur","1",NULL
+"1231","34",NULL,"Sadabad","1",NULL
+"1232","34",NULL,"Safipur","1",NULL
+"1233","34",NULL,"Saharanpur","1",NULL
+"1234","34",NULL,"Sahaspur","1",NULL
+"1235","34",NULL,"Sahaswan","1",NULL
+"1236","34",NULL,"Sahawar","1",NULL
+"1237","34",NULL,"Sahjanwa","1",NULL
+"1238","34",NULL,"Sambhal","1",NULL
+"1239","34",NULL,"Samdhan","1",NULL
+"1240","34",NULL,"Samthar","1",NULL
+"1241","34",NULL,"Sandi","1",NULL
+"1242","34",NULL,"Sandila","1",NULL
+"1243","34",NULL,"Sardhana","1",NULL
+"1244","34",NULL,"Seohara","1",NULL
+"1245","34",NULL,"Shahganj","1",NULL
+"1246","34",NULL,"Shahjahanpur","1",NULL
+"1247","34",NULL,"Shamli","1",NULL
+"1248","34",NULL,"Sherkot","1",NULL
+"1249","34",NULL,"Shikohabad","1",NULL
+"1250","34",NULL,"Shishgarh","1",NULL
+"1251","34",NULL,"Siana","1",NULL
+"1252","34",NULL,"Sikanderpur","1",NULL
+"1253","34",NULL,"Sikandra Rao","1",NULL
+"1254","34",NULL,"Sikandrabad","1",NULL
+"1255","34",NULL,"Sirsaganj","1",NULL
+"1256","34",NULL,"Sirsi","1",NULL
+"1257","34",NULL,"Sitapur","1",NULL
+"1258","34",NULL,"Soron","1",NULL
+"1259","34",NULL,"Suar","1",NULL
+"1260","34",NULL,"Sultanpur","1",NULL
+"1261","34",NULL,"Sumerpur","1",NULL
+"1262","34",NULL,"Tanda","1",NULL
+"1263","34",NULL,"Tanda","1",NULL
+"1264","34",NULL,"Tetri Bazar","1",NULL
+"1265","34",NULL,"Thakurdwara","1",NULL
+"1266","34",NULL,"Thana Bhawan","1",NULL
+"1267","34",NULL,"Tilhar","1",NULL
+"1268","34",NULL,"Tirwaganj","1",NULL
+"1269","34",NULL,"Tulsipur","1",NULL
+"1270","34",NULL,"Tundla","1",NULL
+"1271","34",NULL,"Unnao","1",NULL
+"1272","34",NULL,"Utraula","1",NULL
+"1273","34",NULL,"Varanasi","1",NULL
+"1274","34",NULL,"Vrindavan","1",NULL
+"1275","34",NULL,"Warhapur","1",NULL
+"1276","34",NULL,"Zaidpur","1",NULL
+"1277","34",NULL,"Zamania","1",NULL
+"1278","35",NULL,"Calcutta","1",NULL
+"1279","35",NULL,"Alipurduar","1",NULL
+"1280","35",NULL,"Arambagh","1",NULL
+"1281","35",NULL,"Asansol","1",NULL
+"1282","35",NULL,"Baharampur","1",NULL
+"1283","35",NULL,"Bally","1",NULL
+"1284","35",NULL,"Balurghat","1",NULL
+"1285","35",NULL,"Bankura","1",NULL
+"1286","35",NULL,"Barakar","1",NULL
+"1287","35",NULL,"Barasat","1",NULL
+"1288","35",NULL,"Bardhaman","1",NULL
+"1289","35",NULL,"Bidhan Nagar","1",NULL
+"1290","35",NULL,"Chinsura","1",NULL
+"1291","35",NULL,"Contai","1",NULL
+"1292","35",NULL,"Cooch Behar","1",NULL
+"1293","35",NULL,"Darjeeling","1",NULL
+"1294","35",NULL,"Durgapur","1",NULL
+"1295","35",NULL,"Haldia","1",NULL
+"1296","35",NULL,"Howrah","1",NULL
+"1297","35",NULL,"Islampur","1",NULL
+"1298","35",NULL,"Jhargram","1",NULL
+"1299","35",NULL,"Kharagpur","1",NULL
+"1300","35",NULL,"Kolkata","1",NULL
+"1301","35",NULL,"Mainaguri","1",NULL
+"1302","35",NULL,"Mal","1",NULL
+"1303","35",NULL,"Mathabhanga","1",NULL
+"1304","35",NULL,"Medinipur","1",NULL
+"1305","35",NULL,"Memari","1",NULL
+"1306","35",NULL,"Monoharpur","1",NULL
+"1307","35",NULL,"Murshidabad","1",NULL
+"1308","35",NULL,"Nabadwip","1",NULL
+"1309","35",NULL,"Naihati","1",NULL
+"1310","35",NULL,"Panchla","1",NULL
+"1311","35",NULL,"Pandua","1",NULL
+"1312","35",NULL,"Paschim Punropara","1",NULL
+"1313","35",NULL,"Purulia","1",NULL
+"1314","35",NULL,"Raghunathpur","1",NULL
+"1315","35",NULL,"Raiganj","1",NULL
+"1316","35",NULL,"Rampurhat","1",NULL
+"1317","35",NULL,"Ranaghat","1",NULL
+"1318","35",NULL,"Sainthia","1",NULL
+"1319","35",NULL,"Santipur","1",NULL
+"1320","35",NULL,"Siliguri","1",NULL
+"1321","35",NULL,"Sonamukhi","1",NULL
+"1322","35",NULL,"Srirampore","1",NULL
+"1323","35",NULL,"Suri","1",NULL
+"1324","35",NULL,"Taki","1",NULL
+"1325","35",NULL,"Tamluk","1",NULL
+"1326","35",NULL,"Tarakeswar","1",NULL
+"1327","10",NULL,"Asola","1",NULL
+"1328","10",NULL,"Delhi","1",NULL
+"1329","11",NULL,"Aldona","1",NULL
+"1330","11",NULL,"Curchorem Cacora","1",NULL
+"1331","11",NULL,"Madgaon","1",NULL
+"1332","11",NULL,"Mapusa","1",NULL
+"1333","11",NULL,"Margao","1",NULL
+"1334","11",NULL,"Marmagao","1",NULL
+"1335","11",NULL,"Panaji","1",NULL
+"1336","27",NULL,"Karaikal","1",NULL
+"1337","27",NULL,"Mahe","1",NULL
+"1338","27",NULL,"Pondicherry","1",NULL
+"1339","27",NULL,"Yanam","1",NULL
+"1340","16",NULL,"Amlabad","1",NULL
+"1341","16",NULL,"Ara","1",NULL
+"1342","16",NULL,"Barughutu","1",NULL
+"1343","16",NULL,"Bokaro Steel City","1",NULL
+"1344","16",NULL,"Chaibasa","1",NULL
+"1345","16",NULL,"Chakradharpur","1",NULL
+"1346","16",NULL,"Chandrapura","1",NULL
+"1347","16",NULL,"Chatra","1",NULL
+"1348","16",NULL,"Chirkunda","1",NULL
+"1349","16",NULL,"Churi","1",NULL
+"1350","16",NULL,"Daltonganj","1",NULL
+"1351","16",NULL,"Deoghar","1",NULL
+"1352","16",NULL,"Dhanbad","1",NULL
+"1353","16",NULL,"Dumka","1",NULL
+"1354","16",NULL,"Garhwa","1",NULL
+"1355","16",NULL,"Ghatshila","1",NULL
+"1356","16",NULL,"Giridih","1",NULL
+"1357","16",NULL,"Godda","1",NULL
+"1358","16",NULL,"Gomoh","1",NULL
+"1359","16",NULL,"Gumia","1",NULL
+"1360","16",NULL,"Gumla","1",NULL
+"1361","16",NULL,"Hazaribag","1",NULL
+"1362","16",NULL,"Hussainabad","1",NULL
+"1363","16",NULL,"Jamshedpur","1",NULL
+"1364","16",NULL,"Jamtara","1",NULL
+"1365","16",NULL,"Jhumri Tilaiya","1",NULL
+"1366","16",NULL,"Khunti","1",NULL
+"1367","16",NULL,"Lohardaga","1",NULL
+"1368","16",NULL,"Madhupur","1",NULL
+"1369","16",NULL,"Mihijam","1",NULL
+"1370","16",NULL,"Musabani","1",NULL
+"1371","16",NULL,"Pakaur","1",NULL
+"1372","16",NULL,"Patratu","1",NULL
+"1373","16",NULL,"Phusro","1",NULL
+"1374","16",NULL,"Ramngarh","1",NULL
+"1375","16",NULL,"Ranchi","1",NULL
+"1376","16",NULL,"Sahibganj","1",NULL
+"1377","16",NULL,"Saunda","1",NULL
+"1378","16",NULL,"Simdega","1",NULL
+"1379","16",NULL,"Tenu Dam-cum- Kathhara","1",NULL
+"1380","7",NULL,"Ahiwara","1",NULL
+"1381","7",NULL,"Akaltara","1",NULL
+"1382","7",NULL,"Ambagarh Chowki","1",NULL
+"1383","7",NULL,"Ambikapur","1",NULL
+"1384","7",NULL,"Arang","1",NULL
+"1385","7",NULL,"Bade Bacheli","1",NULL
+"1386","7",NULL,"Balod","1",NULL
+"1387","7",NULL,"Baloda Bazar","1",NULL
+"1388","7",NULL,"Bemetra","1",NULL
+"1389","7",NULL,"Bhatapara","1",NULL
+"1390","7",NULL,"Bilaspur","1",NULL
+"1391","7",NULL,"Birgaon","1",NULL
+"1392","7",NULL,"Champa","1",NULL
+"1393","7",NULL,"Chirmiri","1",NULL
+"1394","7",NULL,"Dalli-Rajhara","1",NULL
+"1395","7",NULL,"Dhamtari","1",NULL
+"1396","7",NULL,"Dipka","1",NULL
+"1397","7",NULL,"Dongargarh","1",NULL
+"1398","7",NULL,"Durg-Bhilai Nagar","1",NULL
+"1399","7",NULL,"Gobranawapara","1",NULL
+"1400","7",NULL,"Jagdalpur","1",NULL
+"1401","7",NULL,"Janjgir","1",NULL
+"1402","7",NULL,"Jashpurnagar","1",NULL
+"1403","7",NULL,"Kanker","1",NULL
+"1404","7",NULL,"Kawardha","1",NULL
+"1405","7",NULL,"Kondagaon","1",NULL
+"1406","7",NULL,"Korba","1",NULL
+"1407","7",NULL,"Mahasamund","1",NULL
+"1408","7",NULL,"Mahendragarh","1",NULL
+"1409","7",NULL,"Mungeli","1",NULL
+"1410","7",NULL,"Naila Janjgir","1",NULL
+"1411","7",NULL,"Raigarh","1",NULL
+"1412","7",NULL,"Raipur","1",NULL
+"1413","7",NULL,"Rajnandgaon","1",NULL
+"1414","7",NULL,"Sakti","1",NULL
+"1415","7",NULL,"Tilda Newra","1",NULL
+"1416","33",NULL,"Nainital","1",NULL
+"1417","33",NULL,"Almora","1",NULL
+"1418","33",NULL,"Pitoragarh","1",NULL
+"1419","33",NULL,"Udhamsingh Nagar","1",NULL
+"1420","33",NULL,"Bageshwar","1",NULL
+"1421","33",NULL,"Champawat","1",NULL
+"1422","33",NULL,"Garhwal(Pauri)","1",NULL
+"1423","33",NULL,"Tehri-Garhwal","1",NULL
+"1424","33",NULL,"Chamoli( Gopeshwar )","1",NULL
+"1425","33",NULL,"Uttarkashi","1",NULL
+"1426","33",NULL,"Dehradun","1",NULL
+"1427","33",NULL,"Rudraprayag","1",NULL
+"1428","33",NULL,"Haridwar","1",NULL
+"1429","9",NULL,"Dama","1",NULL
+"1430","9",NULL,"Diu","1",NULL
+"1431","3",NULL,"Andaman","1",NULL
+"1432","3",NULL,"Nicobar","1",NULL
+"1670","241",NULL,"Mazar-e-Sharif","1",NULL
+"1671","242",NULL,"Herat","1",NULL
+"1672","243",NULL,"Kabul","1",NULL
+"1673","244",NULL,"Qandahar","1",NULL
+"1674","245",NULL,"Lobito","1",NULL
+"1675","245",NULL,"Benguela","1",NULL
+"1676","246",NULL,"Huambo","1",NULL
+"1677","247",NULL,"Luanda","1",NULL
+"1678","248",NULL,"Namibe","1",NULL
+"1697","250",NULL,"Tirana","1",NULL
+"1698","251",NULL,"Andorra la Vella","1",NULL
+"1700","253",NULL,"Abu Dhabi","1",NULL
+"1701","253",NULL,"al-Ayn","1",NULL
+"1702","254",NULL,"Ajman","1",NULL
+"1703","255",NULL,"Dubai","1",NULL
+"1704","256",NULL,"Sharja","1",NULL
+"1705","257",NULL,"La Matanza","1",NULL
+"1706","257",NULL,"Lomas de Zamora","1",NULL
+"1707","257",NULL,"Quilmes","1",NULL
+"1708","257",NULL,"Almirante Brown","1",NULL
+"1709","257",NULL,"La Plata","1",NULL
+"1710","257",NULL,"Mar del Plata","1",NULL
+"1712","257",NULL,"Merlo","1",NULL
+"1714","257",NULL,"Moreno","1",NULL
+"1715","257",NULL,"Avellaneda","1",NULL
+"1716","257",NULL,"Tres de Febrero","1",NULL
+"1718","257",NULL,"Florencio Varela","1",NULL
+"1719","257",NULL,"San Isidro","1",NULL
+"1720","257",NULL,"Tigre","1",NULL
+"1721","257",NULL,"Malvinas Argentinas","1",NULL
+"1723","257",NULL,"Berazategui","1",NULL
+"1724","257",NULL,"San Miguel","1",NULL
+"1728","257",NULL,"Hurlingham","1",NULL
+"1730","257",NULL,"San Fernando","1",NULL
+"1732","257",NULL,"Escobar","1",NULL
+"1733","257",NULL,"Pilar","1",NULL
+"1734","257",NULL,"Ezeiza","1",NULL
+"1735","257",NULL,"Tandil","1",NULL
+"1736","258",NULL,"San Fernando del Valle de Cata","1",NULL
+"1740","260",NULL,"Resistencia","1",NULL
+"1741","261",NULL,"Comodoro Rivadavia","1",NULL
+"1742","262",NULL,"Corrientes","1",NULL
+"1743","263",NULL,"Buenos Aires","1",NULL
+"1746","263",NULL,"Caracas","1",NULL
+"1747","263",NULL,"Catia La Mar","1",NULL
+"1749","264",NULL,"Concordia","1",NULL
+"1750","265",NULL,"Formosa","1",NULL
+"1751","266",NULL,"San Salvador de Jujuy","1",NULL
+"1752","267",NULL,"La Rioja","1",NULL
+"1754","268",NULL,"Godoy Cruz","1",NULL
+"1756","268",NULL,"Las Heras","1",NULL
+"1757","268",NULL,"Mendoza","1",NULL
+"1758","268",NULL,"San Rafael","1",NULL
+"1759","269",NULL,"Posadas","1",NULL
+"1761","271",NULL,"Salta","1",NULL
+"1762","272",NULL,"San Juan","1",NULL
+"1763","272",NULL,"San Juan","1",NULL
+"1764","273",NULL,"San Luis","1",NULL
+"1767","275",NULL,"Santiago del Estero","1",NULL
+"1769","277",NULL,"Vanadzor","1",NULL
+"1770","278",NULL,"Yerevan","1",NULL
+"1772","280",NULL,"Tafuna","1",NULL
+"1773","280",NULL,"Fagatogo","1",NULL
+"1775","282",NULL,"Canberra","1",NULL
+"1776","283",NULL,"Sydney","1",NULL
+"1777","283",NULL,"Newcastle","1",NULL
+"1778","283",NULL,"Central Coast","1",NULL
+"1779","283",NULL,"Wollongong","1",NULL
+"1780","284",NULL,"Brisbane","1",NULL
+"1781","284",NULL,"Gold Coast","1",NULL
+"1782","284",NULL,"Townsville","1",NULL
+"1783","284",NULL,"Cairns","1",NULL
+"1784","285",NULL,"Adelaide","1",NULL
+"1785","286",NULL,"Hobart","1",NULL
+"1786","287",NULL,"Melbourne","1",NULL
+"1787","287",NULL,"Geelong","1",NULL
+"1788","288",NULL,"Perth","1",NULL
+"1790","290",NULL,"Linz","1",NULL
+"1791","291",NULL,"Salzburg","1",NULL
+"1792","292",NULL,"Graz","1",NULL
+"1793","293",NULL,"Innsbruck","1",NULL
+"1794","294",NULL,"Wien","1",NULL
+"1795","295",NULL,"Baku","1",NULL
+"1798","298",NULL,"Sumqayit","1",NULL
+"1799","299",NULL,"Bujumbura","1",NULL
+"1800","300",NULL,"Antwerpen","1",NULL
+"1802","301",NULL,"Schaerbeek","1",NULL
+"1803","302",NULL,"Gent","1",NULL
+"1804","303",NULL,"Charleroi","1",NULL
+"1805","303",NULL,"Mons","1",NULL
+"1807","305",NULL,"Namur","1",NULL
+"1808","306",NULL,"Brugge","1",NULL
+"1809","307",NULL,"Djougou","1",NULL
+"1810","308",NULL,"Cotonou","1",NULL
+"1811","309",NULL,"Parakou","1",NULL
+"1814","312",NULL,"Bobo-Dioulasso","1",NULL
+"1815","313",NULL,"Ouagadougou","1",NULL
+"1816","314",NULL,"Barisal","1",NULL
+"1817","315",NULL,"Chittagong","1",NULL
+"1818","315",NULL,"Comilla","1",NULL
+"1819","315",NULL,"Brahmanbaria","1",NULL
+"1820","316",NULL,"Dhaka","1",NULL
+"1821","316",NULL,"Narayanganj","1",NULL
+"1822","316",NULL,"Mymensingh","1",NULL
+"1823","316",NULL,"Tungi","1",NULL
+"1824","316",NULL,"Tangail","1",NULL
+"1825","316",NULL,"Jamalpur","1",NULL
+"1826","316",NULL,"Narsinghdi","1",NULL
+"1827","316",NULL,"Gazipur","1",NULL
+"1828","317",NULL,"Khulna","1",NULL
+"1829","317",NULL,"Jessore","1",NULL
+"1830","318",NULL,"Rajshahi","1",NULL
+"1831","318",NULL,"Rangpur","1",NULL
+"1832","318",NULL,"Nawabganj","1",NULL
+"1833","318",NULL,"Dinajpur","1",NULL
+"1834","318",NULL,"Bogra","1",NULL
+"1835","318",NULL,"Pabna","1",NULL
+"1836","318",NULL,"Naogaon","1",NULL
+"1837","318",NULL,"Sirajganj","1",NULL
+"1838","318",NULL,"Saidpur","1",NULL
+"1839","319",NULL,"Sylhet","1",NULL
+"1840","320",NULL,"Burgas","1",NULL
+"1841","320",NULL,"Sliven","1",NULL
+"1842","321",NULL,"Sofija","1",NULL
+"1843","322",NULL,"Stara Zagora","1",NULL
+"1844","323",NULL,"Pleven","1",NULL
+"1845","324",NULL,"Plovdiv","1",NULL
+"1846","325",NULL,"Ruse","1",NULL
+"1847","326",NULL,"Varna","1",NULL
+"1848","326",NULL,"Dobric","1",NULL
+"1850","327",NULL,"al-Manama","1",NULL
+"1851","328",NULL,"Nassau","1",NULL
+"1852","329",NULL,"Sarajevo","1",NULL
+"1853","329",NULL,"Zenica","1",NULL
+"1854","330",NULL,"Banja Luka","1",NULL
+"1855","331",NULL,"Brest","1",NULL
+"1857","331",NULL,"Pinsk","1",NULL
+"1858","332",NULL,"Gomel","1",NULL
+"1859","332",NULL,"Mozyr","1",NULL
+"1860","333",NULL,"Grodno","1",NULL
+"1861","333",NULL,"Lida","1",NULL
+"1862","334",NULL,"Minsk","1",NULL
+"1863","335",NULL,"Borisov","1",NULL
+"1864","335",NULL,"Soligorsk","1",NULL
+"1866","336",NULL,"Mogiljov","1",NULL
+"1867","336",NULL,"Bobruisk","1",NULL
+"1868","337",NULL,"Vitebsk","1",NULL
+"1870","337",NULL,"Novopolotsk","1",NULL
+"1871","338",NULL,"Belize City","1",NULL
+"1872","339",NULL,"Belmopan","1",NULL
+"1873","340",NULL,"Hamilton","1",NULL
+"1874","340",NULL,"Hamilton","1",NULL
+"1876","342",NULL,"Sucre","1",NULL
+"1877","343",NULL,"Cochabamba","1",NULL
+"1878","344",NULL,"La Paz","1",NULL
+"1879","344",NULL,"El Alto","1",NULL
+"1880","345",NULL,"Oruro","1",NULL
+"1882","347",NULL,"Santa Cruz de la Sierra","1",NULL
+"1883","348",NULL,"Tarija","1",NULL
+"1884","349",NULL,"Rio Branco","1",NULL
+"1886","350",NULL,"Arapiraca","1",NULL
+"1888","352",NULL,"Manaus","1",NULL
+"1889","353",NULL,"Salvador","1",NULL
+"1890","353",NULL,"Feira de Santana","1",NULL
+"1893","353",NULL,"Juazeiro","1",NULL
+"1894","353",NULL,"Itabuna","1",NULL
+"1897","353",NULL,"Barreiras","1",NULL
+"1898","353",NULL,"Alagoinhas","1",NULL
+"1899","353",NULL,"Lauro de Freitas","1",NULL
+"1900","353",NULL,"Teixeira de Freitas","1",NULL
+"1901","353",NULL,"Paulo Afonso","1",NULL
+"1903","353",NULL,"Jacobina","1",NULL
+"1910","355",NULL,"Buenos Aires","1",NULL
+"1913","355",NULL,"Caracas","1",NULL
+"1914","355",NULL,"Catia La Mar","1",NULL
+"1938","360",NULL,"Campo Grande","1",NULL
+"1939","360",NULL,"Dourados","1",NULL
+"1941","361",NULL,"Belo Horizonte","1",NULL
+"1942","361",NULL,"Contagem","1",NULL
+"1944","361",NULL,"Juiz de Fora","1",NULL
+"1945","361",NULL,"Betim","1",NULL
+"1946","361",NULL,"Montes Claros","1",NULL
+"1947","361",NULL,"Uberaba","1",NULL
+"1949","361",NULL,"Governador Valadares","1",NULL
+"1950","361",NULL,"Ipatinga","1",NULL
+"1952","361",NULL,"Sete Lagoas","1",NULL
+"1953","361",NULL,"Santa Luzia","1",NULL
+"1957","361",NULL,"Patos de Minas","1",NULL
+"1958","361",NULL,"Barbacena","1",NULL
+"1959","361",NULL,"Varginha","1",NULL
+"1961","361",NULL,"Itabira","1",NULL
+"1962","361",NULL,"Pouso Alegre","1",NULL
+"1963","361",NULL,"Passos","1",NULL
+"1964","361",NULL,"Araguari","1",NULL
+"1965","361",NULL,"Conselheiro Lafaiete","1",NULL
+"1966","361",NULL,"Coronel Fabriciano","1",NULL
+"1967","361",NULL,"Ituiutaba","1",NULL
+"1994","365",NULL,"Recife","1",NULL
+"1996","365",NULL,"Olinda","1",NULL
+"1997","365",NULL,"Paulista","1",NULL
+"1998","365",NULL,"Caruaru","1",NULL
+"1999","365",NULL,"Petrolina","1",NULL
+"2000","365",NULL,"Cabo de Santo Agostinho","1",NULL
+"2001","365",NULL,"Camaragibe","1",NULL
+"2002","365",NULL,"Garanhuns","1",NULL
+"2007","367",NULL,"Rio de Janeiro","1",NULL
+"2010","367",NULL,"Duque de Caxias","1",NULL
+"2013","367",NULL,"Belford Roxo","1",NULL
+"2014","367",NULL,"Campos dos Goytacazes","1",NULL
+"2016","367",NULL,"Volta Redonda","1",NULL
+"2019","367",NULL,"Nova Friburgo","1",NULL
+"2020","367",NULL,"Barra Mansa","1",NULL
+"2024","367",NULL,"Cabo Frio","1",NULL
+"2025","367",NULL,"Queimados","1",NULL
+"2026","367",NULL,"Resende","1",NULL
+"2027","367",NULL,"Angra dos Reis","1",NULL
+"2029","368",NULL,"Natal","1",NULL
+"2031","368",NULL,"Parnamirim","1",NULL
+"2032","369",NULL,"Porto Alegre","1",NULL
+"2033","369",NULL,"Caxias do Sul","1",NULL
+"2034","369",NULL,"Pelotas","1",NULL
+"2035","369",NULL,"Canoas","1",NULL
+"2036","369",NULL,"Novo Hamburgo","1",NULL
+"2037","369",NULL,"Santa Maria","1",NULL
+"2041","369",NULL,"Rio Grande","1",NULL
+"2042","369",NULL,"Alvorada","1",NULL
+"2043","369",NULL,"Passo Fundo","1",NULL
+"2044","369",NULL,"Uruguaiana","1",NULL
+"2046","369",NULL,"Sapucaia do Sul","1",NULL
+"2047","369",NULL,"Santa Cruz do Sul","1",NULL
+"2048","369",NULL,"Cachoeirinha","1",NULL
+"2050","369",NULL,"Santana do Livramento","1",NULL
+"2054","371",NULL,"Boa Vista","1",NULL
+"2055","372",NULL,"Joinville","1",NULL
+"2057","372",NULL,"Blumenau","1",NULL
+"2062","372",NULL,"Lages","1",NULL
+"2066","373",NULL,"Guarulhos","1",NULL
+"2067","373",NULL,"Campinas","1",NULL
+"2069","373",NULL,"Osasco","1",NULL
+"2073","373",NULL,"Sorocaba","1",NULL
+"2074","373",NULL,"Santos","1",NULL
+"2078","373",NULL,"Moji das Cruzes","1",NULL
+"2079","373",NULL,"Diadema","1",NULL
+"2080","373",NULL,"Piracicaba","1",NULL
+"2081","373",NULL,"Bauru","1",NULL
+"2083","373",NULL,"Franca","1",NULL
+"2085","373",NULL,"Itaquaquecetuba","1",NULL
+"2086","373",NULL,"Limeira","1",NULL
+"2089","373",NULL,"Embu","1",NULL
+"2090","373",NULL,"Barueri","1",NULL
+"2092","373",NULL,"Suzano","1",NULL
+"2096","373",NULL,"Presidente Prudente","1",NULL
+"2097","373",NULL,"Americana","1",NULL
+"2098","373",NULL,"Araraquara","1",NULL
+"2102","373",NULL,"Praia Grande","1",NULL
+"2103","373",NULL,"Rio Claro","1",NULL
+"2104","373",NULL,"Itapevi","1",NULL
+"2105","373",NULL,"Cotia","1",NULL
+"2106","373",NULL,"Ferraz de Vasconcelos","1",NULL
+"2107","373",NULL,"Indaiatuba","1",NULL
+"2110","373",NULL,"Itu","1",NULL
+"2111","373",NULL,"Itapecerica da Serra","1",NULL
+"2113","373",NULL,"Pindamonhangaba","1",NULL
+"2114","373",NULL,"Francisco Morato","1",NULL
+"2115","373",NULL,"Itapetininga","1",NULL
+"2118","373",NULL,"Franco da Rocha","1",NULL
+"2120","373",NULL,"Catanduva","1",NULL
+"2121","373",NULL,"Botucatu","1",NULL
+"2122","373",NULL,"Barretos","1",NULL
+"2125","373",NULL,"Araras","1",NULL
+"2126","373",NULL,"Atibaia","1",NULL
+"2128","373",NULL,"Salto","1",NULL
+"2129","373",NULL,"Ourinhos","1",NULL
+"2130","373",NULL,"Birigui","1",NULL
+"2132","373",NULL,"Votorantim","1",NULL
+"2134","374",NULL,"Aracaju","1",NULL
+"2135","374",NULL,"Nossa Senhora do Socorro","1",NULL
+"2136","375",NULL,"Palmas","1",NULL
+"2138","376",NULL,"Bridgetown","1",NULL
+"2139","377",NULL,"Bandar Seri Begawan","1",NULL
+"2140","378",NULL,"Thimphu","1",NULL
+"2141","379",NULL,"Francistown","1",NULL
+"2142","380",NULL,"Gaborone","1",NULL
+"2143","381",NULL,"Bangui","1",NULL
+"2144","382",NULL,"Calgary","1",NULL
+"2145","382",NULL,"Edmonton","1",NULL
+"2146","383",NULL,"Vancouver","1",NULL
+"2147","383",NULL,"Surrey","1",NULL
+"2148","383",NULL,"Burnaby","1",NULL
+"2149","383",NULL,"Richmond","1",NULL
+"2150","383",NULL,"Abbotsford","1",NULL
+"2151","383",NULL,"Coquitlam","1",NULL
+"2152","383",NULL,"Saanich","1",NULL
+"2153","383",NULL,"Delta","1",NULL
+"2154","383",NULL,"Kelowna","1",NULL
+"2155","384",NULL,"Winnipeg","1",NULL
+"2157","386",NULL,"Cape Breton","1",NULL
+"2158","386",NULL,"Halifax","1",NULL
+"2159","387",NULL,"Toronto","1",NULL
+"2160","387",NULL,"North York","1",NULL
+"2161","387",NULL,"Mississauga","1",NULL
+"2162","387",NULL,"Scarborough","1",NULL
+"2163","387",NULL,"Etobicoke","1",NULL
+"2164","387",NULL,"London","1",NULL
+"2165","387",NULL,"Hamilton","1",NULL
+"2166","387",NULL,"Ottawa","1",NULL
+"2167","387",NULL,"Brampton","1",NULL
+"2168","387",NULL,"Windsor","1",NULL
+"2169","387",NULL,"Kitchener","1",NULL
+"2170","387",NULL,"Markham","1",NULL
+"2171","387",NULL,"York","1",NULL
+"2172","387",NULL,"Vaughan","1",NULL
+"2173","387",NULL,"Burlington","1",NULL
+"2174","387",NULL,"Oshawa","1",NULL
+"2175","387",NULL,"Oakville","1",NULL
+"2176","387",NULL,"Saint Catharines","1",NULL
+"2177","387",NULL,"Richmond Hill","1",NULL
+"2178","387",NULL,"Thunder Bay","1",NULL
+"2179","387",NULL,"Nepean","1",NULL
+"2180","387",NULL,"East York","1",NULL
+"2181","387",NULL,"Cambridge","1",NULL
+"2182","387",NULL,"Gloucester","1",NULL
+"2183","387",NULL,"Guelph","1",NULL
+"2184","387",NULL,"Sudbury","1",NULL
+"2185","387",NULL,"Barrie","1",NULL
+"2187","388",NULL,"Laval","1",NULL
+"2189","388",NULL,"Longueuil","1",NULL
+"2190","388",NULL,"Gatineau","1",NULL
+"2191","389",NULL,"Saskatoon","1",NULL
+"2192","389",NULL,"Regina","1",NULL
+"2194","391",NULL,"West Island","1",NULL
+"2195","392",NULL,"Basel","1",NULL
+"2196","393",NULL,"Bern","1",NULL
+"2197","394",NULL,"Geneve","1",NULL
+"2198","395",NULL,"Lausanne","1",NULL
+"2200","397",NULL,"Antofagasta","1",NULL
+"2201","397",NULL,"Calama","1",NULL
+"2209","400",NULL,"Coquimbo","1",NULL
+"2210","400",NULL,"La Serena","1",NULL
+"2211","400",NULL,"Ovalle","1",NULL
+"2213","402",NULL,"Puerto Montt","1",NULL
+"2214","402",NULL,"Osorno","1",NULL
+"2215","402",NULL,"Valdivia","1",NULL
+"2216","403",NULL,"Punta Arenas","1",NULL
+"2217","404",NULL,"Talca","1",NULL
+"2220","406",NULL,"Santiago de Chile","1",NULL
+"2221","406",NULL,"Puente Alto","1",NULL
+"2222","406",NULL,"San Bernardo","1",NULL
+"2223","406",NULL,"Melipilla","1",NULL
+"2224","406",NULL,"Santiago de los Caballeros","1",NULL
+"2230","409",NULL,"Hefei","1",NULL
+"2231","409",NULL,"Huainan","1",NULL
+"2232","409",NULL,"Bengbu","1",NULL
+"2233","409",NULL,"Wuhu","1",NULL
+"2234","409",NULL,"Huaibei","1",NULL
+"2236","409",NULL,"Anqing","1",NULL
+"2237","409",NULL,"Tongling","1",NULL
+"2238","409",NULL,"Fuyang","1",NULL
+"2239","409",NULL,"Suzhou","1",NULL
+"2241","409",NULL,"Chuzhou","1",NULL
+"2242","409",NULL,"Chaohu","1",NULL
+"2243","409",NULL,"Xuangzhou","1",NULL
+"2244","409",NULL,"Bozhou","1",NULL
+"2245","409",NULL,"Huangshan","1",NULL
+"2246","410",NULL,"Chongqing","1",NULL
+"2247","411",NULL,"Fuzhou","1",NULL
+"2249","411",NULL,"Nanping","1",NULL
+"2250","411",NULL,"Quanzhou","1",NULL
+"2251","411",NULL,"Zhangzhou","1",NULL
+"2252","411",NULL,"Sanming","1",NULL
+"2253","411",NULL,"Longyan","1",NULL
+"2256","411",NULL,"Fuqing","1",NULL
+"2257","411",NULL,"Putian","1",NULL
+"2258","411",NULL,"Shaowu","1",NULL
+"2259","412",NULL,"Lanzhou","1",NULL
+"2260","412",NULL,"Tianshui","1",NULL
+"2261","412",NULL,"Baiyin","1",NULL
+"2262","412",NULL,"Wuwei","1",NULL
+"2263","412",NULL,"Yumen","1",NULL
+"2264","412",NULL,"Jinchang","1",NULL
+"2265","412",NULL,"Pingliang","1",NULL
+"2267","413",NULL,"Shenzhen","1",NULL
+"2268","413",NULL,"Shantou","1",NULL
+"2269","413",NULL,"Zhangjiang","1",NULL
+"2270","413",NULL,"Shaoguan","1",NULL
+"2271","413",NULL,"Chaozhou","1",NULL
+"2272","413",NULL,"Dongwan","1",NULL
+"2273","413",NULL,"Foshan","1",NULL
+"2274","413",NULL,"Zhongshan","1",NULL
+"2275","413",NULL,"Jiangmen","1",NULL
+"2276","413",NULL,"Yangjiang","1",NULL
+"2277","413",NULL,"Zhaoqing","1",NULL
+"2278","413",NULL,"Maoming","1",NULL
+"2279","413",NULL,"Zhuhai","1",NULL
+"2280","413",NULL,"Qingyuan","1",NULL
+"2281","413",NULL,"Huizhou","1",NULL
+"2282","413",NULL,"Meixian","1",NULL
+"2283","413",NULL,"Heyuan","1",NULL
+"2284","413",NULL,"Shanwei","1",NULL
+"2285","413",NULL,"Jieyang","1",NULL
+"2286","414",NULL,"Nanning","1",NULL
+"2287","414",NULL,"Liuzhou","1",NULL
+"2288","414",NULL,"Guilin","1",NULL
+"2289","414",NULL,"Wuzhou","1",NULL
+"2290","414",NULL,"Yulin","1",NULL
+"2291","414",NULL,"Qinzhou","1",NULL
+"2292","414",NULL,"Guigang","1",NULL
+"2293","414",NULL,"Beihai","1",NULL
+"2294","414",NULL,"Bose","1",NULL
+"2295","415",NULL,"Guiyang","1",NULL
+"2296","415",NULL,"Liupanshui","1",NULL
+"2297","415",NULL,"Zunyi","1",NULL
+"2298","415",NULL,"Anshun","1",NULL
+"2299","415",NULL,"Duyun","1",NULL
+"2300","415",NULL,"Kaili","1",NULL
+"2301","416",NULL,"Haikou","1",NULL
+"2302","416",NULL,"Sanya","1",NULL
+"2303","417",NULL,"Shijiazhuang","1",NULL
+"2304","417",NULL,"Tangshan","1",NULL
+"2305","417",NULL,"Handan","1",NULL
+"2306","417",NULL,"Zhangjiakou","1",NULL
+"2307","417",NULL,"Baoding","1",NULL
+"2308","417",NULL,"Qinhuangdao","1",NULL
+"2309","417",NULL,"Xingtai","1",NULL
+"2310","417",NULL,"Chengde","1",NULL
+"2311","417",NULL,"Cangzhou","1",NULL
+"2312","417",NULL,"Langfang","1",NULL
+"2313","417",NULL,"Renqiu","1",NULL
+"2314","417",NULL,"Hengshui","1",NULL
+"2315","418",NULL,"Harbin","1",NULL
+"2316","418",NULL,"Qiqihar","1",NULL
+"2317","418",NULL,"Yichun","1",NULL
+"2318","418",NULL,"Jixi","1",NULL
+"2319","418",NULL,"Daqing","1",NULL
+"2320","418",NULL,"Mudanjiang","1",NULL
+"2321","418",NULL,"Hegang","1",NULL
+"2322","418",NULL,"Jiamusi","1",NULL
+"2323","418",NULL,"Shuangyashan","1",NULL
+"2324","418",NULL,"Tieli","1",NULL
+"2325","418",NULL,"Suihua","1",NULL
+"2326","418",NULL,"Shangzi","1",NULL
+"2327","418",NULL,"Qitaihe","1",NULL
+"2329","418",NULL,"Acheng","1",NULL
+"2330","418",NULL,"Zhaodong","1",NULL
+"2331","418",NULL,"Shuangcheng","1",NULL
+"2332","418",NULL,"Anda","1",NULL
+"2333","418",NULL,"Hailun","1",NULL
+"2334","418",NULL,"Mishan","1",NULL
+"2335","418",NULL,"Fujin","1",NULL
+"2336","419",NULL,"Zhengzhou","1",NULL
+"2337","419",NULL,"Luoyang","1",NULL
+"2338","419",NULL,"Kaifeng","1",NULL
+"2339","419",NULL,"Xinxiang","1",NULL
+"2340","419",NULL,"Anyang","1",NULL
+"2341","419",NULL,"Pingdingshan","1",NULL
+"2342","419",NULL,"Jiaozuo","1",NULL
+"2343","419",NULL,"Nanyang","1",NULL
+"2344","419",NULL,"Hebi","1",NULL
+"2345","419",NULL,"Xuchang","1",NULL
+"2346","419",NULL,"Xinyang","1",NULL
+"2347","419",NULL,"Puyang","1",NULL
+"2348","419",NULL,"Shangqiu","1",NULL
+"2349","419",NULL,"Zhoukou","1",NULL
+"2350","419",NULL,"Luohe","1",NULL
+"2351","419",NULL,"Zhumadian","1",NULL
+"2352","419",NULL,"Sanmenxia","1",NULL
+"2353","419",NULL,"Yuzhou","1",NULL
+"2354","420",NULL,"Wuhan","1",NULL
+"2355","420",NULL,"Huangshi","1",NULL
+"2356","420",NULL,"Xiangfan","1",NULL
+"2357","420",NULL,"Yichang","1",NULL
+"2358","420",NULL,"Shashi","1",NULL
+"2359","420",NULL,"Shiyan","1",NULL
+"2360","420",NULL,"Xiantao","1",NULL
+"2361","420",NULL,"Qianjiang","1",NULL
+"2362","420",NULL,"Honghu","1",NULL
+"2363","420",NULL,"Ezhou","1",NULL
+"2364","420",NULL,"Tianmen","1",NULL
+"2365","420",NULL,"Xiaogan","1",NULL
+"2366","420",NULL,"Zaoyang","1",NULL
+"2367","420",NULL,"Jinmen","1",NULL
+"2368","420",NULL,"Suizhou","1",NULL
+"2369","420",NULL,"Xianning","1",NULL
+"2370","420",NULL,"Laohekou","1",NULL
+"2371","420",NULL,"Puqi","1",NULL
+"2372","420",NULL,"Shishou","1",NULL
+"2373","420",NULL,"Danjiangkou","1",NULL
+"2374","420",NULL,"Guangshui","1",NULL
+"2375","420",NULL,"Enshi","1",NULL
+"2376","421",NULL,"Changsha","1",NULL
+"2377","421",NULL,"Hengyang","1",NULL
+"2378","421",NULL,"Xiangtan","1",NULL
+"2379","421",NULL,"Zhuzhou","1",NULL
+"2380","421",NULL,"Yueyang","1",NULL
+"2381","421",NULL,"Changde","1",NULL
+"2382","421",NULL,"Shaoyang","1",NULL
+"2383","421",NULL,"Yiyang","1",NULL
+"2384","421",NULL,"Chenzhou","1",NULL
+"2385","421",NULL,"Lengshuijiang","1",NULL
+"2386","421",NULL,"Leiyang","1",NULL
+"2387","421",NULL,"Loudi","1",NULL
+"2388","421",NULL,"Huaihua","1",NULL
+"2389","421",NULL,"Lianyuan","1",NULL
+"2390","421",NULL,"Hongjiang","1",NULL
+"2391","421",NULL,"Zixing","1",NULL
+"2392","421",NULL,"Liling","1",NULL
+"2393","421",NULL,"Yuanjiang","1",NULL
+"2394","422",NULL,"Baotou","1",NULL
+"2395","422",NULL,"Hohhot","1",NULL
+"2396","422",NULL,"Yakeshi","1",NULL
+"2397","422",NULL,"Chifeng","1",NULL
+"2398","422",NULL,"Wuhai","1",NULL
+"2399","422",NULL,"Tongliao","1",NULL
+"2400","422",NULL,"Hailar","1",NULL
+"2401","422",NULL,"Jining","1",NULL
+"2402","422",NULL,"Ulanhot","1",NULL
+"2403","422",NULL,"Linhe","1",NULL
+"2404","422",NULL,"Zalantun","1",NULL
+"2405","422",NULL,"Manzhouli","1",NULL
+"2406","422",NULL,"Xilin Hot","1",NULL
+"2408","423",NULL,"Wuxi","1",NULL
+"2409","423",NULL,"Xuzhou","1",NULL
+"2410","423",NULL,"Suzhou","1",NULL
+"2411","423",NULL,"Changzhou","1",NULL
+"2412","423",NULL,"Zhenjiang","1",NULL
+"2413","423",NULL,"Lianyungang","1",NULL
+"2414","423",NULL,"Nantong","1",NULL
+"2415","423",NULL,"Yangzhou","1",NULL
+"2416","423",NULL,"Yancheng","1",NULL
+"2417","423",NULL,"Huaiyin","1",NULL
+"2418","423",NULL,"Jiangyin","1",NULL
+"2419","423",NULL,"Yixing","1",NULL
+"2420","423",NULL,"Dongtai","1",NULL
+"2421","423",NULL,"Changshu","1",NULL
+"2422","423",NULL,"Danyang","1",NULL
+"2423","423",NULL,"Xinghua","1",NULL
+"2424","423",NULL,"Taizhou","1",NULL
+"2426","423",NULL,"Qidong","1",NULL
+"2427","423",NULL,"Liyang","1",NULL
+"2428","423",NULL,"Yizheng","1",NULL
+"2429","423",NULL,"Suqian","1",NULL
+"2430","423",NULL,"Kunshan","1",NULL
+"2431","423",NULL,"Zhangjiagang","1",NULL
+"2432","424",NULL,"Nanchang","1",NULL
+"2433","424",NULL,"Pingxiang","1",NULL
+"2434","424",NULL,"Jiujiang","1",NULL
+"2435","424",NULL,"Jingdezhen","1",NULL
+"2436","424",NULL,"Ganzhou","1",NULL
+"2437","424",NULL,"Fengcheng","1",NULL
+"2438","424",NULL,"Xinyu","1",NULL
+"2439","424",NULL,"Yichun","1",NULL
+"2441","424",NULL,"Shangrao","1",NULL
+"2442","424",NULL,"Linchuan","1",NULL
+"2443","425",NULL,"Changchun","1",NULL
+"2444","425",NULL,"Jilin","1",NULL
+"2445","425",NULL,"Hunjiang","1",NULL
+"2446","425",NULL,"Liaoyuan","1",NULL
+"2447","425",NULL,"Tonghua","1",NULL
+"2448","425",NULL,"Siping","1",NULL
+"2449","425",NULL,"Dunhua","1",NULL
+"2450","425",NULL,"Yanji","1",NULL
+"2451","425",NULL,"Gongziling","1",NULL
+"2452","425",NULL,"Baicheng","1",NULL
+"2453","425",NULL,"Meihekou","1",NULL
+"2454","425",NULL,"Fuyu","1",NULL
+"2455","425",NULL,"Jiutai","1",NULL
+"2456","425",NULL,"Jiaohe","1",NULL
+"2457","425",NULL,"Huadian","1",NULL
+"2458","425",NULL,"Taonan","1",NULL
+"2459","425",NULL,"Longjing","1",NULL
+"2461","425",NULL,"Yushu","1",NULL
+"2462","425",NULL,"Tumen","1",NULL
+"2463","426",NULL,"Shenyang","1",NULL
+"2464","426",NULL,"Dalian","1",NULL
+"2465","426",NULL,"Anshan","1",NULL
+"2466","426",NULL,"Fushun","1",NULL
+"2467","426",NULL,"Benxi","1",NULL
+"2468","426",NULL,"Fuxin","1",NULL
+"2469","426",NULL,"Jinzhou","1",NULL
+"2470","426",NULL,"Dandong","1",NULL
+"2471","426",NULL,"Liaoyang","1",NULL
+"2472","426",NULL,"Yingkou","1",NULL
+"2473","426",NULL,"Panjin","1",NULL
+"2474","426",NULL,"Jinxi","1",NULL
+"2475","426",NULL,"Tieling","1",NULL
+"2476","426",NULL,"Wafangdian","1",NULL
+"2477","426",NULL,"Chaoyang","1",NULL
+"2478","426",NULL,"Haicheng","1",NULL
+"2479","426",NULL,"Beipiao","1",NULL
+"2480","426",NULL,"Tiefa","1",NULL
+"2481","426",NULL,"Kaiyuan","1",NULL
+"2482","426",NULL,"Xingcheng","1",NULL
+"2483","426",NULL,"Jinzhou","1",NULL
+"2484","427",NULL,"Yinchuan","1",NULL
+"2485","427",NULL,"Shizuishan","1",NULL
+"2486","428",NULL,"Peking","1",NULL
+"2487","428",NULL,"Tong Xian","1",NULL
+"2488","429",NULL,"Xining","1",NULL
+"2490","430",NULL,"Xianyang","1",NULL
+"2491","430",NULL,"Baoji","1",NULL
+"2492","430",NULL,"Tongchuan","1",NULL
+"2493","430",NULL,"Hanzhong","1",NULL
+"2494","430",NULL,"Ankang","1",NULL
+"2495","430",NULL,"Weinan","1",NULL
+"2497","431",NULL,"Qingdao","1",NULL
+"2498","431",NULL,"Jinan","1",NULL
+"2499","431",NULL,"Zibo","1",NULL
+"2500","431",NULL,"Yantai","1",NULL
+"2501","431",NULL,"Weifang","1",NULL
+"2502","431",NULL,"Zaozhuang","1",NULL
+"2504","431",NULL,"Linyi","1",NULL
+"2505","431",NULL,"Tengzhou","1",NULL
+"2506","431",NULL,"Dongying","1",NULL
+"2507","431",NULL,"Xintai","1",NULL
+"2508","431",NULL,"Jining","1",NULL
+"2509","431",NULL,"Laiwu","1",NULL
+"2510","431",NULL,"Liaocheng","1",NULL
+"2511","431",NULL,"Laizhou","1",NULL
+"2512","431",NULL,"Dezhou","1",NULL
+"2513","431",NULL,"Heze","1",NULL
+"2514","431",NULL,"Rizhao","1",NULL
+"2515","431",NULL,"Liangcheng","1",NULL
+"2516","431",NULL,"Jiaozhou","1",NULL
+"2517","431",NULL,"Pingdu","1",NULL
+"2518","431",NULL,"Longkou","1",NULL
+"2519","431",NULL,"Laiyang","1",NULL
+"2520","431",NULL,"Wendeng","1",NULL
+"2521","431",NULL,"Binzhou","1",NULL
+"2522","431",NULL,"Weihai","1",NULL
+"2523","431",NULL,"Qingzhou","1",NULL
+"2524","431",NULL,"Linqing","1",NULL
+"2525","431",NULL,"Jiaonan","1",NULL
+"2526","431",NULL,"Zhucheng","1",NULL
+"2527","431",NULL,"Junan","1",NULL
+"2528","431",NULL,"Pingyi","1",NULL
+"2529","432",NULL,"Shanghai","1",NULL
+"2530","433",NULL,"Taiyuan","1",NULL
+"2531","433",NULL,"Datong","1",NULL
+"2532","433",NULL,"Yangquan","1",NULL
+"2533","433",NULL,"Changzhi","1",NULL
+"2534","433",NULL,"Yuci","1",NULL
+"2535","433",NULL,"Linfen","1",NULL
+"2536","433",NULL,"Jincheng","1",NULL
+"2537","433",NULL,"Yuncheng","1",NULL
+"2538","433",NULL,"Xinzhou","1",NULL
+"2539","434",NULL,"Chengdu","1",NULL
+"2540","434",NULL,"Panzhihua","1",NULL
+"2541","434",NULL,"Zigong","1",NULL
+"2542","434",NULL,"Leshan","1",NULL
+"2543","434",NULL,"Mianyang","1",NULL
+"2544","434",NULL,"Luzhou","1",NULL
+"2545","434",NULL,"Neijiang","1",NULL
+"2546","434",NULL,"Yibin","1",NULL
+"2547","434",NULL,"Daxian","1",NULL
+"2548","434",NULL,"Deyang","1",NULL
+"2549","434",NULL,"Guangyuan","1",NULL
+"2550","434",NULL,"Nanchong","1",NULL
+"2551","434",NULL,"Jiangyou","1",NULL
+"2552","434",NULL,"Fuling","1",NULL
+"2553","434",NULL,"Wanxian","1",NULL
+"2554","434",NULL,"Suining","1",NULL
+"2555","434",NULL,"Xichang","1",NULL
+"2556","434",NULL,"Dujiangyan","1",NULL
+"2558","434",NULL,"Emeishan","1",NULL
+"2559","434",NULL,"Huaying","1",NULL
+"2560","435",NULL,"Tianjin","1",NULL
+"2561","436",NULL,"Lhasa","1",NULL
+"2563","437",NULL,"Shihezi","1",NULL
+"2564","437",NULL,"Qaramay","1",NULL
+"2565","437",NULL,"Ghulja","1",NULL
+"2566","437",NULL,"Qashqar","1",NULL
+"2567","437",NULL,"Aqsu","1",NULL
+"2568","437",NULL,"Hami","1",NULL
+"2569","437",NULL,"Korla","1",NULL
+"2570","437",NULL,"Changji","1",NULL
+"2571","437",NULL,"Kuytun","1",NULL
+"2572","438",NULL,"Kunming","1",NULL
+"2573","438",NULL,"Gejiu","1",NULL
+"2574","438",NULL,"Qujing","1",NULL
+"2575","438",NULL,"Dali","1",NULL
+"2576","438",NULL,"Kaiyuan","1",NULL
+"2577","439",NULL,"Hangzhou","1",NULL
+"2578","439",NULL,"Ningbo","1",NULL
+"2579","439",NULL,"Wenzhou","1",NULL
+"2580","439",NULL,"Huzhou","1",NULL
+"2581","439",NULL,"Jiaxing","1",NULL
+"2582","439",NULL,"Shaoxing","1",NULL
+"2583","439",NULL,"Xiaoshan","1",NULL
+"2585","439",NULL,"Zhoushan","1",NULL
+"2586","439",NULL,"Jinhua","1",NULL
+"2587","439",NULL,"Yuyao","1",NULL
+"2588","439",NULL,"Quzhou","1",NULL
+"2589","439",NULL,"Cixi","1",NULL
+"2590","439",NULL,"Haining","1",NULL
+"2591","439",NULL,"Linhai","1",NULL
+"2592","439",NULL,"Huangyan","1",NULL
+"2599","445",NULL,"Tours","1",NULL
+"2602","447",NULL,"Douala","1",NULL
+"2603","447",NULL,"Nkongsamba","1",NULL
+"2605","448",NULL,"Garoua","1",NULL
+"2606","449",NULL,"Bamenda","1",NULL
+"2607","450",NULL,"Port-au-Prince","1",NULL
+"2608","450",NULL,"Carrefour","1",NULL
+"2609","450",NULL,"Delmas","1",NULL
+"2610","450",NULL,"Bafoussam","1",NULL
+"2629","461",NULL,"Brazzaville","1",NULL
+"2630","462",NULL,"Pointe-Noire","1",NULL
+"2631","463",NULL,"Avarua","1",NULL
+"2633","464",NULL,"Bello","1",NULL
+"2635","464",NULL,"Envigado","1",NULL
+"2643","468",NULL,"Manizales","1",NULL
+"2649","472",NULL,"Valledupar","1",NULL
+"2650","473",NULL,"Soacha","1",NULL
+"2651","473",NULL,"Girardot","1",NULL
+"2652","474",NULL,"Neiva","1",NULL
+"2653","475",NULL,"Maicao","1",NULL
+"2654","476",NULL,"Santa Marta","1",NULL
+"2655","477",NULL,"Villavicencio","1",NULL
+"2659","481",NULL,"Pereira","1",NULL
+"2660","481",NULL,"Dos Quebradas","1",NULL
+"2662","483",NULL,"Bucaramanga","1",NULL
+"2663","483",NULL,"Floridablanca","1",NULL
+"2664","483",NULL,"Barrancabermeja","1",NULL
+"2665","483",NULL,"Giron","1",NULL
+"2666","484",NULL,"Sincelejo","1",NULL
+"2670","486",NULL,"Cali","1",NULL
+"2671","486",NULL,"Palmira","1",NULL
+"2672","486",NULL,"Buenaventura","1",NULL
+"2674","486",NULL,"Cartago","1",NULL
+"2675","486",NULL,"Buga","1",NULL
+"2676","487",NULL,"Moroni","1",NULL
+"2681","492",NULL,"Cienfuegos","1",NULL
+"2682","493",NULL,"Bayamo","1",NULL
+"2683","493",NULL,"Manzanillo","1",NULL
+"2686","496",NULL,"La Habana","1",NULL
+"2687","497",NULL,"Victoria de las Tunas","1",NULL
+"2688","498",NULL,"Matanzas","1",NULL
+"2691","501",NULL,"Santiago de Cuba","1",NULL
+"2692","502",NULL,"Santa Clara","1",NULL
+"2711","504",NULL,"George Town","1",NULL
+"2712","505",NULL,"Limassol","1",NULL
+"2713","506",NULL,"Nicosia","1",NULL
+"2725","514",NULL,"Magdeburg","1",NULL
+"2738","516",NULL,"Augsburg","1",NULL
+"2740","516",NULL,"Regensburg","1",NULL
+"2741","516",NULL,"Ingolstadt","1",NULL
+"2743","516",NULL,"Erlangen","1",NULL
+"2744","517",NULL,"Berlin","1",NULL
+"2745","518",NULL,"Potsdam","1",NULL
+"2746","518",NULL,"Cottbus","1",NULL
+"2747","519",NULL,"Bremen","1",NULL
+"2748","519",NULL,"Bremerhaven","1",NULL
+"2749","520",NULL,"Hamburg","1",NULL
+"2750","521",NULL,"Frankfurt am Main","1",NULL
+"2751","521",NULL,"Wiesbaden","1",NULL
+"2752","521",NULL,"Kassel","1",NULL
+"2753","521",NULL,"Darmstadt","1",NULL
+"2754","521",NULL,"Offenbach am Main","1",NULL
+"2755","522",NULL,"Rostock","1",NULL
+"2756","522",NULL,"Schwerin","1",NULL
+"2757","523",NULL,"Hannover","1",NULL
+"2758","523",NULL,"Braunschweig","1",NULL
+"2760","523",NULL,"Oldenburg","1",NULL
+"2762","523",NULL,"Wolfsburg","1",NULL
+"2763","523",NULL,"Salzgitter","1",NULL
+"2764","523",NULL,"Hildesheim","1",NULL
+"2766","524",NULL,"Essen","1",NULL
+"2767","524",NULL,"Dortmund","1",NULL
+"2769","524",NULL,"Duisburg","1",NULL
+"2770","524",NULL,"Bochum","1",NULL
+"2771","524",NULL,"Wuppertal","1",NULL
+"2772","524",NULL,"Bielefeld","1",NULL
+"2773","524",NULL,"Bonn","1",NULL
+"2774","524",NULL,"Gelsenkirchen","1",NULL
+"2777","524",NULL,"Aachen","1",NULL
+"2778","524",NULL,"Krefeld","1",NULL
+"2779","524",NULL,"Oberhausen","1",NULL
+"2780","524",NULL,"Hagen","1",NULL
+"2781","524",NULL,"Hamm","1",NULL
+"2782","524",NULL,"Herne","1",NULL
+"2784","524",NULL,"Solingen","1",NULL
+"2785","524",NULL,"Leverkusen","1",NULL
+"2786","524",NULL,"Neuss","1",NULL
+"2787","524",NULL,"Paderborn","1",NULL
+"2788","524",NULL,"Recklinghausen","1",NULL
+"2789","524",NULL,"Bottrop","1",NULL
+"2790","524",NULL,"Remscheid","1",NULL
+"2791","524",NULL,"Siegen","1",NULL
+"2792","524",NULL,"Moers","1",NULL
+"2793","524",NULL,"Bergisch Gladbach","1",NULL
+"2794","524",NULL,"Witten","1",NULL
+"2795","524",NULL,"Iserlohn","1",NULL
+"2797","524",NULL,"Marl","1",NULL
+"2800","524",NULL,"Ratingen","1",NULL
+"2801","524",NULL,"Velbert","1",NULL
+"2802","525",NULL,"Mainz","1",NULL
+"2803","525",NULL,"Ludwigshafen am Rhein","1",NULL
+"2804","525",NULL,"Koblenz","1",NULL
+"2805","525",NULL,"Kaiserslautern","1",NULL
+"2806","525",NULL,"Trier","1",NULL
+"2808","527",NULL,"Leipzig","1",NULL
+"2809","527",NULL,"Dresden","1",NULL
+"2810","527",NULL,"Chemnitz","1",NULL
+"2811","527",NULL,"Zwickau","1",NULL
+"2812","528",NULL,"Kiel","1",NULL
+"2817","530",NULL,"Djibouti","1",NULL
+"2818","531",NULL,"Roseau","1",NULL
+"2820","531",NULL,"Kingstown","1",NULL
+"2822","533",NULL,"Frederiksberg","1",NULL
+"2823","534",NULL,"Odense","1",NULL
+"2825","536",NULL,"Aalborg","1",NULL
+"2828","539",NULL,"La Romana","1",NULL
+"2829","540",NULL,"San Felipe de Puerto Plata","1",NULL
+"2831","542",NULL,"Santiago de Chile","1",NULL
+"2832","542",NULL,"Puente Alto","1",NULL
+"2833","542",NULL,"San Bernardo","1",NULL
+"2834","542",NULL,"Melipilla","1",NULL
+"2835","542",NULL,"Santiago de los Caballeros","1",NULL
+"2836","543",NULL,"Alger","1",NULL
+"2837","544",NULL,"Annaba","1",NULL
+"2838","545",NULL,"Batna","1",NULL
+"2841","548",NULL,"Biskra","1",NULL
+"2842","549",NULL,"Blida (el-Boulaida)","1",NULL
+"2843","550",NULL,"Ech-Chleff (el-Asnam)","1",NULL
+"2844","551",NULL,"Constantine","1",NULL
+"2846","553",NULL,"Mostaganem","1",NULL
+"2847","554",NULL,"Oran","1",NULL
+"2850","557",NULL,"Skikda","1",NULL
+"2852","559",NULL,"Tiaret","1",NULL
+"2853","560",NULL,"Tlemcen (Tilimsen)","1",NULL
+"2854","561",NULL,"Cuenca","1",NULL
+"2856","563",NULL,"Machala","1",NULL
+"2857","564",NULL,"Esmeraldas","1",NULL
+"2858","565",NULL,"Guayaquil","1",NULL
+"2860","565",NULL,"Milagro","1",NULL
+"2861","566",NULL,"Ibarra","1",NULL
+"2862","567",NULL,"Loja","1",NULL
+"2866","570",NULL,"Quito","1",NULL
+"2867","570",NULL,"Santo Domingo de los Colorados","1",NULL
+"2868","571",NULL,"Ambato","1",NULL
+"2869","572",NULL,"Kafr al-Dawwar","1",NULL
+"2870","572",NULL,"Damanhur","1",NULL
+"2871","573",NULL,"al-Mansura","1",NULL
+"2872","573",NULL,"Mit Ghamr","1",NULL
+"2873","573",NULL,"Talkha","1",NULL
+"2874","574",NULL,"al-Faiyum","1",NULL
+"2875","575",NULL,"al-Mahallat al-Kubra","1",NULL
+"2876","575",NULL,"Tanta","1",NULL
+"2877","576",NULL,"Shibin al-Kawm","1",NULL
+"2878","577",NULL,"al-Minya","1",NULL
+"2879","577",NULL,"Mallawi","1",NULL
+"2880","578",NULL,"Shubra al-Khayma","1",NULL
+"2881","578",NULL,"Bahtim","1",NULL
+"2882","578",NULL,"Banha","1",NULL
+"2883","578",NULL,"Qalyub","1",NULL
+"2884","579",NULL,"Zagazig","1",NULL
+"2885","579",NULL,"Bilbays","1",NULL
+"2886","579",NULL,"al-Dammam","1",NULL
+"2887","579",NULL,"al-Hufuf","1",NULL
+"2888","579",NULL,"al-Mubarraz","1",NULL
+"2889","579",NULL,"al-Khubar","1",NULL
+"2890","579",NULL,"Jubayl","1",NULL
+"2891","579",NULL,"Hafar al-Batin","1",NULL
+"2892","579",NULL,"al-Tuqba","1",NULL
+"2893","579",NULL,"al-Qatif","1",NULL
+"2894","580",NULL,"Alexandria","1",NULL
+"2895","581",NULL,"Assuan","1",NULL
+"2896","582",NULL,"Asyut","1",NULL
+"2897","583",NULL,"Bani Suwayf","1",NULL
+"2898","584",NULL,"Giza","1",NULL
+"2899","584",NULL,"Bulaq al-Dakrur","1",NULL
+"2900","584",NULL,"Warraq al-Arab","1",NULL
+"2901","584",NULL,"al-Hawamidiya","1",NULL
+"2902","585",NULL,"Ismailia","1",NULL
+"2903","586",NULL,"Kafr al-Shaykh","1",NULL
+"2904","586",NULL,"Disuq","1",NULL
+"2905","587",NULL,"Cairo","1",NULL
+"2906","588",NULL,"Luxor","1",NULL
+"2907","589",NULL,"Port Said","1",NULL
+"2908","590",NULL,"Qina","1",NULL
+"2909","590",NULL,"Idfu","1",NULL
+"2910","591",NULL,"Sawhaj","1",NULL
+"2911","591",NULL,"Jirja","1",NULL
+"2912","592",NULL,"al-Arish","1",NULL
+"2913","593",NULL,"Suez","1",NULL
+"2914","594",NULL,"Asmara","1",NULL
+"2916","596",NULL,"Sevilla","1",NULL
+"2919","596",NULL,"Granada","1",NULL
+"2920","596",NULL,"Jerez de la Frontera","1",NULL
+"2923","596",NULL,"Huelva","1",NULL
+"2925","596",NULL,"Algeciras","1",NULL
+"2926","596",NULL,"Marbella","1",NULL
+"2927","596",NULL,"Dos Hermanas","1",NULL
+"2928","597",NULL,"Zaragoza","1",NULL
+"2930","598",NULL,"Oviedo","1",NULL
+"2931","599",NULL,"Palma de Mallorca","1",NULL
+"2932","600",NULL,"Bilbao","1",NULL
+"2933","600",NULL,"Vitoria-Gasteiz","1",NULL
+"2935","600",NULL,"Barakaldo","1",NULL
+"2936","601",NULL,"Las Palmas de Gran Canaria","1",NULL
+"2937","601",NULL,"Santa Cruz de Tenerife","1",NULL
+"2939","602",NULL,"Santander","1",NULL
+"2940","603",NULL,"Valladolid","1",NULL
+"2941","603",NULL,"Burgos","1",NULL
+"2942","603",NULL,"Salamanca","1",NULL
+"2944","604",NULL,"Badajoz","1",NULL
+"2945","605",NULL,"Vigo","1",NULL
+"2947","605",NULL,"Ourense (Orense)","1",NULL
+"2948","605",NULL,"Santiago de Compostela","1",NULL
+"2949","606",NULL,"Albacete","1",NULL
+"2950","607",NULL,"Barcelona","1",NULL
+"2952","607",NULL,"Badalona","1",NULL
+"2953","607",NULL,"Sabadell","1",NULL
+"2954","607",NULL,"Terrassa","1",NULL
+"2955","607",NULL,"Santa Coloma de Gramenet","1",NULL
+"2956","607",NULL,"Tarragona","1",NULL
+"2959","608",NULL,"La Rioja","1",NULL
+"2961","609",NULL,"Madrid","1",NULL
+"2964","609",NULL,"Fuenlabrada","1",NULL
+"2966","609",NULL,"Getafe","1",NULL
+"2969","610",NULL,"Murcia","1",NULL
+"2970","610",NULL,"Cartagena","1",NULL
+"2972","612",NULL,"Valencia","1",NULL
+"2976","613",NULL,"Tallinn","1",NULL
+"2977","614",NULL,"Tartu","1",NULL
+"2978","615",NULL,"Addis Abeba","1",NULL
+"2979","616",NULL,"Gonder","1",NULL
+"2980","616",NULL,"Dese","1",NULL
+"2981","616",NULL,"Bahir Dar","1",NULL
+"2982","617",NULL,"Dire Dawa","1",NULL
+"2983","618",NULL,"Nazret","1",NULL
+"2984","619",NULL,"Mekele","1",NULL
+"2986","620",NULL,"Espoo","1",NULL
+"2987","620",NULL,"Vantaa","1",NULL
+"2989","622",NULL,"Tampere","1",NULL
+"2990","623",NULL,"Oulu","1",NULL
+"2992","625",NULL,"Suva","1",NULL
+"2993","625",NULL,"Nyeri","1",NULL
+"2994","625",NULL,"Kathmandu","1",NULL
+"2995","625",NULL,"Lalitapur","1",NULL
+"2996","625",NULL,"Birgunj","1",NULL
+"2997","625",NULL,"San Lorenzo","1",NULL
+"2999","625",NULL,"Fernando de la Mora","1",NULL
+"3000","625",NULL,"Kabwe","1",NULL
+"3001","625",NULL,"Kandy","1",NULL
+"3002","625",NULL,"Kampala","1",NULL
+"3003","626",NULL,"Stanley","1",NULL
+"3004","627",NULL,"Strasbourg","1",NULL
+"3005","627",NULL,"Mulhouse","1",NULL
+"3006","628",NULL,"Bordeaux","1",NULL
+"3007","629",NULL,"Clermont-Ferrand","1",NULL
+"3012","631",NULL,"Caen","1",NULL
+"3013","632",NULL,"Dijon","1",NULL
+"3015","633",NULL,"Brest","1",NULL
+"3017","634",NULL,"Tours","1",NULL
+"3019","635",NULL,"Le Havre","1",NULL
+"3021","637",NULL,"Rennes","1",NULL
+"3022","637",NULL,"Rouen","1",NULL
+"3023","638",NULL,"Montpellier","1",NULL
+"3025","638",NULL,"Perpignan","1",NULL
+"3026","639",NULL,"Limoges","1",NULL
+"3027","640",NULL,"Metz","1",NULL
+"3028","640",NULL,"Nancy","1",NULL
+"3030","642",NULL,"Reims","1",NULL
+"3031","642",NULL,"Roubaix","1",NULL
+"3032","642",NULL,"Tourcoing","1",NULL
+"3033","643",NULL,"Nantes","1",NULL
+"3034","643",NULL,"Angers","1",NULL
+"3035","643",NULL,"Le Mans","1",NULL
+"3036","644",NULL,"Amiens","1",NULL
+"3048","650",NULL,"Libreville","1",NULL
+"3067","652",NULL,"London","1",NULL
+"3068","652",NULL,"Birmingham","1",NULL
+"3069","652",NULL,"Liverpool","1",NULL
+"3070","652",NULL,"Sheffield","1",NULL
+"3071","652",NULL,"Manchester","1",NULL
+"3072","652",NULL,"Leeds","1",NULL
+"3073","652",NULL,"Bristol","1",NULL
+"3074","652",NULL,"Coventry","1",NULL
+"3075","652",NULL,"Leicester","1",NULL
+"3076","652",NULL,"Bradford","1",NULL
+"3077","652",NULL,"Nottingham","1",NULL
+"3078","652",NULL,"Kingston upon Hull","1",NULL
+"3079","652",NULL,"Plymouth","1",NULL
+"3080","652",NULL,"Stoke-on-Trent","1",NULL
+"3081","652",NULL,"Wolverhampton","1",NULL
+"3082","652",NULL,"Derby","1",NULL
+"3083","652",NULL,"Southampton","1",NULL
+"3084","652",NULL,"Northampton","1",NULL
+"3085","652",NULL,"Dudley","1",NULL
+"3086","652",NULL,"Portsmouth","1",NULL
+"3087","652",NULL,"Newcastle upon Tyne","1",NULL
+"3088","652",NULL,"Sunderland","1",NULL
+"3089","652",NULL,"Luton","1",NULL
+"3090","652",NULL,"Swindon","1",NULL
+"3091","652",NULL,"Southend-on-Sea","1",NULL
+"3092","652",NULL,"Walsall","1",NULL
+"3093","652",NULL,"Bournemouth","1",NULL
+"3094","652",NULL,"Peterborough","1",NULL
+"3095","652",NULL,"Brighton","1",NULL
+"3096","652",NULL,"Blackpool","1",NULL
+"3097","652",NULL,"West Bromwich","1",NULL
+"3098","652",NULL,"Reading","1",NULL
+"3100","652",NULL,"Middlesbrough","1",NULL
+"3101","652",NULL,"Huddersfield","1",NULL
+"3102","652",NULL,"Oxford","1",NULL
+"3103","652",NULL,"Poole","1",NULL
+"3104","652",NULL,"Bolton","1",NULL
+"3105","652",NULL,"Blackburn","1",NULL
+"3106","652",NULL,"Preston","1",NULL
+"3107","652",NULL,"Stockport","1",NULL
+"3108","652",NULL,"Norwich","1",NULL
+"3109","652",NULL,"Rotherham","1",NULL
+"3110","652",NULL,"Cambridge","1",NULL
+"3111","652",NULL,"Watford","1",NULL
+"3112","652",NULL,"Ipswich","1",NULL
+"3113","652",NULL,"Slough","1",NULL
+"3114","652",NULL,"Exeter","1",NULL
+"3115","652",NULL,"Cheltenham","1",NULL
+"3116","652",NULL,"Gloucester","1",NULL
+"3117","652",NULL,"Saint Helens","1",NULL
+"3118","652",NULL,"Sutton Coldfield","1",NULL
+"3119","652",NULL,"York","1",NULL
+"3120","652",NULL,"Oldham","1",NULL
+"3121","652",NULL,"Basildon","1",NULL
+"3122","652",NULL,"Worthing","1",NULL
+"3123","652",NULL,"Chelmsford","1",NULL
+"3124","652",NULL,"Colchester","1",NULL
+"3125","652",NULL,"Crawley","1",NULL
+"3126","652",NULL,"Gillingham","1",NULL
+"3127","652",NULL,"Solihull","1",NULL
+"3128","652",NULL,"Rochdale","1",NULL
+"3129","652",NULL,"Birkenhead","1",NULL
+"3130","652",NULL,"Worcester","1",NULL
+"3131","652",NULL,"Hartlepool","1",NULL
+"3132","652",NULL,"Halifax","1",NULL
+"3134","652",NULL,"Southport","1",NULL
+"3135","652",NULL,"Maidstone","1",NULL
+"3136","652",NULL,"Eastbourne","1",NULL
+"3137","652",NULL,"Grimsby","1",NULL
+"3138","653",NULL,"Saint Helier","1",NULL
+"3139","654",NULL,"Belfast","1",NULL
+"3140","655",NULL,"Glasgow","1",NULL
+"3141","655",NULL,"Edinburgh","1",NULL
+"3142","655",NULL,"Aberdeen","1",NULL
+"3143","655",NULL,"Dundee","1",NULL
+"3144","656",NULL,"Cardiff","1",NULL
+"3145","656",NULL,"Swansea","1",NULL
+"3146","656",NULL,"Newport","1",NULL
+"3149","659",NULL,"Kutaisi","1",NULL
+"3150","660",NULL,"Rustavi","1",NULL
+"3151","661",NULL,"Tbilisi","1",NULL
+"3152","662",NULL,"Kumasi","1",NULL
+"3153","663",NULL,"Accra","1",NULL
+"3154","663",NULL,"Tema","1",NULL
+"3155","664",NULL,"Tamale","1",NULL
+"3156","664",NULL,"Jaffna","1",NULL
+"3157","665",NULL,"Sekondi-Takoradi","1",NULL
+"3158","665",NULL,"Pokhara","1",NULL
+"3159","665",NULL,"Freetown","1",NULL
+"3160","665",NULL,"Colombo","1",NULL
+"3161","665",NULL,"Dehiwala","1",NULL
+"3162","665",NULL,"Moratuwa","1",NULL
+"3163","665",NULL,"Sri Jayawardenepura Kotte","1",NULL
+"3164","665",NULL,"Negombo","1",NULL
+"3183","667",NULL,"Conakry","1",NULL
+"3184","668",NULL,"Basse-Terre","1",NULL
+"3185","669",NULL,"Les Abymes","1",NULL
+"3186","670",NULL,"Banjul","1",NULL
+"3187","671",NULL,"Serekunda","1",NULL
+"3188","672",NULL,"Bissau","1",NULL
+"3189","673",NULL,"Malabo","1",NULL
+"3190","674",NULL,"Athenai","1",NULL
+"3191","674",NULL,"Pireus","1",NULL
+"3192","674",NULL,"Peristerion","1",NULL
+"3193","674",NULL,"Kallithea","1",NULL
+"3194","675",NULL,"Thessaloniki","1",NULL
+"3195","676",NULL,"Herakleion","1",NULL
+"3196","677",NULL,"Larisa","1",NULL
+"3197","678",NULL,"Patras","1",NULL
+"3198","679",NULL,"Roseau","1",NULL
+"3200","679",NULL,"Kingstown","1",NULL
+"3201","680",NULL,"Nuuk","1",NULL
+"3202","681",NULL,"Ciudad de Guatemala","1",NULL
+"3203","681",NULL,"Mixco","1",NULL
+"3204","681",NULL,"Villa Nueva","1",NULL
+"3205","682",NULL,"Quetzaltenango","1",NULL
+"3206","683",NULL,"Cayenne","1",NULL
+"3225","685",NULL,"Georgetown","1",NULL
+"3226","686",NULL,"Victoria","1",NULL
+"3227","687",NULL,"Kowloon and New Kowloon","1",NULL
+"3230","690",NULL,"Tegucigalpa","1",NULL
+"3231","691",NULL,"Zagreb","1",NULL
+"3232","692",NULL,"Osijek","1",NULL
+"3233","693",NULL,"Rijeka","1",NULL
+"3234","694",NULL,"Split","1",NULL
+"3236","695",NULL,"Garoua","1",NULL
+"3237","696",NULL,"Port-au-Prince","1",NULL
+"3238","696",NULL,"Carrefour","1",NULL
+"3239","696",NULL,"Delmas","1",NULL
+"3240","696",NULL,"Bafoussam","1",NULL
+"3244","700",NULL,"Budapest","1",NULL
+"3250","706",NULL,"Banda Aceh","1",NULL
+"3251","706",NULL,"Lhokseumawe","1",NULL
+"3252","707",NULL,"Denpasar","1",NULL
+"3253","708",NULL,"Bengkulu","1",NULL
+"3254","709",NULL,"Semarang","1",NULL
+"3255","709",NULL,"Surakarta","1",NULL
+"3256","709",NULL,"Pekalongan","1",NULL
+"3257","709",NULL,"Tegal","1",NULL
+"3258","709",NULL,"Cilacap","1",NULL
+"3259","709",NULL,"Purwokerto","1",NULL
+"3260","709",NULL,"Magelang","1",NULL
+"3261","709",NULL,"Pemalang","1",NULL
+"3262","709",NULL,"Klaten","1",NULL
+"3263","709",NULL,"Salatiga","1",NULL
+"3264","709",NULL,"Kudus","1",NULL
+"3265","710",NULL,"Surabaya","1",NULL
+"3266","710",NULL,"Malang","1",NULL
+"3267","710",NULL,"Kediri","1",NULL
+"3268","710",NULL,"Jember","1",NULL
+"3269","710",NULL,"Madiun","1",NULL
+"3270","710",NULL,"Pasuruan","1",NULL
+"3271","710",NULL,"Waru","1",NULL
+"3272","710",NULL,"Blitar","1",NULL
+"3273","710",NULL,"Probolinggo","1",NULL
+"3274","710",NULL,"Taman","1",NULL
+"3275","710",NULL,"Mojokerto","1",NULL
+"3276","710",NULL,"Jombang","1",NULL
+"3277","710",NULL,"Banyuwangi","1",NULL
+"3278","711",NULL,"Jakarta","1",NULL
+"3279","712",NULL,"Jambi","1",NULL
+"3280","713",NULL,"Pontianak","1",NULL
+"3281","714",NULL,"Banjarmasin","1",NULL
+"3282","715",NULL,"Palangka Raya","1",NULL
+"3283","716",NULL,"Samarinda","1",NULL
+"3284","716",NULL,"Balikpapan","1",NULL
+"3285","717",NULL,"Bandar Lampung","1",NULL
+"3286","718",NULL,"Ambon","1",NULL
+"3287","719",NULL,"Mataram","1",NULL
+"3288","720",NULL,"Kupang","1",NULL
+"3289","721",NULL,"Pekan Baru","1",NULL
+"3290","721",NULL,"Batam","1",NULL
+"3291","721",NULL,"Tanjung Pinang","1",NULL
+"3292","722",NULL,"Ujung Pandang","1",NULL
+"3293","723",NULL,"Palu","1",NULL
+"3294","724",NULL,"Kendari","1",NULL
+"3295","725",NULL,"Manado","1",NULL
+"3296","725",NULL,"Gorontalo","1",NULL
+"3297","726",NULL,"Padang","1",NULL
+"3298","727",NULL,"Palembang","1",NULL
+"3299","727",NULL,"Pangkal Pinang","1",NULL
+"3300","728",NULL,"Medan","1",NULL
+"3301","728",NULL,"Pematang Siantar","1",NULL
+"3302","728",NULL,"Tebing Tinggi","1",NULL
+"3303","728",NULL,"Percut Sei Tuan","1",NULL
+"3304","728",NULL,"Binjai","1",NULL
+"3305","728",NULL,"Sunggal","1",NULL
+"3306","728",NULL,"Padang Sidempuan","1",NULL
+"3307","729",NULL,"Jaya Pura","1",NULL
+"3308","730",NULL,"Bandung","1",NULL
+"3309","730",NULL,"Tangerang","1",NULL
+"3310","730",NULL,"Bekasi","1",NULL
+"3311","730",NULL,"Depok","1",NULL
+"3312","730",NULL,"Cimahi","1",NULL
+"3313","730",NULL,"Bogor","1",NULL
+"3314","730",NULL,"Ciputat","1",NULL
+"3315","730",NULL,"Pondokgede","1",NULL
+"3316","730",NULL,"Cirebon","1",NULL
+"3317","730",NULL,"Cimanggis","1",NULL
+"3318","730",NULL,"Ciomas","1",NULL
+"3319","730",NULL,"Tasikmalaya","1",NULL
+"3320","730",NULL,"Karawang","1",NULL
+"3321","730",NULL,"Sukabumi","1",NULL
+"3322","730",NULL,"Serang","1",NULL
+"3323","730",NULL,"Cilegon","1",NULL
+"3324","730",NULL,"Cianjur","1",NULL
+"3325","730",NULL,"Ciparay","1",NULL
+"3326","730",NULL,"Citeureup","1",NULL
+"3327","730",NULL,"Cibinong","1",NULL
+"3328","730",NULL,"Purwakarta","1",NULL
+"3329","730",NULL,"Garut","1",NULL
+"3330","730",NULL,"Majalaya","1",NULL
+"3331","730",NULL,"Pondok Aren","1",NULL
+"3332","730",NULL,"Sawangan","1",NULL
+"3333","731",NULL,"Yogyakarta","1",NULL
+"3334","731",NULL,"Depok","1",NULL
+"3714","758",NULL,"Dublin","1",NULL
+"3715","759",NULL,"Cork","1",NULL
+"3716","760",NULL,"Ardebil","1",NULL
+"3717","761",NULL,"Bushehr","1",NULL
+"3718","762",NULL,"Shahr-e Kord","1",NULL
+"3719","763",NULL,"Tabriz","1",NULL
+"3720","763",NULL,"Maragheh","1",NULL
+"3721","763",NULL,"Marand","1",NULL
+"3722","764",NULL,"Esfahan","1",NULL
+"3723","764",NULL,"Kashan","1",NULL
+"3724","764",NULL,"Najafabad","1",NULL
+"3725","764",NULL,"Khomeynishahr","1",NULL
+"3726","764",NULL,"Qomsheh","1",NULL
+"3727","765",NULL,"Shiraz","1",NULL
+"3728","765",NULL,"Marv Dasht","1",NULL
+"3729","765",NULL,"Jahrom","1",NULL
+"3730","766",NULL,"Rasht","1",NULL
+"3731","766",NULL,"Bandar-e Anzali","1",NULL
+"3732","767",NULL,"Gorgan","1",NULL
+"3733","768",NULL,"Hamadan","1",NULL
+"3734","768",NULL,"Malayer","1",NULL
+"3735","769",NULL,"Bandar-e-Abbas","1",NULL
+"3736","770",NULL,"Ilam","1",NULL
+"3737","771",NULL,"Kerman","1",NULL
+"3738","771",NULL,"Sirjan","1",NULL
+"3739","771",NULL,"Rafsanjan","1",NULL
+"3740","772",NULL,"Kermanshah","1",NULL
+"3741","773",NULL,"Mashhad","1",NULL
+"3742","773",NULL,"Sabzevar","1",NULL
+"3743","773",NULL,"Neyshabur","1",NULL
+"3744","773",NULL,"Bojnurd","1",NULL
+"3745","773",NULL,"Birjand","1",NULL
+"3746","773",NULL,"Torbat-e Heydariyeh","1",NULL
+"3747","774",NULL,"Ahvaz","1",NULL
+"3748","774",NULL,"Abadan","1",NULL
+"3749","774",NULL,"Dezful","1",NULL
+"3750","774",NULL,"Masjed-e-Soleyman","1",NULL
+"3751","774",NULL,"Andimeshk","1",NULL
+"3752","774",NULL,"Khorramshahr","1",NULL
+"3753","775",NULL,"Sanandaj","1",NULL
+"3754","775",NULL,"Saqqez","1",NULL
+"3755","776",NULL,"Khorramabad","1",NULL
+"3756","776",NULL,"Borujerd","1",NULL
+"3757","777",NULL,"Arak","1",NULL
+"3758","778",NULL,"Sari","1",NULL
+"3759","778",NULL,"Amol","1",NULL
+"3760","778",NULL,"Babol","1",NULL
+"3761","778",NULL,"Qaemshahr","1",NULL
+"3762","778",NULL,"Gonbad-e Qabus","1",NULL
+"3763","779",NULL,"Qazvin","1",NULL
+"3764","780",NULL,"Qom","1",NULL
+"3765","780",NULL,"Saveh","1",NULL
+"3766","781",NULL,"Shahrud","1",NULL
+"3767","781",NULL,"Semnan","1",NULL
+"3768","782",NULL,"Zahedan","1",NULL
+"3769","782",NULL,"Zabol","1",NULL
+"3770","783",NULL,"Teheran","1",NULL
+"3771","783",NULL,"Karaj","1",NULL
+"3772","783",NULL,"Eslamshahr","1",NULL
+"3773","783",NULL,"Qarchak","1",NULL
+"3774","783",NULL,"Qods","1",NULL
+"3775","783",NULL,"Varamin","1",NULL
+"3776","784",NULL,"Urmia","1",NULL
+"3777","784",NULL,"Khoy","1",NULL
+"3778","784",NULL,"Bukan","1",NULL
+"3779","784",NULL,"Mahabad","1",NULL
+"3780","784",NULL,"Miandoab","1",NULL
+"3781","785",NULL,"Yazd","1",NULL
+"3782","786",NULL,"Zanjan","1",NULL
+"3783","787",NULL,"al-Ramadi","1",NULL
+"3784","788",NULL,"al-Najaf","1",NULL
+"3785","789",NULL,"al-Diwaniya","1",NULL
+"3786","790",NULL,"al-Sulaymaniya","1",NULL
+"3787","791",NULL,"Kirkuk","1",NULL
+"3788","792",NULL,"al-Hilla","1",NULL
+"3789","793",NULL,"Baghdad","1",NULL
+"3790","794",NULL,"Basra","1",NULL
+"3791","795",NULL,"al-Nasiriya","1",NULL
+"3792","796",NULL,"Baquba","1",NULL
+"3793","797",NULL,"Irbil","1",NULL
+"3794","798",NULL,"Karbala","1",NULL
+"3795","799",NULL,"al-Amara","1",NULL
+"3796","800",NULL,"Mosul","1",NULL
+"3797","801",NULL,"al-Kut","1",NULL
+"3799","803",NULL,"Beerseba","1",NULL
+"3800","803",NULL,"Ashdod","1",NULL
+"3801","803",NULL,"Ashqelon","1",NULL
+"3802","804",NULL,"Rishon Le Ziyyon","1",NULL
+"3803","804",NULL,"Petah Tiqwa","1",NULL
+"3804","804",NULL,"Netanya","1",NULL
+"3805","804",NULL,"Rehovot","1",NULL
+"3806","805",NULL,"Haifa","1",NULL
+"3807","806",NULL,"Jerusalem","1",NULL
+"3808","807",NULL,"Tel Aviv-Jaffa","1",NULL
+"3809","807",NULL,"Holon","1",NULL
+"3810","807",NULL,"Bat Yam","1",NULL
+"3811","807",NULL,"Bene Beraq","1",NULL
+"3812","807",NULL,"Ramat Gan","1",NULL
+"3813","808",NULL,"Pescara","1",NULL
+"3814","809",NULL,"Bari","1",NULL
+"3815","809",NULL,"Taranto","1",NULL
+"3816","809",NULL,"Foggia","1",NULL
+"3817","809",NULL,"Lecce","1",NULL
+"3818","809",NULL,"Andria","1",NULL
+"3819","809",NULL,"Brindisi","1",NULL
+"3820","809",NULL,"Barletta","1",NULL
+"3821","810",NULL,"Reggio di Calabria","1",NULL
+"3822","810",NULL,"Catanzaro","1",NULL
+"3823","811",NULL,"Napoli","1",NULL
+"3824","811",NULL,"Salerno","1",NULL
+"3825","811",NULL,"Torre del Greco","1",NULL
+"3826","811",NULL,"Giugliano in Campania","1",NULL
+"3827","812",NULL,"Bologna","1",NULL
+"3828","812",NULL,"Modena","1",NULL
+"3829","812",NULL,"Parma","1",NULL
+"3831","812",NULL,"Ravenna","1",NULL
+"3832","812",NULL,"Ferrara","1",NULL
+"3833","812",NULL,"Rimini","1",NULL
+"3835","812",NULL,"Piacenza","1",NULL
+"3836","812",NULL,"Cesena","1",NULL
+"3837","813",NULL,"Trieste","1",NULL
+"3838","813",NULL,"Udine","1",NULL
+"3839","814",NULL,"Roma","1",NULL
+"3840","814",NULL,"Latina","1",NULL
+"3841","815",NULL,"Genova","1",NULL
+"3842","815",NULL,"La Spezia","1",NULL
+"3843","816",NULL,"Milano","1",NULL
+"3844","816",NULL,"Brescia","1",NULL
+"3845","816",NULL,"Monza","1",NULL
+"3846","816",NULL,"Bergamo","1",NULL
+"3847","817",NULL,"Ancona","1",NULL
+"3848","817",NULL,"Pesaro","1",NULL
+"3849","818",NULL,"Torino","1",NULL
+"3850","818",NULL,"Novara","1",NULL
+"3851","818",NULL,"Alessandria","1",NULL
+"3852","819",NULL,"Cagliari","1",NULL
+"3853","819",NULL,"Sassari","1",NULL
+"3854","820",NULL,"Palermo","1",NULL
+"3855","820",NULL,"Catania","1",NULL
+"3856","820",NULL,"Messina","1",NULL
+"3857","820",NULL,"Syrakusa","1",NULL
+"3858","821",NULL,"Firenze","1",NULL
+"3859","821",NULL,"Prato","1",NULL
+"3860","821",NULL,"Livorno","1",NULL
+"3861","821",NULL,"Pisa","1",NULL
+"3862","821",NULL,"Arezzo","1",NULL
+"3863","822",NULL,"Trento","1",NULL
+"3864","822",NULL,"Bolzano","1",NULL
+"3865","823",NULL,"Perugia","1",NULL
+"3866","823",NULL,"Terni","1",NULL
+"3867","824",NULL,"Venezia","1",NULL
+"3868","824",NULL,"Verona","1",NULL
+"3869","824",NULL,"Padova","1",NULL
+"3870","824",NULL,"Vicenza","1",NULL
+"3871","825",NULL,"Kingston","1",NULL
+"3872","825",NULL,"Portmore","1",NULL
+"3873","826",NULL,"Spanish Town","1",NULL
+"3874","827",NULL,"al-Zarqa","1",NULL
+"3875","827",NULL,"al-Rusayfa","1",NULL
+"3876","828",NULL,"Amman","1",NULL
+"3877","828",NULL,"Wadi al-Sir","1",NULL
+"3878","829",NULL,"Irbid","1",NULL
+"3879","830",NULL,"Nagoya","1",NULL
+"3880","830",NULL,"Toyohashi","1",NULL
+"3881","830",NULL,"Toyota","1",NULL
+"3882","830",NULL,"Okazaki","1",NULL
+"3883","830",NULL,"Kasugai","1",NULL
+"3884","830",NULL,"Ichinomiya","1",NULL
+"3885","830",NULL,"Anjo","1",NULL
+"3886","830",NULL,"Komaki","1",NULL
+"3887","830",NULL,"Seto","1",NULL
+"3888","830",NULL,"Kariya","1",NULL
+"3889","830",NULL,"Toyokawa","1",NULL
+"3890","830",NULL,"Handa","1",NULL
+"3891","830",NULL,"Tokai","1",NULL
+"3892","830",NULL,"Inazawa","1",NULL
+"3893","830",NULL,"Konan","1",NULL
+"3894","831",NULL,"Akita","1",NULL
+"3895","832",NULL,"Aomori","1",NULL
+"3896","832",NULL,"Hachinohe","1",NULL
+"3897","832",NULL,"Hirosaki","1",NULL
+"3898","833",NULL,"Chiba","1",NULL
+"3899","833",NULL,"Funabashi","1",NULL
+"3900","833",NULL,"Matsudo","1",NULL
+"3901","833",NULL,"Ichikawa","1",NULL
+"3902","833",NULL,"Kashiwa","1",NULL
+"3903","833",NULL,"Ichihara","1",NULL
+"3904","833",NULL,"Sakura","1",NULL
+"3905","833",NULL,"Yachiyo","1",NULL
+"3906","833",NULL,"Narashino","1",NULL
+"3907","833",NULL,"Nagareyama","1",NULL
+"3908","833",NULL,"Urayasu","1",NULL
+"3909","833",NULL,"Abiko","1",NULL
+"3910","833",NULL,"Kisarazu","1",NULL
+"3911","833",NULL,"Noda","1",NULL
+"3912","833",NULL,"Kamagaya","1",NULL
+"3913","833",NULL,"Nishio","1",NULL
+"3914","833",NULL,"Kimitsu","1",NULL
+"3915","833",NULL,"Mobara","1",NULL
+"3916","833",NULL,"Narita","1",NULL
+"3917","834",NULL,"Matsuyama","1",NULL
+"3918","834",NULL,"Niihama","1",NULL
+"3919","834",NULL,"Imabari","1",NULL
+"3920","835",NULL,"Fukui","1",NULL
+"3921","836",NULL,"Fukuoka","1",NULL
+"3922","836",NULL,"Kitakyushu","1",NULL
+"3923","836",NULL,"Kurume","1",NULL
+"3924","836",NULL,"Omuta","1",NULL
+"3925","836",NULL,"Kasuga","1",NULL
+"3926","837",NULL,"Iwaki","1",NULL
+"3927","837",NULL,"Koriyama","1",NULL
+"3928","837",NULL,"Fukushima","1",NULL
+"3929","837",NULL,"Aizuwakamatsu","1",NULL
+"3930","838",NULL,"Gifu","1",NULL
+"3931","838",NULL,"Ogaki","1",NULL
+"3932","838",NULL,"Kakamigahara","1",NULL
+"3933","838",NULL,"Tajimi","1",NULL
+"3934","839",NULL,"Maebashi","1",NULL
+"3935","839",NULL,"Takasaki","1",NULL
+"3936","839",NULL,"Ota","1",NULL
+"3937","839",NULL,"Isesaki","1",NULL
+"3938","839",NULL,"Kiryu","1",NULL
+"3939","840",NULL,"Hiroshima","1",NULL
+"3940","840",NULL,"Fukuyama","1",NULL
+"3941","840",NULL,"Kure","1",NULL
+"3942","840",NULL,"Higashihiroshima","1",NULL
+"3943","840",NULL,"Onomichi","1",NULL
+"3944","841",NULL,"Sapporo","1",NULL
+"3945","841",NULL,"Asahikawa","1",NULL
+"3946","841",NULL,"Hakodate","1",NULL
+"3947","841",NULL,"Kushiro","1",NULL
+"3948","841",NULL,"Obihiro","1",NULL
+"3949","841",NULL,"Tomakomai","1",NULL
+"3950","841",NULL,"Otaru","1",NULL
+"3951","841",NULL,"Ebetsu","1",NULL
+"3952","841",NULL,"Kitami","1",NULL
+"3953","841",NULL,"Muroran","1",NULL
+"3954","842",NULL,"Kobe","1",NULL
+"3955","842",NULL,"Amagasaki","1",NULL
+"3956","842",NULL,"Himeji","1",NULL
+"3957","842",NULL,"Nishinomiya","1",NULL
+"3958","842",NULL,"Akashi","1",NULL
+"3959","842",NULL,"Kakogawa","1",NULL
+"3960","842",NULL,"Takarazuka","1",NULL
+"3961","842",NULL,"Itami","1",NULL
+"3962","842",NULL,"Kawanishi","1",NULL
+"3963","842",NULL,"Sanda","1",NULL
+"3964","842",NULL,"Takasago","1",NULL
+"3965","843",NULL,"Mito","1",NULL
+"3966","843",NULL,"Hitachi","1",NULL
+"3967","843",NULL,"Tsukuba","1",NULL
+"3968","843",NULL,"Tama","1",NULL
+"3969","843",NULL,"Tsuchiura","1",NULL
+"3970","844",NULL,"Kanazawa","1",NULL
+"3971","844",NULL,"Komatsu","1",NULL
+"3972","845",NULL,"Morioka","1",NULL
+"3973","846",NULL,"Takamatsu","1",NULL
+"3974","847",NULL,"Kagoshima","1",NULL
+"3976","848",NULL,"Kawasaki","1",NULL
+"3977","848",NULL,"Sagamihara","1",NULL
+"3978","848",NULL,"Yokosuka","1",NULL
+"3979","848",NULL,"Fujisawa","1",NULL
+"3980","848",NULL,"Hiratsuka","1",NULL
+"3981","848",NULL,"Chigasaki","1",NULL
+"3982","848",NULL,"Atsugi","1",NULL
+"3983","848",NULL,"Yamato","1",NULL
+"3984","848",NULL,"Odawara","1",NULL
+"3985","848",NULL,"Kamakura","1",NULL
+"3986","848",NULL,"Hadano","1",NULL
+"3987","848",NULL,"Zama","1",NULL
+"3988","848",NULL,"Ebina","1",NULL
+"3989","848",NULL,"Isehara","1",NULL
+"3990","849",NULL,"Kochi","1",NULL
+"3991","850",NULL,"Kumamoto","1",NULL
+"3992","850",NULL,"Yatsushiro","1",NULL
+"3993","851",NULL,"Kioto","1",NULL
+"3994","851",NULL,"Uji","1",NULL
+"3995","851",NULL,"Maizuru","1",NULL
+"3996","851",NULL,"Kameoka","1",NULL
+"3997","852",NULL,"Yokkaichi","1",NULL
+"3998","852",NULL,"Suzuka","1",NULL
+"3999","852",NULL,"Tsu","1",NULL
+"4000","852",NULL,"Matsusaka","1",NULL
+"4001","852",NULL,"Kuwana","1",NULL
+"4002","852",NULL,"Ise","1",NULL
+"4003","853",NULL,"Sendai","1",NULL
+"4004","853",NULL,"Ishinomaki","1",NULL
+"4005","854",NULL,"Miyazaki","1",NULL
+"4006","854",NULL,"Miyakonojo","1",NULL
+"4007","854",NULL,"Nobeoka","1",NULL
+"4008","855",NULL,"Nagano","1",NULL
+"4009","855",NULL,"Matsumoto","1",NULL
+"4010","855",NULL,"Ueda","1",NULL
+"4011","855",NULL,"Iida","1",NULL
+"4012","856",NULL,"Nagasaki","1",NULL
+"4013","856",NULL,"Sasebo","1",NULL
+"4014","856",NULL,"Isahaya","1",NULL
+"4015","857",NULL,"Nara","1",NULL
+"4016","857",NULL,"Kashihara","1",NULL
+"4017","857",NULL,"Ikoma","1",NULL
+"4018","857",NULL,"Yamatokoriyama","1",NULL
+"4019","858",NULL,"Niigata","1",NULL
+"4020","858",NULL,"Nagaoka","1",NULL
+"4021","858",NULL,"Joetsu","1",NULL
+"4022","858",NULL,"Kashiwazaki","1",NULL
+"4023","859",NULL,"Oita","1",NULL
+"4024","859",NULL,"Beppu","1",NULL
+"4025","860",NULL,"Okayama","1",NULL
+"4026","860",NULL,"Kurashiki","1",NULL
+"4027","860",NULL,"Tsuyama","1",NULL
+"4028","861",NULL,"Naha","1",NULL
+"4029","861",NULL,"Okinawa","1",NULL
+"4030","861",NULL,"Urasoe","1",NULL
+"4031","862",NULL,"Osaka","1",NULL
+"4032","862",NULL,"Sakai","1",NULL
+"4033","862",NULL,"Higashiosaka","1",NULL
+"4034","862",NULL,"Hirakata","1",NULL
+"4035","862",NULL,"Toyonaka","1",NULL
+"4036","862",NULL,"Takatsuki","1",NULL
+"4037","862",NULL,"Suita","1",NULL
+"4038","862",NULL,"Yao","1",NULL
+"4039","862",NULL,"Ibaraki","1",NULL
+"4040","862",NULL,"Neyagawa","1",NULL
+"4041","862",NULL,"Kishiwada","1",NULL
+"4042","862",NULL,"Izumi","1",NULL
+"4043","862",NULL,"Moriguchi","1",NULL
+"4044","862",NULL,"Kadoma","1",NULL
+"4045","862",NULL,"Matsubara","1",NULL
+"4046","862",NULL,"Daito","1",NULL
+"4047","862",NULL,"Minoo","1",NULL
+"4048","862",NULL,"Tondabayashi","1",NULL
+"4049","862",NULL,"Kawachinagano","1",NULL
+"4050","862",NULL,"Habikino","1",NULL
+"4051","862",NULL,"Ikeda","1",NULL
+"4052","862",NULL,"Izumisano","1",NULL
+"4053","863",NULL,"Saga","1",NULL
+"4054","864",NULL,"Urawa","1",NULL
+"4055","864",NULL,"Kawaguchi","1",NULL
+"4056","864",NULL,"Omiya","1",NULL
+"4057","864",NULL,"Kawagoe","1",NULL
+"4058","864",NULL,"Tokorozawa","1",NULL
+"4059","864",NULL,"Koshigaya","1",NULL
+"4060","864",NULL,"Soka","1",NULL
+"4061","864",NULL,"Ageo","1",NULL
+"4062","864",NULL,"Kasukabe","1",NULL
+"4063","864",NULL,"Sayama","1",NULL
+"4064","864",NULL,"Kumagaya","1",NULL
+"4065","864",NULL,"Niiza","1",NULL
+"4066","864",NULL,"Iruma","1",NULL
+"4067","864",NULL,"Misato","1",NULL
+"4068","864",NULL,"Asaka","1",NULL
+"4069","864",NULL,"Iwatsuki","1",NULL
+"4070","864",NULL,"Toda","1",NULL
+"4071","864",NULL,"Fukaya","1",NULL
+"4072","864",NULL,"Sakado","1",NULL
+"4073","864",NULL,"Fujimi","1",NULL
+"4074","864",NULL,"Higashimatsuyama","1",NULL
+"4075","865",NULL,"Otsu","1",NULL
+"4076","865",NULL,"Kusatsu","1",NULL
+"4077","865",NULL,"Hikone","1",NULL
+"4078","866",NULL,"Matsue","1",NULL
+"4079","867",NULL,"Hamamatsu","1",NULL
+"4080","867",NULL,"Shizuoka","1",NULL
+"4081","867",NULL,"Shimizu","1",NULL
+"4082","867",NULL,"Fuji","1",NULL
+"4083","867",NULL,"Numazu","1",NULL
+"4084","867",NULL,"Fujieda","1",NULL
+"4085","867",NULL,"Fujinomiya","1",NULL
+"4086","867",NULL,"Yaizu","1",NULL
+"4087","867",NULL,"Mishima","1",NULL
+"4088","868",NULL,"Utsunomiya","1",NULL
+"4089","868",NULL,"Ashikaga","1",NULL
+"4090","868",NULL,"Oyama","1",NULL
+"4091","868",NULL,"Kanuma","1",NULL
+"4092","869",NULL,"Tokushima","1",NULL
+"4093","870",NULL,"Tokyo","1",NULL
+"4094","870",NULL,"Hachioji","1",NULL
+"4095","870",NULL,"Machida","1",NULL
+"4096","870",NULL,"Fuchu","1",NULL
+"4097","870",NULL,"Chofu","1",NULL
+"4098","870",NULL,"Kodaira","1",NULL
+"4099","870",NULL,"Mitaka","1",NULL
+"4100","870",NULL,"Hino","1",NULL
+"4101","870",NULL,"Tachikawa","1",NULL
+"4102","870",NULL,"Hitachinaka","1",NULL
+"4103","870",NULL,"Ome","1",NULL
+"4104","870",NULL,"Higashimurayama","1",NULL
+"4105","870",NULL,"Musashino","1",NULL
+"4106","870",NULL,"Higashikurume","1",NULL
+"4107","870",NULL,"Koganei","1",NULL
+"4108","870",NULL,"Kokubunji","1",NULL
+"4109","870",NULL,"Akishima","1",NULL
+"4110","870",NULL,"Hoya","1",NULL
+"4111","871",NULL,"Tottori","1",NULL
+"4112","871",NULL,"Yonago","1",NULL
+"4113","872",NULL,"Toyama","1",NULL
+"4114","872",NULL,"Takaoka","1",NULL
+"4115","873",NULL,"Wakayama","1",NULL
+"4116","874",NULL,"Yamagata","1",NULL
+"4117","874",NULL,"Sakata","1",NULL
+"4118","874",NULL,"Tsuruoka","1",NULL
+"4119","874",NULL,"Yonezawa","1",NULL
+"4120","875",NULL,"Shimonoseki","1",NULL
+"4121","875",NULL,"Ube","1",NULL
+"4122","875",NULL,"Yamaguchi","1",NULL
+"4123","875",NULL,"Hofu","1",NULL
+"4124","875",NULL,"Tokuyama","1",NULL
+"4125","875",NULL,"Iwakuni","1",NULL
+"4126","876",NULL,"Kofu","1",NULL
+"4127","877",NULL,"Taldyqorghan","1",NULL
+"4128","878",NULL,"Almaty","1",NULL
+"4130","880",NULL,"Astana","1",NULL
+"4131","881",NULL,"Atyrau","1",NULL
+"4133","882",NULL,"Semey","1",NULL
+"4134","883",NULL,"Aqtau","1",NULL
+"4135","884",NULL,"Petropavl","1",NULL
+"4137","885",NULL,"Pavlodar","1",NULL
+"4138","885",NULL,"Ekibastuz","1",NULL
+"4139","886",NULL,"Qaraghandy","1",NULL
+"4140","886",NULL,"Temirtau","1",NULL
+"4141","886",NULL,"Zhezqazghan","1",NULL
+"4142","887",NULL,"Qostanay","1",NULL
+"4143","887",NULL,"Rudnyy","1",NULL
+"4144","888",NULL,"Qyzylorda","1",NULL
+"4145","889",NULL,"Shymkent","1",NULL
+"4146","890",NULL,"Taraz","1",NULL
+"4147","891",NULL,"Oral","1",NULL
+"4148","892",NULL,"Suva","1",NULL
+"4149","892",NULL,"Nyeri","1",NULL
+"4150","892",NULL,"Kathmandu","1",NULL
+"4151","892",NULL,"Lalitapur","1",NULL
+"4152","892",NULL,"Birgunj","1",NULL
+"4153","892",NULL,"San Lorenzo","1",NULL
+"4155","892",NULL,"Fernando de la Mora","1",NULL
+"4156","892",NULL,"Kabwe","1",NULL
+"4157","892",NULL,"Kandy","1",NULL
+"4158","892",NULL,"Kampala","1",NULL
+"4159","893",NULL,"Mombasa","1",NULL
+"4160","894",NULL,"Machakos","1",NULL
+"4161","894",NULL,"Meru","1",NULL
+"4162","894",NULL,"Biratnagar","1",NULL
+"4163","895",NULL,"Nairobi","1",NULL
+"4164","896",NULL,"Kisumu","1",NULL
+"4165","897",NULL,"Nakuru","1",NULL
+"4166","897",NULL,"Eldoret","1",NULL
+"4167","898",NULL,"Bishkek","1",NULL
+"4168","899",NULL,"Osh","1",NULL
+"4169","900",NULL,"Battambang","1",NULL
+"4170","901",NULL,"Phnom Penh","1",NULL
+"4171","902",NULL,"Siem Reap","1",NULL
+"4172","903",NULL,"Bikenibeu","1",NULL
+"4173","903",NULL,"Bairiki","1",NULL
+"4174","904",NULL,"Basseterre","1",NULL
+"4175","905",NULL,"Cheju","1",NULL
+"4176","906",NULL,"Chonju","1",NULL
+"4177","906",NULL,"Iksan","1",NULL
+"4178","906",NULL,"Kunsan","1",NULL
+"4179","906",NULL,"Chong-up","1",NULL
+"4180","906",NULL,"Kimje","1",NULL
+"4181","906",NULL,"Namwon","1",NULL
+"4182","907",NULL,"Sunchon","1",NULL
+"4183","907",NULL,"Mokpo","1",NULL
+"4184","907",NULL,"Yosu","1",NULL
+"4185","907",NULL,"Kwang-yang","1",NULL
+"4186","907",NULL,"Naju","1",NULL
+"4187","908",NULL,"Chongju","1",NULL
+"4188","908",NULL,"Chungju","1",NULL
+"4189","908",NULL,"Chechon","1",NULL
+"4190","909",NULL,"Chonan","1",NULL
+"4191","909",NULL,"Asan","1",NULL
+"4192","909",NULL,"Nonsan","1",NULL
+"4193","909",NULL,"Sosan","1",NULL
+"4194","909",NULL,"Kongju","1",NULL
+"4195","909",NULL,"Poryong","1",NULL
+"4196","910",NULL,"Inchon","1",NULL
+"4197","911",NULL,"Wonju","1",NULL
+"4198","911",NULL,"Chunchon","1",NULL
+"4199","911",NULL,"Kangnung","1",NULL
+"4200","911",NULL,"Tonghae","1",NULL
+"4201","912",NULL,"Kwangju","1",NULL
+"4202","913",NULL,"Songnam","1",NULL
+"4203","913",NULL,"Puchon","1",NULL
+"4204","913",NULL,"Suwon","1",NULL
+"4205","913",NULL,"Anyang","1",NULL
+"4206","913",NULL,"Koyang","1",NULL
+"4207","913",NULL,"Ansan","1",NULL
+"4208","913",NULL,"Kwangmyong","1",NULL
+"4209","913",NULL,"Pyongtaek","1",NULL
+"4210","913",NULL,"Uijongbu","1",NULL
+"4211","913",NULL,"Yong-in","1",NULL
+"4212","913",NULL,"Kunpo","1",NULL
+"4213","913",NULL,"Namyangju","1",NULL
+"4214","913",NULL,"Paju","1",NULL
+"4215","913",NULL,"Ichon","1",NULL
+"4216","913",NULL,"Kuri","1",NULL
+"4217","913",NULL,"Shihung","1",NULL
+"4218","913",NULL,"Hanam","1",NULL
+"4219","913",NULL,"Uiwang","1",NULL
+"4220","914",NULL,"Pohang","1",NULL
+"4221","914",NULL,"Kumi","1",NULL
+"4222","914",NULL,"Kyongju","1",NULL
+"4223","914",NULL,"Andong","1",NULL
+"4224","914",NULL,"Kyongsan","1",NULL
+"4225","914",NULL,"Kimchon","1",NULL
+"4226","914",NULL,"Yongju","1",NULL
+"4227","914",NULL,"Sangju","1",NULL
+"4228","914",NULL,"Yongchon","1",NULL
+"4229","914",NULL,"Mun-gyong","1",NULL
+"4230","915",NULL,"Ulsan","1",NULL
+"4231","915",NULL,"Chang-won","1",NULL
+"4232","915",NULL,"Masan","1",NULL
+"4233","915",NULL,"Chinju","1",NULL
+"4234","915",NULL,"Kimhae","1",NULL
+"4235","915",NULL,"Yangsan","1",NULL
+"4236","915",NULL,"Koje","1",NULL
+"4237","915",NULL,"Tong-yong","1",NULL
+"4238","915",NULL,"Chinhae","1",NULL
+"4239","915",NULL,"Miryang","1",NULL
+"4240","915",NULL,"Sachon","1",NULL
+"4241","916",NULL,"Pusan","1",NULL
+"4242","917",NULL,"Seoul","1",NULL
+"4243","918",NULL,"Taegu","1",NULL
+"4244","919",NULL,"Taejon","1",NULL
+"4245","920",NULL,"Kuwait","1",NULL
+"4246","921",NULL,"al-Salimiya","1",NULL
+"4247","921",NULL,"Jalib al-Shuyukh","1",NULL
+"4248","922",NULL,"Savannakhet","1",NULL
+"4249","923",NULL,"Vientiane","1",NULL
+"4250","924",NULL,"Tripoli","1",NULL
+"4251","925",NULL,"Beirut","1",NULL
+"4252","926",NULL,"Monrovia","1",NULL
+"4253","927",NULL,"al-Zawiya","1",NULL
+"4254","928",NULL,"Bengasi","1",NULL
+"4255","929",NULL,"Misrata","1",NULL
+"4256","930",NULL,"Tripoli","1",NULL
+"4257","931",NULL,"Castries","1",NULL
+"4258","932",NULL,"Schaan","1",NULL
+"4259","933",NULL,"Vaduz","1",NULL
+"4260","934",NULL,"Suva","1",NULL
+"4261","934",NULL,"Nyeri","1",NULL
+"4262","934",NULL,"Kathmandu","1",NULL
+"4263","934",NULL,"Lalitapur","1",NULL
+"4264","934",NULL,"Birgunj","1",NULL
+"4265","934",NULL,"San Lorenzo","1",NULL
+"4267","934",NULL,"Fernando de la Mora","1",NULL
+"4268","934",NULL,"Kabwe","1",NULL
+"4269","934",NULL,"Kandy","1",NULL
+"4270","934",NULL,"Kampala","1",NULL
+"4271","935",NULL,"Tamale","1",NULL
+"4272","935",NULL,"Jaffna","1",NULL
+"4273","936",NULL,"Sekondi-Takoradi","1",NULL
+"4274","936",NULL,"Pokhara","1",NULL
+"4275","936",NULL,"Freetown","1",NULL
+"4276","936",NULL,"Colombo","1",NULL
+"4277","936",NULL,"Dehiwala","1",NULL
+"4278","936",NULL,"Moratuwa","1",NULL
+"4279","936",NULL,"Sri Jayawardenepura Kotte","1",NULL
+"4280","936",NULL,"Negombo","1",NULL
+"4281","937",NULL,"Maseru","1",NULL
+"4282","938",NULL,"Kaunas","1",NULL
+"4283","939",NULL,"Klaipeda","1",NULL
+"4284","940",NULL,"Panevezys","1",NULL
+"4285","941",NULL,"Vilnius","1",NULL
+"4288","944",NULL,"Daugavpils","1",NULL
+"4289","945",NULL,"Liepaja","1",NULL
+"4290","946",NULL,"Riga","1",NULL
+"4291","947",NULL,"Macao","1",NULL
+"4292","948",NULL,"Casablanca","1",NULL
+"4293","948",NULL,"Mohammedia","1",NULL
+"4294","949",NULL,"Khouribga","1",NULL
+"4295","949",NULL,"Settat","1",NULL
+"4296","950",NULL,"Safi","1",NULL
+"4297","950",NULL,"El Jadida","1",NULL
+"4300","953",NULL,"Marrakech","1",NULL
+"4302","955",NULL,"Oujda","1",NULL
+"4303","955",NULL,"Nador","1",NULL
+"4308","958",NULL,"Beni-Mellal","1",NULL
+"4313","960",NULL,"Taza","1",NULL
+"4332","962",NULL,"Balti","1",NULL
+"4334","964",NULL,"Chisinau","1",NULL
+"4335","965",NULL,"Tiraspol","1",NULL
+"4336","966",NULL,"Antananarivo","1",NULL
+"4338","967",NULL,"Fianarantsoa","1",NULL
+"4339","968",NULL,"Mahajanga","1",NULL
+"4340","969",NULL,"Toamasina","1",NULL
+"4341","970",NULL,"Male","1",NULL
+"4342","971",NULL,"Aguascalientes","1",NULL
+"4343","972",NULL,"Tijuana","1",NULL
+"4344","972",NULL,"Mexicali","1",NULL
+"4345","972",NULL,"Ensenada","1",NULL
+"4346","973",NULL,"La Paz","1",NULL
+"4347","973",NULL,"Los Cabos","1",NULL
+"4348","974",NULL,"Campeche","1",NULL
+"4349","974",NULL,"Carmen","1",NULL
+"4351","975",NULL,"Tapachula","1",NULL
+"4352","975",NULL,"Ocosingo","1",NULL
+"4355","975",NULL,"Las Margaritas","1",NULL
+"4357","976",NULL,"Chihuahua","1",NULL
+"4359","976",NULL,"Delicias","1",NULL
+"4360","976",NULL,"Hidalgo del Parral","1",NULL
+"4361","977",NULL,"Saltillo","1",NULL
+"4363","977",NULL,"Monclova","1",NULL
+"4364","977",NULL,"Piedras Negras","1",NULL
+"4366","977",NULL,"Matamoros","1",NULL
+"4367","978",NULL,"Colima","1",NULL
+"4368","978",NULL,"Manzanillo","1",NULL
+"4370","979",NULL,"Buenos Aires","1",NULL
+"4373","979",NULL,"Caracas","1",NULL
+"4374","979",NULL,"Catia La Mar","1",NULL
+"4375","980",NULL,"Durango","1",NULL
+"4377","980",NULL,"Lerdo","1",NULL
+"4379","981",NULL,"Irapuato","1",NULL
+"4380","981",NULL,"Celaya","1",NULL
+"4381","981",NULL,"Salamanca","1",NULL
+"4383","981",NULL,"Guanajuato","1",NULL
+"4384","981",NULL,"Allende","1",NULL
+"4385","981",NULL,"Silao","1",NULL
+"4386","981",NULL,"Valle de Santiago","1",NULL
+"4387","981",NULL,"Dolores Hidalgo","1",NULL
+"4390","981",NULL,"San Luis de la Paz","1",NULL
+"4391","981",NULL,"San Felipe","1",NULL
+"4392","981",NULL,"Salvatierra","1",NULL
+"4394","982",NULL,"Chilpancingo de los Bravo","1",NULL
+"4395","982",NULL,"Iguala de la Independencia","1",NULL
+"4396","982",NULL,"Chilapa de Alvarez","1",NULL
+"4399","983",NULL,"Pachuca de Soto","1",NULL
+"4400","983",NULL,"Tulancingo de Bravo","1",NULL
+"4401","983",NULL,"Huejutla de Reyes","1",NULL
+"4402","984",NULL,"Guadalajara","1",NULL
+"4403","984",NULL,"Zapopan","1",NULL
+"4404","984",NULL,"Tlaquepaque","1",NULL
+"4406","984",NULL,"Puerto Vallarta","1",NULL
+"4407","984",NULL,"Lagos de Moreno","1",NULL
+"4444","987",NULL,"Cuernavaca","1",NULL
+"4445","987",NULL,"Jiutepec","1",NULL
+"4446","987",NULL,"Cuautla","1",NULL
+"4447","987",NULL,"Temixco","1",NULL
+"4448","988",NULL,"Tepic","1",NULL
+"4449","988",NULL,"Santiago Ixcuintla","1",NULL
+"4458","990",NULL,"San Juan Bautista Tuxtepec","1",NULL
+"4459","991",NULL,"Puebla","1",NULL
+"4462","991",NULL,"Atlixco","1",NULL
+"4463","991",NULL,"San Pedro Cholula","1",NULL
+"4473","996",NULL,"Ahome","1",NULL
+"4474","996",NULL,"Guasave","1",NULL
+"4475","996",NULL,"Navolato","1",NULL
+"4476","996",NULL,"El Fuerte","1",NULL
+"4477","997",NULL,"Hermosillo","1",NULL
+"4478","997",NULL,"Cajeme","1",NULL
+"4479","997",NULL,"Nogales","1",NULL
+"4481","997",NULL,"Navojoa","1",NULL
+"4482","997",NULL,"Guaymas","1",NULL
+"4483","998",NULL,"Centro (Villahermosa)","1",NULL
+"4485","998",NULL,"Comalcalco","1",NULL
+"4486","998",NULL,"Huimanguillo","1",NULL
+"4487","998",NULL,"Macuspana","1",NULL
+"4489","999",NULL,"Reynosa","1",NULL
+"4490","999",NULL,"Matamoros","1",NULL
+"4491","999",NULL,"Nuevo Laredo","1",NULL
+"4492","999",NULL,"Tampico","1",NULL
+"4493","999",NULL,"Victoria","1",NULL
+"4494","999",NULL,"Ciudad Madero","1",NULL
+"4495","999",NULL,"Altamira","1",NULL
+"4496","999",NULL,"El Mante","1",NULL
+"4498","1000",NULL,"Veracruz","1",NULL
+"4499","1000",NULL,"Xalapa","1",NULL
+"4500","1000",NULL,"Coatzacoalcos","1",NULL
+"4502","1000",NULL,"Papantla","1",NULL
+"4504","1000",NULL,"Poza Rica de Hidalgo","1",NULL
+"4508","1000",NULL,"Orizaba","1",NULL
+"4509","1000",NULL,"Temapache","1",NULL
+"4510","1000",NULL,"Cosoleacaque","1",NULL
+"4511","1000",NULL,"Tantoyuca","1",NULL
+"4513","1000",NULL,"Tierra Blanca","1",NULL
+"4516","1003",NULL,"Fresnillo","1",NULL
+"4517","1003",NULL,"Zacatecas","1",NULL
+"4518","1003",NULL,"Guadalupe","1",NULL
+"4519","1004",NULL,"Dalap-Uliga-Darrit","1",NULL
+"4520","1005",NULL,"Skopje","1",NULL
+"4521","1006",NULL,"Bamako","1",NULL
+"4522","1007",NULL,"Valletta","1",NULL
+"4523","1008",NULL,"Birkirkara","1",NULL
+"4527","1011",NULL,"Mandalay","1",NULL
+"4528","1011",NULL,"Meikhtila","1",NULL
+"4529","1011",NULL,"Myingyan","1",NULL
+"4530","1012",NULL,"Moulmein (Mawlamyine)","1",NULL
+"4533","1014",NULL,"Sittwe (Akyab)","1",NULL
+"4535","1016",NULL,"Monywa","1",NULL
+"4536","1017",NULL,"Taunggyi (Taunggye)","1",NULL
+"4537","1017",NULL,"Lashio (Lasho)","1",NULL
+"4540","1019",NULL,"Ulan Bator","1",NULL
+"4541","1020",NULL,"Garapan","1",NULL
+"4542","1021",NULL,"Xai-Xai","1",NULL
+"4543","1021",NULL,"Gaza","1",NULL
+"4544","1022",NULL,"Maxixe","1",NULL
+"4545","1023",NULL,"Chimoio","1",NULL
+"4546","1024",NULL,"Maputo","1",NULL
+"4547","1024",NULL,"Matola","1",NULL
+"4548","1025",NULL,"Nampula","1",NULL
+"4550","1026",NULL,"Beira","1",NULL
+"4551","1027",NULL,"Tete","1",NULL
+"4556","1030",NULL,"Nouakchott","1",NULL
+"4557","1031",NULL,"Plymouth","1",NULL
+"4558","1032",NULL,"Fort-de-France","1",NULL
+"4559","1033",NULL,"Beau Bassin-Rose Hill","1",NULL
+"4560","1033",NULL,"Vacoas-Phoenix","1",NULL
+"4561","1034",NULL,"Port-Louis","1",NULL
+"4562","1035",NULL,"Blantyre","1",NULL
+"4563","1036",NULL,"Lilongwe","1",NULL
+"4564","1037",NULL,"Johor Baharu","1",NULL
+"4565","1038",NULL,"Alor Setar","1",NULL
+"4566","1038",NULL,"Sungai Petani","1",NULL
+"4567","1039",NULL,"Kota Bharu","1",NULL
+"4568","1040",NULL,"Seremban","1",NULL
+"4569","1041",NULL,"Kuantan","1",NULL
+"4570","1042",NULL,"Ipoh","1",NULL
+"4571","1042",NULL,"Taiping","1",NULL
+"4572","1043",NULL,"Pinang","1",NULL
+"4573","1044",NULL,"Sandakan","1",NULL
+"4574","1045",NULL,"Kuching","1",NULL
+"4575","1045",NULL,"Sibu","1",NULL
+"4576","1046",NULL,"Petaling Jaya","1",NULL
+"4577","1046",NULL,"Kelang","1",NULL
+"4578","1046",NULL,"Selayang Baru","1",NULL
+"4579","1046",NULL,"Shah Alam","1",NULL
+"4580","1047",NULL,"Kuala Terengganu","1",NULL
+"4581","1048",NULL,"Kuala Lumpur","1",NULL
+"4582","1049",NULL,"Mamoutzou","1",NULL
+"4583","1050",NULL,"Windhoek","1",NULL
+"4602","1052",NULL,"Maradi","1",NULL
+"4603","1053",NULL,"Niamey","1",NULL
+"4604","1054",NULL,"Zinder","1",NULL
+"4623","1056",NULL,"Onitsha","1",NULL
+"4624","1056",NULL,"Enugu","1",NULL
+"4625","1056",NULL,"Awka","1",NULL
+"4626","1057",NULL,"Kumo","1",NULL
+"4627","1057",NULL,"Deba Habe","1",NULL
+"4628","1057",NULL,"Gombe","1",NULL
+"4629","1058",NULL,"Makurdi","1",NULL
+"4630","1059",NULL,"Maiduguri","1",NULL
+"4631","1060",NULL,"Calabar","1",NULL
+"4632","1060",NULL,"Ugep","1",NULL
+"4633","1061",NULL,"Benin City","1",NULL
+"4634","1061",NULL,"Sapele","1",NULL
+"4635","1061",NULL,"Warri","1",NULL
+"4636","1062",NULL,"Abuja","1",NULL
+"4637","1063",NULL,"Aba","1",NULL
+"4638","1064",NULL,"Zaria","1",NULL
+"4639","1064",NULL,"Kaduna","1",NULL
+"4640","1065",NULL,"Kano","1",NULL
+"4641","1066",NULL,"Katsina","1",NULL
+"4642","1067",NULL,"Ilorin","1",NULL
+"4643","1067",NULL,"Offa","1",NULL
+"4644","1068",NULL,"Lagos","1",NULL
+"4645","1068",NULL,"Mushin","1",NULL
+"4646","1068",NULL,"Ikorodu","1",NULL
+"4647","1068",NULL,"Shomolu","1",NULL
+"4648","1068",NULL,"Agege","1",NULL
+"4649","1068",NULL,"Epe","1",NULL
+"4650","1069",NULL,"Minna","1",NULL
+"4651","1069",NULL,"Bida","1",NULL
+"4652","1070",NULL,"Abeokuta","1",NULL
+"4653","1070",NULL,"Ijebu-Ode","1",NULL
+"4654","1070",NULL,"Shagamu","1",NULL
+"4655","1071",NULL,"Ado-Ekiti","1",NULL
+"4656","1071",NULL,"Ikerre","1",NULL
+"4657","1071",NULL,"Ilawe-Ekiti","1",NULL
+"4658","1071",NULL,"Owo","1",NULL
+"4659","1071",NULL,"Ondo","1",NULL
+"4660","1071",NULL,"Akure","1",NULL
+"4661","1071",NULL,"Oka-Akoko","1",NULL
+"4662","1071",NULL,"Ikare","1",NULL
+"4663","1071",NULL,"Ise-Ekiti","1",NULL
+"4664","1072",NULL,"Ibadan","1",NULL
+"4665","1072",NULL,"Ogbomosho","1",NULL
+"4666","1072",NULL,"Oshogbo","1",NULL
+"4667","1072",NULL,"Ilesha","1",NULL
+"4668","1072",NULL,"Iwo","1",NULL
+"4669","1072",NULL,"Ede","1",NULL
+"4670","1072",NULL,"Ife","1",NULL
+"4671","1072",NULL,"Ila","1",NULL
+"4672","1072",NULL,"Oyo","1",NULL
+"4673","1072",NULL,"Iseyin","1",NULL
+"4674","1072",NULL,"Ilobu","1",NULL
+"4675","1072",NULL,"Ikirun","1",NULL
+"4676","1072",NULL,"Shaki","1",NULL
+"4677","1072",NULL,"Effon-Alaiye","1",NULL
+"4678","1072",NULL,"Ikire","1",NULL
+"4679","1072",NULL,"Inisa","1",NULL
+"4680","1072",NULL,"Igboho","1",NULL
+"4681","1072",NULL,"Ejigbo","1",NULL
+"4682","1073",NULL,"Jos","1",NULL
+"4683","1073",NULL,"Lafia","1",NULL
+"4684","1074",NULL,"Port Harcourt","1",NULL
+"4685","1075",NULL,"Sokoto","1",NULL
+"4686","1075",NULL,"Gusau","1",NULL
+"4687","1076",NULL,"Chinandega","1",NULL
+"4689","1078",NULL,"Managua","1",NULL
+"4690","1079",NULL,"Masaya","1",NULL
+"4709","1081",NULL,"Emmen","1",NULL
+"4710","1082",NULL,"Almere","1",NULL
+"4711","1083",NULL,"Apeldoorn","1",NULL
+"4712","1083",NULL,"Nijmegen","1",NULL
+"4713","1083",NULL,"Arnhem","1",NULL
+"4714","1083",NULL,"Ede","1",NULL
+"4715","1084",NULL,"Groningen","1",NULL
+"4716","1085",NULL,"Maastricht","1",NULL
+"4717","1085",NULL,"Heerlen","1",NULL
+"4718","1086",NULL,"Eindhoven","1",NULL
+"4719","1086",NULL,"Tilburg","1",NULL
+"4720","1086",NULL,"Breda","1",NULL
+"4722","1087",NULL,"Amsterdam","1",NULL
+"4723","1087",NULL,"Haarlem","1",NULL
+"4724","1087",NULL,"Zaanstad","1",NULL
+"4725","1087",NULL,"Haarlemmermeer","1",NULL
+"4726","1087",NULL,"Alkmaar","1",NULL
+"4727","1088",NULL,"Enschede","1",NULL
+"4728","1088",NULL,"Zwolle","1",NULL
+"4729","1089",NULL,"Utrecht","1",NULL
+"4730","1089",NULL,"Amersfoort","1",NULL
+"4731","1090",NULL,"Rotterdam","1",NULL
+"4732","1090",NULL,"Haag","1",NULL
+"4733","1090",NULL,"Dordrecht","1",NULL
+"4734","1090",NULL,"Leiden","1",NULL
+"4735","1090",NULL,"Zoetermeer","1",NULL
+"4736","1090",NULL,"Delft","1",NULL
+"4738","1092",NULL,"Bergen","1",NULL
+"4739","1093",NULL,"Oslo","1",NULL
+"4740","1094",NULL,"Stavanger","1",NULL
+"4742","1096",NULL,"Suva","1",NULL
+"4743","1096",NULL,"Nyeri","1",NULL
+"4744","1096",NULL,"Kathmandu","1",NULL
+"4745","1096",NULL,"Lalitapur","1",NULL
+"4746","1096",NULL,"Birgunj","1",NULL
+"4747","1096",NULL,"San Lorenzo","1",NULL
+"4749","1096",NULL,"Fernando de la Mora","1",NULL
+"4750","1096",NULL,"Kabwe","1",NULL
+"4751","1096",NULL,"Kandy","1",NULL
+"4752","1096",NULL,"Kampala","1",NULL
+"4753","1097",NULL,"Machakos","1",NULL
+"4754","1097",NULL,"Meru","1",NULL
+"4755","1097",NULL,"Biratnagar","1",NULL
+"4756","1098",NULL,"Sekondi-Takoradi","1",NULL
+"4757","1098",NULL,"Pokhara","1",NULL
+"4758","1098",NULL,"Freetown","1",NULL
+"4759","1098",NULL,"Colombo","1",NULL
+"4760","1098",NULL,"Dehiwala","1",NULL
+"4761","1098",NULL,"Moratuwa","1",NULL
+"4762","1098",NULL,"Sri Jayawardenepura Kotte","1",NULL
+"4763","1098",NULL,"Negombo","1",NULL
+"4782","1100",NULL,"Auckland","1",NULL
+"4783","1100",NULL,"Manukau","1",NULL
+"4784","1100",NULL,"North Shore","1",NULL
+"4785","1100",NULL,"Waitakere","1",NULL
+"4786","1101",NULL,"Christchurch","1",NULL
+"4787","1102",NULL,"Dunedin","1",NULL
+"4788","1103",NULL,"Hamilton","1",NULL
+"4789","1103",NULL,"Hamilton","1",NULL
+"4790","1104",NULL,"Wellington","1",NULL
+"4791","1104",NULL,"Lower Hutt","1",NULL
+"4792","1105",NULL,"Suhar","1",NULL
+"4793","1106",NULL,"al-Sib","1",NULL
+"4794","1106",NULL,"Bawshar","1",NULL
+"4795","1106",NULL,"Masqat","1",NULL
+"4796","1107",NULL,"Salala","1",NULL
+"4797","1108",NULL,"Quetta","1",NULL
+"4798","1108",NULL,"Khuzdar","1",NULL
+"4799","1109",NULL,"Islamabad","1",NULL
+"4800","1110",NULL,"Peshawar","1",NULL
+"4801","1110",NULL,"Mardan","1",NULL
+"4802","1110",NULL,"Mingora","1",NULL
+"4803","1110",NULL,"Kohat","1",NULL
+"4804","1110",NULL,"Abottabad","1",NULL
+"4805","1110",NULL,"Dera Ismail Khan","1",NULL
+"4806","1110",NULL,"Nowshera","1",NULL
+"4807","1111",NULL,"Ludhiana","1",NULL
+"4808","1111",NULL,"Amritsar","1",NULL
+"4809","1111",NULL,"Jalandhar (Jullundur)","1",NULL
+"4810","1111",NULL,"Patiala","1",NULL
+"4811","1111",NULL,"Bhatinda (Bathinda)","1",NULL
+"4812","1111",NULL,"Pathankot","1",NULL
+"4813","1111",NULL,"Hoshiarpur","1",NULL
+"4814","1111",NULL,"Moga","1",NULL
+"4815","1111",NULL,"Abohar","1",NULL
+"4816","1111",NULL,"Lahore","1",NULL
+"4817","1111",NULL,"Faisalabad","1",NULL
+"4818","1111",NULL,"Rawalpindi","1",NULL
+"4819","1111",NULL,"Multan","1",NULL
+"4820","1111",NULL,"Gujranwala","1",NULL
+"4821","1111",NULL,"Sargodha","1",NULL
+"4822","1111",NULL,"Sialkot","1",NULL
+"4823","1111",NULL,"Bahawalpur","1",NULL
+"4824","1111",NULL,"Jhang","1",NULL
+"4825","1111",NULL,"Sheikhupura","1",NULL
+"4826","1111",NULL,"Gujrat","1",NULL
+"4827","1111",NULL,"Kasur","1",NULL
+"4828","1111",NULL,"Rahim Yar Khan","1",NULL
+"4829","1111",NULL,"Sahiwal","1",NULL
+"4830","1111",NULL,"Okara","1",NULL
+"4831","1111",NULL,"Wah","1",NULL
+"4832","1111",NULL,"Dera Ghazi Khan","1",NULL
+"4833","1111",NULL,"Chiniot","1",NULL
+"4834","1111",NULL,"Kamoke","1",NULL
+"4835","1111",NULL,"Mandi Burewala","1",NULL
+"4836","1111",NULL,"Jhelum","1",NULL
+"4837","1111",NULL,"Sadiqabad","1",NULL
+"4838","1111",NULL,"Khanewal","1",NULL
+"4839","1111",NULL,"Hafizabad","1",NULL
+"4840","1111",NULL,"Muzaffargarh","1",NULL
+"4841","1111",NULL,"Khanpur","1",NULL
+"4842","1111",NULL,"Gojra","1",NULL
+"4843","1111",NULL,"Bahawalnagar","1",NULL
+"4844","1111",NULL,"Muridke","1",NULL
+"4845","1111",NULL,"Pak Pattan","1",NULL
+"4846","1111",NULL,"Jaranwala","1",NULL
+"4847","1111",NULL,"Chishtian Mandi","1",NULL
+"4848","1111",NULL,"Daska","1",NULL
+"4849","1111",NULL,"Mandi Bahauddin","1",NULL
+"4850","1111",NULL,"Ahmadpur East","1",NULL
+"4851","1111",NULL,"Kamalia","1",NULL
+"4852","1111",NULL,"Vihari","1",NULL
+"4853","1111",NULL,"Wazirabad","1",NULL
+"4854","1112",NULL,"Mirpur Khas","1",NULL
+"4855","1112",NULL,"Nawabshah","1",NULL
+"4856","1112",NULL,"Jacobabad","1",NULL
+"4857","1112",NULL,"Shikarpur","1",NULL
+"4858","1112",NULL,"Tando Adam","1",NULL
+"4859","1112",NULL,"Khairpur","1",NULL
+"4860","1112",NULL,"Dadu","1",NULL
+"4861","1113",NULL,"Karachi","1",NULL
+"4862","1113",NULL,"Hyderabad","1",NULL
+"4863","1113",NULL,"Sukkur","1",NULL
+"4864","1113",NULL,"Larkana","1",NULL
+"4866","1115",NULL,"San Miguelito","1",NULL
+"4885","1117",NULL,"Chimbote","1",NULL
+"4886","1118",NULL,"Arequipa","1",NULL
+"4887","1119",NULL,"Ayacucho","1",NULL
+"4888","1120",NULL,"Cajamarca","1",NULL
+"4889","1121",NULL,"Callao","1",NULL
+"4890","1121",NULL,"Ventanilla","1",NULL
+"4891","1122",NULL,"Cusco","1",NULL
+"4893","1124",NULL,"Ica","1",NULL
+"4894","1124",NULL,"Chincha Alta","1",NULL
+"4896","1126",NULL,"Nueva San Salvador","1",NULL
+"4897","1126",NULL,"Trujillo","1",NULL
+"4898","1127",NULL,"Chiclayo","1",NULL
+"4899","1128",NULL,"Lima","1",NULL
+"4900","1129",NULL,"Iquitos","1",NULL
+"4901","1130",NULL,"Piura","1",NULL
+"4902","1130",NULL,"Sullana","1",NULL
+"4903","1130",NULL,"Castilla","1",NULL
+"4904","1131",NULL,"Juliaca","1",NULL
+"4905","1131",NULL,"Puno","1",NULL
+"4906","1132",NULL,"Tacna","1",NULL
+"4907","1133",NULL,"Pucallpa","1",NULL
+"4908","1134",NULL,"Sultan Kudarat","1",NULL
+"4909","1135",NULL,"Legazpi","1",NULL
+"4910","1135",NULL,"Naga","1",NULL
+"4911","1135",NULL,"Tabaco","1",NULL
+"4912","1135",NULL,"Daraga (Locsin)","1",NULL
+"4913","1135",NULL,"Sorsogon","1",NULL
+"4914","1135",NULL,"Ligao","1",NULL
+"4915","1136",NULL,"Tuguegarao","1",NULL
+"4916","1136",NULL,"Ilagan","1",NULL
+"4917","1136",NULL,"Santiago","1",NULL
+"4918","1136",NULL,"Cauayan","1",NULL
+"4919","1137",NULL,"Baguio","1",NULL
+"4920","1138",NULL,"Butuan","1",NULL
+"4921","1138",NULL,"Surigao","1",NULL
+"4922","1138",NULL,"Bislig","1",NULL
+"4923","1138",NULL,"Bayugan","1",NULL
+"4925","1139",NULL,"Angeles","1",NULL
+"4926","1139",NULL,"Tarlac","1",NULL
+"4927","1139",NULL,"Cabanatuan","1",NULL
+"4928","1139",NULL,"San Fernando","1",NULL
+"4929","1139",NULL,"Olongapo","1",NULL
+"4930","1139",NULL,"Malolos","1",NULL
+"4931","1139",NULL,"Mabalacat","1",NULL
+"4932","1139",NULL,"Meycauayan","1",NULL
+"4933","1139",NULL,"Santa Maria","1",NULL
+"4934","1139",NULL,"Lubao","1",NULL
+"4935","1139",NULL,"San Miguel","1",NULL
+"4936","1139",NULL,"Baliuag","1",NULL
+"4937","1139",NULL,"Concepcion","1",NULL
+"4938","1139",NULL,"Hagonoy","1",NULL
+"4939","1139",NULL,"Mexico","1",NULL
+"4940","1139",NULL,"San Jose","1",NULL
+"4941","1139",NULL,"Arayat","1",NULL
+"4942","1139",NULL,"Marilao","1",NULL
+"4943","1139",NULL,"Talavera","1",NULL
+"4944","1139",NULL,"Guagua","1",NULL
+"4945","1139",NULL,"Capas","1",NULL
+"4946","1140",NULL,"Iligan","1",NULL
+"4947","1140",NULL,"Cotabato","1",NULL
+"4948","1140",NULL,"Marawi","1",NULL
+"4949","1140",NULL,"Midsayap","1",NULL
+"4950","1140",NULL,"Kidapawan","1",NULL
+"4951","1141",NULL,"Cebu","1",NULL
+"4952","1141",NULL,"Mandaue","1",NULL
+"4953","1141",NULL,"Lapu-Lapu","1",NULL
+"4954","1141",NULL,"Talisay","1",NULL
+"4955","1141",NULL,"Toledo","1",NULL
+"4956","1141",NULL,"Dumaguete","1",NULL
+"4957","1141",NULL,"Bayawan (Tulong)","1",NULL
+"4958","1141",NULL,"Danao","1",NULL
+"4959","1142",NULL,"Tacloban","1",NULL
+"4960","1142",NULL,"Ormoc","1",NULL
+"4961","1142",NULL,"Calbayog","1",NULL
+"4962","1142",NULL,"Baybay","1",NULL
+"4963","1143",NULL,"San Carlos","1",NULL
+"4964","1143",NULL,"Dagupan","1",NULL
+"4965","1143",NULL,"Malasiqui","1",NULL
+"4966","1143",NULL,"Urdaneta","1",NULL
+"4967","1143",NULL,"San Fernando","1",NULL
+"4968","1143",NULL,"Bayambang","1",NULL
+"4969","1143",NULL,"Laoag","1",NULL
+"4970","1144",NULL,"Quezon","1",NULL
+"4971","1144",NULL,"Manila","1",NULL
+"4972","1144",NULL,"Kalookan","1",NULL
+"4973","1144",NULL,"Pasig","1",NULL
+"4974","1144",NULL,"Valenzuela","1",NULL
+"4976","1144",NULL,"Taguig","1",NULL
+"4978","1144",NULL,"Makati","1",NULL
+"4979","1144",NULL,"Marikina","1",NULL
+"4980","1144",NULL,"Muntinlupa","1",NULL
+"4981","1144",NULL,"Pasay","1",NULL
+"4982","1144",NULL,"Malabon","1",NULL
+"4983","1144",NULL,"Mandaluyong","1",NULL
+"4984","1144",NULL,"Navotas","1",NULL
+"4985","1144",NULL,"San Juan del Monte","1",NULL
+"4986","1145",NULL,"Cagayan de Oro","1",NULL
+"4987","1145",NULL,"Valencia","1",NULL
+"4988","1145",NULL,"Malaybalay","1",NULL
+"4989","1145",NULL,"Ozamis","1",NULL
+"4990","1145",NULL,"Gingoog","1",NULL
+"4991","1146",NULL,"Davao","1",NULL
+"4992","1146",NULL,"General Santos","1",NULL
+"4993","1146",NULL,"Tagum","1",NULL
+"4994","1146",NULL,"Panabo","1",NULL
+"4995","1146",NULL,"Koronadal","1",NULL
+"4996","1146",NULL,"Digos","1",NULL
+"4997","1146",NULL,"Polomolok","1",NULL
+"4998","1146",NULL,"Mati","1",NULL
+"4999","1146",NULL,"Malita","1",NULL
+"5000","1146",NULL,"Malungon","1",NULL
+"5001","1147",NULL,"Antipolo","1",NULL
+"5003","1147",NULL,"Bacoor","1",NULL
+"5004","1147",NULL,"Calamba","1",NULL
+"5005","1147",NULL,"Batangas","1",NULL
+"5006","1147",NULL,"Cainta","1",NULL
+"5007","1147",NULL,"San Pedro","1",NULL
+"5008","1147",NULL,"Lipa","1",NULL
+"5009","1147",NULL,"San Pablo","1",NULL
+"5011","1147",NULL,"Taytay","1",NULL
+"5012","1147",NULL,"Lucena","1",NULL
+"5013","1147",NULL,"Imus","1",NULL
+"5014","1147",NULL,"Binangonan","1",NULL
+"5015","1147",NULL,"Santa Rosa","1",NULL
+"5016","1147",NULL,"Puerto Princesa","1",NULL
+"5017","1147",NULL,"Silang","1",NULL
+"5018","1147",NULL,"San Mateo","1",NULL
+"5019","1147",NULL,"Tanauan","1",NULL
+"5020","1147",NULL,"Rodriguez (Montalban)","1",NULL
+"5021","1147",NULL,"Sariaya","1",NULL
+"5022","1147",NULL,"General Mariano Alvarez","1",NULL
+"5023","1147",NULL,"San Jose","1",NULL
+"5024","1147",NULL,"Tanza","1",NULL
+"5025","1147",NULL,"General Trias","1",NULL
+"5026","1147",NULL,"Cabuyao","1",NULL
+"5027","1147",NULL,"Calapan","1",NULL
+"5028","1147",NULL,"Cavite","1",NULL
+"5029","1147",NULL,"Nasugbu","1",NULL
+"5030","1147",NULL,"Santa Cruz","1",NULL
+"5031","1147",NULL,"Candelaria","1",NULL
+"5032","1148",NULL,"Zamboanga","1",NULL
+"5033","1148",NULL,"Pagadian","1",NULL
+"5034","1148",NULL,"Dipolog","1",NULL
+"5035","1149",NULL,"Bacolod","1",NULL
+"5036","1149",NULL,"Iloilo","1",NULL
+"5037","1149",NULL,"Kabankalan","1",NULL
+"5038","1149",NULL,"Cadiz","1",NULL
+"5039","1149",NULL,"Bago","1",NULL
+"5040","1149",NULL,"Sagay","1",NULL
+"5041","1149",NULL,"Roxas","1",NULL
+"5042","1149",NULL,"San Carlos","1",NULL
+"5043","1149",NULL,"Silay","1",NULL
+"5044","1150",NULL,"Koror","1",NULL
+"5045","1151",NULL,"Port Moresby","1",NULL
+"5046","1152",NULL,"Wroclaw","1",NULL
+"5047","1152",NULL,"Walbrzych","1",NULL
+"5048","1152",NULL,"Legnica","1",NULL
+"5050","1153",NULL,"Bydgoszcz","1",NULL
+"5051","1153",NULL,"Torun","1",NULL
+"5052","1153",NULL,"Wloclawek","1",NULL
+"5053","1153",NULL,"Grudziadz","1",NULL
+"5055","1155",NULL,"Lublin","1",NULL
+"5060","1158",NULL,"Warszawa","1",NULL
+"5061","1158",NULL,"Radom","1",NULL
+"5062","1158",NULL,"Plock","1",NULL
+"5063","1159",NULL,"Opole","1",NULL
+"5065","1161",NULL,"Bialystok","1",NULL
+"5066","1162",NULL,"Gdansk","1",NULL
+"5067","1162",NULL,"Gdynia","1",NULL
+"5068","1162",NULL,"Slupsk","1",NULL
+"5069","1163",NULL,"Katowice","1",NULL
+"5070","1163",NULL,"Czestochowa","1",NULL
+"5071","1163",NULL,"Sosnowiec","1",NULL
+"5072","1163",NULL,"Gliwice","1",NULL
+"5073","1163",NULL,"Bytom","1",NULL
+"5074","1163",NULL,"Zabrze","1",NULL
+"5075","1163",NULL,"Bielsko-Biala","1",NULL
+"5076","1163",NULL,"Ruda Slaska","1",NULL
+"5077","1163",NULL,"Rybnik","1",NULL
+"5078","1163",NULL,"Tychy","1",NULL
+"5082","1163",NULL,"Jaworzno","1",NULL
+"5083","1164",NULL,"Kielce","1",NULL
+"5084","1165",NULL,"Olsztyn","1",NULL
+"5085","1165",NULL,"Elblag","1",NULL
+"5086","1166",NULL,"Poznan","1",NULL
+"5087","1166",NULL,"Kalisz","1",NULL
+"5088","1167",NULL,"Szczecin","1",NULL
+"5089","1167",NULL,"Koszalin","1",NULL
+"5090","1168",NULL,"Arecibo","1",NULL
+"5092","1170",NULL,"Caguas","1",NULL
+"5093","1171",NULL,"Carolina","1",NULL
+"5094","1172",NULL,"Guaynabo","1",NULL
+"5096","1174",NULL,"Ponce","1",NULL
+"5097","1175",NULL,"San Juan","1",NULL
+"5098","1175",NULL,"San Juan","1",NULL
+"5099","1176",NULL,"Toa Baja","1",NULL
+"5100","1177",NULL,"Kanggye","1",NULL
+"5101","1178",NULL,"Hamhung","1",NULL
+"5102","1179",NULL,"Chongjin","1",NULL
+"5103","1179",NULL,"Kimchaek","1",NULL
+"5104","1180",NULL,"Haeju","1",NULL
+"5105","1181",NULL,"Sariwon","1",NULL
+"5106","1182",NULL,"Kaesong","1",NULL
+"5107","1183",NULL,"Wonsan","1",NULL
+"5108","1184",NULL,"Nampo","1",NULL
+"5109","1185",NULL,"Phyongsong","1",NULL
+"5110","1186",NULL,"Sinuiju","1",NULL
+"5111","1187",NULL,"Pyongyang","1",NULL
+"5112","1188",NULL,"Hyesan","1",NULL
+"5113","1189",NULL,"Braga","1",NULL
+"5115","1191",NULL,"Lisboa","1",NULL
+"5116","1191",NULL,"Amadora","1",NULL
+"5117","1191",NULL,"Stockholm","1",NULL
+"5118","1192",NULL,"Porto","1",NULL
+"5121","1195",NULL,"Suva","1",NULL
+"5122","1195",NULL,"Nyeri","1",NULL
+"5123","1195",NULL,"Kathmandu","1",NULL
+"5124","1195",NULL,"Lalitapur","1",NULL
+"5125","1195",NULL,"Birgunj","1",NULL
+"5126","1195",NULL,"San Lorenzo","1",NULL
+"5128","1195",NULL,"Fernando de la Mora","1",NULL
+"5129","1195",NULL,"Kabwe","1",NULL
+"5130","1195",NULL,"Kandy","1",NULL
+"5131","1195",NULL,"Kampala","1",NULL
+"5132","1196",NULL,"Xai-Xai","1",NULL
+"5133","1196",NULL,"Gaza","1",NULL
+"5134","1197",NULL,"Hebron","1",NULL
+"5135","1198",NULL,"Khan Yunis","1",NULL
+"5136","1199",NULL,"Nablus","1",NULL
+"5137","1200",NULL,"Jabaliya","1",NULL
+"5138","1201",NULL,"Rafah","1",NULL
+"5139","1202",NULL,"Faaa","1",NULL
+"5140","1202",NULL,"Papeete","1",NULL
+"5141","1203",NULL,"Doha","1",NULL
+"5143","1205",NULL,"Arad","1",NULL
+"5144","1206",NULL,"Pitesti","1",NULL
+"5145","1207",NULL,"Bacau","1",NULL
+"5146","1208",NULL,"Oradea","1",NULL
+"5147","1209",NULL,"Botosani","1",NULL
+"5148","1210",NULL,"Braila","1",NULL
+"5149","1211",NULL,"Brasov","1",NULL
+"5150","1212",NULL,"Bucuresti","1",NULL
+"5151","1213",NULL,"Buzau","1",NULL
+"5152","1214",NULL,"Resita","1",NULL
+"5153","1215",NULL,"Cluj-Napoca","1",NULL
+"5154","1216",NULL,"Constanta","1",NULL
+"5156","1218",NULL,"Craiova","1",NULL
+"5157","1219",NULL,"Galati","1",NULL
+"5159","1221",NULL,"Iasi","1",NULL
+"5160","1222",NULL,"Baia Mare","1",NULL
+"5161","1223",NULL,"Drobeta-Turnu Severin","1",NULL
+"5163","1225",NULL,"Piatra Neamt","1",NULL
+"5164","1226",NULL,"Ploiesti","1",NULL
+"5165","1227",NULL,"Satu Mare","1",NULL
+"5166","1228",NULL,"Sibiu","1",NULL
+"5167","1229",NULL,"Suceava","1",NULL
+"5168","1230",NULL,"Timisoara","1",NULL
+"5169","1231",NULL,"Tulcea","1",NULL
+"5171","1233",NULL,"Focsani","1",NULL
+"5172","1234",NULL,"Maikop","1",NULL
+"5173","1235",NULL,"Barnaul","1",NULL
+"5174","1235",NULL,"Bijsk","1",NULL
+"5175","1235",NULL,"Rubtsovsk","1",NULL
+"5177","1237",NULL,"Arkangeli","1",NULL
+"5178","1237",NULL,"Severodvinsk","1",NULL
+"5179","1238",NULL,"Astrahan","1",NULL
+"5185","1240",NULL,"Belgorod","1",NULL
+"5186","1240",NULL,"Staryi Oskol","1",NULL
+"5187","1241",NULL,"Brjansk","1",NULL
+"5188","1242",NULL,"Ulan-Ude","1",NULL
+"5190","1243",NULL,"Derbent","1",NULL
+"5191","1244",NULL,"Habarovsk","1",NULL
+"5192","1244",NULL,"Komsomolsk-na-Amure","1",NULL
+"5193","1245",NULL,"Abakan","1",NULL
+"5194","1246",NULL,"Surgut","1",NULL
+"5195","1246",NULL,"Niznevartovsk","1",NULL
+"5196","1246",NULL,"Neftejugansk","1",NULL
+"5197","1247",NULL,"Irkutsk","1",NULL
+"5198","1247",NULL,"Bratsk","1",NULL
+"5199","1247",NULL,"Angarsk","1",NULL
+"5200","1247",NULL,"Ust-Ilimsk","1",NULL
+"5201","1247",NULL,"Usolje-Sibirskoje","1",NULL
+"5202","1248",NULL,"Ivanovo","1",NULL
+"5204","1249",NULL,"Jaroslavl","1",NULL
+"5205","1249",NULL,"Rybinsk","1",NULL
+"5207","1251",NULL,"Kaliningrad","1",NULL
+"5208","1252",NULL,"Elista","1",NULL
+"5209","1253",NULL,"Kaluga","1",NULL
+"5210","1253",NULL,"Obninsk","1",NULL
+"5213","1256",NULL,"Petroskoi","1",NULL
+"5214","1257",NULL,"Novokuznetsk","1",NULL
+"5215","1257",NULL,"Kemerovo","1",NULL
+"5216","1257",NULL,"Prokopjevsk","1",NULL
+"5217","1257",NULL,"Leninsk-Kuznetski","1",NULL
+"5218","1257",NULL,"Kiseljovsk","1",NULL
+"5220","1257",NULL,"Anzero-Sudzensk","1",NULL
+"5221","1258",NULL,"Kirov","1",NULL
+"5223","1259",NULL,"Syktyvkar","1",NULL
+"5224","1259",NULL,"Uhta","1",NULL
+"5225","1259",NULL,"Vorkuta","1",NULL
+"5226","1260",NULL,"Kostroma","1",NULL
+"5227","1261",NULL,"Krasnodar","1",NULL
+"5229","1261",NULL,"Novorossijsk","1",NULL
+"5230","1261",NULL,"Armavir","1",NULL
+"5231","1262",NULL,"Krasnojarsk","1",NULL
+"5232","1262",NULL,"Norilsk","1",NULL
+"5234","1262",NULL,"Kansk","1",NULL
+"5235","1262",NULL,"Zeleznogorsk","1",NULL
+"5236","1263",NULL,"Kurgan","1",NULL
+"5237","1264",NULL,"Kursk","1",NULL
+"5238","1264",NULL,"Zeleznogorsk","1",NULL
+"5239","1265",NULL,"Lipetsk","1",NULL
+"5240","1265",NULL,"Jelets","1",NULL
+"5241","1266",NULL,"Magadan","1",NULL
+"5243","1268",NULL,"Saransk","1",NULL
+"5244","1269",NULL,"Moscow","1",NULL
+"5245","1269",NULL,"Zelenograd","1",NULL
+"5246","1270",NULL,"Podolsk","1",NULL
+"5247","1270",NULL,"Ljubertsy","1",NULL
+"5249","1270",NULL,"Kolomna","1",NULL
+"5250","1270",NULL,"Elektrostal","1",NULL
+"5251","1270",NULL,"Himki","1",NULL
+"5253","1270",NULL,"Korolev","1",NULL
+"5254","1270",NULL,"Serpuhov","1",NULL
+"5255","1270",NULL,"Odintsovo","1",NULL
+"5256","1270",NULL,"Orehovo-Zujevo","1",NULL
+"5257","1270",NULL,"Noginsk","1",NULL
+"5258","1270",NULL,"Sergijev Posad","1",NULL
+"5260","1270",NULL,"Zeleznodoroznyi","1",NULL
+"5261","1270",NULL,"Zukovski","1",NULL
+"5262","1270",NULL,"Krasnogorsk","1",NULL
+"5263","1270",NULL,"Klin","1",NULL
+"5264","1271",NULL,"Murmansk","1",NULL
+"5265","1272",NULL,"Nizni Novgorod","1",NULL
+"5266","1272",NULL,"Dzerzinsk","1",NULL
+"5267","1272",NULL,"Arzamas","1",NULL
+"5268","1273",NULL,"Vladikavkaz","1",NULL
+"5269","1274",NULL,"Veliki Novgorod","1",NULL
+"5270","1275",NULL,"Novosibirsk","1",NULL
+"5271","1276",NULL,"Omsk","1",NULL
+"5272","1277",NULL,"Orenburg","1",NULL
+"5273","1277",NULL,"Orsk","1",NULL
+"5274","1277",NULL,"Novotroitsk","1",NULL
+"5275","1278",NULL,"Orjol","1",NULL
+"5276","1279",NULL,"Penza","1",NULL
+"5277","1279",NULL,"Kuznetsk","1",NULL
+"5278","1280",NULL,"Perm","1",NULL
+"5279","1280",NULL,"Berezniki","1",NULL
+"5280","1280",NULL,"Solikamsk","1",NULL
+"5282","1281",NULL,"St Petersburg","1",NULL
+"5283","1281",NULL,"Kolpino","1",NULL
+"5285","1282",NULL,"Pihkova","1",NULL
+"5286","1282",NULL,"Velikije Luki","1",NULL
+"5287","1283",NULL,"Vladivostok","1",NULL
+"5288","1283",NULL,"Nahodka","1",NULL
+"5289","1283",NULL,"Ussurijsk","1",NULL
+"5290","1284",NULL,"Rjazan","1",NULL
+"5291","1285",NULL,"Rostov-na-Donu","1",NULL
+"5292","1285",NULL,"Taganrog","1",NULL
+"5295","1285",NULL,"Volgodonsk","1",NULL
+"5297","1285",NULL,"Bataisk","1",NULL
+"5298","1286",NULL,"Jakutsk","1",NULL
+"5299","1287",NULL,"Juzno-Sahalinsk","1",NULL
+"5300","1288",NULL,"Samara","1",NULL
+"5301","1288",NULL,"Toljatti","1",NULL
+"5302","1288",NULL,"Syzran","1",NULL
+"5304","1289",NULL,"Saratov","1",NULL
+"5305","1289",NULL,"Balakovo","1",NULL
+"5306","1289",NULL,"Engels","1",NULL
+"5308","1290",NULL,"Smolensk","1",NULL
+"5309","1291",NULL,"Stavropol","1",NULL
+"5310","1291",NULL,"Nevinnomyssk","1",NULL
+"5311","1291",NULL,"Pjatigorsk","1",NULL
+"5312","1291",NULL,"Kislovodsk","1",NULL
+"5313","1291",NULL,"Jessentuki","1",NULL
+"5314","1292",NULL,"Jekaterinburg","1",NULL
+"5315","1292",NULL,"Nizni Tagil","1",NULL
+"5316","1292",NULL,"Kamensk-Uralski","1",NULL
+"5317","1292",NULL,"Pervouralsk","1",NULL
+"5318","1292",NULL,"Serov","1",NULL
+"5319","1292",NULL,"Novouralsk","1",NULL
+"5320","1293",NULL,"Tambov","1",NULL
+"5322","1294",NULL,"Kazan","1",NULL
+"5324","1294",NULL,"Niznekamsk","1",NULL
+"5325","1294",NULL,"Almetjevsk","1",NULL
+"5326","1294",NULL,"Zelenodolsk","1",NULL
+"5327","1294",NULL,"Bugulma","1",NULL
+"5328","1295",NULL,"Tjumen","1",NULL
+"5329","1295",NULL,"Tobolsk","1",NULL
+"5330","1296",NULL,"Tomsk","1",NULL
+"5331","1296",NULL,"Seversk","1",NULL
+"5332","1297",NULL,"Tula","1",NULL
+"5333","1297",NULL,"Novomoskovsk","1",NULL
+"5334","1298",NULL,"Tver","1",NULL
+"5335","1299",NULL,"Kyzyl","1",NULL
+"5344","1304",NULL,"Izevsk","1",NULL
+"5345","1304",NULL,"Glazov","1",NULL
+"5346","1304",NULL,"Sarapul","1",NULL
+"5347","1304",NULL,"Votkinsk","1",NULL
+"5348","1305",NULL,"Uljanovsk","1",NULL
+"5349","1305",NULL,"Dimitrovgrad","1",NULL
+"5350","1306",NULL,"Vladimir","1",NULL
+"5351","1306",NULL,"Kovrov","1",NULL
+"5352","1306",NULL,"Murom","1",NULL
+"5353","1307",NULL,"Volgograd","1",NULL
+"5354","1307",NULL,"Volzski","1",NULL
+"5357","1308",NULL,"Vologda","1",NULL
+"5358","1309",NULL,"Voronez","1",NULL
+"5359","1310",NULL,"Nojabrsk","1",NULL
+"5360","1310",NULL,"Novyi Urengoi","1",NULL
+"5361","1311",NULL,"Kigali","1",NULL
+"5363","1313",NULL,"Burayda","1",NULL
+"5364","1314",NULL,"Zagazig","1",NULL
+"5365","1314",NULL,"Bilbays","1",NULL
+"5366","1314",NULL,"al-Dammam","1",NULL
+"5367","1314",NULL,"al-Hufuf","1",NULL
+"5368","1314",NULL,"al-Mubarraz","1",NULL
+"5369","1314",NULL,"al-Khubar","1",NULL
+"5370","1314",NULL,"Jubayl","1",NULL
+"5371","1314",NULL,"Hafar al-Batin","1",NULL
+"5372","1314",NULL,"al-Tuqba","1",NULL
+"5373","1314",NULL,"al-Qatif","1",NULL
+"5374","1315",NULL,"Khamis Mushayt","1",NULL
+"5375","1315",NULL,"Abha","1",NULL
+"5376","1316",NULL,"Hail","1",NULL
+"5377","1317",NULL,"Medina","1",NULL
+"5378","1317",NULL,"Yanbu","1",NULL
+"5379","1318",NULL,"Jedda","1",NULL
+"5380","1318",NULL,"Mekka","1",NULL
+"5381","1318",NULL,"al-Taif","1",NULL
+"5382","1318",NULL,"al-Hawiya","1",NULL
+"5383","1319",NULL,"Najran","1",NULL
+"5384","1320",NULL,"Unayza","1",NULL
+"5385","1321",NULL,"al-Kharj","1",NULL
+"5386","1322",NULL,"Riyadh","1",NULL
+"5387","1323",NULL,"Tabuk","1",NULL
+"5388","1324",NULL,"Kusti","1",NULL
+"5389","1325",NULL,"Port Sudan","1",NULL
+"5390","1326",NULL,"Wad Madani","1",NULL
+"5391","1327",NULL,"al-Qadarif","1",NULL
+"5392","1328",NULL,"Juba","1",NULL
+"5393","1329",NULL,"Nyala","1",NULL
+"5394","1330",NULL,"al-Fashir","1",NULL
+"5395","1331",NULL,"Kassala","1",NULL
+"5396","1332",NULL,"Omdurman","1",NULL
+"5397","1332",NULL,"Khartum","1",NULL
+"5398","1332",NULL,"Sharq al-Nil","1",NULL
+"5399","1333",NULL,"Obeid","1",NULL
+"5400","1334",NULL,"Pikine","1",NULL
+"5401","1334",NULL,"Dakar","1",NULL
+"5402","1334",NULL,"Rufisque","1",NULL
+"5403","1335",NULL,"Diourbel","1",NULL
+"5404","1336",NULL,"Kaolack","1",NULL
+"5405","1337",NULL,"Saint-Louis","1",NULL
+"5408","1339",NULL,"Ziguinchor","1",NULL
+"5427","1341",NULL,"Jamestown","1",NULL
+"5429","1343",NULL,"Honiara","1",NULL
+"5430","1344",NULL,"Sekondi-Takoradi","1",NULL
+"5431","1344",NULL,"Pokhara","1",NULL
+"5432","1344",NULL,"Freetown","1",NULL
+"5433","1344",NULL,"Colombo","1",NULL
+"5434","1344",NULL,"Dehiwala","1",NULL
+"5435","1344",NULL,"Moratuwa","1",NULL
+"5436","1344",NULL,"Sri Jayawardenepura Kotte","1",NULL
+"5437","1344",NULL,"Negombo","1",NULL
+"5438","1345",NULL,"Nueva San Salvador","1",NULL
+"5439","1345",NULL,"Trujillo","1",NULL
+"5440","1346",NULL,"San Miguel","1",NULL
+"5441","1347",NULL,"San Salvador","1",NULL
+"5442","1347",NULL,"Mejicanos","1",NULL
+"5443","1347",NULL,"Soyapango","1",NULL
+"5444","1347",NULL,"Apopa","1",NULL
+"5445","1348",NULL,"Santa Ana","1",NULL
+"5446","1349",NULL,"San Marino","1",NULL
+"5448","1351",NULL,"Mogadishu","1",NULL
+"5449","1352",NULL,"Kismaayo","1",NULL
+"5450","1353",NULL,"Hargeysa","1",NULL
+"5451","1354",NULL,"Saint-Pierre","1",NULL
+"5453","1356",NULL,"Paramaribo","1",NULL
+"5454","1357",NULL,"Bratislava","1",NULL
+"5457","1359",NULL,"Ljubljana","1",NULL
+"5458","1360",NULL,"Maribor","1",NULL
+"5464","1365",NULL,"Lisboa","1",NULL
+"5465","1365",NULL,"Amadora","1",NULL
+"5466","1365",NULL,"Stockholm","1",NULL
+"5476","1372",NULL,"Mbabane","1",NULL
+"5478","1374",NULL,"al-Qamishliya","1",NULL
+"5479","1375",NULL,"al-Raqqa","1",NULL
+"5480","1376",NULL,"Aleppo","1",NULL
+"5481","1377",NULL,"Damascus","1",NULL
+"5482","1378",NULL,"Jaramana","1",NULL
+"5483","1378",NULL,"Duma","1",NULL
+"5484","1379",NULL,"Dayr al-Zawr","1",NULL
+"5485","1380",NULL,"Hama","1",NULL
+"5486","1381",NULL,"Hims","1",NULL
+"5487","1382",NULL,"Idlib","1",NULL
+"5488","1383",NULL,"Latakia","1",NULL
+"5489","1384",NULL,"Cockburn Town","1",NULL
+"5491","1386",NULL,"Moundou","1",NULL
+"5493","1388",NULL,"Bangkok","1",NULL
+"5494","1389",NULL,"Chiang Mai","1",NULL
+"5495","1390",NULL,"Khon Kaen","1",NULL
+"5496","1391",NULL,"Nakhon Pathom","1",NULL
+"5497","1392",NULL,"Nakhon Ratchasima","1",NULL
+"5498","1393",NULL,"Nakhon Sawan","1",NULL
+"5499","1394",NULL,"Nonthaburi","1",NULL
+"5500","1394",NULL,"Pak Kret","1",NULL
+"5501","1395",NULL,"Hat Yai","1",NULL
+"5502","1395",NULL,"Songkhla","1",NULL
+"5503","1396",NULL,"Ubon Ratchathani","1",NULL
+"5504","1397",NULL,"Udon Thani","1",NULL
+"5505","1398",NULL,"Dushanbe","1",NULL
+"5506","1399",NULL,"Khujand","1",NULL
+"5507","1400",NULL,"Fakaofo","1",NULL
+"5508","1401",NULL,"Ashgabat","1",NULL
+"5509","1402",NULL,"Dashhowuz","1",NULL
+"5511","1404",NULL,"Mary","1",NULL
+"5512","1405",NULL,"Dili","1",NULL
+"5514","1407",NULL,"Chaguanas","1",NULL
+"5515","1408",NULL,"Port-of-Spain","1",NULL
+"5516","1409",NULL,"Ariana","1",NULL
+"5517","1409",NULL,"Ettadhamen","1",NULL
+"5518","1410",NULL,"Biserta","1",NULL
+"5520","1412",NULL,"Kairouan","1",NULL
+"5521","1413",NULL,"Sfax","1",NULL
+"5522","1414",NULL,"Sousse","1",NULL
+"5523","1415",NULL,"Tunis","1",NULL
+"5524","1416",NULL,"Adana","1",NULL
+"5525","1416",NULL,"Tarsus","1",NULL
+"5526","1416",NULL,"Ceyhan","1",NULL
+"5527","1417",NULL,"Adiyaman","1",NULL
+"5528","1418",NULL,"Afyon","1",NULL
+"5529","1419",NULL,"Aksaray","1",NULL
+"5530","1420",NULL,"Ankara","1",NULL
+"5531","1421",NULL,"Antalya","1",NULL
+"5532","1421",NULL,"Alanya","1",NULL
+"5533","1422",NULL,"Aydin","1",NULL
+"5534","1422",NULL,"Nazilli","1",NULL
+"5536","1424",NULL,"Balikesir","1",NULL
+"5537","1424",NULL,"Bandirma","1",NULL
+"5538","1425",NULL,"Batman","1",NULL
+"5539","1426",NULL,"Bursa","1",NULL
+"5541","1427",NULL,"Denizli","1",NULL
+"5542","1428",NULL,"Diyarbakir","1",NULL
+"5543","1428",NULL,"Bismil","1",NULL
+"5544","1429",NULL,"Edirne","1",NULL
+"5546","1431",NULL,"Erzincan","1",NULL
+"5547","1432",NULL,"Erzurum","1",NULL
+"5548","1433",NULL,"Eskisehir","1",NULL
+"5549","1434",NULL,"Gaziantep","1",NULL
+"5550","1435",NULL,"Iskenderun","1",NULL
+"5551","1435",NULL,"Hatay (Antakya)","1",NULL
+"5553","1437",NULL,"Isparta","1",NULL
+"5554","1438",NULL,"Istanbul","1",NULL
+"5555","1438",NULL,"Sultanbeyli","1",NULL
+"5556","1439",NULL,"Izmir","1",NULL
+"5557","1440",NULL,"Kahramanmaras","1",NULL
+"5559","1442",NULL,"Karaman","1",NULL
+"5560","1443",NULL,"Kars","1",NULL
+"5561","1444",NULL,"Kayseri","1",NULL
+"5563","1446",NULL,"Kilis","1",NULL
+"5564","1447",NULL,"Kirikkale","1",NULL
+"5565","1448",NULL,"Gebze","1",NULL
+"5566","1448",NULL,"Izmit (Kocaeli)","1",NULL
+"5567","1449",NULL,"Konya","1",NULL
+"5568","1450",NULL,"Malatya","1",NULL
+"5569","1451",NULL,"Manisa","1",NULL
+"5570","1452",NULL,"Kiziltepe","1",NULL
+"5571","1453",NULL,"Ordu","1",NULL
+"5572","1454",NULL,"Osmaniye","1",NULL
+"5573","1455",NULL,"Sakarya (Adapazari)","1",NULL
+"5574","1456",NULL,"Samsun","1",NULL
+"5575","1457",NULL,"Sanliurfa","1",NULL
+"5576","1457",NULL,"Viransehir","1",NULL
+"5577","1458",NULL,"Siirt","1",NULL
+"5578","1459",NULL,"Sivas","1",NULL
+"5580","1460",NULL,"Tekirdag","1",NULL
+"5581","1461",NULL,"Tokat","1",NULL
+"5582","1462",NULL,"Trabzon","1",NULL
+"5583","1463",NULL,"Usak","1",NULL
+"5584","1464",NULL,"Van","1",NULL
+"5585","1465",NULL,"Zonguldak","1",NULL
+"5586","1466",NULL,"Funafuti","1",NULL
+"5587","1467",NULL,"Taiping","1",NULL
+"5588","1467",NULL,"Taliao","1",NULL
+"5589","1467",NULL,"Kueishan","1",NULL
+"5590","1467",NULL,"Ciudad Losada","1",NULL
+"5591","1468",NULL,"Changhwa","1",NULL
+"5592","1468",NULL,"Yuanlin","1",NULL
+"5593","1469",NULL,"Chiayi","1",NULL
+"5594","1470",NULL,"Hsinchu","1",NULL
+"5595","1471",NULL,"Hualien","1",NULL
+"5596","1472",NULL,"Ilan","1",NULL
+"5597","1473",NULL,"Kaohsiung","1",NULL
+"5598","1473",NULL,"Fengshan","1",NULL
+"5599","1473",NULL,"Kangshan","1",NULL
+"5600","1474",NULL,"Keelung (Chilung)","1",NULL
+"5601","1475",NULL,"Miaoli","1",NULL
+"5602","1476",NULL,"Nantou","1",NULL
+"5603","1476",NULL,"Tsaotun","1",NULL
+"5604","1477",NULL,"Pingtung","1",NULL
+"5605","1478",NULL,"Taichung","1",NULL
+"5606","1478",NULL,"Tali","1",NULL
+"5607","1478",NULL,"Fengyuan","1",NULL
+"5608","1479",NULL,"Tainan","1",NULL
+"5609","1479",NULL,"Yungkang","1",NULL
+"5610","1480",NULL,"Taipei","1",NULL
+"5611","1480",NULL,"Panchiao","1",NULL
+"5612","1480",NULL,"Chungho","1",NULL
+"5613","1480",NULL,"Sanchung","1",NULL
+"5614","1480",NULL,"Hsinchuang","1",NULL
+"5615","1480",NULL,"Hsintien","1",NULL
+"5616","1480",NULL,"Yungho","1",NULL
+"5617","1480",NULL,"Tucheng","1",NULL
+"5618","1480",NULL,"Luchou","1",NULL
+"5619","1480",NULL,"Hsichuh","1",NULL
+"5620","1480",NULL,"Shulin","1",NULL
+"5621","1480",NULL,"Tanshui","1",NULL
+"5622","1480",NULL,"Lungtan","1",NULL
+"5623","1481",NULL,"Taitung","1",NULL
+"5624","1482",NULL,"Chungli","1",NULL
+"5625","1482",NULL,"Taoyuan","1",NULL
+"5626","1482",NULL,"Pingchen","1",NULL
+"5627","1482",NULL,"Pate","1",NULL
+"5628","1482",NULL,"Yangmei","1",NULL
+"5630","1484",NULL,"Arusha","1",NULL
+"5631","1485",NULL,"Dar es Salaam","1",NULL
+"5632","1486",NULL,"Dodoma","1",NULL
+"5633","1487",NULL,"Moshi","1",NULL
+"5634","1488",NULL,"Mbeya","1",NULL
+"5635","1489",NULL,"Morogoro","1",NULL
+"5636","1490",NULL,"Mwanza","1",NULL
+"5637","1491",NULL,"Tabora","1",NULL
+"5638","1492",NULL,"Tanga","1",NULL
+"5639","1493",NULL,"Zanzibar","1",NULL
+"5640","1494",NULL,"Suva","1",NULL
+"5641","1494",NULL,"Nyeri","1",NULL
+"5642","1494",NULL,"Kathmandu","1",NULL
+"5643","1494",NULL,"Lalitapur","1",NULL
+"5644","1494",NULL,"Birgunj","1",NULL
+"5645","1494",NULL,"San Lorenzo","1",NULL
+"5647","1494",NULL,"Fernando de la Mora","1",NULL
+"5648","1494",NULL,"Kabwe","1",NULL
+"5649","1494",NULL,"Kandy","1",NULL
+"5650","1494",NULL,"Kampala","1",NULL
+"5651","1495",NULL,"Dnipropetrovsk","1",NULL
+"5652","1495",NULL,"Kryvyi Rig","1",NULL
+"5653","1495",NULL,"Dniprodzerzynsk","1",NULL
+"5654","1495",NULL,"Nikopol","1",NULL
+"5655","1495",NULL,"Pavlograd","1",NULL
+"5656","1496",NULL,"Donetsk","1",NULL
+"5657","1496",NULL,"Mariupol","1",NULL
+"5658","1496",NULL,"Makijivka","1",NULL
+"5659","1496",NULL,"Gorlivka","1",NULL
+"5660","1496",NULL,"Kramatorsk","1",NULL
+"5661","1496",NULL,"Slovjansk","1",NULL
+"5662","1496",NULL,"Jenakijeve","1",NULL
+"5663","1496",NULL,"Kostjantynivka","1",NULL
+"5665","1498",NULL,"Herson","1",NULL
+"5666","1499",NULL,"Hmelnytskyi","1",NULL
+"5667","1499",NULL,"Kamjanets-Podilskyi","1",NULL
+"5668","1500",NULL,"Ivano-Frankivsk","1",NULL
+"5669","1501",NULL,"Kyiv","1",NULL
+"5670","1501",NULL,"Bila Tserkva","1",NULL
+"5671","1501",NULL,"Brovary","1",NULL
+"5672","1502",NULL,"Kirovograd","1",NULL
+"5673","1502",NULL,"Oleksandrija","1",NULL
+"5674","1503",NULL,"Sevastopol","1",NULL
+"5675","1503",NULL,"Simferopol","1",NULL
+"5677","1503",NULL,"Jevpatorija","1",NULL
+"5678","1504",NULL,"Lugansk","1",NULL
+"5679","1504",NULL,"Sjeverodonetsk","1",NULL
+"5683","1504",NULL,"Stahanov","1",NULL
+"5684","1505",NULL,"Lviv","1",NULL
+"5685","1506",NULL,"Mykolajiv","1",NULL
+"5686","1507",NULL,"Odesa","1",NULL
+"5687","1507",NULL,"Izmajil","1",NULL
+"5690","1509",NULL,"Rivne","1",NULL
+"5691","1510",NULL,"Sumy","1",NULL
+"5692","1510",NULL,"Konotop","1",NULL
+"5694","1511",NULL,"Uzgorod","1",NULL
+"5696","1512",NULL,"Ternopil","1",NULL
+"5701","1516",NULL,"Vinnytsja","1",NULL
+"5702","1517",NULL,"Lutsk","1",NULL
+"5703","1518",NULL,"Zaporizzja","1",NULL
+"5704","1518",NULL,"Melitopol","1",NULL
+"5705","1518",NULL,"Berdjansk","1",NULL
+"5706","1519",NULL,"Zytomyr","1",NULL
+"5708","1520",NULL,"Montevideo","1",NULL
+"5709","1521",NULL,"Birmingham","1",NULL
+"5710","1521",NULL,"Montgomery","1",NULL
+"5711","1521",NULL,"Mobile","1",NULL
+"5712","1521",NULL,"Huntsville","1",NULL
+"5713","1522",NULL,"Anchorage","1",NULL
+"5714","1523",NULL,"Phoenix","1",NULL
+"5715","1523",NULL,"Tucson","1",NULL
+"5716","1523",NULL,"Mesa","1",NULL
+"5717","1523",NULL,"Glendale","1",NULL
+"5718","1523",NULL,"Scottsdale","1",NULL
+"5719","1523",NULL,"Chandler","1",NULL
+"5720","1523",NULL,"Tempe","1",NULL
+"5721","1523",NULL,"Gilbert","1",NULL
+"5722","1523",NULL,"Peoria","1",NULL
+"5723","1524",NULL,"Little Rock","1",NULL
+"5724","1525",NULL,"Los Angeles","1",NULL
+"5725","1525",NULL,"San Diego","1",NULL
+"5726","1525",NULL,"San Jose","1",NULL
+"5727","1525",NULL,"San Francisco","1",NULL
+"5728","1525",NULL,"Long Beach","1",NULL
+"5729","1525",NULL,"Fresno","1",NULL
+"5730","1525",NULL,"Sacramento","1",NULL
+"5731","1525",NULL,"Oakland","1",NULL
+"5732","1525",NULL,"Santa Ana","1",NULL
+"5733","1525",NULL,"Anaheim","1",NULL
+"5734","1525",NULL,"Riverside","1",NULL
+"5735","1525",NULL,"Bakersfield","1",NULL
+"5736","1525",NULL,"Stockton","1",NULL
+"5737","1525",NULL,"Fremont","1",NULL
+"5738","1525",NULL,"Glendale","1",NULL
+"5739","1525",NULL,"Huntington Beach","1",NULL
+"5740","1525",NULL,"Modesto","1",NULL
+"5741","1525",NULL,"San Bernardino","1",NULL
+"5742","1525",NULL,"Chula Vista","1",NULL
+"5743","1525",NULL,"Oxnard","1",NULL
+"5744","1525",NULL,"Garden Grove","1",NULL
+"5745","1525",NULL,"Oceanside","1",NULL
+"5746","1525",NULL,"Ontario","1",NULL
+"5747","1525",NULL,"Santa Clarita","1",NULL
+"5748","1525",NULL,"Salinas","1",NULL
+"5749","1525",NULL,"Pomona","1",NULL
+"5750","1525",NULL,"Santa Rosa","1",NULL
+"5751","1525",NULL,"Irvine","1",NULL
+"5752","1525",NULL,"Moreno Valley","1",NULL
+"5753","1525",NULL,"Pasadena","1",NULL
+"5754","1525",NULL,"Hayward","1",NULL
+"5755","1525",NULL,"Torrance","1",NULL
+"5756","1525",NULL,"Escondido","1",NULL
+"5757","1525",NULL,"Sunnyvale","1",NULL
+"5758","1525",NULL,"Fontana","1",NULL
+"5759","1525",NULL,"Orange","1",NULL
+"5760","1525",NULL,"Rancho Cucamonga","1",NULL
+"5761","1525",NULL,"East Los Angeles","1",NULL
+"5762","1525",NULL,"Fullerton","1",NULL
+"5763","1525",NULL,"Corona","1",NULL
+"5764","1525",NULL,"Concord","1",NULL
+"5765","1525",NULL,"Lancaster","1",NULL
+"5766","1525",NULL,"Thousand Oaks","1",NULL
+"5767","1525",NULL,"Vallejo","1",NULL
+"5768","1525",NULL,"Palmdale","1",NULL
+"5769","1525",NULL,"El Monte","1",NULL
+"5770","1525",NULL,"Inglewood","1",NULL
+"5771","1525",NULL,"Simi Valley","1",NULL
+"5772","1525",NULL,"Costa Mesa","1",NULL
+"5773","1525",NULL,"Downey","1",NULL
+"5774","1525",NULL,"West Covina","1",NULL
+"5775","1525",NULL,"Daly City","1",NULL
+"5776","1525",NULL,"Citrus Heights","1",NULL
+"5777","1525",NULL,"Norwalk","1",NULL
+"5778","1525",NULL,"Berkeley","1",NULL
+"5779","1525",NULL,"Santa Clara","1",NULL
+"5780","1525",NULL,"San Buenaventura","1",NULL
+"5781","1525",NULL,"Burbank","1",NULL
+"5782","1525",NULL,"Mission Viejo","1",NULL
+"5783","1525",NULL,"El Cajon","1",NULL
+"5784","1525",NULL,"Richmond","1",NULL
+"5785","1525",NULL,"Compton","1",NULL
+"5786","1525",NULL,"Fairfield","1",NULL
+"5787","1525",NULL,"Arden-Arcade","1",NULL
+"5788","1525",NULL,"San Mateo","1",NULL
+"5789","1525",NULL,"Visalia","1",NULL
+"5790","1525",NULL,"Santa Monica","1",NULL
+"5791","1525",NULL,"Carson","1",NULL
+"5792","1526",NULL,"Denver","1",NULL
+"5793","1526",NULL,"Colorado Springs","1",NULL
+"5794","1526",NULL,"Aurora","1",NULL
+"5795","1526",NULL,"Lakewood","1",NULL
+"5796","1526",NULL,"Fort Collins","1",NULL
+"5797","1526",NULL,"Arvada","1",NULL
+"5798","1526",NULL,"Pueblo","1",NULL
+"5799","1526",NULL,"Westminster","1",NULL
+"5800","1526",NULL,"Boulder","1",NULL
+"5801","1527",NULL,"Bridgeport","1",NULL
+"5802","1527",NULL,"New Haven","1",NULL
+"5803","1527",NULL,"Hartford","1",NULL
+"5804","1527",NULL,"Stamford","1",NULL
+"5805","1527",NULL,"Waterbury","1",NULL
+"5806","1528",NULL,"Washington","1",NULL
+"5807","1529",NULL,"Jacksonville","1",NULL
+"5808","1529",NULL,"Miami","1",NULL
+"5809","1529",NULL,"Tampa","1",NULL
+"5810","1529",NULL,"Saint Petersburg","1",NULL
+"5811","1529",NULL,"Hialeah","1",NULL
+"5812","1529",NULL,"Orlando","1",NULL
+"5813","1529",NULL,"Fort Lauderdale","1",NULL
+"5814","1529",NULL,"Tallahassee","1",NULL
+"5815","1529",NULL,"Hollywood","1",NULL
+"5816","1529",NULL,"Pembroke Pines","1",NULL
+"5817","1529",NULL,"Coral Springs","1",NULL
+"5818","1529",NULL,"Cape Coral","1",NULL
+"5819","1529",NULL,"Clearwater","1",NULL
+"5820","1529",NULL,"Miami Beach","1",NULL
+"5821","1529",NULL,"Gainesville","1",NULL
+"5822","1530",NULL,"Atlanta","1",NULL
+"5823","1530",NULL,"Augusta-Richmond County","1",NULL
+"5824","1530",NULL,"Columbus","1",NULL
+"5825","1530",NULL,"Savannah","1",NULL
+"5826","1530",NULL,"Macon","1",NULL
+"5827","1530",NULL,"Athens-Clarke County","1",NULL
+"5828","1531",NULL,"Honolulu","1",NULL
+"5829","1532",NULL,"Boise City","1",NULL
+"5830","1533",NULL,"Chicago","1",NULL
+"5831","1533",NULL,"Rockford","1",NULL
+"5832","1533",NULL,"Aurora","1",NULL
+"5833","1533",NULL,"Naperville","1",NULL
+"5834","1533",NULL,"Peoria","1",NULL
+"5835","1533",NULL,"Springfield","1",NULL
+"5836","1533",NULL,"Joliet","1",NULL
+"5837","1533",NULL,"Elgin","1",NULL
+"5838","1534",NULL,"Indianapolis","1",NULL
+"5839","1534",NULL,"Fort Wayne","1",NULL
+"5840","1534",NULL,"Evansville","1",NULL
+"5841","1534",NULL,"South Bend","1",NULL
+"5842","1534",NULL,"Gary","1",NULL
+"5843","1535",NULL,"Des Moines","1",NULL
+"5844","1535",NULL,"Cedar Rapids","1",NULL
+"5845","1535",NULL,"Davenport","1",NULL
+"5846","1536",NULL,"Wichita","1",NULL
+"5847","1536",NULL,"Overland Park","1",NULL
+"5848","1536",NULL,"Kansas City","1",NULL
+"5849","1536",NULL,"Topeka","1",NULL
+"5850","1537",NULL,"Lexington-Fayette","1",NULL
+"5851","1537",NULL,"Louisville","1",NULL
+"5852","1538",NULL,"New Orleans","1",NULL
+"5853","1538",NULL,"Baton Rouge","1",NULL
+"5854","1538",NULL,"Shreveport","1",NULL
+"5855","1538",NULL,"Metairie","1",NULL
+"5856","1538",NULL,"Lafayette","1",NULL
+"5857","1539",NULL,"Baltimore","1",NULL
+"5858","1540",NULL,"Boston","1",NULL
+"5859","1540",NULL,"Worcester","1",NULL
+"5860","1540",NULL,"Springfield","1",NULL
+"5861","1540",NULL,"Lowell","1",NULL
+"5862","1540",NULL,"Cambridge","1",NULL
+"5863","1540",NULL,"New Bedford","1",NULL
+"5864","1540",NULL,"Brockton","1",NULL
+"5865","1540",NULL,"Fall River","1",NULL
+"5866","1541",NULL,"Detroit","1",NULL
+"5867","1541",NULL,"Grand Rapids","1",NULL
+"5868","1541",NULL,"Warren","1",NULL
+"5869","1541",NULL,"Flint","1",NULL
+"5870","1541",NULL,"Sterling Heights","1",NULL
+"5871","1541",NULL,"Lansing","1",NULL
+"5872","1541",NULL,"Ann Arbor","1",NULL
+"5873","1541",NULL,"Livonia","1",NULL
+"5874","1542",NULL,"Minneapolis","1",NULL
+"5875","1542",NULL,"Saint Paul","1",NULL
+"5876","1543",NULL,"Jackson","1",NULL
+"5877","1544",NULL,"Kansas City","1",NULL
+"5878","1544",NULL,"Saint Louis","1",NULL
+"5879","1544",NULL,"Springfield","1",NULL
+"5880","1544",NULL,"Independence","1",NULL
+"5881","1545",NULL,"Billings","1",NULL
+"5882","1546",NULL,"Omaha","1",NULL
+"5883","1546",NULL,"Lincoln","1",NULL
+"5884","1547",NULL,"Las Vegas","1",NULL
+"5885","1547",NULL,"Reno","1",NULL
+"5886","1547",NULL,"Henderson","1",NULL
+"5887","1547",NULL,"Paradise","1",NULL
+"5888","1547",NULL,"North Las Vegas","1",NULL
+"5889","1547",NULL,"Sunrise Manor","1",NULL
+"5890","1548",NULL,"Manchester","1",NULL
+"5891","1549",NULL,"Newark","1",NULL
+"5892","1549",NULL,"Jersey City","1",NULL
+"5893","1549",NULL,"Paterson","1",NULL
+"5894","1549",NULL,"Elizabeth","1",NULL
+"5895","1550",NULL,"Albuquerque","1",NULL
+"5896","1551",NULL,"New York","1",NULL
+"5897","1551",NULL,"Buffalo","1",NULL
+"5898","1551",NULL,"Rochester","1",NULL
+"5899","1551",NULL,"Yonkers","1",NULL
+"5900","1551",NULL,"Syracuse","1",NULL
+"5901","1551",NULL,"Albany","1",NULL
+"5902","1552",NULL,"Charlotte","1",NULL
+"5903","1552",NULL,"Raleigh","1",NULL
+"5904","1552",NULL,"Greensboro","1",NULL
+"5905","1552",NULL,"Durham","1",NULL
+"5906","1552",NULL,"Winston-Salem","1",NULL
+"5907","1552",NULL,"Fayetteville","1",NULL
+"5908","1552",NULL,"Cary","1",NULL
+"5909","1553",NULL,"Columbus","1",NULL
+"5910","1553",NULL,"Cleveland","1",NULL
+"5911","1553",NULL,"Cincinnati","1",NULL
+"5912","1553",NULL,"Toledo","1",NULL
+"5913","1553",NULL,"Akron","1",NULL
+"5914","1553",NULL,"Dayton","1",NULL
+"5915","1554",NULL,"Oklahoma City","1",NULL
+"5916","1554",NULL,"Tulsa","1",NULL
+"5917","1554",NULL,"Norman","1",NULL
+"5918","1555",NULL,"Portland","1",NULL
+"5919","1555",NULL,"Eugene","1",NULL
+"5920","1555",NULL,"Salem","1",NULL
+"5921","1556",NULL,"Philadelphia","1",NULL
+"5922","1556",NULL,"Pittsburgh","1",NULL
+"5923","1556",NULL,"Allentown","1",NULL
+"5924","1556",NULL,"Erie","1",NULL
+"5925","1557",NULL,"Providence","1",NULL
+"5926","1558",NULL,"Columbia","1",NULL
+"5927","1558",NULL,"Charleston","1",NULL
+"5928","1559",NULL,"Sioux Falls","1",NULL
+"5929","1560",NULL,"Memphis","1",NULL
+"5930","1560",NULL,"Nashville-Davidson","1",NULL
+"5931","1560",NULL,"Knoxville","1",NULL
+"5932","1560",NULL,"Chattanooga","1",NULL
+"5933","1560",NULL,"Clarksville","1",NULL
+"5934","1561",NULL,"Houston","1",NULL
+"5935","1561",NULL,"Dallas","1",NULL
+"5936","1561",NULL,"San Antonio","1",NULL
+"5937","1561",NULL,"Austin","1",NULL
+"5938","1561",NULL,"El Paso","1",NULL
+"5939","1561",NULL,"Fort Worth","1",NULL
+"5940","1561",NULL,"Arlington","1",NULL
+"5941","1561",NULL,"Corpus Christi","1",NULL
+"5942","1561",NULL,"Plano","1",NULL
+"5943","1561",NULL,"Garland","1",NULL
+"5944","1561",NULL,"Lubbock","1",NULL
+"5945","1561",NULL,"Irving","1",NULL
+"5946","1561",NULL,"Laredo","1",NULL
+"5947","1561",NULL,"Amarillo","1",NULL
+"5948","1561",NULL,"Brownsville","1",NULL
+"5949","1561",NULL,"Pasadena","1",NULL
+"5950","1561",NULL,"Grand Prairie","1",NULL
+"5951","1561",NULL,"Mesquite","1",NULL
+"5952","1561",NULL,"Abilene","1",NULL
+"5953","1561",NULL,"Beaumont","1",NULL
+"5954","1561",NULL,"Waco","1",NULL
+"5955","1561",NULL,"Carrollton","1",NULL
+"5956","1561",NULL,"McAllen","1",NULL
+"5957","1561",NULL,"Wichita Falls","1",NULL
+"5958","1561",NULL,"Midland","1",NULL
+"5959","1561",NULL,"Odessa","1",NULL
+"5960","1562",NULL,"Salt Lake City","1",NULL
+"5961","1562",NULL,"West Valley City","1",NULL
+"5962","1562",NULL,"Provo","1",NULL
+"5963","1562",NULL,"Sandy","1",NULL
+"5964","1563",NULL,"Virginia Beach","1",NULL
+"5965","1563",NULL,"Norfolk","1",NULL
+"5966","1563",NULL,"Chesapeake","1",NULL
+"5967","1563",NULL,"Richmond","1",NULL
+"5968","1563",NULL,"Newport News","1",NULL
+"5969","1563",NULL,"Arlington","1",NULL
+"5970","1563",NULL,"Hampton","1",NULL
+"5971","1563",NULL,"Alexandria","1",NULL
+"5972","1563",NULL,"Portsmouth","1",NULL
+"5973","1563",NULL,"Roanoke","1",NULL
+"5974","1564",NULL,"Seattle","1",NULL
+"5975","1564",NULL,"Spokane","1",NULL
+"5976","1564",NULL,"Tacoma","1",NULL
+"5977","1564",NULL,"Vancouver","1",NULL
+"5978","1564",NULL,"Bellevue","1",NULL
+"5979","1565",NULL,"Milwaukee","1",NULL
+"5980","1565",NULL,"Madison","1",NULL
+"5981","1565",NULL,"Green Bay","1",NULL
+"5982","1565",NULL,"Kenosha","1",NULL
+"5983","1566",NULL,"Andijon","1",NULL
+"5984","1567",NULL,"Buhoro","1",NULL
+"5985","1568",NULL,"Cizah","1",NULL
+"5987","1569",NULL,"Fargona","1",NULL
+"5988","1569",NULL,"Margilon","1",NULL
+"5989","1570",NULL,"Nukus","1",NULL
+"5991","1572",NULL,"Namangan","1",NULL
+"5992","1573",NULL,"Navoi","1",NULL
+"5993","1574",NULL,"Karsi","1",NULL
+"5994","1575",NULL,"Samarkand","1",NULL
+"5995","1576",NULL,"Termiz","1",NULL
+"5996","1577",NULL,"Circik","1",NULL
+"5997","1577",NULL,"Angren","1",NULL
+"5998","1577",NULL,"Olmalik","1",NULL
+"5999","1578",NULL,"Toskent","1",NULL
+"6021","1581",NULL,"Taiping","1",NULL
+"6022","1581",NULL,"Taliao","1",NULL
+"6023","1581",NULL,"Kueishan","1",NULL
+"6024","1581",NULL,"Ciudad Losada","1",NULL
+"6029","1583",NULL,"San Fernando de Apure","1",NULL
+"6030","1584",NULL,"Maracay","1",NULL
+"6031","1584",NULL,"Turmero","1",NULL
+"6033","1585",NULL,"Barinas","1",NULL
+"6037","1587",NULL,"Valencia","1",NULL
+"6038","1587",NULL,"Puerto Cabello","1",NULL
+"6039","1587",NULL,"Guacara","1",NULL
+"6040","1588",NULL,"Buenos Aires","1",NULL
+"6043","1588",NULL,"Caracas","1",NULL
+"6044","1588",NULL,"Catia La Mar","1",NULL
+"6049","1591",NULL,"Barquisimeto","1",NULL
+"6051","1593",NULL,"Petare","1",NULL
+"6052","1593",NULL,"Baruta","1",NULL
+"6053","1593",NULL,"Los Teques","1",NULL
+"6054","1593",NULL,"Guarenas","1",NULL
+"6055","1593",NULL,"Guatire","1",NULL
+"6056","1593",NULL,"Ocumare del Tuy","1",NULL
+"6058","1595",NULL,"Acarigua","1",NULL
+"6059","1595",NULL,"Guanare","1",NULL
+"6060","1595",NULL,"Araure","1",NULL
+"6061","1596",NULL,"Sincelejo","1",NULL
+"6065","1598",NULL,"Valera","1",NULL
+"6066","1599",NULL,"San Felipe","1",NULL
+"6068","1600",NULL,"Cabimas","1",NULL
+"6069","1600",NULL,"Ciudad Ojeda","1",NULL
+"6070","1601",NULL,"Road Town","1",NULL
+"6071","1602",NULL,"Charlotte Amalie","1",NULL
+"6072","1603",NULL,"Long Xuyen","1",NULL
+"6073","1604",NULL,"Vung Tau","1",NULL
+"6074","1605",NULL,"Thai Nguyen","1",NULL
+"6075","1606",NULL,"Quy Nhon","1",NULL
+"6077","1608",NULL,"Can Tho","1",NULL
+"6078","1609",NULL,"Buon Ma Thuot","1",NULL
+"6080","1611",NULL,"Haiphong","1",NULL
+"6081","1612",NULL,"Hanoi","1",NULL
+"6082","1613",NULL,"Ho Chi Minh City","1",NULL
+"6083","1614",NULL,"Nha Trang","1",NULL
+"6084","1614",NULL,"Cam Ranh","1",NULL
+"6085","1615",NULL,"Rach Gia","1",NULL
+"6086","1616",NULL,"Da Lat","1",NULL
+"6087","1617",NULL,"Nam Dinh","1",NULL
+"6088","1618",NULL,"Vinh","1",NULL
+"6089","1619",NULL,"Cam Pha","1",NULL
+"6090","1620",NULL,"Da Nang","1",NULL
+"6091","1621",NULL,"Hong Gai","1",NULL
+"6092","1622",NULL,"Hue","1",NULL
+"6093","1623",NULL,"My Tho","1",NULL
+"6094","1624",NULL,"Port-Vila","1",NULL
+"6095","1625",NULL,"Mata-Utu","1",NULL
+"6096","1626",NULL,"Apia","1",NULL
+"6097","1627",NULL,"Aden","1",NULL
+"6098","1628",NULL,"al-Mukalla","1",NULL
+"6099","1629",NULL,"Hodeida","1",NULL
+"6100","1630",NULL,"Ibb","1",NULL
+"6101","1631",NULL,"Sanaa","1",NULL
+"6102","1632",NULL,"Taizz","1",NULL
+"6103","1633",NULL,"Beograd","1",NULL
+"6105","1633",NULL,"Kragujevac","1",NULL
+"6107","1634",NULL,"Prizren","1",NULL
+"6108","1635",NULL,"Podgorica","1",NULL
+"6109","1636",NULL,"Novi Sad","1",NULL
+"6110","1636",NULL,"Subotica","1",NULL
+"6111","1637",NULL,"Port Elizabeth","1",NULL
+"6112","1637",NULL,"East London","1",NULL
+"6113","1637",NULL,"Uitenhage","1",NULL
+"6114","1637",NULL,"Mdantsane","1",NULL
+"6115","1638",NULL,"Bloemfontein","1",NULL
+"6116","1638",NULL,"Welkom","1",NULL
+"6117","1638",NULL,"Botshabelo","1",NULL
+"6118","1639",NULL,"Soweto","1",NULL
+"6119","1639",NULL,"Johannesburg","1",NULL
+"6120","1639",NULL,"Pretoria","1",NULL
+"6121","1639",NULL,"Vanderbijlpark","1",NULL
+"6122","1639",NULL,"Kempton Park","1",NULL
+"6123","1639",NULL,"Alberton","1",NULL
+"6124","1639",NULL,"Benoni","1",NULL
+"6125","1639",NULL,"Randburg","1",NULL
+"6126","1639",NULL,"Vereeniging","1",NULL
+"6127","1639",NULL,"Wonderboom","1",NULL
+"6128","1639",NULL,"Roodepoort","1",NULL
+"6129","1639",NULL,"Boksburg","1",NULL
+"6130","1639",NULL,"Soshanguve","1",NULL
+"6131","1639",NULL,"Krugersdorp","1",NULL
+"6132","1639",NULL,"Brakpan","1",NULL
+"6133","1639",NULL,"Oberholzer","1",NULL
+"6134","1639",NULL,"Germiston","1",NULL
+"6135","1639",NULL,"Springs","1",NULL
+"6136","1639",NULL,"Westonaria","1",NULL
+"6137","1639",NULL,"Randfontein","1",NULL
+"6138","1639",NULL,"Nigel","1",NULL
+"6139","1640",NULL,"Inanda","1",NULL
+"6140","1640",NULL,"Durban","1",NULL
+"6141","1640",NULL,"Pinetown","1",NULL
+"6142","1640",NULL,"Pietermaritzburg","1",NULL
+"6143","1640",NULL,"Umlazi","1",NULL
+"6144","1640",NULL,"Newcastle","1",NULL
+"6145","1640",NULL,"Chatsworth","1",NULL
+"6146","1640",NULL,"Ladysmith","1",NULL
+"6147","1641",NULL,"Witbank","1",NULL
+"6148","1642",NULL,"Klerksdorp","1",NULL
+"6149","1642",NULL,"Potchefstroom","1",NULL
+"6150","1642",NULL,"Rustenburg","1",NULL
+"6151","1643",NULL,"Kimberley","1",NULL
+"6152","1644",NULL,"Cape Town","1",NULL
+"6153","1644",NULL,"Paarl","1",NULL
+"6154","1644",NULL,"George","1",NULL
+"6155","1645",NULL,"Suva","1",NULL
+"6156","1645",NULL,"Nyeri","1",NULL
+"6157","1645",NULL,"Kathmandu","1",NULL
+"6158","1645",NULL,"Lalitapur","1",NULL
+"6159","1645",NULL,"Birgunj","1",NULL
+"6160","1645",NULL,"San Lorenzo","1",NULL
+"6162","1645",NULL,"Fernando de la Mora","1",NULL
+"6163","1645",NULL,"Kabwe","1",NULL
+"6164","1645",NULL,"Kandy","1",NULL
+"6165","1645",NULL,"Kampala","1",NULL
+"6166","1646",NULL,"Ndola","1",NULL
+"6167","1646",NULL,"Kitwe","1",NULL
+"6168","1646",NULL,"Chingola","1",NULL
+"6169","1646",NULL,"Mufulira","1",NULL
+"6170","1646",NULL,"Luanshya","1",NULL
+"6171","1647",NULL,"Lusaka","1",NULL
+"6172","1648",NULL,"Bulawayo","1",NULL
+"6173","1649",NULL,"Harare","1",NULL
+"6174","1649",NULL,"Chitungwiza","1",NULL
+"6175","1649",NULL,"Mount Darwin","1",NULL
+"6176","1650",NULL,"Mutare","1",NULL
+"6177","1651",NULL,"Gweru","1",NULL
+"6178","21",NULL,"Thane","1",NULL
+"6179","21",NULL,"amravati","1",NULL
+"6180","29",NULL,"Bhiwadi","1",NULL
+"6181","21",NULL,"Andheri","1",NULL
+"6182","31",NULL,"Hosur","1",NULL
+"6183","34",NULL,"GHAZIABAD","1",NULL
+"6184","13",NULL,"DHARUHERA","1",NULL
+"6185","12",NULL,"SURENDRANAGAR","1",NULL
+"6186","34",NULL,"SHAHIBABAD","1",NULL
+"6187","12",NULL,"CHANGODAR","1",NULL
+"6188","9",NULL,"NANI DAMAN","1",NULL
+"6189","21",NULL,"HALOL","1",NULL
+"6190","12",NULL,"BHIMASAR","1",NULL
+"6191","12",NULL,"INDRAD","1",NULL
+"6192","21",NULL,"HATKANAGALE","1",NULL
+"6193","21",NULL,"JAYSINGPUR","1",NULL
+"6194","21",NULL,"KARAD","1",NULL
+"6195","21",NULL,"VASAI (E)","1",NULL
+"6196","21",NULL,"DAHANU","1",NULL
+"6197","21",NULL,"TALASARI","1",NULL
+"6198","31",NULL,"SEMBAKKAM","1",NULL
+"6199","29",NULL,"Nimrana","1",NULL
+"6200","11",NULL,"PONDA","1",NULL
+"6201","29",NULL,"MANESAR","1",NULL
+"6202","13",NULL,"CHANDIGARH","1",NULL
+"6203","10",NULL,"NEW DELHI","1",NULL
+"6204","14",NULL,"NALAGARH","1",NULL
+"6205","21",NULL,"WADA","1",NULL
+"6206","21",NULL,"JALGAON","1",NULL
+"6207","21",NULL,"SANGALI","1",NULL
+"6208","13",NULL,"IMT Maneser","1",NULL
+"6209","12",NULL,"Maneja","1",NULL
+"6210","31",NULL,"Ranipet","1",NULL
+"6211","21",NULL,"Waluj","1",NULL
+"6212","8",NULL,"Silvassa","1",NULL
+"6213","13",NULL,"Bawal","1",NULL
+"6214","12",NULL,"Baroda","1",NULL
+"6215","1652",NULL,"Hyderabad","1",NULL
+"6216","11",NULL,"Taleigao","1",NULL
+"6217","11",NULL,"Santacruz","1",NULL
+"6218","11",NULL,"Verna","1",NULL

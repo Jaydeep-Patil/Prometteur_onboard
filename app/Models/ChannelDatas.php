@@ -9,4 +9,8 @@ class ChannelDatas extends Model
 {
     use HasFactory;
     protected $guarded = ['id'];
+
+    public function channels(){
+        return $this->belongsTo(Channel::class,'id');
+     }
 }    

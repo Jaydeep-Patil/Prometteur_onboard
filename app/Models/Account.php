@@ -27,4 +27,7 @@ class Account extends Model
         return $this->hasMany(Channel::class, 'account_id');
     }
 
+    public function ChannelDatas(){
+        return $this->hasMany(ChannelDatas::class, 'channel_id','id');
+       }
 }

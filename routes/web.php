@@ -46,6 +46,8 @@ Route::post("getLobList", [ChannelController::class, "getLobList"])->name("getLo
 Route::post("getChannelList", [ChannelController::class, "getChannelList"])->name("getChannelList");
 Route::post("getCountryList", [ChannelController::class, "getCountryList"])->name("getCountryList");
 
+Route::get('summary_page/{id}', [App\Http\Controllers\AccountController::class, 'summary'])->name('summary');
+
 
 
 

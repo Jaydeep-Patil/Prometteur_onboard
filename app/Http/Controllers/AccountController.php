@@ -83,7 +83,7 @@ class AccountController extends Controller
 
         }
         $result=Account::where('temp_id',$request->temp_id)->with('lobs.channels')->get();
-        $result1=Account::where('temp_id',$request->temp_id)->with('lobs.channels')->get();
+        $result1=Account::where('temp_id',$request->temp_id)->with('lobs.channels')->with('fileimage')->get();
         $country=Country::get();
 
         //Added by Jaydeep
@@ -106,7 +106,7 @@ class AccountController extends Controller
         $result['file_page']=view('file_page',compact('result1'))->render();
         $user_detail = User::where('id',$request->temp_id)->first();
         $account_detail = Account::where('temp_id',$request->temp_id)->with('lobs')->with('processinfo')->with('fileimage')->get();
-        //d($account_detail[0]->name,$request->all());
+        
          $result['account_detail']=view('summary_page',compact('account_detail','user_detail'))->render();
        
         // dd($result);
@@ -169,8 +169,36 @@ class AccountController extends Controller
         return response()->json(['success' => true,'data'=>$result,'message' => 'Successfully']);
     }
     public function process_info(Request $request){
-              $input =$request->all();
-            $insert = Process_info::create($input);
+        $input =$request->all();
+        $acc_id = $request->account_names;
+        $inputLobs = $request['process_info']['lob_names'];
+        $inputChannels = $request['process_info']['channelnames'];
+        //fetch all lobs according to requested account
+        $lobs = Lob::where('account_id', $acc_id)->get();
+       
+        foreach($lobs as $lb=>$lob){
+            //check lob is present in requested lob array
+            if(in_array($lob->id,$inputLobs)){
+                //fetch all chaneels against requested lob
+                $channelId = Channel::where('lob_id', $lob->id)->get();
+                foreach($channelId as $ch=>$channel){ 
+                    $chId =$channel['id'];
+                    //check channel is present in requested channels
+                    if(in_array($chId, $inputChannels)){
+                        $input['channelnames'] = $channel['id'];
+                        $input['account_names'] = $acc_id;
+                        $input['lob_names'] = $lob->id;
+                        $input['country'] = $channel['country'];
+                        $insert = Process_info::updateOrcreate(['account_names'=>$acc_id,'lob_names'=> $lob->id,'channelnames'=>$chId],$input);
+                    }
+                }
+            }
+        }
+        if(!empty($insert) && $insert != null){
+            return response()->json(["status" => '1', "data" =>  $insert]);
+        }else{
+            return response()->json(["status" => 0]);
+        }
     }
     private function  N2L($number)
     {
@@ -224,128 +252,296 @@ class AccountController extends Controller
         $imagename13 = null;
         $imagename14 = null;
 
-        
         $acc_id =$request->account_id;
         $accountData = Account::where('id',$acc_id)->get();
         if(!empty($accountData)){
             $clientId = $accountData[0]['client_id'];
             $acc_name = $accountData[0]['account_name'];
-            //dd($accountData[0]['account_name']);
-        $path = '/uploads/'.$clientId.'_'.$acc_name;
-        if (! File::exists($path)) {
-            File::makeDirectory(public_path().'/'.$path,0777,true);
-        }else{
             
+            //get data if account_id already present in table
+            $filesData = Filesdata::where('account_id', $acc_id)->first();
+            //path for file storage
+            $path = '/uploads/'.$clientId.'_'.$acc_name;
+            //check here path is already created for this account or not
+            if (!File::exists(public_path().$path)) { 
+                //If path account created then create here
+                File::makeDirectory(public_path().$path,0777,true);
+            }
+           
+            //Forecasting Process Document
+            if($request->f_process_doc != null){ 
+                //check file already exist or not  
+                if(!empty($filesData) && $filesData->f_process_doc != null){
+                    //if file already exist then remove from folder
+                    unlink(public_path($path.'/'.$filesData['f_process_doc']));
+                }
+                // $imagename1 = rand(0000,9999).$request->f_process_doc->getclientoriginalname();
+                $imagename1 = $clientId.'_'.$acc_name.'_'.$request->f_process_doc->getclientoriginalname();
+                //here move file to account folder
+                $request->f_process_doc->move(public_path().$path.'/',$imagename1);
+                $file_data['f_process_doc'] = $imagename1;
+            }else{
+                $imagename1 = ($filesData)?$filesData['f_process_doc']:'';
+            }
+        
+            //Model Sample File
+            if($request->model_file != null){
+                //check file already exist or not  
+                if(!empty($filesData) && $filesData->model_file != null){
+                    //if file already exist then remove from folder
+                    unlink(public_path($path.'/'.$filesData['model_file']));
+                }
+                // $imagename2 = rand(0000,9999).$request->model_file->getclientoriginalname();
+                $imagename2 = $clientId.'_'.$acc_name.'_'.$request->model_file->getclientoriginalname();
+                //here move file to account folder
+                $request->model_file->move(public_path($path.'/'),$imagename2);
+                $file_data['model_file'] = $imagename2;
+            }else{
+                $imagename2 = ($filesData)?$filesData['model_file']:null;
+            }
+
+            //Accuracy Measurement / Result
+            if($request->f_accurecy_file != null){
+                //check file already exist or not  
+                if(!empty($filesData) && $filesData->f_accurecy_file != null){
+                    //if file already exist then remove from folder
+                    unlink(public_path($path.'/'.$filesData['f_accurecy_file']));
+                }
+                //$imagename3 = rand(0000,9999).$request->f_accurecy_file->getclientoriginalname();
+                $imagename3 = $clientId.'_'.$acc_name.'_'.$request->f_accurecy_file->getclientoriginalname();
+                //here move file to account folder
+                $request->f_accurecy_file->move(public_path($path.'/'),$imagename3);
+                $file_data['f_accurecy_file'] = $imagename3;
+            }else{
+                $imagename3 = ($filesData)?$filesData['f_accurecy_file']:null;
+            }
+
+            //Staffing / Resource Planning Process Document
+            if($request->sta_process_doc != null){
+                //check file already exist or not  
+                if(!empty($filesData) && $filesData->sta_process_doc != null){
+                    //if file already exist then remove from folder
+                    unlink(public_path($path.'/'.$filesData['sta_process_doc']));
+                }
+                // $imagename4 = rand(0000,9999).$request->sta_process_doc->getclientoriginalname();
+                $imagename4 = $clientId.'_'.$acc_name.'_'.$request->sta_process_doc->getclientoriginalname();
+                //here move file to account folder
+                $request->sta_process_doc->move(public_path($path.'/'),$imagename4);
+                $file_data['sta_process_doc'] = $imagename4;
+            }else{
+                $imagename4 = ($filesData)?$filesData['sta_process_doc']:null;
+            }
+
+            //Staffing / Resource Planning Model Sample File
+            if($request->sta_model_file != null){
+                //check file already exist or not  
+                if(!empty($filesData) && $filesData->sta_process_doc != null){
+                    //if file already exist then remove from folder
+                    unlink(public_path($path.'/'.$filesData['sta_model_file']));
+                }
+                // $imagename5 = rand(0000,9999).$request->sta_model_file->getclientoriginalname();
+                $imagename5 = $clientId.'_'.$acc_name.'_'.$request->sta_model_file->getclientoriginalname();
+                //here move file to account folder
+                $request->sta_model_file->move(public_path($path.'/'),$imagename5);
+                $file_data['sta_model_file'] = $imagename5;
+            }else{
+                $imagename5 = ($filesData)?$filesData['sta_model_file']:null;
+            }
+
+            //Staffing / Resource Planning ModelStaffing Forecast Accuracy Result
+            if($request->sta_forecast_file != null){
+                //check file already exist or not  
+                if(!empty($filesData) && $filesData->sta_forecast_file != null){
+                    //if file already exist then remove from folder
+                    unlink(public_path($path.'/'.$filesData['sta_forecast_file']));
+                }
+                // $imagename6 = rand(0000,9999).$request->sta_forecast_file->getclientoriginalname();
+                $imagename6 = $clientId.'_'.$acc_name.'_'.$request->sta_forecast_file->getclientoriginalname();
+                //here move file to account folder
+                $request->sta_forecast_file->move(public_path($path.'/'),$imagename6);
+                $file_data['sta_forecast_file'] = $imagename6;
+            }else{
+                $imagename6 = ($filesData)?$filesData['sta_forecast_file']:null;
+            }
+
+            //Scheduling Process Document
+            if($request->sche_p_doc != null){
+                //check file already exist or not  
+                if(!empty($filesData) && $filesData->sche_p_doc != null){
+                    //if file already exist then remove from folder
+                    unlink(public_path($path.'/'.$filesData['sche_p_doc']));
+                }
+                // $imagename7 = rand(0000,9999).$request->sche_p_doc->getclientoriginalname();
+                $imagename7 = $clientId.'_'.$acc_name.'_'.$request->sche_p_doc->getclientoriginalname();
+                //here move file to account folder
+                $request->sche_p_doc->move(public_path($path.'/'),$imagename7);
+                $file_data['sche_p_doc'] = $imagename7;
+            }else{
+                $imagename7 = ($filesData)?$filesData['sche_p_doc']:null;
+            }
+
+            //Scheduling Scheduling Model (only if done in Excel)
+            if($request->sche_sched_file != null){
+                //check file already exist or not  
+                if(!empty($filesData) && $filesData->sche_sched_file != null){
+                    //if file already exist then remove from folder
+                    unlink(public_path($path.'/'.$filesData['sche_sched_file']));
+                }
+                // $imagename8 = rand(0000,9999).$request->sche_sched_file->getclientoriginalname();
+                $imagename8 = $clientId.'_'.$acc_name.'_'.$request->sche_sched_file->getclientoriginalname();
+                //here move file to account folder
+                $request->sche_sched_file->move(public_path($path.'/'),$imagename8);
+                $file_data['sche_sched_file'] = $imagename8;
+            }else{
+                $imagename8 = ($filesData)?$filesData['sche_sched_file']:null;
+            }
+
+            //Scheduling Forecast Accuracy Result
+            if($request->sche_forecast_file != null){
+                //check file already exist or not  
+                if(!empty($filesData) && $filesData->sche_forecast_file != null){
+                    //if file already exist then remove from folder
+                    unlink(public_path($path.'/'.$filesData['sche_forecast_file']));
+                }
+                // $imagename9 = rand(0000,9999).$request->sche_forecast_file->getclientoriginalname();
+                $imagename9 = $clientId.'_'.$acc_name.'_'.$request->sche_forecast_file->getclientoriginalname();
+                //here move file to account folder
+                $request->sche_forecast_file->move(public_path($path.'/'),$imagename9);
+                $file_data['sche_forecast_file'] = $imagename9;
+            }else{
+                $imagename9 = ($filesData)?$filesData['sche_forecast_file']:null;
+            }
+
+            //Scheduling IDP / Deviation File sample
+            if($request->sche_idp_file != null){
+                //check file already exist or not  
+                if(!empty($filesData) && $filesData->sche_idp_file != null){
+                    //if file already exist then remove from folder
+                    unlink(public_path($path.'/'.$filesData['sche_idp_file']));
+                }
+                // $imagename10 = rand(0000,9999).$request->sche_idp_file->getclientoriginalname();
+                $imagename10 = $clientId.'_'.$acc_name.'_'.$request->sche_idp_file->getclientoriginalname();
+                //here move file to account folder
+                $request->sche_idp_file->move(public_path($path.'/'),$imagename10);
+                $file_data['sche_idp_file'] = $imagename10;
+            }else{
+                $imagename10 = ($filesData)?$filesData['sche_idp_file']:null;
+            }
+
+            //RTA / Intraday Management Process Document
+            if($request->rta_p_file != null){
+                //check file already exist or not  
+                if(!empty($filesData) && $filesData->rta_p_file != null){
+                    //if file already exist then remove from folder
+                    unlink(public_path($path.'/'.$filesData['rta_p_file']));
+                }
+                // $imagename11 = rand(0000,9999).$request->rta_p_file->getclientoriginalname();
+                $imagename11 = $clientId.'_'.$acc_name.'_'.$request->rta_p_file->getclientoriginalname();
+                //here file move to account folder
+                $request->rta_p_file->move(public_path($path.'/'),$imagename11);
+                $file_data['rta_p_file'] = $imagename11;
+            }else{
+                $imagename11 = ($filesData)?$filesData['rta_p_file']:null;
+            }
+
+            //RTA / Intraday Management Intraday Report Sample
+            if($request->rta_intro_file != null){
+                //check file already exist or not  
+                if(!empty($filesData) && $filesData->rta_intro_file != null){
+                    //if file already exist then remove from folder
+                    unlink(public_path($path.'/'.$filesData['rta_intro_file']));
+                }
+                // $imagename12 = rand(0000,9999).$request->rta_intro_file->getclientoriginalname();
+                $imagename12 = $clientId.'_'.$acc_name.'_'.$request->rta_intro_file->getclientoriginalname();
+                //here file move to account folder
+                $request->rta_intro_file->move(public_path($path.'/'),$imagename12);
+                $file_data['rta_intro_file'] = $imagename12;
+            }else{
+                $imagename12 = ($filesData)?$filesData['rta_intro_file']:null;
+            }
+
+            //RTA / Intraday Management Day-End Report Sample 
+            if($request->rta_dayr_file != null){
+                //check file already exist or not  
+                if(!empty($filesData) && $filesData->rta_dayr_file != null){
+                    //if file already exist then remove from folder
+                    unlink(public_path($path.'/'.$filesData['rta_dayr_file']));
+                }
+                // $imagename13 = rand(0000,9999).$request->rta_dayr_file->getclientoriginalname();
+                $imagename13 = $clientId.'_'.$acc_name.'_'.$request->rta_dayr_file->getclientoriginalname();
+                //here file move to account folder
+                $request->rta_dayr_file->move(public_path($path.'/'),$imagename13);
+                $file_data['rta_dayr_file'] = $imagename13;
+            }else{
+                $imagename13 = ($filesData)?$filesData['rta_dayr_file']:null;
+            }
+
+            //RTA / Intraday Management RCA / Post-Mortem Report Sample
+            if($request->rta_rca_file != null){
+                //check file already exist or not  
+                if(!empty($filesData) && $filesData->rta_rca_file != null){
+                    //if file already exist then remove from folder
+                    unlink(public_path($path.'/'.$filesData['rta_rca_file']));
+                }
+                // $imagename14 = rand(0000,9999).$request->rta_rca_file->getclientoriginalname();
+                $imagename14 = $clientId.'_'.$acc_name.'_'.$request->rta_rca_file->getclientoriginalname();
+                //here file move to account folder
+                $request->rta_rca_file->move(public_path($path.'/'),$imagename14);
+                $file_data['rta_rca_file'] = $imagename14;
+            }else{
+                $imagename14 = ($filesData)?$filesData['rta_rca_file']:null;
+            } 
+
+            $file_data = array(
+                "account_id" => $request->account_id,
+                "f_process_doc" => $imagename1,
+                "model_file" => $imagename2,
+                "f_accurecy_file" => $imagename3,
+                "sta_process_doc" => $imagename4,
+                "sta_model_file" => $imagename5,
+                "sta_forecast_file" => $imagename6,
+                "sche_p_doc" => $imagename7,
+                "sche_sched_file" => $imagename8,
+                "sche_forecast_file" => $imagename9,
+                "sche_idp_file" => $imagename10,
+                "rta_p_file" => $imagename11,
+                "rta_intro_file" => $imagename12,
+                "rta_dayr_file" => $imagename13,
+                "rta_rca_file" => $imagename14,
+            );
+
+            $file_data = Filesdata::updateOrCreate(['account_id'=>$acc_id],$file_data);
         }
-        //$fileData = 
-        if($request->f_process_doc != null)
-        {
-            // $imagename1 = rand(0000,9999).$request->f_process_doc->getclientoriginalname();
-            $imagename1 = $clientId.'_'.$acc_name.'_'.$request->f_process_doc->getclientoriginalname();
-            $request->f_process_doc->move(public_path($path.'/'),$imagename1);
-            $file_data['f_process_doc'] = $imagename1;
-        }
-        if($request->model_file != null){
-            // $imagename2 = rand(0000,9999).$request->model_file->getclientoriginalname();
-            $imagename2 = $clientId.'_'.$acc_name.'_'.$request->model_file->getclientoriginalname();
-            $request->model_file->move(public_path($path.'/'),$imagename2);
-            $file_data['model_file'] = $imagename2;
-        }
-        if($request->f_accurecy_file != null){
-            //$imagename3 = rand(0000,9999).$request->f_accurecy_file->getclientoriginalname();
-            $imagename3 = $clientId.'_'.$acc_name.'_'.$request->f_accurecy_file->getclientoriginalname();
-            $request->f_accurecy_file->move(public_path($path.'/'),$imagename3);
-            $file_data['f_accurecy_file'] = $imagename3;
-        }
-        if($request->sta_process_doc != null){
-            // $imagename4 = rand(0000,9999).$request->sta_process_doc->getclientoriginalname();
-            $imagename4 = $clientId.'_'.$acc_name.'_'.$request->sta_process_doc->getclientoriginalname();
-            $request->sta_process_doc->move(public_path($path.'/'),$imagename4);
-            $file_data['sta_process_doc'] = $imagename4;
-        }
-        if($request->sta_model_file != null){
-            // $imagename5 = rand(0000,9999).$request->sta_model_file->getclientoriginalname();
-            $imagename5 = $clientId.'_'.$acc_name.'_'.$request->sta_model_file->getclientoriginalname();
-            $request->sta_model_file->move(public_path($path.'/'),$imagename5);
-            $file_data['sta_model_file'] = $imagename5;
-        }
-       if($request->sta_forecast_file != null){
-            // $imagename6 = rand(0000,9999).$request->sta_forecast_file->getclientoriginalname();
-            $imagename6 = $clientId.'_'.$acc_name.'_'.$request->sta_forecast_file->getclientoriginalname();
-            $request->sta_forecast_file->move(public_path($path.'/'),$imagename6);
-            $file_data['sta_forecast_file'] = $imagename6;
-        }
-        if($request->sche_p_doc != null){
-            // $imagename7 = rand(0000,9999).$request->sche_p_doc->getclientoriginalname();
-            $imagename7 = $clientId.'_'.$acc_name.'_'.$request->sche_p_doc->getclientoriginalname();
-            $request->sche_p_doc->move(public_path($path.'/'),$imagename7);
-            $file_data['sche_p_doc'] = $imagename7;
-        }
-        if($request->sche_sched_file != null){
-            // $imagename8 = rand(0000,9999).$request->sche_sched_file->getclientoriginalname();
-            $imagename8 = $clientId.'_'.$acc_name.'_'.$request->sche_sched_file->getclientoriginalname();
-            $request->sche_sched_file->move(public_path($path.'/'),$imagename8);
-            $file_data['sche_sched_file'] = $imagename8;
-        }
-        if($request->sche_forecast_file != null){
-            // $imagename9 = rand(0000,9999).$request->sche_forecast_file->getclientoriginalname();
-            $imagename9 = $clientId.'_'.$acc_name.'_'.$request->sche_forecast_file->getclientoriginalname();
-            $request->sche_forecast_file->move(public_path($path.'/'),$imagename9);
-            $file_data['sche_forecast_file'] = $imagename9;
-        }
-        if($request->sche_idp_file != null){
-            // $imagename10 = rand(0000,9999).$request->sche_idp_file->getclientoriginalname();
-            $imagename10 = $clientId.'_'.$acc_name.'_'.$request->sche_idp_file->getclientoriginalname();
-            $request->sche_idp_file->move(public_path($path.'/'),$imagename10);
-            $file_data['sche_idp_file'] = $imagename10;
-        }
-        if($request->rta_p_file != null){
-            // $imagename11 = rand(0000,9999).$request->rta_p_file->getclientoriginalname();
-            $imagename11 = $clientId.'_'.$acc_name.'_'.$request->rta_p_file->getclientoriginalname();
-            $request->rta_p_file->move(public_path($path.'/'),$imagename11);
-            $file_data['rta_p_file'] = $imagename11;
-        }
-        if($request->rta_intro_file != null){
-            // $imagename12 = rand(0000,9999).$request->rta_intro_file->getclientoriginalname();
-            $imagename12 = $clientId.'_'.$acc_name.'_'.$request->rta_intro_file->getclientoriginalname();
-            $request->rta_intro_file->move(public_path($path.'/'),$imagename12);
-            $file_data['rta_intro_file'] = $imagename12;
-        }
-        if($request->rta_dayr_file != null){
-            // $imagename13 = rand(0000,9999).$request->rta_dayr_file->getclientoriginalname();
-            $imagename13 = $clientId.'_'.$acc_name.'_'.$request->rta_dayr_file->getclientoriginalname();
-            $request->rta_dayr_file->move(public_path($path.'/'),$imagename13);
-            $file_data['rta_dayr_file'] = $imagename13;
-        }
-        if($request->rta_rca_file != null){
-            // $imagename14 = rand(0000,9999).$request->rta_rca_file->getclientoriginalname();
-            $imagename14 = $clientId.'_'.$acc_name.'_'.$request->rta_rca_file->getclientoriginalname();
-            $request->rta_rca_file->move(public_path($path.'/'),$imagename14);
-            $file_data['rta_rca_file'] = $imagename14;
-        }
-        $file_data = array(
-            "account_id" => $request->account_id,
-            "f_process_doc" => $imagename1,
-            "model_file" => $imagename2,
-            "f_accurecy_file" => $imagename3,
-            "sta_process_doc" => $imagename4,
-            "sta_model_file" => $imagename5,
-            "sta_forecast_file" => $imagename6,
-            "sche_p_doc" => $imagename7,
-            "sche_sched_file" => $imagename8,
-            "sche_forecast_file" => $imagename9,
-            "sche_idp_file" => $imagename10,
-            "rta_p_file" => $imagename11,
-            "rta_intro_file" => $imagename12,
-            "rta_dayr_file" => $imagename13,
-            "rta_rca_file" => $imagename14,
-        );
-        $file_data = Filesdata::updateOrCreate(['account_id'=>$acc_id],$file_data);
-    }
+
         if($file_data != null){
             return response()->json(["status" => 1, "data" => $file_data]);
         }else{
             return response()->json(["status" => 0]);
         }
+    }
+
+    //
+    public function summary($id=null)
+    {   
+        $user_detail = User::where('id',$id)->first();
+       // $account_detail = Account::where('temp_id',$id)->with('lobs.channels.ChannelDatas')->with('processinfo')->with('fileimage')->first();
+       $account_detail = Account::where('temp_id',$id)->with('lobs')->with(['channel.ChannelDatas','channel.processInfo','channel.countrydata','channel.citydata'])->with('fileimage')->get(); 
+      
+        $billingType =  Config::get("common.BILLING_TYPE");
+        $billingCap =  Config::get("common.BILLING_CAP");
+        $minBillingGuarantee = Config::get("common.MIN_BILLING_GUARANTEE");
+        $minBillingReference = Config::get("common.MIN_BILLING_REFERENCE");
+        $maxBillingThres = Config::get("common.MAX_BILLABLE_THRESHOLD");
+        $maxBillRef = Config::get("common.MAX_BILLABLE_REFERENCE");
+        $serviceApi = Config::get("common.SERVICE_API");
+        $time = Config::get("common.TIME");
+        $acdBillSystem = Config::get("common.ACD_Billing_SystemName");
+        $wfmSystem = Config::get("common.WFM_SYSTEM");
+        $processDetails = Config::get("common.PROCESS_DETAILS");
+
+        //ended here by jaydeep
+       return view('summary_page',compact('account_detail','user_detail', 'billingType', 'billingCap', 'minBillingGuarantee',
+                    'minBillingReference', 'maxBillingThres', 'maxBillingThres', 'maxBillRef', 'serviceApi', 'time', 'acdBillSystem', 'wfmSystem', 'processDetails'      
+                    ))->render();
     }
 }

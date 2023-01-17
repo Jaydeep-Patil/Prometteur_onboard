@@ -1,1095 +1,2774 @@
+<!-- need to remove -->
+<!-- @extends('layouts.front') -->
+<!-- @section('content') -->
+<!-- end remove code -->
    <div class="scrollbarbar">
-                  <div class="container">
-                     <div class="row">
-                        <div class="col col-12">
-                           <!-- === Account Details Blocks === -->
-                           <div class="summary_contaienr">
-                              <h2>Account Details</h2>
-                              <ul class="summary_ul">
+      <div class="container">
+         <div class="row">
+            <div class="col col-12">
+               <!-- === Account Details Blocks === -->
+               <div class="summary_contaienr">
+                  <h2>Account Details</h2>
+                  <ul class="summary_ul">
+                     <li>
+                        <label>User Name</label>
+                        <p>{{ $user_detail->name }}</p>
+                     </li>
+                     <li>
+                        <label>Business Email</label>
+                        <p>{{ $user_detail->email }}</p>
+                     </li>
+                     {{-- @endforeach --}}
+                  </ul>
+               </div>
+               <?php //echo "<pre>"; print_r($account_detail); ?>
+               <!-- === General Overview Blocks === -->
+                  <!-- Added By JD -->
+                  <?php //echo "<pre>"; print_r($account_detail); ?>
+                  <div class="summary_contaienr">
+                  <h2>General Overview</h2>
 
-
-                            
-                                <li>
-                                  <label>User Name</label>
-                                  <p>{{ $user_detail->name }}</p>
-                                </li>
-                                <li>
-                                    <label>Business Email</label>
-                                    <p>{{ $user_detail->email }}</p>
-                                </li>
-                                {{-- @endforeach --}}
-                              </ul>
-                           </div>
-                           <!-- === General Overview Blocks === -->
-                           <div class="summary_contaienr">
-                              <h2>General Overview</h2>
-                              <div class="table-responsive">
-                                 <table class="table table-bordered summary_table">
-                                    <thead>
-                                       <tr>
-                                          <th scope="col" class="bg_dark_th">Account Name</th>
-                                          <th scope="col" class="bg_dark_th">LOB</th>
-                                          <th scope="col" class="bg_dark_th">Channels</th>
-                                          <th scope="col" class="bg_dark_th">Country</th>
-                                          <th scope="col" class="bg_dark_th">City Name</th>
-                                          <th scope="col" class="bg_dark_th">Site Name</th>
-                                          <th scope="col" class="bg_dark_th">FTEs</th>
-                                       </tr>
-                                    </thead>
-                                    @foreach ($account_detail as $key => $account)
-                                        <tbody>
-                                        <tr>
-                                            {{-- {{ dd($account->lobs->count()) }} --}}
-                                            <th rowspan="3">{{ $account->account_name }}</th>
-                                            @foreach ($account->lobs as $key => $lob)
-                                            <td rowspan="1" {{ $key }}>{{ $lob->lob_name }}</td>
-                                            @foreach ($lob->channels as $key => $channels)
-                                                    {{-- @if($key == 0) --}}
-                                                        <tr>
-                                                            <td>{{ $channels->channel_name }}</td>
-                                                            <td>{{ $channels->country }}</td>
-                                                            <td>{{ $channels->city_name }}</td>
-                                                            <td>{{ $channels->site_name }}</td>
-                                                            <td>{{ $channels->fte }}</td>
-                                                        </tr>
-                                                            {{-- @else
-                                                            <tr>
-                                                                <td>{{ $channels->channel_name }}</td>
-                                                                <td>{{ $channels->country }}</td>
-                                                                <td>{{ $channels->city_name }}</td>
-                                                                <td>{{ $channels->site_name }}</td>
-                                                                <td>{{ $channels->fte }}</td>
-                                                            </tr>
-                                                    @endif --}}
-                                                        @endforeach
-                                                    @endforeach
-                                        </tbody>
+                  <div class="table-responsive">
+                     <?php //echo "<pre>"; print_r($account_detail); die;?>
+                     <table class="table table-bordered summary_table fix_summary_table">
+                        <thead>
+                           <tr>
+                              <th scope="col" class="bg_dark_th">Account Name</th>
+                              <th scope="col" class="bg_dark_th">LOB</th>
+                              <th scope="col" class="bg_dark_th">Channels</th>
+                              <th scope="col" class="bg_dark_th">Country</th>
+                              <th scope="col" class="bg_dark_th">City Name</th>
+                              <th scope="col" class="bg_dark_th">Site Name</th>
+                              <th scope="col" class="bg_dark_th">FTEs</th>
+                           </tr>
+                        </thead>
+                              <tbody>
+                                 <?php $i=1; $y=0;
+                                 ?>
+                                 @foreach ($account_detail as $key => $account)
+                                    <?php 
+                                       $acc_lob_cnt=$acc_lob_ch_cnt=0;
+                                       $acc_lob_cnt += count($account_detail[$key]['lobs']);
+                                    ?>
+                                    @foreach($account['lobs'] as $key2 => $lob)
+                                    <?php $acc_lob_ch_cnt += count($lob->channels); ?>
                                     @endforeach
-                                 </table>
-                              </div>
-                           </div>
-                           <!-- === Detailed Information Blocks === -->
-                           <div class="summary_contaienr">
-                              <h2>Detailed Information</h2>
-                              <div class="table-responsive">
-                                 <table class="table table-bordered summary_table">
-                                    <!-- === Account Tbody ===  -->
-                                    <tbody>
-                                        @foreach ($account_detail as $key => $account)
-                                        <tr>
-                                           <th class="bg_dark_th">Account Name</th>
-                                                 <td colspan="4" class="text-center">{{ $account->account_name }}</td>
-                                             </tr>
-                                             <tr>
-                                                <th class="bg_light_th">LOB</th>
-                                                    @foreach ($account->lobs as $key => $lob)
-                                                      <td colspan="{{ $account->lobs->count() }}" {{ $key }} class="text-center">{{ $lob->lob_name }}</td>
-                                                      @endforeach
-                                                      <?php
-                                                      $total = count($lob->channels)
-                                                      ?>
-
-                                                        {{-- {{ dd($lob->channels[0]['channel_name']) }} --}}
-                                                    {{-- @foreach ($lob as $key => $lobs) --}}
-                                                      <tr>
-                                                         <th class="bg_light_th">Channels</th>
-                                                        @foreach ($account->lobs as $key => $lob)
-                                                            @foreach ($lob->channels as $key => $channels)
-                                                            <td class="text-center">{{ $channels->channel_name }}</td>
-                                                            @endforeach
-                                                        @endforeach
-                                                      </tr>
-                                                      <tr>
-                                                         <th class="bg_light_th">Country</th>
-
-                                                        @foreach ($account->lobs as $key => $lob)
-                                                            @foreach ($lob->channels as $key => $channels)
-                                                            <td class="text-center">{{ $channels->country }}</td>
-                                                            @endforeach
-                                                        @endforeach
-                                                      </tr>
-                                                      <tr>
-                                                         <th class="bg_light_th">City Name</th>
-
-                                                         @foreach ($account->lobs as $key => $lob)
-                                                            @foreach ($lob->channels as $key => $channels)
-                                                            <td class="text-center">{{ $channels->city_name }}</td>
-                                                            @endforeach
-                                                         @endforeach
-                                                      </tr>
-                                                      <tr>
-                                                         <th class="bg_light_th">Site Name</th>
-
-                                                         @foreach ($account->lobs as $key => $lob)
-                                                            @foreach ($lob->channels as $key => $channels)
-                                                            <td class="text-center">{{ $channels->site_name }}</td>
-                                                            @endforeach
-                                                         @endforeach
-                                                      </tr>
-                                                      <tr>
-                                                         <th class="bg_light_th">FTEs</th>
-
-                                                         @foreach ($account->lobs as $key => $lob)
-                                                            @foreach ($lob->channels as $key => $channels)
-                                                            <td class="text-center">{{ $channels->fte }}</td>
-                                                            @endforeach
-                                                         @endforeach
-                                                      </tr>
-                                                      {{-- @endforeach --}}
-                                                  {{-- @endforeach --}}
-                                                {{-- <td colspan="2" class="text-center">Voice LOB</td>
-                                                <td colspan="2" class="text-center">Chat LOB</td>
-                                                <td colspan="2" class="text-center">Voice LOB</td> --}}
-                                             </tr>
-                                              @endforeach
-                                           {{-- <td colspan="4" class="text-center">Microsoft</td> --}}
-
-
-
-                                      </tbody>
-                                    <!-- === Billability Tbody ===  -->
-                                    <tbody>
-                                       <tr>
-                                          <th class="bg_dark_th">Billability</th>
-                                          <td colspan="8"></td>
-                                       </tr>
-                                       <tr>
-                                          <th>Billing Method</th>
-                                          <td class="text-center">Handle Minutes</td>
-                                          <td class="text-center">Production Hour</td>
-                                          <td class="text-center">Handle Minutes</td>
-                                          <td class="text-center">Production Hour</td>
-                                          <td class="text-center">Handle Minutes</td>
-                                          <td class="text-center">Production Hour</td>
-                                          <td class="text-center">Handle Minutes</td>
-                                          <td class="text-center">Production Hour</td>
-                                       </tr>
-                                       <tr>
-                                          <th>Billing Cap</th>
-                                          <td class="text-center">Occupancy</td>
-                                          <td class="text-center">AHT</td>
-                                          <td class="text-center">Occupancy</td>
-                                          <td class="text-center">AHT</td>
-                                          <td class="text-center">Occupancy</td>
-                                          <td class="text-center">AHT</td>
-                                          <td class="text-center">Occupancy</td>
-                                          <td class="text-center">AHT</td>
-                                       </tr>
-                                       <tr>
-                                          <th>Value for selected Billing Cap</th>
-                                          <td class="text-center"></td>
-                                          <td class="text-center"></td>
-                                          <td class="text-center"></td>
-                                          <td class="text-center"></td>
-                                          <td class="text-center"></td>
-                                          <td class="text-center"></td>
-                                          <td class="text-center"></td>
-                                          <td class="text-center"></td>
-                                       </tr>
-                                       <tr>
-                                          <th>Min Billing Guarantee</th>
-                                          <td class="text-center">50.%</td>
-                                          <td class="text-center">60.%</td>
-                                          <td class="text-center">70.%</td>
-                                          <td class="text-center">80.%</td>
-                                          <td class="text-center">85.%</td>
-                                          <td class="text-center">90.%</td>
-                                          <td class="text-center">95.%</td>
-                                          <td class="text-center">100%</td>
-                                       </tr>
-                                       <tr>
-                                          <th>Min Billing Reference</th>
-                                          <td class="text-center">Contractual Lock</td>
-                                          <td class="text-center">Contractual FTE</td>
-                                          <td class="text-center">Contractual Lock</td>
-                                          <td class="text-center">Contractual FTE</td>
-                                          <td class="text-center">Contractual Lock</td>
-                                          <td class="text-center">Contractual FTE</td>
-                                          <td class="text-center">Contractual Lock</td>
-                                          <td class="text-center">Contractual FTE</td>
-                                       </tr>
-                                       <tr>
-                                          <th>Max Billable Threshold</th>
-                                          <td class="text-center">101.%</td>
-                                          <td class="text-center">102.%</td>
-                                          <td class="text-center">103.%</td>
-                                          <td class="text-center">104.%</td>
-                                          <td class="text-center">105.%</td>
-                                          <td class="text-center">106.%</td>
-                                          <td class="text-center">107.%</td>
-                                          <td class="text-center">108.%</td>
-                                       </tr>
-                                       <tr>
-                                          <th>Max Billing Reference</th>
-                                          <td class="text-center">Contractual Lock</td>
-                                          <td class="text-center">Contractual FTE</td>
-                                          <td class="text-center">Contractual Lock</td>
-                                          <td class="text-center">Contractual FTE</td>
-                                          <td class="text-center">Contractual Lock</td>
-                                          <td class="text-center">Contractual FTE</td>
-                                          <td class="text-center">Contractual Lock</td>
-                                          <td class="text-center">Contractual FTE</td>
-                                       </tr>
-                                    </tbody>
-                                    <!-- === KPIs & Objectives Tbody ===  -->
-                                    <tbody>
-                                       <tr>
-                                          <th class="bg_dark_th">KPIs & Objectives</th>
-                                          <td colspan="8"></td>
-                                       </tr>
-                                       <tr>
-                                          <th>SOW Max Staffing Req?</th>
-                                          <td class="text-center">101.%</td>
-                                          <td class="text-center">102.%</td>
-                                          <td class="text-center">103.%</td>
-                                          <td class="text-center">104.%</td>
-                                          <td class="text-center">105.%</td>
-                                          <td class="text-center">106.%</td>
-                                          <td class="text-center">107.%</td>
-                                          <td class="text-center">108.%</td>
-                                       </tr>
-                                       <tr>
-                                          <th>Service KPI - 1 (If applicable)</th>
-                                          <td class="text-center">Occupancy %</td>
-                                          <td class="text-center">Occupancy %</td>
-                                          <td class="text-center">Occupancy %</td>
-                                          <td class="text-center">Occupancy %</td>
-                                          <td class="text-center">Occupancy %</td>
-                                          <td class="text-center">Occupancy %</td>
-                                          <td class="text-center">Occupancy %</td>
-                                          <td class="text-center">Occupancy %</td>
-                                       </tr>
-                                       <tr>
-                                          <th>Service KPI - 1 - Target (%/Sec)</th>
-                                          <td class="text-center">30</td>
-                                          <td class="text-center">30</td>
-                                          <td class="text-center">30</td>
-                                          <td class="text-center">30</td>
-                                          <td class="text-center">30</td>
-                                          <td class="text-center">30</td>
-                                          <td class="text-center">30</td>
-                                          <td class="text-center">30</td>
-                                       </tr>
-                                       <tr>
-                                          <th>Service KPI - 2 (If applicable)</th>
-                                          <td class="text-center">Occupancy %</td>
-                                          <td class="text-center">Occupancy %</td>
-                                          <td class="text-center">Occupancy %</td>
-                                          <td class="text-center">Occupancy %</td>
-                                          <td class="text-center">Occupancy %</td>
-                                          <td class="text-center">Occupancy %</td>
-                                          <td class="text-center">Occupancy %</td>
-                                          <td class="text-center">Occupancy %</td>
-                                       </tr>
-                                       <tr>
-                                          <th>Service KPI - 2 - Target (%/Sec)</th>
-                                          <td class="text-center">30</td>
-                                          <td class="text-center">30</td>
-                                          <td class="text-center">30</td>
-                                          <td class="text-center">30</td>
-                                          <td class="text-center">30</td>
-                                          <td class="text-center">30</td>
-                                          <td class="text-center">30</td>
-                                          <td class="text-center">30</td>
-                                       </tr>
-                                    </tbody>
-                                    <!-- === Training Details Tbody ===  -->
-                                    <tbody>
-                                       <tr>
-                                          <th class="bg_dark_th">Training Details</th>
-                                          <td colspan="8"></td>
-                                       </tr>
-                                       <tr>
-                                          <th>Classroom Training Duration (Weeks)</th>
-                                          <td class="text-center">3</td>
-                                          <td class="text-center">3</td>
-                                          <td class="text-center">3</td>
-                                          <td class="text-center">3</td>
-                                          <td class="text-center">3</td>
-                                          <td class="text-center">3</td>
-                                          <td class="text-center">3</td>
-                                          <td class="text-center">3</td>
-                                       </tr>
-                                       <tr>
-                                          <th>Nesting / OJT Duration (Weeks)</th>
-                                          <td class="text-center">3</td>
-                                          <td class="text-center">3</td>
-                                          <td class="text-center">3</td>
-                                          <td class="text-center">3</td>
-                                          <td class="text-center">3</td>
-                                          <td class="text-center">3</td>
-                                          <td class="text-center">3</td>
-                                          <td class="text-center">3</td>
-                                       </tr>
-                                    </tbody>
-                                    <!-- === Operating Hours Tbody ===  -->
-                                    <tbody>
-                                       <tr>
-                                          <th class="bg_dark_th">Operating Hours</th>
-                                          <td colspan="8"></td>
-                                       </tr>
-                                       <tr>
-                                          <th>Weekday Start Time</th>
-                                          <td class="text-center">00:00</td>
-                                          <td class="text-center">00:00</td>
-                                          <td class="text-center">00:00</td>
-                                          <td class="text-center">00:00</td>
-                                          <td class="text-center">00:00</td>
-                                          <td class="text-center">00:00</td>
-                                          <td class="text-center">00:00</td>
-                                          <td class="text-center">00:00</td>
-                                       </tr>
-                                       <tr>
-                                          <th>Weekday End Time</th>
-                                          <td class="text-center">23:30</td>
-                                          <td class="text-center">23:30</td>
-                                          <td class="text-center">23:30</td>
-                                          <td class="text-center">23:30</td>
-                                          <td class="text-center">23:30</td>
-                                          <td class="text-center">23:30</td>
-                                          <td class="text-center">23:30</td>
-                                          <td class="text-center">23:30</td>
-                                       </tr>
-                                       <tr>
-                                          <th>Sat Start Time</th>
-                                          <td class="text-center">No Operations</td>
-                                          <td class="text-center">No Operations</td>
-                                          <td class="text-center">No Operations</td>
-                                          <td class="text-center">No Operations</td>
-                                          <td class="text-center">No Operations</td>
-                                          <td class="text-center">No Operations</td>
-                                          <td class="text-center">No Operations</td>
-                                          <td class="text-center">No Operations</td>
-                                       </tr>
-                                       <tr>
-                                          <th>Sat Start Time</th>
-                                          <td class="text-center">No Operations</td>
-                                          <td class="text-center">No Operations</td>
-                                          <td class="text-center">No Operations</td>
-                                          <td class="text-center">No Operations</td>
-                                          <td class="text-center">No Operations</td>
-                                          <td class="text-center">No Operations</td>
-                                          <td class="text-center">No Operations</td>
-                                          <td class="text-center">No Operations</td>
-                                       </tr>
-                                       <tr>
-                                          <th>Sun Start Time</th>
-                                          <td class="text-center">No Operations</td>
-                                          <td class="text-center">No Operations</td>
-                                          <td class="text-center">No Operations</td>
-                                          <td class="text-center">No Operations</td>
-                                          <td class="text-center">No Operations</td>
-                                          <td class="text-center">No Operations</td>
-                                          <td class="text-center">No Operations</td>
-                                          <td class="text-center">No Operations</td>
-                                       </tr>
-                                       <tr>
-                                          <th>Sun Start Time</th>
-                                          <td class="text-center">No Operations</td>
-                                          <td class="text-center">No Operations</td>
-                                          <td class="text-center">No Operations</td>
-                                          <td class="text-center">No Operations</td>
-                                          <td class="text-center">No Operations</td>
-                                          <td class="text-center">No Operations</td>
-                                          <td class="text-center">No Operations</td>
-                                          <td class="text-center">No Operations</td>
-                                       </tr>
-                                    </tbody>
-                                    <!-- === Process Details Tbody ===  -->
-                                    <tbody>
-                                       <tr>
-                                          <th class="bg_dark_th">Process Details</th>
-                                          <td colspan="8"></td>
-                                       </tr>
-                                       <tr>
-                                          <th>Industry Segment</th>
-                                          <td class="text-center">Fintech</td>
-                                          <td class="text-center">Retail</td>
-                                          <td class="text-center">Banking</td>
-                                          <td class="text-center">e-Com</td>
-                                          <td class="text-center">Health Care</td>
-                                          <td class="text-center">Telecom</td>
-                                          <td class="text-center">Customer Service</td>
-                                          <td class="text-center">Others</td>
-                                       </tr>
-                                    </tbody>
-                                    <!-- === Employee Details Tbody ===  -->
-                                    <tbody>
-                                       <tr>
-                                          <th class="bg_dark_th">Employee Details</th>
-                                          <td colspan="8"></td>
-                                       </tr>
-                                       <tr>
-                                          <th>Full-Time Employees</th>
-                                          <td class="text-center">Yes</td>
-                                          <td class="text-center">Yes</td>
-                                          <td class="text-center">Yes</td>
-                                          <td class="text-center">Yes</td>
-                                          <td class="text-center">Yes</td>
-                                          <td class="text-center">Yes</td>
-                                          <td class="text-center">Yes</td>
-                                          <td class="text-center">Yes</td>
-                                       </tr>
-                                       <tr>
-                                          <th>Part-Time Employees</th>
-                                          <td class="text-center">No</td>
-                                          <td class="text-center">No</td>
-                                          <td class="text-center">No</td>
-                                          <td class="text-center">No</td>
-                                          <td class="text-center">No</td>
-                                          <td class="text-center">No</td>
-                                          <td class="text-center">No</td>
-                                          <td class="text-center">No</td>
-                                       </tr>
-                                       <tr>
-                                          <th>Contractual Employees</th>
-                                          <td class="text-center">Yes</td>
-                                          <td class="text-center">Yes</td>
-                                          <td class="text-center">Yes</td>
-                                          <td class="text-center">Yes</td>
-                                          <td class="text-center">No</td>
-                                          <td class="text-center">No</td>
-                                          <td class="text-center">No</td>
-                                          <td class="text-center">No</td>
-                                       </tr>
-                                    </tbody>
-                                    <!-- === Authorized Locations Tbody ===  -->
-                                    <tbody>
-                                       <tr>
-                                          <th class="bg_dark_th">Authorized Locations</th>
-                                          <td colspan="8"></td>
-                                       </tr>
-                                       <tr>
-                                          <th>Work in Office</th>
-                                          <td class="text-center">No</td>
-                                          <td class="text-center">No</td>
-                                          <td class="text-center">No</td>
-                                          <td class="text-center">No</td>
-                                          <td class="text-center">No</td>
-                                          <td class="text-center">No</td>
-                                          <td class="text-center">No</td>
-                                          <td class="text-center">No</td>
-                                       </tr>
-                                       <tr>
-                                          <th>Work from Home</th>
-                                          <td class="text-center">No</td>
-                                          <td class="text-center">No</td>
-                                          <td class="text-center">No</td>
-                                          <td class="text-center">No</td>
-                                          <td class="text-center">No</td>
-                                          <td class="text-center">No</td>
-                                          <td class="text-center">No</td>
-                                          <td class="text-center">No</td>
-                                       </tr>
-                                    </tbody>
-                                    <!-- === System Information Tbody ===  -->
-                                    <tbody>
-                                       <tr>
-                                          <th class="bg_dark_th">System Information</th>
-                                          <td colspan="8"></td>
-                                       </tr>
-                                       <tr>
-                                          <th>ACD Name</th>
-                                          <td class="text-center">CISCO</td>
-                                          <td class="text-center">INCONTACT</td>
-                                          <td class="text-center">AVAYA</td>
-                                          <td class="text-center">Other</td>
-                                          <td class="text-center">CISCO</td>
-                                          <td class="text-center">INCONTACT</td>
-                                          <td class="text-center">AVAYA</td>
-                                          <td class="text-center">Other</td>
-                                       </tr>
-                                       <tr>
-                                          <th>WFM Tool</th>
-                                          <td class="text-center">NICE</td>
-                                          <td class="text-center">VERINT</td>
-                                          <td class="text-center">ASPECT</td>
-                                          <td class="text-center">CALABRIO</td>
-                                          <td class="text-center">Other</td>
-                                          <td class="text-center">NICE</td>
-                                          <td class="text-center">VERINT</td>
-                                          <td class="text-center">ASPECT</td>
-                                       </tr>
-                                       <tr>
-                                          <th>Back office Tool</th>
-                                          <td class="text-center"></td>
-                                          <td class="text-center"></td>
-                                          <td class="text-center"></td>
-                                          <td class="text-center"></td>
-                                          <td class="text-center"></td>
-                                          <td class="text-center"></td>
-                                          <td class="text-center"></td>
-                                          <td class="text-center"></td>
-                                       </tr>
-                                    </tbody>
-                                 </table>
-                              </div>
-                           </div>
-                           <!-- === Process Information Blocks === -->
-                           <div class="summary_contaienr">
-                              <h2>Process Information</h2>
-                              <div class="table-responsive">
-                                 <table class="table table-bordered summary_table summary_procee_table">
-                                    <!-- === Account Tbody ===  -->
-                                    <tbody>
-                                        @foreach ($account_detail as $account_info)
-                                        <tr>
-                                            <th class="bg_dark_th">Account Name</th>
-                                                @foreach ($account_info->processinfo as $info)
-                                                    <td class="text-center">{{ $info->account_names }}</td>
-                                                @endforeach
-                                        </tr>
-                                       <tr>
-                                           <th class="bg_light_th">LOB</th>
-                                           @foreach ($account_info->processinfo as $info)
-                                          <td class="text-center">{{ $info->lob_names }}</td>
+                                 
+                                 <tr>
+                                    <td rowspan="{{ $acc_lob_cnt + $acc_lob_ch_cnt +1 }}" style="text-align:center; justify-content:center;">
+                                       {{ $account->account_name }}
+                                    </td>
+                                 </tr>
+                                 
+                                 @foreach ($account['lobs'] as $key => $lob)
+                                 <?php $ch = count($lob->channels); ?>
+                                 <tr>
+                                    <td rowspan="{{$ch +1}}">{{$lob->lob_name}}</td>
+                                 </tr>
+                                 
+                                 @foreach ($lob->channels as $key => $channels)
+                                 <tr>
+                                    <td>{{ $channels->channel_name }}</td>
+                                    <td>
+                                       @if(isset($channels['countrydata']) && !empty($channels['countrydata']))
+                                          @foreach($channels['countrydata'] as $cntry)
+                                             {{ $cntry['country_name'] }}
                                           @endforeach
-                                          {{-- <td class="text-center">Voice LOB</td> --}}
-                                       </tr>
-                                       <tr>
-                                          <th class="bg_light_th">Channels</th>
-                                            @foreach ($account_info->processinfo as $info)
-                                                <td class="text-center">{{ $info->channelnames }}</td>
-                                            @endforeach
-                                          {{-- <td class="text-center">Email</td> --}}
-                                       </tr>
-                                       <tr>
-                                          <th class="bg_light_th">Country</th>
-                                            @foreach ($account_info->processinfo as $info)
-                                                <td class="text-center">{{ $info->country }}</td>
-                                            @endforeach
-                                          {{-- <td class="text-center">India</td> --}}
-                                       </tr>
-                                       @endforeach
-                                    </tbody>
-                                    <!-- ======= Forecasting  ======= -->
-                                    <tbody>
-                                       <tr>
-                                          <th class="bg_dark_th">Forecasting</th>
-                                          <td colspan="2" ></td>
-                                       </tr>
-                                       <tr>
-                                           <td>Which Forecasting tool / software package is being utilised?</td>
-                                                @foreach ($account_info->processinfo as $info)
-                                                    <td>{{ $info->f_1 }}</td>
-                                                @endforeach
-                                            </tr>
-                                            <tr>
-                                                <td>Which Forecasting model is being used?</td>
-                                                @foreach ($account_info->processinfo as $info)
-                                                    <td>{{ $info->f_2 }}</td>
-                                                @endforeach
-                                            </tr>
-                                            <tr>
-                                                <td>What are the key input parameters to the model?</td>
-                                                @foreach ($account_info->processinfo as $info)
-                                                    <td>{{ $info->f_3 }}</td>
-                                                @endforeach
-                                            </tr>
-                                            <tr>
-                                                <td>How frequently is the model revisited for goodness of fit?</td>
-                                                @foreach ($account_info->processinfo as $info)
-                                                    <td>{{ $info->f_4 }}</td>
-                                                @endforeach
-                                            </tr>
-                                            <tr>
-                                                <td>How do you measure the accuracy of your Forecasting model?</td>
-                                                @foreach ($account_info->processinfo as $info)
-                                                    <td>{{ $info->f_5 }}</td>
-                                                @endforeach
-                                            </tr>
-                                        {{-- @endforeach --}}
-                                    </tbody>
-                                    <!-- ========= Staffing / Resource Planning  ======= -->
-                                    <tbody>
-                                       <tr>
-                                          <th class="bg_dark_th">Staffing / Resource Planning</th>
-                                          <td colspan="2" ></td>
-                                       </tr>
-                                       <!-- Forecast Locks -->
-                                       <tr>
-                                          <th class="bg_light_th">Forecast Locks</th>
-                                          <td colspan="2" ></td>
-                                       </tr>
-                                       <tr>
-                                          <td>Who provides the Forecast / Lock which forms the base of Staff Planning?</td>
-                                            @foreach ($account_info->processinfo as $info)
-                                                <td>{{ $info->f_6 }}</td>
-                                            @endforeach
-                                       </tr>
-                                       <tr>
-                                          <td>What is your staff locking model?</td>
-                                          @foreach ($account_info->processinfo as $info)
-                                          <td>{{ $info->f_7 }}</td>
+                                       @endif
+                                    </td>
+                                    <td>
+                                       @if(isset($channels['citydata']) && !empty($channels['citydata']))
+                                          @foreach($channels['citydata'] as $ct)
+                                             {{ $ct['city_name'] }}
                                           @endforeach
-                                       </tr>
-                                       <tr>
-                                          <td>Do you generate Internal Forecast?</td>
-                                          @foreach ($account_info->processinfo as $info)
-                                          <td>{{ $info->f_8 }}</td>
-                                          @endforeach
-                                       </tr>
-                                       <tr>
-                                          <td>Which Forecast is used for Staff Planning?</td>
-                                          @foreach ($account_info->processinfo as $info)
-                                          <td>{{ $info->f_9 }}</td>
-                                          @endforeach
-                                       </tr>
-                                       <!-- AHT -->
-                                       {{-- {{ dd($account_info->processinfo); }} --}}
-                                       <tr>
-                                          <th class="bg_light_th">AHT</th>
-                                          <td colspan="2" ></td>
-                                       </tr>
-                                       <tr>
-                                          <td>What AHT is used for Staff Planning?</td>
-                                          @foreach ($account_info->processinfo as $info)
-                                          <td>{{ $info->f_10 }}</td>
-                                          @endforeach
-                                       </tr>
-                                       <tr>
-                                          <td>How do you calculate New Hire impact on the AHT?</td>
-                                          @foreach ($account_info->processinfo as $info)
-                                          <td>{{ $info->f_11 }}</td>
-                                          @endforeach
-                                       </tr>
-                                       <!-- FTE -->
-                                       <tr>
-                                          <th class="bg_light_th">FTE</th>
-                                          <td colspan="2" ></td>
-                                       </tr>
-                                       <tr>
-                                          <td>How do you generate FTE requirements?</td>
-                                          @foreach ($account_info->processinfo as $info)
-                                          <td>{{ $info->f_12 }}</td>
-                                          @endforeach
-                                       </tr>
-                                       <!-- In-Office Shrinkage -->
-                                       <tr>
-                                          <th class="bg_light_th">In-Office Shrinkage</th>
-                                          <td colspan="2" ></td>
-                                       </tr>
-                                       <tr>
-                                          <td>At what level are your In-Office Shrinkages planned?</td>
-                                          @foreach ($account_info->processinfo as $info)
-                                          <td>{{ $info->f_13 }}</td>
-                                          @endforeach
-                                       </tr>
-                                       <tr>
-                                          <td>Do you have set targets for each individual Aux/Activity code?</td>
-                                          @foreach ($account_info->processinfo as $info)
-                                          <td>{{ $info->f_14 }}</td>
-                                          @endforeach
-                                       </tr>
-                                       <tr>
-                                          <td>In-Office shrinkage Forecasts are modeled on (please select the appropriate)</td>
-                                          @foreach ($account_info->processinfo as $info)
-                                          <td>{{ $info->f_15 }}</td>
-                                          @endforeach
-                                       </tr>
-                                       <!-- Out-of-Office Shrinkage -->
-                                       <tr>
-                                          <th class="bg_light_th">Out-of-Office Shrinkage</th>
-                                          <td colspan="2" ></td>
-                                       </tr>
-                                       <tr>
-                                          <td>At what level are your Out-of-Office Shrinkages planned?</td>
-                                          @foreach ($account_info->processinfo as $info)
-                                          <td>{{ $info->f_16 }}</td>
-                                          @endforeach
-                                       </tr>
-                                       <tr>
-                                          <td>Vacation Forecasts are modeled on (please select the appropriate)</td>
-                                          @foreach ($account_info->processinfo as $info)
-                                          <td>{{ $info->f_17 }}</td>
-                                          @endforeach
-                                       </tr>
-                                       <tr>
-                                          <td>Absenteeism Forecasts are modeled on (please select the appropriate)</td>
-                                          @foreach ($account_info->processinfo as $info)
-                                          <td>{{ $info->f_18 }}</td>
-                                          @endforeach
-
-                                       </tr>
-                                       <!-- Schedule Inflex -->
-                                       <tr>
-                                          <th class="bg_light_th">Schedule Inflex</th>
-                                          <td colspan="2" ></td>
-                                       </tr>
-                                       <tr>
-                                          <td>Is Schedule Inflex considered in Staff planning?</td>
-                                          @foreach ($account_info->processinfo as $info)
-                                          <td>{{ $info->f_19 }}</td>
-                                          @endforeach
-                                       </tr>
-                                       <tr>
-                                          <td>How is the Schedule Inflex estimated / calculated?</td>
-                                          @foreach ($account_info->processinfo as $info)
-                                          <td>{{ $info->f_20 }}</td>
-                                          @endforeach
-                                       </tr>
-                                       <!-- Attrition -->
-                                       <tr>
-                                          <th class="bg_light_th">Attrition</th>
-                                          <td colspan="2" ></td>
-                                       </tr>
-                                       <tr>
-                                          <td>How do you factor attrition in your staff plan?</td>
-                                          @foreach ($account_info->processinfo as $info)
-                                          <td>{{ $info->f_21 }}</td>
-                                          @endforeach
-                                       </tr>
-                                       <tr>
-                                          <td>Do you plan for Involuntary Attrition as a separate line item? (BQM, Promotions, Transfers etc.)</td>
-                                          @foreach ($account_info->processinfo as $info)
-                                          <td>{{ $info->f_22 }}</td>
-                                          @endforeach
-                                       </tr>
-                                       <!-- Staff Planning Connects -->
-                                       <tr>
-                                          <th class="bg_light_th">Staff Planning Connects</th>
-                                          <td colspan="2" ></td>
-                                       </tr>
-                                       <tr>
-                                          <td>Do you have Inter-departmental Staff planning discussions?</td>
-                                          @foreach ($account_info->processinfo as $info)
-                                          <td>{{ $info->f_23 }}</td>
-                                          @endforeach
-                                       </tr>
-                                       <tr>
-                                          <td>What is the frequency?</td>
-                                          @foreach ($account_info->processinfo as $info)
-                                          <td>{{ $info->f_24 }}</td>
-                                          @endforeach
-                                       </tr>
-                                       <tr>
-                                          <td colspan="3"><strong>Who decides the below:-</strong></td>
-                                       </tr>
-                                       <tr>
-                                          <td>Staffing Plan (Validation & Signing off key assumptions such as AHT, Shrinkage etc.</td>
-                                          @foreach ($account_info->processinfo as $info)
-                                          <td>{{ $info->f_25 }}</td>
-                                          @endforeach
-                                       </tr>
-                                       <tr>
-                                          <td>Adding Batches</td>
-                                          @foreach ($account_info->processinfo as $info)
-                                          <td>{{ $info->f_26 }}</td>
-                                          @endforeach
-                                       </tr>
-                                       <tr>
-                                          <td>Removing Batches</td>
-                                          @foreach ($account_info->processinfo as $info)
-                                          <td>{{ $info->f_27 }}</td>
-                                          @endforeach
-                                       </tr>
-                                       <tr>
-                                          <td>Cross Skilling</td>
-                                          @foreach ($account_info->processinfo as $info)
-                                          <td>{{ $info->f_28 }}</td>
-                                          @endforeach
-                                       </tr>
-                                       <tr>
-                                          <td>Is there a client dependency for hiring batches?</td>
-                                          @foreach ($account_info->processinfo as $info)
-                                          <td>{{ $info->f_29 }}</td>
-                                          @endforeach
-                                       </tr>
-                                       <tr>
-                                          <td>Do you have a calibration calls with the Recruitment team</td>
-                                          @foreach ($account_info->processinfo as $info)
-                                          <td>{{ $info->f_30 }}</td>
-                                          @endforeach
-                                       </tr>
-                                       <tr>
-                                          <td>If Yes – Weekly or Monthly</td>
-                                          @foreach ($account_info->processinfo as $info)
-                                          <td>{{ $info->f_31 }}</td>
-                                          @endforeach
-                                       </tr>
-                                    </tbody>
-                                    <!-- ========= Scheduling  ======= -->
-                                    <tbody>
-                                       <tr>
-                                          <th class="bg_dark_th">Scheduling</th>
-                                          <td colspan="2"></td>
-                                       </tr>
-                                       <tr>
-                                          <td>Do you do Call Curve Analysis before deciding the Schedule Pattern?</td>
-                                          @foreach ($account_info->processinfo as $info)
-                                          <td>{{ $info->f_32 }}</td>
-                                          @endforeach
-                                       </tr>
-                                       <tr>
-                                          <td>What is the frequency of the above?</td>
-                                          @foreach ($account_info->processinfo as $info)
-                                          <td>{{ $info->f_33 }}</td>
-                                          @endforeach
-                                       </tr>
-                                       <tr>
-                                          <td>How do you create interval level Volume and AHT requirements?</td>
-                                          @foreach ($account_info->processinfo as $info)
-                                          <td>{{ $info->f_34 }}</td>
-                                          @endforeach
-                                       </tr>
-                                       <tr>
-                                          <td>How do you manage the Headcount reconciliation process?</td>
-                                          @foreach ($account_info->processinfo as $info)
-                                          <td>{{ $info->f_35 }}</td>
-                                          @endforeach
-                                       </tr>
-                                       <tr>
-                                          <td>Do you run Manpower Dimensionioning exercise frequently to arrive at optimal HC mix FT/PT/Split/Flexi?</td>
-                                          @foreach ($account_info->processinfo as $info)
-                                            <td>{{ $info->f_36 }}</td>
-                                          @endforeach
-                                       </tr>
-                                       <tr>
-                                          <td>What is the frequency of the above?</td>
-                                          @foreach ($account_info->processinfo as $info)
-                                            <td>{{ $info->f_37 }}</td>
-                                          @endforeach
-                                       </tr>
-                                       <tr>
-                                          <td>Do you run & test different Schedule Patterns to identify best fit?</td>
-                                          @foreach ($account_info->processinfo as $info)
-                                            <td>{{ $info->f_38 }}</td>
-                                          @endforeach
-                                       </tr>
-                                       <tr>
-                                          <td>What is the frequency of the above?</td>
-                                          @foreach ($account_info->processinfo as $info)
-                                            <td>{{ $info->f_39 }}</td>
-                                          @endforeach
-                                       </tr>
-                                       <tr>
-                                          <td>Do you plot all In-office shrinkages in your Schedules at Interval Level?
-                                             (Coaching, Team Meeting, Business Updates etc.)
-                                          </td>
-                                          @foreach ($account_info->processinfo as $info)
-                                            <td>{{ $info->f_40 }}</td>
-                                          @endforeach
-                                       </tr>
-                                       <tr>
-                                          <td>Do you plot Out-of-Office shrinkage in your Schedules at Interval Level? (Vacation)</td>
-                                          @foreach ($account_info->processinfo as $info)
-                                            <td>{{ $info->f_41 }}</td>
-                                          @endforeach
-                                       </tr>
-                                       <tr>
-                                          <td>Do you review IDP/Schedule deviation prior to schedule release?</td>
-                                          @foreach ($account_info->processinfo as $info)
-                                            <td>{{ $info->f_42 }}</td>
-                                          @endforeach
-                                       </tr>
-                                       <tr>
-                                          <td>Do you measure Schedule Efficiency?</td>
-                                          @foreach ($account_info->processinfo as $info)
-                                            <td>{{ $info->f_43 }}</td>
-                                          @endforeach
-                                       </tr>
-                                       <tr>
-                                          <td>What is your target for Schedule Efficiency? (Please specify in %)</td>
-                                          @foreach ($account_info->processinfo as $info)
-                                            <td>{{ $info->f_44 }}</td>
-                                          @endforeach
-                                       </tr>
-                                       <tr>
-                                          <td>How do you measure the Schedule Efficiency?</td>
-                                          @foreach ($account_info->processinfo as $info)
-                                            <td>{{ $info->f_45 }}</td>
-                                          @endforeach
-                                       </tr>
-                                       <tr>
-                                          <td>What is your internal target for Scheduling accuracy? (Requirment to Scheduled - Day/Intervals)</td>
-                                          @foreach ($account_info->processinfo as $info)
-                                            <td>{{ $info->f_46 }}</td>
-                                          @endforeach
-                                       </tr>
-                                       <tr>
-                                          <td>How do you measure the Schedule Accuracy?</td>
-                                          @foreach ($account_info->processinfo as $info)
-                                            <td>{{ $info->f_47 }}</td>
-                                          @endforeach
-                                       </tr>
-                                       <tr>
-                                          <td>Do you measure the impact of various Scheduling Constraints on the account in terms or FTE & Cost?</td>
-                                          @foreach ($account_info->processinfo as $info)
-                                            <td>{{ $info->f_48 }}</td>
-                                          @endforeach
-                                       </tr>
-                                    </tbody>
-                                    <!-- ========= Intraday Management  ======= -->
-                                    <tbody>
-                                       <tr>
-                                          <th class="bg_dark_th">Intraday Management</th>
-                                          <td colspan="2"></td>
-                                       </tr>
-                                       <tr>
-                                          <td>Do you have a WFM Play book / Guide? E.g - Downtime Process, Calling Tree, Threshold & Skilling</td>
-                                          @foreach ($account_info->processinfo as $info)
-                                            <td>{{ $info->f_49 }}</td>
-                                          @endforeach
-                                       </tr>
-                                       <tr>
-                                          <td>Does RTA have a daily read out call / RCA?</td>
-                                          @foreach ($account_info->processinfo as $info)
-                                            <td>{{ $info->f_50 }}</td>
-                                          @endforeach
-                                       </tr>
-                                       <tr>
-                                          <td>Does the RTA do real time skill management?</td>
-                                          @foreach ($account_info->processinfo as $info)
-
-                                            <td>{{ $info->f_51 }}</td>
-                                          @endforeach
-                                       </tr>
-                                       <tr>
-                                          <td>Does RTA do Intra-day Reforecasting?</td>
-                                          @foreach ($account_info->processinfo as $info)
-                                            <td>{{ $info->f_52 }}</td>
-                                          @endforeach
-                                       </tr>
-                                       <tr>
-                                          <td>How do you manage customers resources up or down Realtime?</td>
-                                          @foreach ($account_info->processinfo as $info)
-                                            <td>{{ $info->f_53 }}</td>
-                                          @endforeach
-                                       </tr>
-                                       <tr>
-                                          <td>How do you manage and report, variance to plan Realtime?</td>
-                                          @foreach ($account_info->processinfo as $info)
-                                            <td>{{ $info->f_54 }}</td>
-                                          @endforeach
-                                       </tr>
-                                    </tbody>
-                                 </table>
-                              </div>
-                           </div>
-                           <!-- === Process Information Blocks === -->
-                           <div class="summary_contaienr">
-                              <h2>File Information</h2>
-                              <div class="table-responsive">
-
-                                 <table class="table table-bordered summary_table summary_procee_table">
-                                    <tbody>
-
-                                       <tr>
-                                          <th class="bg_dark_th">Account Name</th>
-                                            @foreach ($account_info->processinfo as $info)
-                                                <td class="text-center">{{ $info->account_names }}</td>
-                                            @endforeach
-                                       </tr>
-                                       <tr>
-                                          <th class="bg_light_th">Forecasting</th>
-                                          <td colspan="2"></td>
-                                       </tr>
-                                       <tr>
-                                          <th class="text-right">Process Document</th>
-                                          @foreach ($account_info->fileimage as $info)
-                                          <td class="text-center"><img src="{{ asset('/file_images/'.$info->f_process_doc) }}" alt="f_process_doc image" height="50" width="50">@if($info->f_process_doc == null)<i class="fad fa-file-check"></i>@endif</td>
-                                          @endforeach
-                                          {{-- <td class="text-center"><i class="fad fa-file-check"></i>@endif</td> --}}
-                                       </tr>
-                                       <tr>
-                                          <th class="text-right">Model Sample File</th>
-                                          @foreach ($account_info->fileimage as $info)
-                                          <td class="text-center"><img src="{{ asset('/file_images/'.$info->model_file) }}" alt="model_file image" height="50" width="50" > @if($info->model_file == null)<i class="fad fa-file-check"></i>@endif</td>
-                                          @endforeach
-                                       </tr>>
-                                       <tr>
-                                          <th class="text-right">Accuracy Measurement / Result</th>
-                                          @foreach ($account_info->fileimage as $info)
-                                          <td class="text-center"><img src="{{ asset('/file_images/'.$info->f_accurecy_file) }}" alt="f_accurecy_file image"  height="50" width="50">@if($info->f_accurecy_file == null)<i class="fad fa-file-check"></i>@endif</td>
-                                          @endforeach
-                                       </tr>
-                                       <tr>
-                                          <th class="bg_light_th">Staffing / Resource Planning</th>
-                                          <td colspan="2"></td>
-                                       </tr>
-                                       <tr>
-                                          <th class="text-right">Process Document</th>
-                                          @foreach ($account_info->fileimage as $info)
-                                          <td class="text-center"><img src="{{ asset('/file_images/'.$info->sta_process_doc) }}" alt="sta_process_doc image"  height="50" width="50">@if($info->sta_process_doc == null)<i class="fad fa-file-check"></i>@endif</td>
-                                          @endforeach
-                                       </tr>
-                                       <tr>
-                                          <th class="text-right">Model Sample File</th>
-                                          @foreach ($account_info->fileimage as $info)
-                                          <td class="text-center"><img src="{{ asset('/file_images/'.$info->sta_model_file) }}" alt="sta_model_file image"  height="50" width="50">@if($info->sta_model_file == null)<i class="fad fa-file-check"></i>@endif</td>
-                                          @endforeach
-                                       </tr>
-                                       <tr>
-                                          <th class="text-right">Staffing Forecast Accuracy Result</th>
-                                          @foreach ($account_info->fileimage as $info)
-                                          <td class="text-center"><img src="{{ asset('/file_images/'.$info->sta_forecast_file) }}" alt="sta_forecast_file image"  height="50" width="50">@if($info->sta_forecast_file == null)<i class="fad fa-file-check"></i>@endif</td>
-                                          @endforeach
-                                       </tr>
-                                       <tr>
-                                          <th class="bg_light_th">Scheduling</th>
-                                          <td colspan="2"></td>
-                                       </tr>
-                                       <tr>
-                                          <th class="text-right">Process Document</th>
-                                          @foreach ($account_info->fileimage as $info)
-                                          <td class="text-center"><img src="{{ asset('/file_images/'.$info->sche_p_doc) }}" alt="sche_p_doc image"  height="50" width="50">@if($info->sche_p_doc == null)<i class="fad fa-file-check"></i>@endif</td>
-                                          @endforeach
-                                       </tr>
-                                       <tr>
-                                          <th class="text-right">Scheduling Model (only if done in Excel)</th>
-                                          @foreach ($account_info->fileimage as $info)
-                                          <td class="text-center"><img src="{{ asset('/file_images/'.$info->sche_sched_file) }}" alt="sche_sched_file image"  height="50" width="50">@if($info->sche_sched_file == null)<i class="fad fa-file-check"></i>@endif</td>
-                                          @endforeach
-                                       </tr>
-                                       <tr>
-                                          <th class="text-right">Staffing Forecast Accuracy Result</th>
-                                          @foreach ($account_info->fileimage as $info)
-                                          <td class="text-center"><img src="{{ asset('/file_images/'.$info->sche_forecast_file) }}" alt="sche_forecast_file image"  height="50" width="50">@if($info->sche_forecast_file == null)<i class="fad fa-file-check"></i>@endif</td>
-                                          @endforeach
-                                       </tr>
-                                       <tr>
-                                          <th class="text-right">IDP / Deviation File sample</th>
-                                          @foreach ($account_info->fileimage as $info)
-                                          <td class="text-center"><img src="{{ asset('/file_images/'.$info->sche_idp_file) }}" alt="sche_idp_file image"  height="50" width="50">@if($info->sche_idp_file == null)<i class="fad fa-file-check"></i>@endif</td>
-                                          @endforeach
-                                       </tr>
-                                       <tr>
-                                          <th class="bg_light_th">RTA / Intraday Management</th>
-                                          <td colspan="2"></td>
-                                       </tr>
-                                       <tr>
-                                          <th class="text-right">Process Document</th>
-                                          @foreach ($account_info->fileimage as $info)
-                                          <td class="text-center"><img src="{{ asset('/file_images/'.$info->rta_p_file) }}" alt="rta_p_file image"  height="50" width="50">@if($info->rta_p_file == null)<i class="fad fa-file-check"></i>@endif</td>
-                                          @endforeach
-                                       </tr>
-                                       <tr>
-                                          <th class="text-right">Intraday Report Sample</th>
-                                          @foreach ($account_info->fileimage as $info)
-                                          <td class="text-center"><img src="{{ asset('/file_images/'.$info->rta_intro_file) }}" alt="rta_intro_file image"  height="50" width="50">@if($info->f_process_doc == null)<i class="fad fa-file-check"></i>@endif</td>
-                                          @endforeach
-                                       </tr>
-                                       <tr>
-                                          <th class="text-right">Day-End Report Sample</th>
-                                          @foreach ($account_info->fileimage as $info)
-                                          <td class="text-center"><img src="{{ asset('/file_images/'.$info->rta_dayr_file) }}" alt="rta_dayr_file image"  height="50" width="50">@if($info->rta_dayr_file == null)<i class="fad fa-file-check"></i>@endif</td>
-                                          @endforeach
-                                       </tr>
-                                       <tr>
-                                          <th class="text-right">RCA/Post-Mortem Report Sample</th>
-                                          @foreach ($account_info->fileimage as $info)
-                                          <td class="text-center"><img src="{{ asset('/file_images/'.$info->rta_rca_file) }}" alt="rta_rca_file image"  height="50" width="50">@if($info->rta_rca_file == null)<i class="fad fa-file-check"></i>@endif</td>
-                                          @endforeach
-                                       </tr>
-                                    </tbody>
-                                 </table>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="footerBtn-panel">
-                     <button type="button" class="action-button previous previous_button">Back</button>
-                     <button type="submit" class="action-button">Submit</button>
+                                       @endif
+                                    </td>
+                                    <td>{{ $channels->site_name }}</td>
+                                    <td>{{ $channels->fte }}</td> 
+                                 </tr>
+                                 @endforeach
+                                 @endforeach
+                                 @endforeach
+                              </tbody>
+                     </table>
                   </div>
                </div>
+
+               <!-- === Detailed Information Blocks === -->
+               <div class="summary_contaienr">
+                  <h2>Detailed Information</h2>
+                  <div class="table-responsive">
+                     <table class="table table-bordered summary_table fix_summary_table">
+                        <!-- === Account Tbody ===  -->
+                        <tbody>
+                           <tr>
+                              <th class="bg_dark_th">Account Name</th>
+                              @foreach ($account_detail as $key => $account)
+                              <?php 
+                                 $acc_lob_cnt=$acc_lob_ch_cnt=0;
+                                 $acc_lob_cnt += count($account_detail[$key]['lobs']);
+                              ?>
+                              @foreach($account['lobs'] as $key2 => $lob)
+                                 <?php $ch = count($lob->channels); ?>
+                                 @foreach ($lob->channels as $key => $channels)
+                                 <!-- {{ $acc_lob_ch_cnt  }} -->
+                              <td colspan="{{$acc_lob_ch_cnt}}" style="text-align:center; justify-content:center;">
+                                  {{ $account->account_name }}
+                              </td>
+                              @endforeach
+                                 @endforeach
+                              @endforeach
+                           </tr>
+
+                           <!-- Lob Details -->
+                           <tr>
+                              <th class="bg_light_th">LOB</th>
+                              @foreach ($account_detail as $key => $account)
+                              <?php 
+                                 $acc_lob_cnt=$acc_lob_ch_cnt=0;
+                                 $acc_lob_cnt += count($account_detail[$key]['lobs']);
+                              ?>
+                              @foreach($account['lobs'] as $key2 => $lob)
+                                 <?php $acc_lob_ch_cnt = count($lob->channels); ?>
+                              <td colspan="{{$acc_lob_ch_cnt}}" style="text-align:center; justify-content:center;">
+                                  {{ $lob->lob_name }}
+                              </td>
+                              @endforeach
+                              @endforeach
+                           </tr>
+                           <!--  -->
+
+                           <!-- Channels Details -->
+                           <tr>
+                              <th class="bg_light_th">Channels</th>
+                              @foreach ($account_detail as $key => $account)
+                              @foreach($account['lobs'] as $key2 => $lob)
+                              @foreach ($lob->channels as $key => $channels)
+                                 <?php $acc_lob_ch_cnt = count($lob->channels); ?>
+                              <td>
+                                  {{ $channels->channel_name }}
+                              </td>
+                              @endforeach
+                              @endforeach
+                              @endforeach
+                           </tr>
+                           <!--  -->
+
+                           <!-- country Details -->
+                           <tr>
+                              <th class="bg_light_th">Country</th>
+                              @foreach ($account_detail as $key => $account)
+                              @foreach($account['lobs'] as $key2 => $lob)
+                              @foreach ($lob->channels as $key => $channels)
+                                 <?php $acc_lob_ch_cnt = count($lob->channels); ?>
+                                 <td>
+                                    @if(isset($channels['countrydata']) && !empty($channels['countrydata']))
+                                       @foreach($channels['countrydata'] as $cntry)
+                                          {{ $cntry['country_name'] }}
+                                       @endforeach
+                                    @endif
+                                 </td>
+                              @endforeach
+                              @endforeach
+                              @endforeach
+                           </tr>
+                           <!--  -->
+                           
+                           <!-- city Name -->
+                           <tr>
+                              <th class="bg_light_th">City Name</th>
+                              @foreach ($account_detail as $key => $account)
+                              @foreach($account['lobs'] as $key2 => $lob)
+                              @foreach ($lob->channels as $key => $channels)
+                                 <?php $acc_lob_ch_cnt = count($lob->channels); ?>
+                                 <td>
+                                    @if(isset($channels['citydata']) && !empty($channels['citydata']))
+                                       @foreach($channels['countrydata'] as $ct)
+                                          {{ $ct['city_name'] }}
+                                       @endforeach
+                                    @endif
+                                 </td>
+                              @endforeach
+                              @endforeach
+                              @endforeach
+                           </tr>
+                           <!--  -->
+
+                           <!-- site Name -->
+                           <tr>
+                              <th class="bg_light_th">Site Name</th>
+                              @foreach ($account_detail as $key => $account)
+                              @foreach($account['lobs'] as $key2 => $lob)
+                              @foreach ($lob->channels as $key => $channels)
+                                 <?php $acc_lob_ch_cnt = count($lob->channels); ?>
+                              <td>
+                                  {{ $channels->site_name }}
+                              </td>
+                              @endforeach
+                              @endforeach
+                              @endforeach
+                           </tr>
+                           <!--  -->
+
+                           <!-- FTEs Name -->
+                           <tr>
+                              <th class="bg_light_th">FTEs</th>
+                              @foreach ($account_detail as $key => $account)
+                              @foreach($account['lobs'] as $key2 => $lob)
+                              @foreach ($lob->channels as $key => $channels)
+                                 <?php $acc_lob_ch_cnt = count($lob->channels); ?>
+                              <td>
+                                  {{ $channels->fte }}
+                              </td>
+                              @endforeach
+                              @endforeach
+                              @endforeach
+                           </tr>
+                           <!--  -->
+                        
+                     <!-- *********************************** Billability ****************************** -->
+                           <!-- Billability Details -->
+                           <tr>
+                              <th class="bg_dark_th">Billability</th>
+                              <?php $acc_lob_ch_cnt=0; ?>
+                              @foreach ($account_detail as $key => $account)
+                              @foreach($account['lobs'] as $key2 => $lob)
+                              @foreach ($lob->channels as $key => $channels)
+                                 <?php ++$acc_lob_ch_cnt; ?>
+                              @endforeach
+                              @endforeach
+                              @endforeach
+                              <td colspan ="{{$acc_lob_ch_cnt}}"></td>
+                           </tr>
+                           <!--  -->
+
+                           <!-- Billing Method -->
+                           <tr>
+                              <th>Billing Method</th>
+                              @foreach ($account_detail as $key => $account)
+                              @foreach($account['lobs'] as $key2 => $lob)
+                              @foreach ($lob->channels as $key => $channels)
+                              <td>
+                              @foreach($channels['ChannelDatas'] as $chd=>$chdata)
+                                    {{ $billingType[$chdata->monthly_ftp] }}
+                              @endforeach
+                              </td>
+                              @endforeach
+                              @endforeach
+                              @endforeach
+                           </tr>
+                           <!--  -->
+
+                           <!-- Billing Cap -->
+                           <tr>
+                              <th>Billing Cap</th>
+                              @foreach ($account_detail as $key => $account)
+                              @foreach($account['lobs'] as $key2 => $lob)
+                              @foreach ($lob->channels as $key => $channels)
+                              <td>
+                              @foreach($channels['ChannelDatas'] as $chd=>$chdata)
+                                    {{ $billingCap[$chdata->billing_cap] }}
+                              @endforeach
+                              </td>
+                              @endforeach
+                              @endforeach
+                              @endforeach
+                           </tr>
+                           <!--  -->
+
+                           <!-- Value for selected Billing Cap -->
+                           <tr>
+                              <th>Value for selected Billing Cap</th>
+                              @foreach ($account_detail as $key => $account)
+                              @foreach($account['lobs'] as $key2 => $lob)
+                              @foreach ($lob->channels as $key => $channels)
+                              <td>
+                              
+                              </td>
+                              @endforeach
+                              @endforeach
+                              @endforeach
+                           </tr>
+                           <!--  -->
+
+                           <!-- Min Billing Guarantee -->
+                           <tr>
+                              <th>Min Billing Guarantee</th>
+                              @foreach ($account_detail as $key => $account)
+                                 @foreach($account['lobs'] as $key2 => $lob)
+                                    @foreach ($lob->channels as $key => $channels)
+                                    <td>
+                                       @foreach($channels['ChannelDatas'] as $chd=>$chdata)
+                                             {{ $minBillingGuarantee[$chdata->billing_guarantee] }}
+                                       @endforeach
+                                    </td>
+                                    @endforeach
+                                 @endforeach
+                              @endforeach
+                           </tr>
+                           <!--  -->
+
+                           <!-- Min Billing Reference -->
+                           <tr>
+                              <th>Min Billing Reference</th>
+                              @foreach ($account_detail as $key => $account)
+                                 @foreach($account['lobs'] as $key2 => $lob)
+                                    @foreach ($lob->channels as $key => $channels)
+                                    <td>
+                                       @foreach($channels['ChannelDatas'] as $chd=>$chdata)
+                                             {{ $minBillingReference[$chdata->min_bill_ref] }}
+                                       @endforeach
+                                    </td>
+                                    @endforeach
+                                 @endforeach
+                              @endforeach
+                           </tr>
+                           <!--  -->
+
+                           <!-- Max Billable Threshold -->
+                           <tr>
+                              <th>Max Billable Threshold</th>
+                              @foreach ($account_detail as $key => $account)
+                                 @foreach($account['lobs'] as $key2 => $lob)
+                                    @foreach ($lob->channels as $key => $channels)
+                                    <td>
+                                       @foreach($channels['ChannelDatas'] as $chd=>$chdata)
+                                             {{ $maxBillingThres[$chdata->max_bill_thres] }}
+                                       @endforeach
+                                    </td>
+                                    @endforeach
+                                 @endforeach
+                              @endforeach
+                           </tr>
+                           <!--  -->
+
+                           <!-- Max Billing Reference -->
+                           <tr>
+                              <th>Min Billing Reference</th>
+                              @foreach ($account_detail as $key => $account)
+                                 @foreach($account['lobs'] as $key2 => $lob)
+                                    @foreach ($lob->channels as $key => $channels)
+                                    <td>
+                                       @foreach($channels['ChannelDatas'] as $chd=>$chdata)
+                                             {{ $maxBillRef[$chdata->max_bill_ref] }}
+                                       @endforeach
+                                    </td>
+                                    @endforeach
+                                 @endforeach
+                              @endforeach
+                           </tr>
+                           <!--  -->
+
+                           <!-- *********************************** KPIs & Objectives ****************************** -->
+                           <!-- KPIs & Objectives Details -->
+                           <tr>
+                              <th class="bg_dark_th">KPIs & Objectives</th>
+                              <?php $acc_lob_ch_cnt=0; ?>
+                              @foreach ($account_detail as $key => $account)
+                                 @foreach($account['lobs'] as $key2 => $lob)
+                                    @foreach ($lob->channels as $key => $channels)
+                                       <?php ++$acc_lob_ch_cnt; ?>
+                                    @endforeach
+                                 @endforeach
+                              @endforeach
+                              <td colspan ="{{$acc_lob_ch_cnt}}"></td>
+                           </tr>
+                           <!--  -->
+
+                           <!-- SOW Max Staffing Req? -->
+                           <tr>
+                              <th>SOW Max Staffing Req?</th>
+                              @foreach ($account_detail as $key => $account)
+                                 @foreach($account['lobs'] as $key2 => $lob)
+                                    @foreach ($lob->channels as $key => $channels)
+                                    <td>
+                                       @foreach($channels['ChannelDatas'] as $chd=>$chdata)
+                                             {{ $maxBillingThres[$chdata->swo] }}
+                                       @endforeach
+                                    </td>
+                                    @endforeach
+                                 @endforeach
+                              @endforeach
+                           </tr>
+                           <!--  -->
+
+                           <!-- Service KPI - 1 (If applicable) -->
+                           <tr>
+                              <th>Service KPI - 1 (If applicable)</th>
+                              @foreach ($account_detail as $key => $account)
+                                 @foreach($account['lobs'] as $key2 => $lob)
+                                    @foreach ($lob->channels as $key => $channels)
+                                    <td>
+                                       @foreach($channels['ChannelDatas'] as $chd=>$chdata)
+                                             {{ $serviceApi[$chdata->kpi1_app] }}
+                                       @endforeach
+                                    </td>
+                                    @endforeach
+                                 @endforeach
+                              @endforeach
+                           </tr>
+                           <!--  -->
+
+                           <!-- Service KPI - 1 - Target (%/Sec) -->
+                           <tr>
+                              <th>Service KPI - 1 - Target (%/Sec)</th>
+                              @foreach ($account_detail as $key => $account)
+                                 @foreach($account['lobs'] as $key2 => $lob)
+                                    @foreach ($lob->channels as $key => $channels)
+                                    <td>
+                                       @foreach($channels['ChannelDatas'] as $chd=>$chdata)
+                                             {{ $chdata->kpi1_target }}
+                                       @endforeach
+                                    </td>
+                                    @endforeach
+                                 @endforeach
+                              @endforeach
+                           </tr>
+                           <!--  -->
+
+                           <!-- Service KPI - 2 (If applicable) -->
+                           <tr>
+                              <th>Service KPI - 1 (If applicable)</th>
+                              @foreach ($account_detail as $key => $account)
+                                 @foreach($account['lobs'] as $key2 => $lob)
+                                    @foreach ($lob->channels as $key => $channels)
+                                    <td>
+                                       @foreach($channels['ChannelDatas'] as $chd=>$chdata)
+                                             {{ $serviceApi[$chdata->kpi2_app] }}
+                                       @endforeach
+                                    </td>
+                                    @endforeach
+                                 @endforeach
+                              @endforeach
+                           </tr>
+                           <!--  -->
+
+                           <!-- Service KPI - 2 - Target (%/Sec) -->
+                           <tr>
+                              <th>Service KPI - 2 - Target (%/Sec)</th>
+                              @foreach ($account_detail as $key => $account)
+                                 @foreach($account['lobs'] as $key2 => $lob)
+                                    @foreach ($lob->channels as $key => $channels)
+                                    <td>
+                                       @foreach($channels['ChannelDatas'] as $chd=>$chdata)
+                                             {{ $chdata->kpi2_target }}
+                                       @endforeach
+                                    </td>
+                                    @endforeach
+                                 @endforeach
+                              @endforeach
+                           </tr>
+                           <!--  -->
+
+                           <!-- *********************************** Training Details ****************************** -->
+                           <!-- Training Details -->
+                           <tr>
+                              <th class="bg_dark_th">Training Details</th>
+                              <?php $acc_lob_ch_cnt=0; ?>
+                              @foreach ($account_detail as $key => $account)
+                                 @foreach($account['lobs'] as $key2 => $lob)
+                                    @foreach ($lob->channels as $key => $channels)
+                                       <?php ++$acc_lob_ch_cnt; ?>
+                                    @endforeach
+                                 @endforeach
+                              @endforeach
+                              <td colspan ="{{$acc_lob_ch_cnt}}"></td>
+                           </tr>
+                           <!--  -->
+
+                           <!-- Classroom Training Duration (Weeks) -->
+                           <tr>
+                              <th>Classroom Training Duration (Weeks)</th>
+                              @foreach ($account_detail as $key => $account)
+                                 @foreach($account['lobs'] as $key2 => $lob)
+                                    @foreach ($lob->channels as $key => $channels)
+                                    <td>
+                                       @foreach($channels['ChannelDatas'] as $chd=>$chdata)
+                                             {{ $chdata->class_duration }}
+                                       @endforeach
+                                    </td>
+                                    @endforeach
+                                 @endforeach
+                              @endforeach
+                           </tr>
+                           <!--  -->
+
+                           <!-- Nesting / OJT Duration (Weeks) -->
+                           <tr>
+                              <th>Nesting / OJT Duration (Weeks)</th>
+                              @foreach ($account_detail as $key => $account)
+                                 @foreach($account['lobs'] as $key2 => $lob)
+                                    @foreach ($lob->channels as $key => $channels)
+                                    <td>
+                                       @foreach($channels['ChannelDatas'] as $chd=>$chdata)
+                                             {{ $chdata->nesting_duration }}
+                                       @endforeach
+                                    </td>
+                                    @endforeach
+                                 @endforeach
+                              @endforeach
+                           </tr>
+                           <!--  -->
+
+                           <!-- *********************************** Operating Hours ****************************** -->
+                           <!-- Operating Hours -->
+                           <tr>
+                              <th class="bg_dark_th">Operating Hours</th>
+                              <?php $acc_lob_ch_cnt=0; ?>
+                              @foreach ($account_detail as $key => $account)
+                                 @foreach($account['lobs'] as $key2 => $lob)
+                                    @foreach ($lob->channels as $key => $channels)
+                                       <?php ++$acc_lob_ch_cnt; ?>
+                                    @endforeach
+                                 @endforeach
+                              @endforeach
+                              <td colspan ="{{$acc_lob_ch_cnt}}"></td>
+                           </tr>
+                           <!--  -->
+
+                           <!-- Weekday Start Time -->
+                           <tr>
+                              <th>Weekday Start Time</th>
+                              @foreach ($account_detail as $key => $account)
+                                 @foreach($account['lobs'] as $key2 => $lob)
+                                    @foreach ($lob->channels as $key => $channels)
+                                    <td>
+                                       @foreach($channels['ChannelDatas'] as $chd=>$chdata)
+                                             {{ $chdata->weekday_start_time }}
+                                       @endforeach
+                                    </td>
+                                    @endforeach
+                                 @endforeach
+                              @endforeach
+                           </tr>
+                           <!--  -->
+
+                           <!-- Weekday End Time -->
+                           <tr>
+                              <th>Weekday End Time</th>
+                              @foreach ($account_detail as $key => $account)
+                                 @foreach($account['lobs'] as $key2 => $lob)
+                                    @foreach ($lob->channels as $key => $channels)
+                                    <td>
+                                       @foreach($channels['ChannelDatas'] as $chd=>$chdata)
+                                             {{ $chdata->weekday_end_time }}
+                                       @endforeach
+                                    </td>
+                                    @endforeach
+                                 @endforeach
+                              @endforeach
+                           </tr>
+                           <!--  -->
+
+                           <!-- Sat Start Time -->
+                           <tr>
+                              <th>Sat Start Time</th>
+                              @foreach ($account_detail as $key => $account)
+                                 @foreach($account['lobs'] as $key2 => $lob)
+                                    @foreach ($lob->channels as $key => $channels)
+                                    <td>
+                                       @foreach($channels['ChannelDatas'] as $chd=>$chdata)
+                                             {{ $chdata->sat_start_time }}
+                                       @endforeach
+                                    </td>
+                                    @endforeach
+                                 @endforeach
+                              @endforeach
+                           </tr>
+                           <!--  -->
+
+                           <!-- Sat End Time -->
+                           <tr>
+                              <th>Sat End Time</th>
+                              @foreach ($account_detail as $key => $account)
+                                 @foreach($account['lobs'] as $key2 => $lob)
+                                    @foreach ($lob->channels as $key => $channels)
+                                    <td>
+                                       @foreach($channels['ChannelDatas'] as $chd=>$chdata)
+                                             {{ $chdata->sat_end_time }}
+                                       @endforeach
+                                    </td>
+                                    @endforeach
+                                 @endforeach
+                              @endforeach
+                           </tr>
+                           <!--  -->
+
+                           <!-- Sun Start Time -->
+                           <tr>
+                              <th>Sun Start Time</th>
+                              @foreach ($account_detail as $key => $account)
+                                 @foreach($account['lobs'] as $key2 => $lob)
+                                    @foreach ($lob->channels as $key => $channels)
+                                    <td>
+                                       @foreach($channels['ChannelDatas'] as $chd=>$chdata)
+                                             {{ $chdata->sun_start_time }}
+                                       @endforeach
+                                    </td>
+                                    @endforeach
+                                 @endforeach
+                              @endforeach
+                           </tr>
+                           <!--  -->
+
+                           <!-- Sun End Time -->
+                           <tr>
+                              <th>Sun End Time</th>
+                              @foreach ($account_detail as $key => $account)
+                                 @foreach($account['lobs'] as $key2 => $lob)
+                                    @foreach ($lob->channels as $key => $channels)
+                                    <td>
+                                       @foreach($channels['ChannelDatas'] as $chd=>$chdata)
+                                             {{ $chdata->sun_end_time }}
+                                       @endforeach
+                                    </td>
+                                    @endforeach
+                                 @endforeach
+                              @endforeach
+                           </tr>
+                           <!--  -->
+
+                           <!-- *********************************** Process Details ****************************** -->
+                           <!-- Process Details -->
+                           <tr>
+                              <th class="bg_dark_th">Process Details</th>
+                              <?php $acc_lob_ch_cnt=0; ?>
+                              @foreach ($account_detail as $key => $account)
+                                 @foreach($account['lobs'] as $key2 => $lob)
+                                    @foreach ($lob->channels as $key => $channels)
+                                       <?php ++$acc_lob_ch_cnt; ?>
+                                    @endforeach
+                                 @endforeach
+                              @endforeach
+                              <td colspan ="{{$acc_lob_ch_cnt}}"></td>
+                           </tr>
+                           <!--  -->
+                           <!-- Industry Segment -->
+                           <tr>
+                              <th>Industry Segment</th>
+                              @foreach ($account_detail as $key => $account)
+                                 @foreach($account['lobs'] as $key2 => $lob)
+                                    @foreach ($lob->channels as $key => $channels)
+                                    <td>
+                                     @foreach($channels['ChannelDatas'] as $chd=>$chdata)
+                                          @if(isset($chdata->industry_segment) && $chdata->industry_segment != null)
+                                             {{ $processDetails[$chdata->industry_segment] }}
+                                          @else
+                                             {{ ""}}
+                                             @endif
+                                       @endforeach
+                                    </td>
+                                    @endforeach
+                                 @endforeach
+                              @endforeach
+                           </tr>
+                           <!--  -->
+
+                           <!-- *********************************** Process Details ****************************** -->
+                           <!-- Employee Details -->
+                           <tr>
+                              <th class="bg_dark_th">Employee Details</th>
+                              <?php $acc_lob_ch_cnt=0; ?>
+                              @foreach ($account_detail as $key => $account)
+                                 @foreach($account['lobs'] as $key2 => $lob)
+                                    @foreach ($lob->channels as $key => $channels)
+                                       <?php ++$acc_lob_ch_cnt; ?>
+                                    @endforeach
+                                 @endforeach
+                              @endforeach
+                              <td colspan ="{{$acc_lob_ch_cnt}}"></td>
+                           </tr>
+                           <!--  -->
+
+                           <!-- Full-Time Employees -->
+                           <tr>
+                              <th>Full-Time Employees</th>
+                              @foreach ($account_detail as $key => $account)
+                                 @foreach($account['lobs'] as $key2 => $lob)
+                                    @foreach ($lob->channels as $key => $channels)
+                                    <td>
+                                       @foreach($channels['ChannelDatas'] as $chd=>$chdata)
+                                             {{ $chdata->full_time_employee }}
+                                       @endforeach
+                                    </td>
+                                    @endforeach
+                                 @endforeach
+                              @endforeach
+                           </tr>
+                           <!--  -->
+
+                           <!-- Part-Time Employees -->
+                           <tr>
+                              <th>Part-Time Employees</th>
+                              @foreach ($account_detail as $key => $account)
+                                 @foreach($account['lobs'] as $key2 => $lob)
+                                    @foreach ($lob->channels as $key => $channels)
+                                    <td>
+                                       @foreach($channels['ChannelDatas'] as $chd=>$chdata)
+                                             {{ $chdata->part_time_employee }}
+                                       @endforeach
+                                    </td>
+                                    @endforeach
+                                 @endforeach
+                              @endforeach
+                           </tr>
+                           <!--  -->
+
+                           <!-- Contractual Employees -->
+                           <tr>
+                              <th>Contractual Employees</th>
+                              @foreach ($account_detail as $key => $account)
+                                 @foreach($account['lobs'] as $key2 => $lob)
+                                    @foreach ($lob->channels as $key => $channels)
+                                    <td>
+                                       @foreach($channels['ChannelDatas'] as $chd=>$chdata)
+                                             {{ $chdata->contract_employee }}
+                                       @endforeach
+                                    </td>
+                                    @endforeach
+                                 @endforeach
+                              @endforeach
+                           </tr>
+                           <!--  -->
+
+                           <!-- *********************************** Authorized Locations ****************************** -->
+                           <!-- Authorized Locations -->
+                           <tr>
+                              <th class="bg_dark_th">Authorized Locations</th>
+                              <?php $acc_lob_ch_cnt=0; ?>
+                              @foreach ($account_detail as $key => $account)
+                                 @foreach($account['lobs'] as $key2 => $lob)
+                                    @foreach ($lob->channels as $key => $channels)
+                                       <?php ++$acc_lob_ch_cnt; ?>
+                                    @endforeach
+                                 @endforeach
+                              @endforeach
+                              <td colspan ="{{$acc_lob_ch_cnt}}"></td>
+                           </tr>
+                           <!--  -->
+
+                           <!-- Work in Office -->
+                           <tr>
+                              <th>Work in Office</th>
+                              @foreach ($account_detail as $key => $account)
+                                 @foreach($account['lobs'] as $key2 => $lob)
+                                    @foreach ($lob->channels as $key => $channels)
+                                    <td>
+                                       @foreach($channels['ChannelDatas'] as $chd=>$chdata)
+                                             {{ $chdata->work_office }}
+                                       @endforeach
+                                    </td>
+                                    @endforeach
+                                 @endforeach
+                              @endforeach
+                           </tr>
+                           <!--  -->
+
+                           <!-- Work from Home -->
+                           <tr>
+                              <th>Work from Home</th>
+                              @foreach ($account_detail as $key => $account)
+                                 @foreach($account['lobs'] as $key2 => $lob)
+                                    @foreach ($lob->channels as $key => $channels)
+                                    <td>
+                                       @foreach($channels['ChannelDatas'] as $chd=>$chdata)
+                                             {{ $chdata->work_home }}
+                                       @endforeach
+                                    </td>
+                                    @endforeach
+                                 @endforeach
+                              @endforeach
+                           </tr>
+                           <!--  -->
+
+                           <!-- *********************************** System Information ****************************** -->
+                           <!-- System Information -->
+                           <tr>
+                              <th class="bg_dark_th">System Information</th>
+                              <?php $acc_lob_ch_cnt=0; ?>
+                              @foreach ($account_detail as $key => $account)
+                                 @foreach($account['lobs'] as $key2 => $lob)
+                                    @foreach ($lob->channels as $key => $channels)
+                                       <?php ++$acc_lob_ch_cnt; ?>
+                                    @endforeach
+                                 @endforeach
+                              @endforeach
+                              <td colspan ="{{$acc_lob_ch_cnt}}"></td>
+                           </tr>
+                           <!--  -->
+
+                           <!-- ACD Name details -->
+                           <tr>
+                              <th>ACD Name</th>
+                              @foreach ($account_detail as $key => $account)
+                                 @foreach($account['lobs'] as $key2 => $lob)
+                                    @foreach ($lob->channels as $key => $channels)
+                                    <td>
+                                       @foreach($channels['ChannelDatas'] as $chd=>$chdata)
+                                          @if(isset($chdata->acd_name) && $chdata->acd_name != null)
+                                             {{ $acdBillSystem[$chdata->acd_name] }}
+                                          @else
+                                             {{""}}
+                                          @endif
+                                       @endforeach
+                                    </td>
+                                    @endforeach
+                                 @endforeach
+                              @endforeach
+                           </tr>
+                           <!--  -->
+
+                           <!-- WFM Tool details -->
+                           <tr>
+                              <th>WFM Tool</th>
+                              @foreach ($account_detail as $key => $account)
+                                 @foreach($account['lobs'] as $key2 => $lob)
+                                    @foreach ($lob->channels as $key => $channels)
+                                    <td>
+                                       @foreach($channels['ChannelDatas'] as $chdata)
+                                       @if(isset($chdata->wfm_tool) && $chdata->wfm_tool != null)
+                                       {{ $processDetails[$chdata->wfm_tool]}}
+                                       @else
+                                       {{""}}
+                                       @endif
+                                       @endforeach
+                                    </td>
+                                    @endforeach
+                                 @endforeach
+                              @endforeach
+                           </tr>
+                           <!--  -->
+
+                           <!-- Back office Tool -->
+                           <tr>
+                              <th>Back office Tool</th>
+                              @foreach ($account_detail as $key => $account)
+                                 @foreach($account['lobs'] as $key2 => $lob)
+                                    @foreach ($lob->channels as $key => $channels)
+                                    <td>
+                                       @foreach($channels['ChannelDatas'] as $chd=>$chdata)
+                                          @if(isset($chdata->back_tool))
+                                             {{ $chdata->back_tool }}
+                                          @else
+                                             {{""}}
+                                          @endif
+                                       @endforeach
+                                    </td>
+                                    @endforeach
+                                 @endforeach
+                              @endforeach
+                           </tr>
+                           <!--  -->
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+
+<!-- ***********************************  Process Information Block ****************************** -->
+               <!-- === Process Information Blocks === -->
+               <div class="summary_contaienr">
+                  <h2>Process Information</h2>
+                  <div class="table-responsive">
+                     <table class="table table-bordered summary_table summary_procee_table fix_summary_table">
+                        <!-- === Account Tbody ===  -->
+                        <tbody>
+                        <tr>
+                              <th class="bg_dark_th">Account Name</th>
+                              @foreach ($account_detail as $key => $account)
+                              <?php 
+                                 $acc_lob_cnt=$acc_lob_ch_cnt=0;
+                                 $acc_lob_cnt += count($account_detail[$key]['lobs']);
+                              ?>
+                              @foreach($account['lobs'] as $key2 => $lob)
+                                 <?php $ch = count($lob->channels); ?>
+                                 @foreach ($lob->channels as $key => $channels)
+                                 <!-- {{ $acc_lob_ch_cnt  }} -->
+                              <td colspan="{{$acc_lob_ch_cnt}}" style="text-align:center; justify-content:center;">
+                                  {{ $account->account_name }}
+                              </td>
+                              @endforeach
+                                 @endforeach
+                              @endforeach
+                           </tr>
+
+                           <!-- Lob Details -->
+                           <tr>
+                              <th class="bg_light_th">LOB</th>
+                              @foreach ($account_detail as $key => $account)
+                              <?php 
+                                 $acc_lob_cnt=$acc_lob_ch_cnt=0;
+                                 $acc_lob_cnt += count($account_detail[$key]['lobs']);
+                              ?>
+                              @foreach($account['lobs'] as $key2 => $lob)
+                                 <?php $acc_lob_ch_cnt = count($lob->channels); ?>
+                              <td colspan="{{$acc_lob_ch_cnt}}" style="text-align:center; justify-content:center;">
+                                  {{ $lob->lob_name }}
+                              </td>
+                              @endforeach
+                              @endforeach
+                           </tr>
+                           <!--  -->
+
+                           <!-- Channels Details -->
+                           <tr>
+                              <th class="bg_light_th">Channels</th>
+                              @foreach ($account_detail as $key => $account)
+                              @foreach($account['lobs'] as $key2 => $lob)
+                              @foreach ($lob->channels as $key => $channels)
+                                 <?php $acc_lob_ch_cnt = count($lob->channels); ?>
+                              <td>
+                                  {{ $channels->channel_name }}
+                              </td>
+                              @endforeach
+                              @endforeach
+                              @endforeach
+                           </tr>
+                           <!--  -->
+
+                           <!-- country Details -->
+                           <tr>
+                              <th class="bg_light_th">Country</th>
+                              @foreach ($account_detail as $key => $account)
+                              @foreach($account['lobs'] as $key2 => $lob)
+                              @foreach ($lob->channels as $key => $channels)
+                                 <?php $acc_lob_ch_cnt = count($lob->channels); ?>
+                                 <td>
+                                       @if(isset($channels['countrydata']) && !empty($channels['countrydata']))
+                                          @foreach($channels['countrydata'] as $cntry)
+                                             {{ $cntry['country_name'] }}
+                                          @endforeach
+                                       @endif
+                                    </td>
+                              @endforeach
+                              @endforeach
+                              @endforeach
+                           </tr>
+                           <!--  -->
+
+                           <!-- Forecasting -->
+                           <tr>
+                              <th class="bg_dark_th">Forecasting</th>
+                              <?php $acc_lob_ch_cnt=0; ?>
+                              @foreach ($account_detail as $key => $account)
+                                 @foreach($account['lobs'] as $key2 => $lob)
+                                    @foreach ($lob->channels as $key => $channels)
+                                       <?php ++$acc_lob_ch_cnt; ?>
+                                    @endforeach
+                                 @endforeach
+                              @endforeach
+                              <td colspan ="{{$acc_lob_ch_cnt}}"></td>
+                           </tr>
+                           <!--  -->
+
+                           <!-- Which Forecasting tool / software package is being utilised? -->
+                           <tr>
+                              <th>Which Forecasting tool / software package is being utilised?</th>
+                              @foreach ($account_detail as $key => $account)
+                              @foreach($account['lobs'] as $key2 => $lob)
+                              @foreach ($lob->channels as $key => $channels)
+                                 <?php $acc_lob_ch_cnt = count($lob->channels); ?>
+                                 <td>
+                                    @if(isset($channels['processInfo']))
+                                    @foreach($channels['processInfo'] as $proInfo)
+                                       {{ $proInfo->f_1 }}
+                                    @endforeach
+                                    @else
+                                    {{""}}
+                                    @endif
+                                 </td>
+                              @endforeach
+                              @endforeach
+                              @endforeach
+                           </tr>
+                           <!--  -->
+
+                           <!-- Which Forecasting model is being used? -->
+                           <tr>
+                              <th>Which Forecasting model is being used?</th>
+                              @foreach ($account_detail as $key => $account)
+                              @foreach($account['lobs'] as $key2 => $lob)
+                              @foreach ($lob->channels as $key => $channels)
+                                 <?php $acc_lob_ch_cnt = count($lob->channels); ?>
+                                 <td>
+                                    @if(isset($channels['processInfo']))
+                                    @foreach($channels['processInfo'] as $proInfo)
+                                       {{ $proInfo->f_2 }}
+                                       @endforeach
+                                    @else
+                                    {{""}}
+                                    @endif
+                                 </td>
+                              @endforeach
+                              @endforeach
+                              @endforeach
+                           </tr>
+                           <!--  -->
+
+                           <!-- What are the key input parameters to the model? -->
+                           <tr>
+                              <th>What are the key input parameters to the model?</th>
+                              @foreach ($account_detail as $key => $account)
+                              @foreach($account['lobs'] as $key2 => $lob)
+                              @foreach ($lob->channels as $key => $channels)
+                                 <?php $acc_lob_ch_cnt = count($lob->channels); ?>
+                                 <td>
+                                    @if(isset($channels['processInfo']))
+                                       @foreach($channels['processInfo'] as $proInfo)
+                                          {{ $proInfo->f_3 }}
+                                       @endforeach
+                                    @else
+                                    {{""}}
+                                    @endif
+                                 </td>
+                              @endforeach
+                              @endforeach
+                              @endforeach
+                           </tr>
+                           <!--  -->
+
+                           <!-- How frequently is the model revisited for goodness of fit? -->
+                           <tr>
+                              <th>How frequently is the model revisited for goodness of fit?</th>
+                              @foreach ($account_detail as $key => $account)
+                              @foreach($account['lobs'] as $key2 => $lob)
+                              @foreach ($lob->channels as $key => $channels)
+                                 <?php $acc_lob_ch_cnt = count($lob->channels); ?>
+                                 
+                                 <td>
+                                    @if(isset($channels['processInfo']))
+                                       @foreach($channels['processInfo'] as $proInfo)
+                                          {{ $proInfo->f_4 }}
+                                       @endforeach
+                                    @else
+                                       {{""}}
+                                    @endif
+                                 </td>
+                              @endforeach
+                              @endforeach
+                              @endforeach
+                           </tr>
+                           <!--  -->
+
+                           <!-- How do you measure the accuracy of your Forecasting model? -->
+                           <tr>
+                              <th>How do you measure the accuracy of your Forecasting model?</th>
+                              @foreach ($account_detail as $key => $account)
+                              @foreach($account['lobs'] as $key2 => $lob)
+                              @foreach ($lob->channels as $key => $channels)
+                                 <?php $acc_lob_ch_cnt = count($lob->channels); ?>
+                                 <td>
+                                    @if(isset($channels['processInfo']))
+                                       @foreach($channels['processInfo'] as $proInfo)
+                                          {{ $proInfo->f_5 }}
+                                       @endforeach
+                                    @else
+                                    {{""}}
+                                    @endif
+                                 </td>
+                              @endforeach
+                              @endforeach
+                              @endforeach
+                           </tr>
+                           <!--  -->
+
+                           <!-- ***************** Staffing / Resource Planning ******************* -->
+                           <!--Staffing / Resource Planning -->
+                           <tr>
+                              <th class="bg_dark_th">Staffing / Resource Planning</th>
+                              <?php $acc_lob_ch_cnt=0; ?>
+                              @foreach ($account_detail as $key => $account)
+                                 @foreach($account['lobs'] as $key2 => $lob)
+                                    @foreach ($lob->channels as $key => $channels)
+                                       <?php ++$acc_lob_ch_cnt; ?>
+                                    @endforeach
+                                 @endforeach
+                              @endforeach
+                              <td colspan ="{{$acc_lob_ch_cnt}}"></td>
+                           </tr>
+                           <!--  -->
+
+                           <!--Staffing / Resource Planning -->
+                           <tr>
+                              <th class="bg_light_th">Forecast Locks</th>
+                              <?php $acc_lob_ch_cnt=0; ?>
+                              @foreach ($account_detail as $key => $account)
+                                 @foreach($account['lobs'] as $key2 => $lob)
+                                    @foreach ($lob->channels as $key => $channels)
+                                       <?php ++$acc_lob_ch_cnt; ?>
+                                    @endforeach
+                                 @endforeach
+                              @endforeach
+                              <td colspan ="{{$acc_lob_ch_cnt}}"></td>
+                           </tr>
+                           <!--  -->
+
+                           <!-- Who provides the Forecast / Lock which forms the base of Staff Planning? -->
+                           <tr>
+                              <th>Who provides the Forecast / Lock which forms the base of Staff Planning?</th>
+                              @foreach ($account_detail as $key => $account)
+                              @foreach($account['lobs'] as $key2 => $lob)
+                              @foreach ($lob->channels as $key => $channels)
+                                 <?php $acc_lob_ch_cnt = count($lob->channels); ?>
+                                 <td>
+                                    @if(isset($channels['processInfo']))
+                                       @foreach($channels['processInfo'] as $proInfo)
+                                          {{ $proInfo->f_6 }}
+                                       @endforeach
+                                    @else
+                                    {{""}}
+                                    @endif
+                                 </td>
+                              @endforeach
+                              @endforeach
+                              @endforeach
+                           </tr>
+                           <!--  -->
+
+                           <!-- What is your staff locking model? -->
+                           <tr>
+                              <th>What is your staff locking model?</th>
+                              @foreach ($account_detail as $key => $account)
+                              @foreach($account['lobs'] as $key2 => $lob)
+                              @foreach ($lob->channels as $key => $channels)
+                                 <?php $acc_lob_ch_cnt = count($lob->channels); ?>
+                                 <td>
+                                    @if(isset($channels['processInfo']))
+                                       @foreach($channels['processInfo'] as $proInfo)
+                                          {{ $proInfo->f_7 }}
+                                       @endforeach
+                                    @else
+                                    {{""}}
+                                    @endif
+                                 </td>
+                              @endforeach
+                              @endforeach
+                              @endforeach
+                           </tr>
+                           <!--  -->
+
+                           <!-- Do you generate Internal Forecast? -->
+                           <tr>
+                              <th>Do you generate Internal Forecast?</th>
+                              @foreach ($account_detail as $key => $account)
+                              @foreach($account['lobs'] as $key2 => $lob)
+                              @foreach ($lob->channels as $key => $channels)
+                                 <?php $acc_lob_ch_cnt = count($lob->channels); ?>
+                                 <td>
+                                 @if(isset($channels['processInfo']))
+                                    @foreach($channels['processInfo'] as $proInfo)
+                                       {{ $proInfo->f_8 }}
+                                    @endforeach
+                                    @else
+                                    {{""}}
+                                    @endif
+                                 </td>
+                              @endforeach
+                              @endforeach
+                              @endforeach
+                           </tr>
+                           <!--  -->
+                           
+                           <!-- Which Forecast is used for Staff Planning? -->
+                           <tr>
+                              <th>Which Forecast is used for Staff Planning?</th>
+                              @foreach ($account_detail as $key => $account)
+                              @foreach($account['lobs'] as $key2 => $lob)
+                              @foreach ($lob->channels as $key => $channels)
+                                 <?php $acc_lob_ch_cnt = count($lob->channels); ?>
+                                 <td>
+                                 @if(isset($channels['processInfo']))
+                                    @foreach($channels['processInfo'] as $proInfo)
+                                       {{ $proInfo->f_9 }}
+                                    @endforeach
+                                    @else
+                                    {{""}}
+                                    @endif
+                                 </td>
+                              @endforeach
+                              @endforeach
+                              @endforeach
+                           </tr>
+                           <!--  -->
+
+                           <!-- ******************** AHT Details ******************** -->
+                           <!--AHT -->
+                           <tr>
+                              <th class="bg_light_th">AHT</th>
+                              <?php $acc_lob_ch_cnt=0; ?>
+                              @foreach ($account_detail as $key => $account)
+                                 @foreach($account['lobs'] as $key2 => $lob)
+                                    @foreach ($lob->channels as $key => $channels)
+                                       <?php ++$acc_lob_ch_cnt; ?>
+                                    @endforeach
+                                 @endforeach
+                              @endforeach
+                              <td colspan ="{{$acc_lob_ch_cnt}}"></td>
+                           </tr>
+                           <!--  -->
+
+                           <!-- What AHT is used for Staff Planning? -->
+                           <tr>
+                              <th>What AHT is used for Staff Planning?</th>
+                              @foreach ($account_detail as $key => $account)
+                              @foreach($account['lobs'] as $key2 => $lob)
+                              @foreach ($lob->channels as $key => $channels)
+                                 <?php $acc_lob_ch_cnt = count($lob->channels); ?>
+                                 <td>
+                                    @if(isset($channels['processInfo']))
+                                    @foreach($channels['processInfo'] as $proInfo)
+                                       {{ $proInfo->f_10 }}
+                                    @endforeach
+                                    @else
+                                    {{""}}
+                                    @endif
+                                 </td>
+                              @endforeach
+                              @endforeach
+                              @endforeach
+                           </tr>
+                           <!--  -->
+
+                           <!-- How do you calculate New Hire impact on the AHT? -->
+                           <tr>
+                              <th>How do you calculate New Hire impact on the AHT?</th>
+                              @foreach ($account_detail as $key => $account)
+                              @foreach($account['lobs'] as $key2 => $lob)
+                              @foreach ($lob->channels as $key => $channels)
+                                 <?php $acc_lob_ch_cnt = count($lob->channels); ?>
+                                 <td>
+                                    @if(isset($channels['processInfo']))
+                                    @foreach($channels['processInfo'] as $proInfo)
+                                       {{ $proInfo->f_11 }}
+                                    @endforeach
+                                    @else
+                                    {{""}}
+                                    @endif
+                                 </td>
+                              @endforeach
+                              @endforeach
+                              @endforeach
+                           </tr>
+                           <!--  -->
+
+                           <!-- ******************** FTE Details ******************** -->
+                           <!--FTE -->
+                           <tr>
+                              <th class="bg_light_th">FTE</th>
+                              <?php $acc_lob_ch_cnt=0; ?>
+                              @foreach ($account_detail as $key => $account)
+                                 @foreach($account['lobs'] as $key2 => $lob)
+                                    @foreach ($lob->channels as $key => $channels)
+                                       <?php ++$acc_lob_ch_cnt; ?>
+                                    @endforeach
+                                 @endforeach
+                              @endforeach
+                              <td colspan ="{{$acc_lob_ch_cnt}}"></td>
+                           </tr>
+                           <!--  -->
+
+                           <!-- How do you generate FTE requirements? -->
+                           <tr>
+                              <th>How do you generate FTE requirements?</th>
+                              @foreach ($account_detail as $key => $account)
+                              @foreach($account['lobs'] as $key2 => $lob)
+                              @foreach ($lob->channels as $key => $channels)
+                                 <?php $acc_lob_ch_cnt = count($lob->channels); ?>
+                                 <td>
+                                    @if(isset($channels['processInfo']))
+                                    @foreach($channels['processInfo'] as $proInfo)
+                                       {{ $proInfo->f_12 }}
+                                    @endforeach
+                                    @else
+                                    {{""}}
+                                    @endif
+                                 </td>
+                              @endforeach
+                              @endforeach
+                              @endforeach
+                           </tr>
+                           <!--  -->
+
+                           <!-- ******************** In-Office Shrinkage Details ******************** -->
+                           <!--In-Office Shrinkage -->
+                           <tr>
+                              <th class="bg_light_th">In-Office Shrinkage</th>
+                              <?php $acc_lob_ch_cnt=0; ?>
+                              @foreach ($account_detail as $key => $account)
+                                 @foreach($account['lobs'] as $key2 => $lob)
+                                    @foreach ($lob->channels as $key => $channels)
+                                       <?php ++$acc_lob_ch_cnt; ?>
+                                    @endforeach
+                                 @endforeach
+                              @endforeach
+                              <td colspan ="{{$acc_lob_ch_cnt}}"></td>
+                           </tr>
+                           <!--  -->
+
+                           <!-- At what level are your In-Office Shrinkages planned? -->
+                           <tr>
+                              <th>At what level are your In-Office Shrinkages planned?</th>
+                              @foreach ($account_detail as $key => $account)
+                              @foreach($account['lobs'] as $key2 => $lob)
+                              @foreach ($lob->channels as $key => $channels)
+                                 <?php $acc_lob_ch_cnt = count($lob->channels); ?>
+                                 <td>
+                                    @if(isset($channels['processInfo']))
+                                    @foreach($channels['processInfo'] as $proInfo)
+                                       {{ $proInfo->f_13 }}
+                                    @endforeach
+                                    @else
+                                    {{""}}
+                                    @endif
+                                 </td>
+                              @endforeach
+                              @endforeach
+                              @endforeach
+                           </tr>
+                           <!--  -->
+
+                           <!-- Do you have set targets for each individual Aux/Activity code? -->
+                           <tr>
+                              <th>Do you have set targets for each individual Aux/Activity code?</th>
+                              @foreach ($account_detail as $key => $account)
+                              @foreach($account['lobs'] as $key2 => $lob)
+                              @foreach ($lob->channels as $key => $channels)
+                                 <?php $acc_lob_ch_cnt = count($lob->channels); ?>
+                                 <td>
+                                    @if(isset($channels['processInfo']))
+                                       @foreach($channels['processInfo'] as $proInfo)
+                                          {{ $proInfo->f_14 }}
+                                       @endforeach
+                                    @else
+                                    {{""}}
+                                    @endif
+                                 </td>
+                              @endforeach
+                              @endforeach
+                              @endforeach
+                           </tr>
+                           <!--  -->
+
+                           <!-- In-Office shrinkage Forecasts are modeled on (please select the appropriate) -->
+                           <tr>
+                              <th>In-Office shrinkage Forecasts are modeled on (please select the appropriate)</th>
+                              @foreach ($account_detail as $key => $account)
+                              @foreach($account['lobs'] as $key2 => $lob)
+                              @foreach ($lob->channels as $key => $channels)
+                                 <?php $acc_lob_ch_cnt = count($lob->channels); ?>
+                                 <td>
+                                    @if(isset($channels['processInfo']))
+                                       @foreach($channels['processInfo'] as $proInfo)
+                                          {{ $proInfo->f_15 }}
+                                       @endforeach
+                                    @else
+                                    {{""}}
+                                    @endif
+                                 </td>
+                              @endforeach
+                              @endforeach
+                              @endforeach
+                           </tr>
+                           <!--  -->
+
+                           <!-- *************** Out-of-Office Shrinkage Details ************** -->
+                           <!--Out-of-Office Shrinkage -->
+                           <tr>
+                              <th class="bg_dark_th">Out-of-Office Shrinkage</th>
+                              <?php $acc_lob_ch_cnt=0; ?>
+                              @foreach ($account_detail as $key => $account)
+                                 @foreach($account['lobs'] as $key2 => $lob)
+                                    @foreach ($lob->channels as $key => $channels)
+                                       <?php ++$acc_lob_ch_cnt; ?>
+                                    @endforeach
+                                 @endforeach
+                              @endforeach
+                              <td colspan ="{{$acc_lob_ch_cnt}}"></td>
+                           </tr>
+                           <!--  -->
+
+                           <!-- At what level are your Out-of-Office Shrinkages planned? -->
+                           <tr>
+                              <th>At what level are your Out-of-Office Shrinkages planned?</th>
+                              @foreach ($account_detail as $key => $account)
+                              @foreach($account['lobs'] as $key2 => $lob)
+                              @foreach ($lob->channels as $key => $channels)
+                                 <?php $acc_lob_ch_cnt = count($lob->channels); ?>
+                              <td>
+                                 @if(isset($channels['processInfo']))
+                                    @foreach($channels['processInfo'] as $proInfo)
+                                       {{ $proInfo->f_16 }}
+                                    @endforeach
+                                 
+                                 @else
+                                    {{""}}
+                                 @endif
+                              </td>
+                              @endforeach
+                              @endforeach
+                              @endforeach
+                           </tr>
+                           <!--  -->
+
+                           <!-- Vacation Forecasts are modeled on (please select the appropriate) -->
+                           <tr>
+                              <th>Vacation Forecasts are modeled on (please select the appropriate)</th>
+                              @foreach ($account_detail as $key => $account)
+                              @foreach($account['lobs'] as $key2 => $lob)
+                              @foreach ($lob->channels as $key => $channels)
+                                 <?php $acc_lob_ch_cnt = count($lob->channels); ?>
+                              <td>
+                                 @if(isset($channels['processInfo']))
+                                    @foreach($channels['processInfo'] as $proInfo)
+                                       {{ $proInfo->f_17 }}
+                                    @endforeach
+                                 @else
+                                    {{""}}
+                                 @endif
+                              </td>
+                              @endforeach
+                              @endforeach
+                              @endforeach
+                           </tr>
+                           <!--  -->
+
+                           <!-- Absenteeism Forecasts are modeled on (please select the appropriate) -->
+                           <tr>
+                              <th>Absenteeism Forecasts are modeled on (please select the appropriate)</th>
+                              @foreach ($account_detail as $key => $account)
+                              @foreach($account['lobs'] as $key2 => $lob)
+                              @foreach ($lob->channels as $key => $channels)
+                                 <?php $acc_lob_ch_cnt = count($lob->channels); ?>
+                              <td>
+                                 @if(isset($channels['processInfo']))
+                                    @foreach($channels['processInfo'] as $proInfo)
+                                       {{ $proInfo->f_18 }}
+                                    @endforeach
+                                 @else
+                                    {{""}}
+                                 @endif
+                              </td>
+                              @endforeach
+                              @endforeach
+                              @endforeach
+                           </tr>
+                           <!--  -->
+
+                           <!-- **************** Schedule Inflex  ******************** -->
+                           <!-- Schedule Inflex -->
+                           <tr>
+                              <th class="bg_light_th">Schedule Inflex</th>
+                              <?php $acc_lob_ch_cnt=0; ?>
+                              @foreach ($account_detail as $key => $account)
+                                 @foreach($account['lobs'] as $key2 => $lob)
+                                    @foreach ($lob->channels as $key => $channels)
+                                       <?php ++$acc_lob_ch_cnt; ?>
+                                    @endforeach
+                                 @endforeach
+                              @endforeach
+                              <td colspan ="{{$acc_lob_ch_cnt}}"></td>
+                           </tr>
+                           <!--  -->
+
+                           <!-- Is Schedule Inflex considered in Staff planning? -->
+                           <tr>
+                              <th>Is Schedule Inflex considered in Staff planning?</th>
+                              @foreach ($account_detail as $key => $account)
+                              @foreach($account['lobs'] as $key2 => $lob)
+                              @foreach ($lob->channels as $key => $channels)
+                                 <?php $acc_lob_ch_cnt = count($lob->channels); ?>
+                              <td>
+                                 @if(isset($channels['processInfo']))
+                                    @foreach($channels['processInfo'] as $proInfo)
+                                       {{ $proInfo->f_19 }}
+                                    @endforeach
+                                 @else
+                                    {{""}}
+                                 @endif
+                              </td>
+                              @endforeach
+                              @endforeach
+                              @endforeach
+                           </tr>
+                           <!--  -->
+
+                           <!-- How is the Schedule Inflex estimated / calculated? -->
+                           <tr>
+                              <th>How is the Schedule Inflex estimated / calculated?</th>
+                              @foreach ($account_detail as $key => $account)
+                              @foreach($account['lobs'] as $key2 => $lob)
+                              @foreach ($lob->channels as $key => $channels)
+                                 <?php $acc_lob_ch_cnt = count($lob->channels); ?>
+                              <td>
+                                 @if(isset($channels['processInfo']))
+                                    @foreach($channels['processInfo'] as $proInfo)
+                                       {{ $proInfo->f_20 }}
+                                    @endforeach
+                                 @else
+                                    {{""}}
+                                 @endif
+                              </td>
+                              @endforeach
+                              @endforeach
+                              @endforeach
+                           </tr>
+                           <!--  -->
+
+                           <!-- ********************* Attrition Details ******************** -->
+                           <!--Attrition -->
+                           <tr>
+                              <th class="bg_light_th">Attrition</th>
+                              <?php $acc_lob_ch_cnt=0; ?>
+                              @foreach ($account_detail as $key => $account)
+                                 @foreach($account['lobs'] as $key2 => $lob)
+                                    @foreach ($lob->channels as $key => $channels)
+                                       <?php ++$acc_lob_ch_cnt; ?>
+                                    @endforeach
+                                 @endforeach
+                              @endforeach
+                              <td colspan ="{{$acc_lob_ch_cnt}}"></td>
+                           </tr>
+                           <!--  -->
+
+                           <!-- How do you factor attrition in your staff plan? -->
+                           <tr>
+                              <th>How do you factor attrition in your staff plan?</th>
+                              @foreach ($account_detail as $key => $account)
+                              @foreach($account['lobs'] as $key2 => $lob)
+                              @foreach ($lob->channels as $key => $channels)
+                                 <?php $acc_lob_ch_cnt = count($lob->channels); ?>
+                              <td>
+                                 @if(isset($channels['processInfo']))
+                                    @foreach($channels['processInfo'] as $proInfo)
+                                       {{ $proInfo->f_21 }}
+                                    @endforeach
+                                 @else
+                                    {{""}}
+                                 @endif
+                              </td>
+                              @endforeach
+                              @endforeach
+                              @endforeach
+                           </tr>
+                           <!--  -->
+
+                           <!-- Do you plan for Involuntary Attrition as a separate line item? (BQM, Promotions, Transfers etc.) -->
+                           <tr>
+                              <th>Do you plan for Involuntary Attrition as a separate line item? (BQM, Promotions, Transfers etc.)</th>
+                              @foreach ($account_detail as $key => $account)
+                              @foreach($account['lobs'] as $key2 => $lob)
+                              @foreach ($lob->channels as $key => $channels)
+                                 <?php $acc_lob_ch_cnt = count($lob->channels); ?>
+                              <td>
+                                 @if(isset($channels['processInfo']))
+                                    @foreach($channels['processInfo'] as $proInfo)
+                                       {{ $proInfo->f_22 }}
+                                    @endforeach
+                                 @else
+                                    {{""}}
+                                 @endif
+                              </td>
+                              @endforeach
+                              @endforeach
+                              @endforeach
+                           </tr>
+                           <!--  -->
+
+                           <!-- *************** Staff Planning Connects *********************** -->
+                           <!--Staff Planning Connects -->
+                           <tr>
+                              <th class="bg_light_th">Staff Planning Connects</th>
+                              <?php $acc_lob_ch_cnt=0; ?>
+                              @foreach ($account_detail as $key => $account)
+                                 @foreach($account['lobs'] as $key2 => $lob)
+                                    @foreach ($lob->channels as $key => $channels)
+                                       <?php ++$acc_lob_ch_cnt; ?>
+                                    @endforeach
+                                 @endforeach
+                              @endforeach
+                              <td colspan ="{{$acc_lob_ch_cnt}}"></td>
+                           </tr>
+                           <!--  -->
+
+                           <!-- Do you have Inter-departmental Staff planning discussions? -->
+                           <tr>
+                              <th>Do you have Inter-departmental Staff planning discussions?</th>
+                              @foreach ($account_detail as $key => $account)
+                              @foreach($account['lobs'] as $key2 => $lob)
+                              @foreach ($lob->channels as $key => $channels)
+                                 <?php $acc_lob_ch_cnt = count($lob->channels); ?>
+                              <td>
+                                 @if(isset($channels['processInfo']))
+                                    @foreach($channels['processInfo'] as $proInfo)
+                                       {{ $proInfo->f_23 }}
+                                    @endforeach
+                                 @else
+                                    {{""}}
+                                 @endif
+                              </td>
+                              @endforeach
+                              @endforeach
+                              @endforeach
+                           </tr>
+                           <!--  -->
+
+                           <!-- What is the frequency? -->
+                           <tr>
+                              <th>What is the frequency?</th>
+                              @foreach ($account_detail as $key => $account)
+                              @foreach($account['lobs'] as $key2 => $lob)
+                              @foreach ($lob->channels as $key => $channels)
+                                 <?php $acc_lob_ch_cnt = count($lob->channels); ?>
+                              <td>
+                                 @if(isset($channels['processInfo']))
+                                    @foreach($channels['processInfo'] as $proInfo)
+                                       {{ $proInfo->f_24 }}
+                                    @endforeach
+                                 @else
+                                    {{""}}
+                                 @endif
+                              </td>
+                              @endforeach
+                              @endforeach
+                              @endforeach
+                           </tr>
+                           <!--  -->
+
+                           <!--Staffing / Resource Planning -->
+                           <tr>
+                              <th>Who decides the below:-</th>
+                              <?php $acc_lob_ch_cnt=0; ?>
+                              @foreach ($account_detail as $key => $account)
+                                 @foreach($account['lobs'] as $key2 => $lob)
+                                    @foreach ($lob->channels as $key => $channels)
+                                       <?php ++$acc_lob_ch_cnt; ?>
+                                    @endforeach
+                                 @endforeach
+                              @endforeach
+                              <td colspan ="{{$acc_lob_ch_cnt}}"></td>
+                           </tr>
+                           <!--  -->
+                           
+                           <!-- Staffing Plan (Validation & Signing off key assumptions such as AHT, Shrinkage etc. -->
+                           <tr>
+                              <th>Staffing Plan (Validation & Signing off key assumptions such as AHT, Shrinkage etc.</th>
+                              @foreach ($account_detail as $key => $account)
+                              @foreach($account['lobs'] as $key2 => $lob)
+                              @foreach ($lob->channels as $key => $channels)
+                                 <?php $acc_lob_ch_cnt = count($lob->channels); ?>
+                              <td>
+                                 @if(isset($channels['processInfo']))
+                                    @foreach($channels['processInfo'] as $proInfo)
+                                       {{ $proInfo->f_25 }}
+                                    @endforeach
+                                 @else
+                                    {{""}}
+                                 @endif
+                              </td>
+                              @endforeach
+                              @endforeach
+                              @endforeach
+                           </tr>
+                           <!--  -->
+
+                           <!-- Adding Batches -->
+                           <tr>
+                              <th>Adding Batches</th>
+                              @foreach ($account_detail as $key => $account)
+                              @foreach($account['lobs'] as $key2 => $lob)
+                              @foreach ($lob->channels as $key => $channels)
+                                 <?php $acc_lob_ch_cnt = count($lob->channels); ?>
+                              <td>
+                                 @if(isset($channels['processInfo']))
+                                    @foreach($channels['processInfo'] as $proInfo)
+                                       {{ $proInfo->f_26 }}
+                                    @endforeach
+                                 @else
+                                    {{""}}
+                                 @endif
+                              </td>
+                              @endforeach
+                              @endforeach
+                              @endforeach
+                           </tr>
+                           <!--  -->
+
+                           <!-- Removing Batches -->
+                           <tr>
+                              <th>Removing Batches</th>
+                              @foreach ($account_detail as $key => $account)
+                              @foreach($account['lobs'] as $key2 => $lob)
+                              @foreach ($lob->channels as $key => $channels)
+                                 <?php $acc_lob_ch_cnt = count($lob->channels); ?>
+                              <td>
+                                 @if(isset($channels['processInfo']))
+                                    @foreach($channels['processInfo'] as $proInfo)
+                                       {{ $proInfo->f_27 }}
+                                    @endforeach
+                                 @else
+                                    {{""}}
+                                 @endif
+                              </td>
+                              @endforeach
+                              @endforeach
+                              @endforeach
+                           </tr>
+                           <!--  -->
+
+                           <!-- Cross Skilling -->
+                           <tr>
+                              <th>Cross Skilling</th>
+                              @foreach ($account_detail as $key => $account)
+                              @foreach($account['lobs'] as $key2 => $lob)
+                              @foreach ($lob->channels as $key => $channels)
+                                 <?php $acc_lob_ch_cnt = count($lob->channels); ?>
+                              <td>
+                                 @if(isset($channels['processInfo']))
+                                    @foreach($channels['processInfo'] as $proInfo)
+                                       {{ $proInfo->f_28 }}
+                                    @endforeach
+                                 @else
+                                    {{""}}
+                                 @endif
+                              </td>
+                              @endforeach
+                              @endforeach
+                              @endforeach
+                           </tr>
+                           <!--  -->
+
+                           <!-- Is there a client dependency for hiring batches? -->
+                           <tr>
+                              <th>Is there a client dependency for hiring batches?</th>
+                              @foreach ($account_detail as $key => $account)
+                              @foreach($account['lobs'] as $key2 => $lob)
+                              @foreach ($lob->channels as $key => $channels)
+                                 <?php $acc_lob_ch_cnt = count($lob->channels); ?>
+                              <td>
+                                 @if(isset($channels['processInfo']))
+                                    @foreach($channels['processInfo'] as $proInfo)
+                                       {{ $proInfo->f_29 }}
+                                    @endforeach
+                                 @else
+                                    {{""}}
+                                 @endif
+                              </td>
+                              @endforeach
+                              @endforeach
+                              @endforeach
+                           </tr>
+                           <!--  -->
+
+                           <!-- Do you have a calibration calls with the Recruitment team -->
+                           <tr>
+                              <th>Do you have a calibration calls with the Recruitment team</th>
+                              @foreach ($account_detail as $key => $account)
+                              @foreach($account['lobs'] as $key2 => $lob)
+                              @foreach ($lob->channels as $key => $channels)
+                                 <?php $acc_lob_ch_cnt = count($lob->channels); ?>
+                              <td>
+                                 @if(isset($channels['processInfo']))
+                                    @foreach($channels['processInfo'] as $proInfo)
+                                       {{ $proInfo->f_30 }}
+                                    @endforeach
+                                 @else
+                                    {{""}}
+                                 @endif
+                              </td>
+                              @endforeach
+                              @endforeach
+                              @endforeach
+                           </tr>
+                           <!--  -->
+
+                           <!-- If Yes – Weekly or Monthly -->
+                           <tr>
+                              <th>If Yes – Weekly or Monthly</th>
+                              @foreach ($account_detail as $key => $account)
+                              @foreach($account['lobs'] as $key2 => $lob)
+                              @foreach ($lob->channels as $key => $channels)
+                                 <?php $acc_lob_ch_cnt = count($lob->channels); ?>
+                              <td>
+                                 @if(isset($channels['processInfo']))
+                                    @foreach($channels['processInfo'] as $proInfo)
+                                       {{ $proInfo->f_31 }}
+                                    @endforeach
+                                 @else
+                                    {{""}}
+                                 @endif
+                              </td>
+                              @endforeach
+                              @endforeach
+                              @endforeach
+                           </tr>
+                           <!--  -->
+
+                           <!-- *********************** Scheduling Details ************************ -->
+
+                           <!--Scheduling -->
+                           <tr>
+                              <th class="bg_dark_th">Scheduling</th>
+                              <?php $acc_lob_ch_cnt=0; ?>
+                              @foreach ($account_detail as $key => $account)
+                                 @foreach($account['lobs'] as $key2 => $lob)
+                                    @foreach ($lob->channels as $key => $channels)
+                                       <?php ++$acc_lob_ch_cnt; ?>
+                                    @endforeach
+                                 @endforeach
+                              @endforeach
+                              <td colspan ="{{$acc_lob_ch_cnt}}"></td>
+                           </tr>
+                           <!--  -->
+
+                           <!-- Do you do Call Curve Analysis before deciding the Schedule Pattern? -->
+                           <tr>
+                              <th>Do you do Call Curve Analysis before deciding the Schedule Pattern?</th>
+                              @foreach ($account_detail as $key => $account)
+                              @foreach($account['lobs'] as $key2 => $lob)
+                              @foreach ($lob->channels as $key => $channels)
+                                 <?php $acc_lob_ch_cnt = count($lob->channels); ?>
+                              <td>
+                                 @if(isset($channels['processInfo']))
+                                    @foreach($channels['processInfo'] as $proInfo)
+                                       {{ $proInfo->f_32 }}
+                                    @endforeach
+                                 @else
+                                    {{""}}
+                                 @endif
+                              </td>
+                              @endforeach
+                              @endforeach
+                              @endforeach
+                           </tr>
+                           <!--  -->
+
+                           <!-- Do you do Call Curve Analysis before deciding the Schedule Pattern? -->
+                           <tr>
+                              <th>Do you do Call Curve Analysis before deciding the Schedule Pattern?</th>
+                              @foreach ($account_detail as $key => $account)
+                              @foreach($account['lobs'] as $key2 => $lob)
+                              @foreach ($lob->channels as $key => $channels)
+                                 <?php $acc_lob_ch_cnt = count($lob->channels); ?>
+                              <td>
+                                 @if(isset($channels['processInfo']))
+                                    @foreach($channels['processInfo'] as $proInfo)
+                                       {{ $proInfo->f_32 }}
+                                    @endforeach
+                                 @else
+                                    {{""}}
+                                 @endif
+                              </td>
+                              @endforeach
+                              @endforeach
+                              @endforeach
+                           </tr>
+                           <!--  -->
+
+                           <!-- What is the frequency of the above? -->
+                           <tr>
+                              <th>What is the frequency of the above?</th>
+                              @foreach ($account_detail as $key => $account)
+                              @foreach($account['lobs'] as $key2 => $lob)
+                              @foreach ($lob->channels as $key => $channels)
+                                 <?php $acc_lob_ch_cnt = count($lob->channels); ?>
+                              <td>
+                                 @if(isset($channels['processInfo']))
+                                    @foreach($channels['processInfo'] as $proInfo)
+                                       {{ $proInfo->f_33 }}
+                                    @endforeach
+                                 @else
+                                    {{""}}
+                                 @endif
+                              </td>
+                              @endforeach
+                              @endforeach
+                              @endforeach
+                           </tr>
+                           <!--  -->
+
+                           <!-- How do you create interval level Volume and AHT requirements? -->
+                           <tr>
+                              <th>How do you create interval level Volume and AHT requirements?</th>
+                              @foreach ($account_detail as $key => $account)
+                              @foreach($account['lobs'] as $key2 => $lob)
+                              @foreach ($lob->channels as $key => $channels)
+                                 <?php $acc_lob_ch_cnt = count($lob->channels); ?>
+                              <td>
+                                 @if(isset($channels['processInfo']))
+                                    @foreach($channels['processInfo'] as $proInfo)
+                                       {{ $proInfo->f_34 }}
+                                    @endforeach
+                                 @else
+                                    {{""}}
+                                 @endif
+                              </td>
+                              @endforeach
+                              @endforeach
+                              @endforeach
+                           </tr>
+                           <!--  -->
+
+                           <!-- How do you manage the Headcount reconciliation process? -->
+                           <tr>
+                              <th>How do you manage the Headcount reconciliation process?</th>
+                              @foreach ($account_detail as $key => $account)
+                              @foreach($account['lobs'] as $key2 => $lob)
+                              @foreach ($lob->channels as $key => $channels)
+                                 <?php $acc_lob_ch_cnt = count($lob->channels); ?>
+                              <td>
+                                 @if(isset($channels['processInfo']))
+                                    @foreach($channels['processInfo'] as $proInfo)
+                                       {{ $proInfo->f_35 }}
+                                    @endforeach
+                                 @else
+                                    {{""}}
+                                 @endif
+                              </td>
+                              @endforeach
+                              @endforeach
+                              @endforeach
+                           </tr>
+                           <!--  -->
+
+                           <!-- Do you run Manpower Dimensionioning exercise frequently to arrive at optimal HC mix (FT/PT/Split/Flexi? -->
+                           <tr>
+                              <th>Do you run Manpower Dimensionioning exercise frequently to arrive at optimal HC mix (FT/PT/Split/Flexi?</th>
+                              @foreach ($account_detail as $key => $account)
+                              @foreach($account['lobs'] as $key2 => $lob)
+                              @foreach ($lob->channels as $key => $channels)
+                                 <?php $acc_lob_ch_cnt = count($lob->channels); ?>
+                              <td>
+                                 @if(isset($channels['processInfo']))
+                                    @foreach($channels['processInfo'] as $proInfo)
+                                       {{ $proInfo->f_36 }}
+                                    @endforeach
+                                 @else
+                                    {{""}}
+                                 @endif
+                              </td>
+                              @endforeach
+                              @endforeach
+                              @endforeach
+                           </tr>
+                           <!--  -->
+
+                           <!-- What is the frequency of the above? -->
+                           <tr>
+                              <th>What is the frequency of the above?</th>
+                              @foreach ($account_detail as $key => $account)
+                              @foreach($account['lobs'] as $key2 => $lob)
+                              @foreach ($lob->channels as $key => $channels)
+                                 <?php $acc_lob_ch_cnt = count($lob->channels); ?>
+                              <td>
+                                 @if(isset($channels['processInfo']))
+                                    @foreach($channels['processInfo'] as $proInfo)
+                                       {{ $proInfo->f_37 }}
+                                    @endforeach
+                                 @else
+                                    {{""}}
+                                 @endif
+                              </td>
+                              @endforeach
+                              @endforeach
+                              @endforeach
+                           </tr>
+                           <!--  -->
+
+                           <!-- Do you run & test different Schedule Patterns to identify best fit? -->
+                           <tr>
+                              <th>Do you run & test different Schedule Patterns to identify best fit?</th>
+                              @foreach ($account_detail as $key => $account)
+                              @foreach($account['lobs'] as $key2 => $lob)
+                              @foreach ($lob->channels as $key => $channels)
+                                 <?php $acc_lob_ch_cnt = count($lob->channels); ?>
+                              <td>
+                                 @if(isset($channels['processInfo']))
+                                    @foreach($channels['processInfo'] as $proInfo)
+                                       {{ $proInfo->f_38 }}
+                                    @endforeach
+                                 @else
+                                    {{""}}
+                                 @endif
+                              </td>
+                              @endforeach
+                              @endforeach
+                              @endforeach
+                           </tr>
+                           <!--  -->
+
+                           <!-- What is the frequency of the above? -->
+                           <tr>
+                              <th>What is the frequency of the above?</th>
+                              @foreach ($account_detail as $key => $account)
+                              @foreach($account['lobs'] as $key2 => $lob)
+                              @foreach ($lob->channels as $key => $channels)
+                                 <?php $acc_lob_ch_cnt = count($lob->channels); ?>
+                              <td>
+                                 @if(isset($channels['processInfo']))
+                                    @foreach($channels['processInfo'] as $proInfo)
+                                       {{ $proInfo->f_39 }}
+                                    @endforeach
+                                 @else
+                                    {{""}}
+                                 @endif
+                              </td>
+                              @endforeach
+                              @endforeach
+                              @endforeach
+                           </tr>
+                           <!--  -->
+
+                           <!-- Do you plot all In-office shrinkages in your Schedules at Interval Level? (Coaching, Team Meeting, Business Updates etc.) -->
+                           <tr>
+                              <th>Do you plot all In-office shrinkages in your Schedules at Interval Level? (Coaching, Team Meeting, Business Updates etc.)</th>
+                              @foreach ($account_detail as $key => $account)
+                              @foreach($account['lobs'] as $key2 => $lob)
+                              @foreach ($lob->channels as $key => $channels)
+                                 <?php $acc_lob_ch_cnt = count($lob->channels); ?>
+                              <td>
+                                 @if(isset($channels['processInfo']))
+                                    @foreach($channels['processInfo'] as $proInfo)
+                                       {{ $proInfo->f_40 }}
+                                    @endforeach
+                                 @else
+                                    {{""}}
+                                 @endif
+                              </td>
+                              @endforeach
+                              @endforeach
+                              @endforeach
+                           </tr>
+                           <!--  -->
+
+                           <!-- Do you plot Out-of-Office shrinkage in your Schedules at Interval Level? (Vacation) -->
+                           <tr>
+                              <th>Do you plot Out-of-Office shrinkage in your Schedules at Interval Level? (Vacation)</th>
+                              @foreach ($account_detail as $key => $account)
+                              @foreach($account['lobs'] as $key2 => $lob)
+                              @foreach ($lob->channels as $key => $channels)
+                                 <?php $acc_lob_ch_cnt = count($lob->channels); ?>
+                              <td>
+                                 @if(isset($channels['processInfo']))
+                                    @foreach($channels['processInfo'] as $proInfo)
+                                       {{ $proInfo->f_41 }}
+                                    @endforeach
+                                 @else
+                                    {{""}}
+                                 @endif
+                              </td>
+                              @endforeach
+                              @endforeach
+                              @endforeach
+                           </tr>
+                           <!--  -->
+
+                           <!-- Do you review IDP/Schedule deviation prior to schedule release? -->
+                           <tr>
+                              <th>Do you review IDP/Schedule deviation prior to schedule release?</th>
+                              @foreach ($account_detail as $key => $account)
+                              @foreach($account['lobs'] as $key2 => $lob)
+                              @foreach ($lob->channels as $key => $channels)
+                                 <?php $acc_lob_ch_cnt = count($lob->channels); ?>
+                              <td>
+                                 @if(isset($channels['processInfo']))
+                                    @foreach($channels['processInfo'] as $proInfo)
+                                       {{ $proInfo->f_42 }}
+                                    @endforeach
+                                 @else
+                                    {{""}}
+                                 @endif
+                              </td>
+                              @endforeach
+                              @endforeach
+                              @endforeach
+                           </tr>
+                           <!--  -->
+
+                           <!-- Do you measure Schedule Efficiency? -->
+                           <tr>
+                              <th>Do you measure Schedule Efficiency?</th>
+                              @foreach ($account_detail as $key => $account)
+                              @foreach($account['lobs'] as $key2 => $lob)
+                              @foreach ($lob->channels as $key => $channels)
+                                 <?php $acc_lob_ch_cnt = count($lob->channels); ?>
+                              <td>
+                                 @if(isset($channels['processInfo']))
+                                    @foreach($channels['processInfo'] as $proInfo)
+                                       {{ $proInfo->f_43 }}
+                                    @endforeach
+                                 @else
+                                    {{""}}
+                                 @endif
+                              </td>
+                              @endforeach
+                              @endforeach
+                              @endforeach
+                           </tr>
+                           <!--  -->
+
+                           <!-- What is your target for Schedule Efficiency? (Please specify in %) -->
+                           <tr>
+                              <th>What is your target for Schedule Efficiency? (Please specify in %)</th>
+                              @foreach ($account_detail as $key => $account)
+                              @foreach($account['lobs'] as $key2 => $lob)
+                              @foreach ($lob->channels as $key => $channels)
+                                 <?php $acc_lob_ch_cnt = count($lob->channels); ?>
+                              <td>
+                                 @if(isset($channels['processInfo']))
+                                    @foreach($channels['processInfo'] as $proInfo)
+                                       {{ $proInfo->f_44 }}
+                                    @endforeach
+                                 @else
+                                    {{""}}
+                                 @endif
+                              </td>
+                              @endforeach
+                              @endforeach
+                              @endforeach
+                           </tr>
+                           <!--  -->
+
+                           <!-- How do you measure the Schedule Efficiency? -->
+                           <tr>
+                              <th>How do you measure the Schedule Efficiency?</th>
+                              @foreach ($account_detail as $key => $account)
+                              @foreach($account['lobs'] as $key2 => $lob)
+                              @foreach ($lob->channels as $key => $channels)
+                                 <?php $acc_lob_ch_cnt = count($lob->channels); ?>
+                              <td>
+                                 @if(isset($channels['processInfo']))
+                                    @foreach($channels['processInfo'] as $proInfo)
+                                       {{ $proInfo->f_45 }}
+                                    @endforeach
+                                 @else
+                                    {{""}}
+                                 @endif
+                              </td>
+                              @endforeach
+                              @endforeach
+                              @endforeach
+                           </tr>
+                           <!--  -->
+
+                           <!-- What is your internal target for Scheduling accuracy? (Requirment to Scheduled - Day/Intervals) -->
+                           <tr>
+                              <th>What is your internal target for Scheduling accuracy? (Requirment to Scheduled - Day/Intervals)</th>
+                              @foreach ($account_detail as $key => $account)
+                              @foreach($account['lobs'] as $key2 => $lob)
+                              @foreach ($lob->channels as $key => $channels)
+                                 <?php $acc_lob_ch_cnt = count($lob->channels); ?>
+                              <td>
+                                 @if(isset($channels['processInfo']))
+                                    @foreach($channels['processInfo'] as $proInfo)
+                                       {{ $proInfo->f_46 }}
+                                    @endforeach
+                                 @else
+                                    {{""}}
+                                 @endif
+                              </td>
+                              @endforeach
+                              @endforeach
+                              @endforeach
+                           </tr>
+                           <!--  -->
+
+                           <!-- How do you measure the Schedule Accuracy? -->
+                           <tr>
+                              <th>How do you measure the Schedule Accuracy?</th>
+                              @foreach ($account_detail as $key => $account)
+                              @foreach($account['lobs'] as $key2 => $lob)
+                              @foreach ($lob->channels as $key => $channels)
+                                 <?php $acc_lob_ch_cnt = count($lob->channels); ?>
+                              <td>
+                                 @if(isset($channels['processInfo']))
+                                    @foreach($channels['processInfo'] as $proInfo)
+                                       {{ $proInfo->f_47 }}
+                                    @endforeach
+                                 @else
+                                    {{""}}
+                                 @endif
+                              </td>
+                              @endforeach
+                              @endforeach
+                              @endforeach
+                           </tr>
+                           <!--  -->
+
+                           <!-- Do you measure the impact of various Scheduling Constraints on the account in terms or FTE & Cost? -->
+                           <tr>
+                              <th>Do you measure the impact of various Scheduling Constraints on the account in terms or FTE & Cost?</th>
+                              @foreach ($account_detail as $key => $account)
+                              @foreach($account['lobs'] as $key2 => $lob)
+                              @foreach ($lob->channels as $key => $channels)
+                                 <?php $acc_lob_ch_cnt = count($lob->channels); ?>
+                              <td>
+                                 @if(isset($channels['processInfo']))
+                                    @foreach($channels['processInfo'] as $proInfo)
+                                       {{ $proInfo->f_48 }}
+                                    @endforeach
+                                 @else
+                                    {{""}}
+                                 @endif
+                              </td>
+                              @endforeach
+                              @endforeach
+                              @endforeach
+                           </tr>
+                           <!--  -->
+
+                            <!-- *********************** Intraday Management Details ************************ -->
+
+                           <!--Intraday Management -->
+                           <tr>
+                              <th class="bg_dark_th">Intraday Management</th>
+                              <?php $acc_lob_ch_cnt=0; ?>
+                              @foreach ($account_detail as $key => $account)
+                                 @foreach($account['lobs'] as $key2 => $lob)
+                                    @foreach ($lob->channels as $key => $channels)
+                                       <?php ++$acc_lob_ch_cnt; ?>
+                                    @endforeach
+                                 @endforeach
+                              @endforeach
+                              <td colspan ="{{$acc_lob_ch_cnt}}"></td>
+                           </tr>
+                           <!--  -->
+
+                           <!-- Do you have a WFM Play book / Guide? E.g - Downtime Process, Calling Tree, Threshold & Skilling -->
+                           <tr>
+                              <th>Do you have a WFM Play book / Guide? E.g - Downtime Process, Calling Tree, Threshold & Skilling</th>
+                              @foreach ($account_detail as $key => $account)
+                              @foreach($account['lobs'] as $key2 => $lob)
+                              @foreach ($lob->channels as $key => $channels)
+                                 <?php $acc_lob_ch_cnt = count($lob->channels); ?>
+                              <td>
+                                 @if(isset($channels['processInfo']))
+                                    @foreach($channels['processInfo'] as $proInfo)
+                                       {{ $proInfo->f_49 }}
+                                    @endforeach
+                                 @else
+                                    {{""}}
+                                 @endif
+                              </td>
+                              @endforeach
+                              @endforeach
+                              @endforeach
+                           </tr>
+                           <!--  -->
+
+                           <!-- Does RTA have a daily read out call / RCA? -->
+                           <tr>
+                              <th>Does RTA have a daily read out call / RCA?</th>
+                              @foreach ($account_detail as $key => $account)
+                              @foreach($account['lobs'] as $key2 => $lob)
+                              @foreach ($lob->channels as $key => $channels)
+                                 <?php $acc_lob_ch_cnt = count($lob->channels); ?>
+                              <td>
+                                 @if(isset($channels['processInfo']))
+                                    @foreach($channels['processInfo'] as $proInfo)
+                                       {{ $proInfo->f_50 }}
+                                    @endforeach
+                                 @else
+                                    {{""}}
+                                 @endif
+                              </td>
+                              @endforeach
+                              @endforeach
+                              @endforeach
+                           </tr>
+                           <!--  -->
+
+                           <!-- Does the RTA do real time skill management? -->
+                           <tr>
+                              <th>Does the RTA do real time skill management?</th>
+                              @foreach ($account_detail as $key => $account)
+                              @foreach($account['lobs'] as $key2 => $lob)
+                              @foreach ($lob->channels as $key => $channels)
+                                 <?php $acc_lob_ch_cnt = count($lob->channels); ?>
+                              <td>
+                                 @if(isset($channels['processInfo']))
+                                    @foreach($channels['processInfo'] as $proInfo)
+                                       {{ $proInfo->f_51 }}
+                                    @endforeach
+                                 @else
+                                    {{""}}
+                                 @endif
+                              </td>
+                              @endforeach
+                              @endforeach
+                              @endforeach
+                           </tr>
+                           <!--  -->
+
+                           <!-- Does RTA do Intra-day Reforecasting? -->
+                           <tr>
+                              <th>Does RTA do Intra-day Reforecasting?</th>
+                              @foreach ($account_detail as $key => $account)
+                              @foreach($account['lobs'] as $key2 => $lob)
+                              @foreach ($lob->channels as $key => $channels)
+                                 <?php $acc_lob_ch_cnt = count($lob->channels); ?>
+                              <td>
+                                 @if(isset($channels['processInfo']))
+                                    @foreach($channels['processInfo'] as $proInfo)
+                                       {{ $proInfo->f_52 }}
+                                    @endforeach
+                                 @else
+                                    {{""}}
+                                 @endif
+                              </td>
+                              @endforeach
+                              @endforeach
+                              @endforeach
+                           </tr>
+                           <!--  -->
+
+                           <!-- How do you manage customers resources up or down Realtime? -->
+                           <tr>
+                              <th>How do you manage customers resources up or down Realtime?</th>
+                              @foreach ($account_detail as $key => $account)
+                              @foreach($account['lobs'] as $key2 => $lob)
+                              @foreach ($lob->channels as $key => $channels)
+                                 <?php $acc_lob_ch_cnt = count($lob->channels); ?>
+                              <td>
+                                 @if(isset($channels['processInfo']))
+                                    @foreach($channels['processInfo'] as $proInfo)
+                                       {{ $proInfo->f_53 }}
+                                    @endforeach
+                                 @else
+                                    {{""}}
+                                 @endif
+                              </td>
+                              @endforeach
+                              @endforeach
+                              @endforeach
+                           </tr>
+                           <!--  -->
+
+                           <!-- How do you manage and report, variance to plan Realtime? -->
+                           <tr>
+                              <th>How do you manage and report, variance to plan Realtime?</th>
+                              @foreach ($account_detail as $key => $account)
+                              @foreach($account['lobs'] as $key2 => $lob)
+                              @foreach ($lob->channels as $key => $channels)
+                                 <?php $acc_lob_ch_cnt = count($lob->channels); ?>
+                              <td>
+                                 @if(isset($channels['processInfo']))
+                                    @foreach($channels['processInfo'] as $proInfo)
+                                       {{ $proInfo->f_54 }}
+                                    @endforeach
+                                 @else
+                                    {{""}}
+                                 @endif
+                              </td>
+                              @endforeach
+                              @endforeach
+                              @endforeach
+                           </tr>
+                           <!--  -->
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+
+            <!-- **************************** File Information Details *********************** -->
+            <!-- File Information -->
+               <div class="summary_contaienr">
+                  <h2>File Information</h2>
+                  <div class="table-responsive">
+
+                     <table class="table table-bordered summary_table summary_procee_table fix_summary_table">
+                        <tbody>
+                        <tr>
+                              <th class="bg_dark_th">Account Name</th>
+                              @foreach ($account_detail as $key => $account)
+                              <?php 
+                                 $acc_lob_cnt=$acc_lob_ch_cnt=0;
+                                 $acc_lob_cnt += count($account_detail[$key]['lobs']);
+                              ?>
+                              @foreach($account['lobs'] as $key2 => $lob)
+                                 <?php $ch = count($lob->channels); ?>
+                                 @foreach ($lob->channels as $key => $channels)
+                                 <!-- {{ $acc_lob_ch_cnt  }} -->
+                              <td colspan="{{$acc_lob_ch_cnt}}" style="text-align:center; justify-content:center;">
+                                  {{ $account->account_name }}
+                              </td>
+                              @endforeach
+                                 @endforeach
+                              @endforeach
+                           </tr>
+                           <!--  -->
+
+                           <!-- Forecasting -->
+                           <tr>
+                              <th class="bg_light_th">Forecasting</th>
+                                 <?php $acc_lob_ch_cnt=0; ?>
+                                 @foreach ($account_detail as $key => $account)
+                                    @foreach($account['lobs'] as $key2 => $lob)
+                                       @foreach ($lob->channels as $key => $channels)
+                                          <?php ++$acc_lob_ch_cnt; ?>
+                                       @endforeach
+                                    @endforeach
+                                 @endforeach
+                              <td colspan ="{{$acc_lob_ch_cnt}}"></td>
+                           </tr>
+                           <!--  -->
+
+                           <!-- Process Document -->
+                           <tr>
+                              <th class="text-right">Process Document</th>
+                              @foreach ($account_detail as $key => $account)
+                                 <td class="text-center">
+                                    @foreach($account['fileimage'] as $file)
+                                       @if(isset($file->f_process_doc) && !empty($file->f_process_doc) && $file->f_process_doc !=null)
+                                          <?php 
+                                             $client_id = $account->client_id;
+                                             $acc_name = $account->account_name;
+                                             $replace_str = $client_id."_".$acc_name."_";
+                                             $f_name = str_replace($replace_str, "", $file->f_process_doc)
+                                           ?>
+                                          <i class="fad fa-file-check" title="{{ $f_name }}"></i>
+                                          @endif
+                                    @endforeach
+                                 </td>
+                              @endforeach
+                           </tr>
+                           <!--  -->
+
+                           <!-- Model Sample File -->
+                           <tr>
+                              <th class="text-right">Model Sample File</th>
+                              @foreach ($account_detail as $key => $account)
+                                 <td class="text-center">
+                                    @foreach($account['fileimage'] as $file)
+                                       @if(isset($file->model_file) && !empty($file->model_file) && $file->model_file !=null)
+                                          <?php 
+                                             $client_id = $account->client_id;
+                                             $acc_name = $account->account_name;
+                                             $replace_str = $client_id."_".$acc_name."_";
+                                             $f_name = str_replace($replace_str, "", $file->model_file)
+                                           ?>
+                                          <i class="fad fa-file-check" title="{{ $f_name }}"></i>
+                                          @endif
+                                    @endforeach
+                                 </td>
+                              @endforeach
+                           </tr>
+                           <!--  -->
+
+                           <!-- Accuracy Measurement / Result -->
+                           <tr>
+                              <th class="text-right">Accuracy Measurement / Result</th>
+                              @foreach ($account_detail as $key => $account)
+                                 <td class="text-center">
+                                    @foreach($account['fileimage'] as $file)
+                                       @if(isset($file->f_accurecy_file) && !empty($file->f_accurecy_file) && $file->f_accurecy_file !=null)
+                                          <?php 
+                                             $client_id = $account->client_id;
+                                             $acc_name = $account->account_name;
+                                             $replace_str = $client_id."_".$acc_name."_";
+                                             $f_name = str_replace($replace_str, "", $file->f_accurecy_file)
+                                           ?>
+                                          <i class="fad fa-file-check" title="{{ $f_name }}"></i>
+                                          @endif
+                                    @endforeach
+                                 </td>
+                              @endforeach
+                           </tr>
+                           <!--  -->
+
+                           <!-- Staffing / Resource Planning -->
+                           <tr>
+                              <th class="bg_light_th">Staffing / Resource Planning</th>
+                                 <?php $acc_lob_ch_cnt=0; ?>
+                                 @foreach ($account_detail as $key => $account)
+                                    @foreach($account['lobs'] as $key2 => $lob)
+                                       @foreach ($lob->channels as $key => $channels)
+                                          <?php ++$acc_lob_ch_cnt; ?>
+                                       @endforeach
+                                    @endforeach
+                                 @endforeach
+                              <td colspan ="{{$acc_lob_ch_cnt}}"></td>
+                           </tr>
+                           <!--  -->
+
+                           <!-- Process Document -->
+                           <tr>
+                              <th class="text-right">Process Document</th>
+                              @foreach ($account_detail as $key => $account)
+                                 <td class="text-center">
+                                    @foreach($account['fileimage'] as $file)
+                                       @if(isset($file->sta_process_doc) && !empty($file->sta_process_doc) && $file->sta_process_doc !=null)
+                                          <?php 
+                                             $client_id = $account->client_id;
+                                             $acc_name = $account->account_name;
+                                             $replace_str = $client_id."_".$acc_name."_";
+                                             $f_name = str_replace($replace_str, "", $file->sta_process_doc)
+                                           ?>
+                                          <i class="fad fa-file-check" title="{{ $f_name }}"></i>
+                                       @endif
+                                    @endforeach
+                                 </td>
+                              @endforeach
+                           </tr>
+                           <!--  -->
+
+                           <!-- Model Sample File -->
+                           <tr>
+                              <th class="text-right">Model Sample File</th>
+                              @foreach ($account_detail as $key => $account)
+                                 <td class="text-center">
+                                    @foreach($account['fileimage'] as $file)
+                                       @if(isset($file->sta_model_file) && !empty($file->sta_model_file) && $file->sta_model_file !=null)
+                                          <?php 
+                                             $client_id = $account->client_id;
+                                             $acc_name = $account->account_name;
+                                             $replace_str = $client_id."_".$acc_name."_";
+                                             $f_name = str_replace($replace_str, "", $file->sta_model_file)
+                                           ?>
+                                          <i class="fad fa-file-check" title="{{ $f_name }}"></i>
+                                       @endif
+                                    @endforeach
+                                 </td>
+                              @endforeach
+                           </tr>
+                           <!--  -->
+
+                           <!-- Staffing Forecast Accuracy Result -->
+                           <tr>
+                              <th class="text-right">Staffing Forecast Accuracy Result</th>
+                              @foreach ($account_detail as $key => $account)
+                                 <td class="text-center">
+                                    @foreach($account['fileimage'] as $file)
+                                       @if(isset($file->sta_forecast_file) && !empty($file->sta_forecast_file) && $file->sta_forecast_file !=null)
+                                          <?php 
+                                             $client_id = $account->client_id;
+                                             $acc_name = $account->account_name;
+                                             $replace_str = $client_id."_".$acc_name."_";
+                                             $f_name = str_replace($replace_str, "", $file->sta_forecast_file)
+                                           ?>
+                                          <i class="fad fa-file-check" title="{{ $f_name }}"></i>
+                                       @endif
+                                    @endforeach
+                                 </td>
+                              @endforeach
+                           </tr>
+                           <!--  -->
+
+                            <!-- Scheduling -->
+                            <tr>
+                              <th class="bg_light_th">Scheduling</th>
+                                 <?php $acc_lob_ch_cnt=0; ?>
+                                 @foreach ($account_detail as $key => $account)
+                                    @foreach($account['lobs'] as $key2 => $lob)
+                                       @foreach ($lob->channels as $key => $channels)
+                                          <?php ++$acc_lob_ch_cnt; ?>
+                                       @endforeach
+                                    @endforeach
+                                 @endforeach
+                              <td colspan ="{{$acc_lob_ch_cnt}}"></td>
+                           </tr>
+                           <!--  -->
+
+                           <!-- Process Document -->
+                           <tr>
+                              <th class="text-right">Process Document</th>
+                              @foreach ($account_detail as $key => $account)
+                                 <td class="text-center">
+                                    @foreach($account['fileimage'] as $file)
+                                       @if(isset($file->sche_p_doc) && !empty($file->sche_p_doc) && $file->sche_p_doc !=null)
+                                          <?php 
+                                             $client_id = $account->client_id;
+                                             $acc_name = $account->account_name;
+                                             $replace_str = $client_id."_".$acc_name."_";
+                                             $f_name = str_replace($replace_str, "", $file->sche_p_doc)
+                                           ?>
+                                          <i class="fad fa-file-check" title="{{ $f_name }}"></i>
+                                       @endif
+                                    @endforeach
+                                 </td>
+                              @endforeach
+                           </tr>
+                           <!--  -->
+
+                           <!-- Scheduling Model (only if done in Excel) -->
+                           <tr>
+                              <th class="text-right">Scheduling Model (only if done in Excel)</th>
+                              @foreach ($account_detail as $key => $account)
+                                 <td class="text-center">
+                                    @foreach($account['fileimage'] as $file)
+                                       @if(isset($file->sche_sched_file) && !empty($file->sche_sched_file) && $file->sche_sched_file !=null)
+                                          <?php 
+                                             $client_id = $account->client_id;
+                                             $acc_name = $account->account_name;
+                                             $replace_str = $client_id."_".$acc_name."_";
+                                             $f_name = str_replace($replace_str, "", $file->sche_sched_file)
+                                           ?>
+                                          <i class="fad fa-file-check" title="{{ $f_name }}"></i>
+                                       @endif
+                                    @endforeach
+                                 </td>
+                              @endforeach
+                           </tr>
+                           <!--  -->
+
+                           <!-- Scheduling Forecast Accuracy Result -->
+                           <tr>
+                              <th class="text-right">Scheduling Forecast Accuracy Result</th>
+                              @foreach ($account_detail as $key => $account)
+                                 <td class="text-center">
+                                    @foreach($account['fileimage'] as $file)
+                                       @if(isset($file->sche_forecast_file) && !empty($file->sche_forecast_file) && $file->sche_forecast_file !=null)
+                                          <?php 
+                                             $client_id = $account->client_id;
+                                             $acc_name = $account->account_name;
+                                             $replace_str = $client_id."_".$acc_name."_";
+                                             $f_name = str_replace($replace_str, "", $file->sche_forecast_file)
+                                           ?>
+                                          <i class="fad fa-file-check" title="{{ $f_name }}"></i>
+                                       @endif
+                                    @endforeach
+                                 </td>
+                              @endforeach
+                           </tr>
+                           <!--  -->
+
+                           <!-- IDP / Deviation File sample -->
+                           <tr>
+                              <th class="text-right">IDP / Deviation File sample</th>
+                              @foreach ($account_detail as $key => $account)
+                                 <td class="text-center">
+                                    @foreach($account['fileimage'] as $file)
+                                       @if(isset($file->sche_idp_file) && !empty($file->sche_idp_file) && $file->sche_idp_file !=null)
+                                          <?php 
+                                             $client_id = $account->client_id;
+                                             $acc_name = $account->account_name;
+                                             $replace_str = $client_id."_".$acc_name."_";
+                                             $f_name = str_replace($replace_str, "", $file->sche_idp_file)
+                                           ?>
+                                          <i class="fad fa-file-check" title="{{ $f_name }}"></i>
+                                       @endif
+                                    @endforeach
+                                 </td>
+                              @endforeach
+                           </tr>
+                           <!--  -->
+
+                           <!-- RTA / Intraday Management -->
+                           <tr>
+                              <th class="bg_light_th">RTA / Intraday Management</th>
+                                 <?php $acc_lob_ch_cnt=0; ?>
+                                 @foreach ($account_detail as $key => $account)
+                                    @foreach($account['lobs'] as $key2 => $lob)
+                                       @foreach ($lob->channels as $key => $channels)
+                                          <?php ++$acc_lob_ch_cnt; ?>
+                                       @endforeach
+                                    @endforeach
+                                 @endforeach
+                              <td colspan ="{{$acc_lob_ch_cnt}}"></td>
+                           </tr>
+                           <!--  -->
+
+                           <!-- Process Document -->
+                           <tr>
+                              <th class="text-right">Process Document</th>
+                              @foreach ($account_detail as $key => $account)
+                                 <td class="text-center">
+                                    @foreach($account['fileimage'] as $file)
+                                       @if(isset($file->rta_p_file) && !empty($file->rta_p_file) && $file->rta_p_file !=null)
+                                          <?php 
+                                             $client_id = $account->client_id;
+                                             $acc_name = $account->account_name;
+                                             $replace_str = $client_id."_".$acc_name."_";
+                                             $f_name = str_replace($replace_str, "", $file->rta_p_file)
+                                           ?>
+                                          <i class="fad fa-file-check" title="{{ $f_name }}"></i>
+                                       @endif
+                                    @endforeach
+                                 </td>
+                              @endforeach
+                           </tr>
+                           <!--  -->
+
+                           <!-- Intraday Report Sample -->
+                           <tr>
+                              <th class="text-right">Intraday Report Sample</th>
+                              @foreach ($account_detail as $key => $account)
+                                 <td class="text-center">
+                                    @foreach($account['fileimage'] as $file)
+                                       @if(isset($file->rta_intro_file) && !empty($file->rta_intro_file) && $file->rta_intro_file !=null)
+                                          <?php 
+                                             $client_id = $account->client_id;
+                                             $acc_name = $account->account_name;
+                                             $replace_str = $client_id."_".$acc_name."_";
+                                             $f_name = str_replace($replace_str, "", $file->rta_intro_file)
+                                           ?>
+                                          <i class="fad fa-file-check" title="{{ $f_name }}"></i>
+                                       @endif
+                                    @endforeach
+                                 </td>
+                              @endforeach
+                           </tr>
+                           <!--  -->
+
+                           <!-- Day-End Report Sample -->
+                           <tr>
+                              <th class="text-right">Day-End Report Sample</th>
+                              @foreach ($account_detail as $key => $account)
+                                 <td class="text-center">
+                                    @foreach($account['fileimage'] as $file)
+                                       @if(isset($file->rta_dayr_file) && !empty($file->rta_dayr_file) && $file->rta_dayr_file !=null)
+                                          <?php 
+                                             $client_id = $account->client_id;
+                                             $acc_name = $account->account_name;
+                                             $replace_str = $client_id."_".$acc_name."_";
+                                             $f_name = str_replace($replace_str, "", $file->rta_dayr_file)
+                                           ?>
+                                          <i class="fad fa-file-check" title="{{ $f_name }}"></i>
+                                       @endif
+                                    @endforeach
+                                 </td>
+                              @endforeach
+                           </tr>
+                           <!--  -->
+
+                           <!-- RCA / Post-Mortem Report Sample -->
+                           <tr>
+                              <th class="text-right">RCA / Post-Mortem Report Sample</th>
+                              @foreach ($account_detail as $key => $account)
+                                 <td class="text-center">
+                                    @foreach($account['fileimage'] as $file)
+                                       @if(isset($file->rta_rca_file) && !empty($file->rta_rca_file) && $file->rta_rca_file !=null)
+                                          <?php 
+                                             $client_id = $account->client_id;
+                                             $acc_name = $account->account_name;
+                                             $replace_str = $client_id."_".$acc_name."_";
+                                             $f_name = str_replace($replace_str, "", $file->rta_rca_file)
+                                           ?>
+                                          <i class="fad fa-file-check" title="{{ $f_name }}"></i>
+                                       @endif
+                                    @endforeach
+                                 </td>
+                              @endforeach
+                           </tr>
+                           <!--  -->
+                           </tbody>
+                     </table>
+                  </div>
+               </div>
+                  <!-- ended by JD -->
+
+               
+                        </tbody>
+                     </table>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="footerBtn-panel">
+         <button type="button" class="action-button previous previous_button">Back</button>
+         <button type="submit" class="action-button">Submit</button>
+      </div>
+   </div>
+
+   <!-- need to remove -->
+   <!-- @endsection -->
+   <!-- ended need to remove -->

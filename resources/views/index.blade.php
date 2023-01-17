@@ -150,7 +150,7 @@
                         </div>
                         <div class="col-lg-3 col-md-6 mb-4">
                            <div class="form-group">
-                              <select class="selectpicker form-control" title="Select LOB" multiple name="lob_names[]" id="lob_names">
+                              <select class="selectpicker form-control" title="Select LOB" multiple name="process_info[lob_names][]" id="lob_names">
                                  <!-- <option>LOB 1</option>
                                  <option>LOB 2</option>
                                  <option>LOB 3</option>
@@ -161,7 +161,7 @@
                         </div>
                         <div class="col-lg-3 col-md-6 mb-4">
                            <div class="form-group">
-                              <select class="selectpicker form-control" title="Select Channels" multiple name="channelnames[]" id="channelnames">
+                              <select class="selectpicker form-control" title="Select Channels" multiple name="process_info[channelnames][]" id="channelnames">
                                  <!-- <option>Voice - IB</option>
                                  <option>Voice - OB</option>
                                  <option>Chat</option>
@@ -174,7 +174,7 @@
                         </div>
                         <div class="col-lg-3 col-md-6 mb-4">
                            <div class="form-group">
-                              <select class="selectpicker form-control" multiple name="country" title="Select Country" id="country">
+                              <select class="selectpicker form-control" multiple name="country[]" title="Select Country" id="country">
                                  <!-- <option>Afghanistan</option>
                                  <option>Albania</option>
                                  <option>Algeria</option>
@@ -214,7 +214,7 @@
                                           <td>Which Forecasting tool / software package is being utilised?</td>
                                           <td>
                                              <div class="form-group">
-                                                <input type="text" name="f_1" class="form-control" placeholder="Please Enter">
+                                                <input type="text" name="f_1" id="f_1" class="form-control" placeholder="Please Enter">
                                              </div>
                                           </td>
                                        </tr>
@@ -222,7 +222,7 @@
                                           <td>Which Forecasting model is being used?</td>
                                           <td>
                                              <div class="form-group">
-                                                <input type="text" name="f_2"  class="form-control" placeholder="Please Enter">
+                                                <input type="text" name="f_2" id="f_2" class="form-control" placeholder="Please Enter">
                                              </div>
                                           </td>
                                        </tr>
@@ -230,7 +230,7 @@
                                           <td>What are the key input parameters to the model?</td>
                                           <td>
                                              <div class="form-group">
-                                                <input type="text"  name="f_3"  class="form-control" placeholder="Please Enter">
+                                                <input type="text"  name="f_3" id="f_3" class="form-control" placeholder="Please Enter">
                                              </div>
                                           </td>
                                        </tr>
@@ -238,11 +238,11 @@
                                           <td>How frequently is the model revisited for goodness of fit?</td>
                                           <td>
                                              <div class="form-group">
-                                                <select class="selectpicker form-control"  name="f_4"  title="Please select">
-                                                   <option>Monthly</option>
-                                                   <option>Quarterly</option>
-                                                   <option>Half-yearly</option>
-                                                   <option>Yearly</option>
+                                                <select class="selectpicker form-control"  name="f_4" id="f_4" title="Please select">
+                                                   <option value="Monthly">Monthly</option>
+                                                   <option value="Quarterly">Quarterly</option>
+                                                   <option value="Half-yearly">Half-yearly</option>
+                                                   <option value="Yearly">Yearly</option>
                                                 </select>
                                              </div>
                                           </td>
@@ -251,7 +251,7 @@
                                           <td>How do you measure the accuracy of your Forecasting model?</td>
                                           <td>
                                              <div class="form-group">
-                                                <input type="text"  name="f_5"  class="form-control" placeholder="Please Enter">
+                                                <input type="text"  name="f_5" id="f_5" class="form-control" placeholder="Please Enter">
                                              </div>
                                           </td>
                                        </tr>
@@ -269,9 +269,9 @@
                                           <td>Who provides the Forecast / Lock which forms the base of Staff Planning?</td>
                                           <td>
                                              <div class="form-group">
-                                                <select class="selectpicker form-control"  name="f_6"  title="Please select">
-                                                   <option>Client</option>
-                                                   <option>Internal</option>
+                                                <select class="selectpicker form-control"  name="f_6" id="f_6" title="Please select">
+                                                   <option value="Client">Client</option>
+                                                   <option value="Internal">Internal</option>
                                                 </select>
                                              </div>
                                           </td>
@@ -280,17 +280,17 @@
                                           <td>What is your staff locking model?</td>
                                           <td>
                                              <div class="form-group">
-                                                <select class="selectpicker form-control"  name="f_7"  title="Please select">
-                                                   <option>FTE</option>
-                                                   <option>Incenter Hours</option>
-                                                   <option>Production Hours</option>
-                                                   <option>Handle Minutes</option>
-                                                   <option>Calls</option>
-                                                   <option>Emails</option>
-                                                   <option>Chats</option>
-                                                   <option>Workstations</option>
-                                                   <option>Social Media</option>
-                                                   <option>Other</option>
+                                                <select class="selectpicker form-control"  name="f_7" id="f_7" title="Please select">
+                                                   <option value="FTE">FTE</option>
+                                                   <option value="Incenter Hours">Incenter Hours</option>
+                                                   <option value="Production Hours">Production Hours</option>
+                                                   <option value="Handle Minutes">Handle Minutes</option>
+                                                   <option value="Calls">Calls</option>
+                                                   <option value="Emails">Emails</option>
+                                                   <option value="Chats">Chats</option>
+                                                   <option value="Workstations">Workstations</option>
+                                                   <option value="Social Media">Social Media</option>
+                                                   <option value="Other">Other</option>
                                                 </select>
                                              </div>
                                           </td>
@@ -299,7 +299,7 @@
                                           <td>Do you generate Internal Forecast?</td>
                                           <td>
                                              <div class="form-group">
-                                                <select class="selectpicker form-control"  name="f_8"  title="Please select">
+                                                <select class="selectpicker form-control"  name="f_8" id="f_8" title="Please select">
                                                    <option value="yes">Yes</option>
                                                    <option value="no">No</option>
                                                    <option value="NA">Not Applicable</option>
@@ -311,7 +311,7 @@
                                           <td>Which Forecast is used for Staff Planning?</td>
                                           <td>
                                              <div class="form-group">
-                                                <select class="selectpicker form-control" name="f_9"  title="Please select">
+                                                <select class="selectpicker form-control" name="f_9" id="f_9"  title="Please select">
                                                    <option value="client forecast">Client Forecast</option>
                                                    <option value="internal Forecast">Internal Forecast</option>
                                                    <option value="NA">Not Applicable</option>
@@ -327,7 +327,7 @@
                                           <td>What AHT is used for Staff Planning?</td>
                                           <td>
                                              <div class="form-group">
-                                                <select class="selectpicker form-control"  name="f_10" title="Please select">
+                                                <select class="selectpicker form-control"  name="f_10" id="f_10" title="Please select">
                                                    <option value="Target-Internal">Target-Internal</option>
                                                    <option value="Target-Client">Target-Client</option>
                                                    <option value="Billable-Cap">Billable-Cap</option>
@@ -341,7 +341,7 @@
                                           <td>How do you calculate New Hire impact on the AHT?</td>
                                           <td>
                                              <div class="form-group">
-                                                <select class="selectpicker form-control" name="f_11" title="Please select">
+                                                <select class="selectpicker form-control" name="f_11" id="f_11" title="Please select">
                                                    <option value="Not Considered">Not Considered</option>
                                                    <option value="Experiential">Experiential</option>
                                                    <option value="Calculation (Learning Curve)">Calculation (Learning Curve)</option>
@@ -357,7 +357,7 @@
                                           <td>How do you generate FTE requirements?</td>
                                           <td>
                                              <div class="form-group">
-                                                <select class="selectpicker form-control" name="f_12" title="Please select">
+                                                <select class="selectpicker form-control" name="f_12" id="f_12" title="Please select">
                                                    <option value="Client-Provided">Client-Provided</option>
                                                    <option value="Workload Fn">Workload Fn</option>
                                                    <option value="Erlang">Erlang</option>
@@ -375,7 +375,7 @@
                                           <td>At what level are your In-Office Shrinkages planned?</td>
                                           <td>
                                              <div class="form-group">
-                                                <select class="selectpicker form-control" name="f_13" title="Please select">
+                                                <select class="selectpicker form-control" name="f_13" id="f_13" title="Please select">
                                                    <option value="All Combined">All Combined</option>
                                                    <option value="By Aux-code">By Aux-code</option>
                                                    <option value="By Activity-code">By Activity-code</option>
@@ -387,7 +387,7 @@
                                           <td>Do you have set targets for each individual Aux/Activity code?</td>
                                           <td>
                                              <div class="form-group">
-                                                <select class="selectpicker form-control" name="f_14" title="Please select">
+                                                <select class="selectpicker form-control" name="f_14" id="f_14" title="Please select">
                                                    <option value="Yes">Yes</option>
                                                    <option value="No">No</option>
                                                    <option value="NA">Not Applicable</option>
@@ -399,7 +399,7 @@
                                           <td>In-Office shrinkage Forecasts are modeled on (please select the appropriate)</td>
                                           <td>
                                              <div class="form-group">
-                                                <select class="selectpicker form-control" name="f_15"  title="Please select">
+                                                <select class="selectpicker form-control" name="f_15" id="f_15" title="Please select">
                                                    <option value="Trend">Trend</option>
                                                    <option value="Targets">Targets</option>
                                                    <option value="Operational-Commitments">Operational-Commitments</option>
@@ -415,7 +415,7 @@
                                           <td>At what level are your Out-of-Office Shrinkages planned?</td>
                                           <td>
                                              <div class="form-group">
-                                                <select class="selectpicker form-control" name="f_16" title="Please select">
+                                                <select class="selectpicker form-control" name="f_16" id="f_16" title="Please select">
                                                    <option value="All Combined">All Combined</option>
                                                    <option value="By Absence Codes">By Absence Codes</option>
                                                 </select>
@@ -426,7 +426,7 @@
                                           <td>Vacation Forecasts are modeled on (please select the appropriate)</td>
                                           <td>
                                              <div class="form-group">
-                                                <select class="selectpicker form-control" name="f_17" title="Please select">
+                                                <select class="selectpicker form-control" name="f_17" id="f_17" title="Please select">
                                                    <option value="Targets">Targets</option>
                                                    <option value="Trends">Trends</option>
                                                    <option value="Modulated (Need-Based)">Modulated (Need-Based)</option>
@@ -438,7 +438,7 @@
                                           <td>Absenteeism Forecasts are modeled on (please select the appropriate)</td>
                                           <td>
                                              <div class="form-group">
-                                                <select class="selectpicker form-control" name="f_18" title="Please select">
+                                                <select class="selectpicker form-control" name="f_18" id="f_18" title="Please select">
                                                     <option value="Targets">Targets</option>
                                                     <option value="Trends">Trends</option>
                                                    <option value="Trend & Seasonality">Trend & Seasonality</option>
@@ -455,7 +455,7 @@
                                           <td>Is Schedule Inflex considered in Staff planning?</td>
                                           <td>
                                              <div class="form-group">
-                                                <select class="selectpicker form-control" name="f_19" title="Please select">
+                                                <select class="selectpicker form-control" name="f_19" id="f_19" title="Please select">
                                                     <option value="Yes">Yes</option>
                                                     <option value="No">No</option>
                                                 </select>
@@ -466,7 +466,7 @@
                                           <td>How is the Schedule Inflex estimated / calculated?</td>
                                           <td>
                                              <div class="form-group">
-                                                <select class="selectpicker form-control" name="f_20" title="Please select">
+                                                <select class="selectpicker form-control" name="f_20" id="f_20" title="Please select">
                                                    <option value="Experiential">Experiential</option>
                                                    <option value="Schedule Simulation">Schedule Simulation</option>
                                                 </select>
@@ -481,7 +481,7 @@
                                           <td>How do you factor attrition in your staff plan?</td>
                                           <td>
                                              <div class="form-group">
-                                                <select class="selectpicker form-control" name="f_21" title="Please select">
+                                                <select class="selectpicker form-control" name="f_21" id="f_21" title="Please select">
                                                     <option value="Targets">Targets</option>
                                                     <option value="Trends">Trends</option>
                                                    <option value="Trend & Seasonality">Trend & Seasonality</option>
@@ -494,7 +494,7 @@
                                           <td>Do you plan for Involuntary Attrition as a separate line item? (BQM, Promotions, Transfers etc.)</td>
                                           <td>
                                              <div class="form-group">
-                                                <select class="selectpicker form-control" name="f_21" title="Please select">
+                                                <select class="selectpicker form-control" name="f_22" id="f_22" title="Please select">
                                                     <option value="Yes">Yes</option>
                                                     <option value="No">No</option>
                                                 </select>
@@ -509,7 +509,7 @@
                                           <td>Do you have Inter-departmental Staff planning discussions?</td>
                                           <td>
                                              <div class="form-group">
-                                                <select class="selectpicker form-control" name="f_22" title="Please select">
+                                                <select class="selectpicker form-control" name="f_23" id="f_23" title="Please select">
                                                     <option value="Yes">Yes</option>
                                                     <option value="No">No</option>
                                                 </select>
@@ -520,7 +520,7 @@
                                           <td>What is the frequency?</td>
                                           <td>
                                              <div class="form-group">
-                                                <select class="selectpicker form-control" name="f_23" title="Please select">
+                                                <select class="selectpicker form-control" name="f_24" id="f_24" title="Please select">
                                                    <option value="Weekly">Weekly</option>
                                                    <option value="Bi-weekly">Bi-weekly</option>
                                                    <option value="Monthly">Monthly</option>
@@ -535,7 +535,7 @@
                                           <td>Staffing Plan (Validation & Signing off key assumptions such as AHT, Shrinkage etc.</td>
                                           <td>
                                              <div class="form-group">
-                                                <select class="selectpicker form-control" name="f_24" title="Please select">
+                                                <select class="selectpicker form-control" name="f_25" id="f_25" title="Please select">
                                                    <option value="Operations">Operations</option>
                                                    <option value="WFM">WFM</option>
                                                    <option value="Client">Client</option>
@@ -547,7 +547,7 @@
                                           <td>Adding Batches</td>
                                           <td>
                                              <div class="form-group">
-                                                <select class="selectpicker form-control" name="f_25" title="Please select">
+                                                <select class="selectpicker form-control" name="f_26" id="f_26" title="Please select">
                                                     <option value="Operations">Operations</option>
                                                     <option value="WFM">WFM</option>
                                                     <option value="Client">Client</option>
@@ -559,7 +559,7 @@
                                           <td>Removing Batches</td>
                                           <td>
                                              <div class="form-group">
-                                                <select class="selectpicker form-control" name="f_26" title="Please select">
+                                                <select class="selectpicker form-control" name="f_27" id="f_27" title="Please select">
                                                     <option value="Operations">Operations</option>
                                                     <option value="WFM">WFM</option>
                                                     <option value="Client">Client</option>
@@ -571,7 +571,7 @@
                                           <td>Cross Skilling</td>
                                           <td>
                                              <div class="form-group">
-                                                <select class="selectpicker form-control" name="f_27" title="Please select">
+                                                <select class="selectpicker form-control" name="f_28" id="f_28" title="Please select">
                                                     <option value="Operations">Operations</option>
                                                     <option value="WFM">WFM</option>
                                                     <option value="Client">Client</option>
@@ -583,7 +583,7 @@
                                           <td>Is there a client dependency for hiring batches?</td>
                                           <td>
                                              <div class="form-group">
-                                                <select class="selectpicker form-control"  name="f_28" title="Please select">
+                                                <select class="selectpicker form-control"  name="f_29" id="f_29" title="Please select">
                                                     <option value="Yes">Yes</option>
                                                     <option value="No">No</option>
                                                 </select>
@@ -594,7 +594,7 @@
                                           <td>Do you have a calibration calls with the Recruitment team</td>
                                           <td>
                                              <div class="form-group">
-                                                <select class="selectpicker form-control" name="f_29" title="Please select">
+                                                <select class="selectpicker form-control" name="f_30" id="f_30" title="Please select">
                                                     <option value="Yes">Yes</option>
                                                     <option value="No">No</option>
                                                 </select>
@@ -605,7 +605,7 @@
                                           <td>If Yes – Weekly or Monthly</td>
                                           <td>
                                              <div class="form-group">
-                                                <select class="selectpicker form-control" name="f_30" title="Please select">
+                                                <select class="selectpicker form-control" name="f_31" id="f_31" title="Please select">
                                                     <option value="Weekly">Weekly</option>
                                                     <option value="Bi-weekly">Bi-weekly</option>
                                                     <option value="Monthly">Monthly</option>
@@ -623,7 +623,7 @@
                                           <td>Do you do Call Curve Analysis before deciding the Schedule Pattern?</td>
                                           <td>
                                              <div class="form-group">
-                                                <select class="selectpicker form-control" name="f_31" title="Please select">
+                                                <select class="selectpicker form-control" name="f_32" id="f_32" title="Please select">
                                                     <option value="Yes">Yes</option>
                                                     <option value="No">No</option>
                                                 </select>
@@ -634,7 +634,7 @@
                                           <td>What is the frequency of the above?</td>
                                           <td>
                                              <div class="form-group">
-                                                <select class="selectpicker form-control" name="f_32" title="Please select">
+                                                <select class="selectpicker form-control" name="f_33" id="f_33" title="Please select">
                                                    <option value="Monthly">Monthly</option>
                                                    <option value="Quarterly">Quarterly</option>
                                                 </select>
@@ -645,7 +645,7 @@
                                           <td>How do you create interval level Volume and AHT requirements?</td>
                                           <td>
                                              <div class="form-group">
-                                                <select class="selectpicker form-control" name="f_33" title="Please select">
+                                                <select class="selectpicker form-control" name="f_34" id="f_34" title="Please select">
                                                     <option value="Monthly">Monthly</option>
                                                     <option value="Quarterly">Quarterly</option>
                                                 </select>
@@ -656,7 +656,7 @@
                                           <td>How do you manage the Headcount reconciliation process?</td>
                                           <td>
                                              <div class="form-group">
-                                                <select class="selectpicker form-control" name="f_34" title="Please select">
+                                                <select class="selectpicker form-control" name="f_35" id="f_35" title="Please select">
                                                    <option value="Employee Database - Internal">Employee Database - Internal</option>
                                                    <option value="Employee Database - Client">Employee Database - Client</option>
                                                    <option value="Weekly Inputs from Operations">Weekly Inputs from Operations</option>
@@ -668,7 +668,7 @@
                                           <td>Do you run Manpower Dimensionioning exercise frequently to arrive at optimal HC mix (FT/PT/Split/Flexi?</td>
                                           <td>
                                              <div class="form-group">
-                                                <select class="selectpicker form-control" name="f_35" title="Please select">
+                                                <select class="selectpicker form-control" name="f_36" id="f_36" title="Please select">
                                                     <option value="Yes">Yes</option>
                                                     <option value="No">No</option>
                                                 </select>
@@ -679,7 +679,7 @@
                                           <td>What is the frequency of the above?</td>
                                           <td>
                                              <div class="form-group">
-                                                <select class="selectpicker form-control" name="f_36" title="Please select">
+                                                <select class="selectpicker form-control" name="f_37" id="f_37" title="Please select">
                                                     <option value="Weekly">Weekly</option>
                                                     <option value="Bi-weekly">Bi-weekly</option>
                                                     <option value="Monthly">Monthly</option>
@@ -691,7 +691,7 @@
                                           <td>Do you run & test different Schedule Patterns to identify best fit?</td>
                                           <td>
                                              <div class="form-group">
-                                                <select class="selectpicker form-control" name="f_37" title="Please select">
+                                                <select class="selectpicker form-control" name="f_38" id="f_38" title="Please select">
                                                     <option value="Yes">Yes</option>
                                                     <option value="No">No</option>
                                                 </select>
@@ -702,7 +702,7 @@
                                           <td>What is the frequency of the above?</td>
                                           <td>
                                              <div class="form-group">
-                                                <select class="selectpicker form-control" name="f_38" title="Please select">
+                                                <select class="selectpicker form-control" name="f_39" id="f_39" title="Please select">
                                                     <option value="Weekly">Weekly</option>
                                                     <option value="Bi-weekly">Bi-weekly</option>
                                                     <option value="Monthly">Monthly</option>
@@ -714,7 +714,7 @@
                                           <td>Do you plot all In-office shrinkages in your Schedules at Interval Level? (Coaching, Team Meeting, Business Updates etc.)</td>
                                           <td>
                                              <div class="form-group">
-                                                <select class="selectpicker form-control" name="f_39" title="Please select">
+                                                <select class="selectpicker form-control" name="f_40" id="f_40" title="Please select">
                                                     <option value="Yes">Yes</option>
                                                     <option value="No">No</option>
                                                    <option value="NA">Not Applicable</option>
@@ -726,7 +726,7 @@
                                           <td>Do you plot Out-of-Office shrinkage in your Schedules at Interval Level? (Vacation)</td>
                                           <td>
                                              <div class="form-group">
-                                                <select class="selectpicker form-control" name="f_40" title="Please select">
+                                                <select class="selectpicker form-control" name="f_41" id="f_41" title="Please select">
                                                     <option value="Yes">Yes</option>
                                                     <option value="No">No</option>
                                                    <option value="NA">Not Applicable</option>
@@ -738,7 +738,7 @@
                                           <td>Do you review IDP/Schedule deviation prior to schedule release?</td>
                                           <td>
                                              <div class="form-group">
-                                                <select class="selectpicker form-control" name="f_41" title="Please select">
+                                                <select class="selectpicker form-control" name="f_42" id="f_42" title="Please select">
                                                     <option value="Yes">Yes</option>
                                                     <option value="No">No</option>
                                                 </select>
@@ -749,7 +749,7 @@
                                           <td>Do you measure Schedule Efficiency?</td>
                                           <td>
                                              <div class="form-group">
-                                                <select class="selectpicker form-control" name="f_42" title="Please select">
+                                                <select class="selectpicker form-control" name="f_43" id="f_43" title="Please select">
                                                     <option value="Yes">Yes</option>
                                                     <option value="No">No</option>
                                                 </select>
@@ -760,7 +760,7 @@
                                           <td>What is your target for Schedule Efficiency? (Please specify in %)</td>
                                           <td>
                                              <div class="form-group">
-                                                <input type="text" name="f_43" class="form-control">
+                                                <input type="text" name="f_44" id="f_44" class="form-control">
                                              </div>
                                           </td>
                                        </tr>
@@ -768,7 +768,7 @@
                                           <td>How do you measure the Schedule Efficiency?</td>
                                           <td>
                                              <div class="form-group">
-                                                <input type="text" name="f_44" class="form-control">
+                                                <input type="text" name="f_45" id="f_45" class="form-control">
                                              </div>
                                           </td>
                                        </tr>
@@ -776,7 +776,7 @@
                                           <td>What is your internal target for Scheduling accuracy? (Requirment to Scheduled - Day/Intervals)</td>
                                           <td>
                                              <div class="form-group">
-                                                <select class="selectpicker form-control" name="f_45" title="Please select">
+                                                <select class="selectpicker form-control" name="f_46" id="f_46" title="Please select">
                                                    <option value="50%"> &lt; 50%</option>
                                                    <option value="50% to 70%">50% to 75%</option>
                                                    <option value="75% to 90%">75% to 90%</option>
@@ -789,7 +789,7 @@
                                           <td>How do you measure the Schedule Accuracy?</td>
                                           <td>
                                              <div class="form-group">
-                                                <input type="text" name="f_46" class="form-control">
+                                                <input type="text" name="f_47" id="f_47" class="form-control">
                                              </div>
                                           </td>
                                        </tr>
@@ -797,7 +797,7 @@
                                           <td>Do you measure the impact of various Scheduling Constraints on the account in terms or FTE & Cost?</td>
                                           <td>
                                              <div class="form-group">
-                                                <select class="selectpicker form-control" name="f_47" title="Please select">
+                                                <select class="selectpicker form-control" name="f_48" id="f_48" title="Please select">
                                                     <option value="Yes">Yes</option>
                                                     <option value="No">No</option>
                                                 </select>
@@ -814,7 +814,7 @@
                                           <td>Do you have a WFM Play book / Guide? E.g - Downtime Process, Calling Tree, Threshold & Skilling</td>
                                           <td>
                                              <div class="form-group">
-                                                <select class="selectpicker form-control"  name="f_48" title="Please select">
+                                                <select class="selectpicker form-control"  name="f_49" id="f_49" title="Please select">
                                                     <option value="Yes">Yes</option>
                                                     <option value="No">No</option>
                                                 </select>
@@ -825,7 +825,7 @@
                                           <td>Does RTA have a daily read out call / RCA?</td>
                                           <td>
                                              <div class="form-group">
-                                                <select class="selectpicker form-control" name="f_49" title="Please select">
+                                                <select class="selectpicker form-control" name="f_50" id="f_50" title="Please select">
                                                     <option value="Yes">Yes</option>
                                                     <option value="No">No</option>
                                                 </select>
@@ -836,7 +836,7 @@
                                           <td>Does the RTA do real time skill management?</td>
                                           <td>
                                              <div class="form-group">
-                                                <select class="selectpicker form-control" name="f_50" title="Please select">
+                                                <select class="selectpicker form-control" name="f_51" id="f_51" title="Please select">
                                                     <option value="Yes">Yes</option>
                                                     <option value="No">No</option>
                                                 </select>
@@ -847,7 +847,7 @@
                                           <td>Does RTA do Intra-day Reforecasting?</td>
                                           <td>
                                              <div class="form-group">
-                                                <select class="selectpicker form-control" name="f_51" title="Please select">
+                                                <select class="selectpicker form-control" name="f_52" id="f_52" title="Please select">
                                                     <option value="Yes">Yes</option>
                                                     <option value="No">No</option>
                                                 </select>
@@ -858,7 +858,7 @@
                                           <td>How do you manage customers resources up or down Realtime?</td>
                                           <td>
                                              <div class="form-group">
-                                                <input type="text" name="f_52" class="form-control">
+                                                <input type="text" name="f_53" id="f_53" class="form-control">
                                              </div>
                                           </td>
                                        </tr>
@@ -866,7 +866,7 @@
                                           <td>How do you manage and report, variance to plan Realtime?</td>
                                           <td>
                                              <div class="form-group">
-                                                <input type="text" name="f_53" class="form-control">
+                                                <input type="text" name="f_54" id="f_54" class="form-control">
                                              </div>
                                           </td>
                                        </tr>
@@ -894,7 +894,6 @@
                      <div class="row d-flex align-items-center justify-content-center">
                         <div class="col col-lg-8 col-12">
                            <div class="accordion file_page" id="accordionFileUpload">
-
 
                            </div>
                         </div>
@@ -947,7 +946,7 @@
 
             $(document).on('change','#lob_names',function(){
             var val = $(this).val();
-            alert(val);
+           
             $.ajax({
                 type: "POST",
                 url: "{{ route('getChannelList') }}",
@@ -968,7 +967,7 @@
             });
             $(document).on('change','#channelnames',function(){
             var val = $(this).val();
-            alert(val);
+            
             $.ajax({
                 type: "POST",
                 url: "{{ route('getCountryList') }}",
@@ -979,7 +978,7 @@
                         $('#country').empty();
                         //$('#country').append('<option disabled>Select country</option>');
                             $.each(result.data,function(i,v){ console.log(v);
-                                 $('#country').append('<option value="'+v.country_id+'">'+v.country_name+'</option>');
+                                 $('#country').append('<option value="'+v.country_id+'" selected>'+v.country_name+'</option>');
                                });
                                $('.selectpicker').selectpicker('refresh');
                             }
@@ -987,6 +986,73 @@
                        
                 });
             });
+
+            $("#f_8, #f_9, #f_20, #f_24, #f_31,#f_33, #f_37, #f_44, #f_45").prop('disabled', true);
+
+            $(document).on('change','#f_6,#f_19, #f_23, #f_30, #f_32, #f_36, #f_43',function(){
+               var f6 = $("#f_6").val();
+               var f19 = $("#f_19").val();
+               var f23 = $("#f_23").val();
+               var f30 = $("#f_30").val();
+               var f32 = $("#f_32").val();
+               var f36 = $("#f_36").val();
+               var f43 = $("#f_43").val();
+
+
+               if(f6 == "Client"){
+                  $("#f_8, #f_9").prop('disabled', false);
+               }else{
+                  $("#f_8, #f_9").prop('disabled', true);
+                  $("#f_8, #f_9").val('');
+               }
+
+               if(f19 == "Yes"){
+                  $("#f_20").prop('disabled', false);
+               }else{
+                  $("#f_20").prop('disabled', true);
+                  $("#f_20").val('');
+               }
+               
+               if(f23 == "Yes"){
+                  $("#f_24").prop('disabled', false);
+               }else{
+                  $("#f_24").prop('disabled', true);
+                  $("#f_24").val('');
+               }
+
+               if(f30 == "Yes"){
+                  $("#f_31").prop('disabled', false);
+               }else{
+                  $("#f_31").prop('disabled', true);
+                  $("#f_31").val('');
+               }
+
+               if(f32 == "Yes"){
+                  $("#f_33").prop('disabled', false);
+               }else{
+                  $("#f_33").prop('disabled', true);
+                  $("#f_33").val('');
+               }
+
+               if(f36 == "Yes"){
+                  $("#f_37").prop('disabled', false);
+               }else{
+                  $("#f_37").prop('disabled', true);
+                  $("#f_37").val('');
+               }
+
+               if(f43 == "Yes"){
+                  $("#f_44, #f_45").prop('disabled', false);
+               }else{
+                  $("#f_44, #f_45").prop('disabled', true);
+                  $("#f_44, #f_45").val('');
+               }
+               $('.selectpicker').selectpicker('refresh');
+               
+            });
+
+            
+
       //ended here by Jaydeep
 
        $('#process_info').click(function(){
@@ -1002,10 +1068,15 @@
               url: "{{route('process_info')}}",
               data: process_data, // serializes the form's elements.
               success: function(result)
-              {
+              { 
                   console.log(result);
-                  if(result.success){
-
+                  if(result.status){
+                     alert("Process Information Saved Successfully.");
+                     $("#f_1, #f_2, #f_3, #account_names").val("");
+                     $('.selectpicker').selectpicker('refresh');
+                     $('#f_6,#f_19, #f_23, #f_30, #f_32, #f_36, #f_43', '#account_names').val("").selectpicker('refresh');
+                     $("#f_8, #f_9, #f_20, #f_24, #f_31,#f_33, #f_37, #f_44, #f_45").val("").selectpicker('refresh');;
+                     $("#lob_names, #channelnames, #country").empty().selectpicker('refresh');
                   }
               }
          });
@@ -1140,7 +1211,7 @@
                               </td>
                               <td>
                                  <div class="form-group">
-                                    <select name="country[`+acc_count+`][`+lob_count+`]" id="country`+h+`" class="form-control selectpicker" data-live-search="true" required>
+                                    <select name="country[`+acc_count+`][`+lob_count+`][`+h+`]" id="country`+h+`" class="form-control selectpicker" data-live-search="true" required>
                                        <option selected disabled>Select Country</option>
                                        @foreach($country as $key => $countries)
                                        <option value="{{ $key }}">{{ $countries }}</option>
@@ -1149,7 +1220,7 @@
                                  </div>
                               </td>
                               <td>
-                                 <select name="city_name[`+acc_count+`][`+lob_count+`]" id ="city_name`+h+`" class=" form-control selectpicker" data-live-search="true" required>
+                                 <select name="city_name[`+acc_count+`][`+lob_count+`][`+h+`]" id ="city_name`+h+`" class=" form-control selectpicker" data-live-search="true" required>
                                     <option selected disabled>Select City</option>
                                  </select>
                               </td>
@@ -1209,7 +1280,7 @@
                   </td>
                   <td>
                      <div class="form-group">
-                           <select name="country[`+acc_count+`][`+lob_count+`][`+h+`]" id="country`+h+`" data-id="`+h+`" class="form-control selectpicker" data-live-search="true" required>
+                           <select name="country[`+acc_count+`][`+lob_count+`][]" id="country`+h+`" data-id="`+h+`" class="form-control selectpicker" data-live-search="true" required>
                               <option selected disabled>Select Country</option>
                               @foreach($country as $key => $countries)
                               <option value="{{ $key }}">{{ $countries }}</option>
@@ -1268,7 +1339,7 @@
                         </td>
                         <td>
                            <div class="form-group">
-                              <select name="country[`+acc_count+`][`+lob_count+`][`+h+`]" id="country`+h+`" data-id="`+h+`" class="form-control selectpicker" data-live-search="true" required>
+                              <select name="country[`+acc_count+`][`+lob_count+`][]" id="country`+h+`" data-id="`+h+`" class="form-control selectpicker" data-live-search="true" required>
                                     <option selected disabled>Select Country</option>
                                     @foreach($country as $key => $countries)
                                     <option value="{{ $key }}">{{ $countries }}</option>
@@ -1336,7 +1407,6 @@
                             $.each(data,function(key,value){
                                 $('#city_name'+searial_id).append('<option value="'+key+'">'+value+'</option>');
                             });
-                            $('#city_name'+searial_id).selectpicker('refresh');
                             $('.selectpicker').selectpicker('refresh');
                         }
                 })
@@ -1421,8 +1491,12 @@
                if(form_name=='detailed_info'){
                   $.get("{{route('get_account')}}",{temp_id:$('.temp_id').val()},function(result){
                         if(result.success){
+                           $('#account_names').empty();
+                           $('#lob_names').empty();
+                           $('#channelnames').empty();
+                           $('#country').empty();
                            $.each(result.data,function(i,v){
-                              $('#account_names').html('<option value="'+v.id+'">'+v.account_name+'</option>');
+                              $('#account_names').append('<option value="'+v.id+'">'+v.account_name+'</option>');
                                $.each(v.lobs,function(ii,vv){
                                    $('#lob_names').html('<option value="'+vv.id+'">'+vv.lob_name+'</option>');
                                    $.each(vv.channels,function(iii,vvv){

@@ -12,11 +12,21 @@ class Channel extends Model
      public function lob_data(){
         return $this->hasMany(Account::class,'id','account_id');
      }
-     public function City(){
-        return $this->hasOne(Country::class,'id','city_name');
+
+     public function citydata(){
+        return $this->hasMany(City::class,'city_id','city_name');
      }
 
-     public function country(){
-      return $this->hasOne(Country::class, 'country_id','country');
+     public function countrydata(){
+      return $this->hasMany(Country::class, 'country_id','country');
+     }
+
+     public function ChannelDatas(){
+      return $this->hasMany(ChannelDatas::class, 'channel_id','id');
+     }
+
+     public function processInfo()
+     {
+         return $this->hasMany(Process_info::class, 'channelnames');
      }
 }

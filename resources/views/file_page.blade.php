@@ -3,6 +3,7 @@
 <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 @foreach($result1 as $key=>$value)
+
 <div class="card">
     <div class="card-header" id="headingF1{{$value->id}}">
        <h2 class="mb-0">
@@ -30,24 +31,24 @@
                    <tr>
                       <td class="text-right">Process Document</td>
                       <td class="text-center">
-                         <button class="fileUploadBtn"><i class="far fa-upload"></i><input type="file" name="f_process_doc" class="file_upload"  onchange="SaveData()"/></button>
+                         <button class="fileUploadBtn"><i class="far fa-upload"></i><input type="file" name="f_process_doc" id="f_process_doc" class="file_upload" data-myvar="f_process_doc_toggle"  onchange="SaveData(this)"/></button>
                       </td>
                       <td class="text-center">
                          <div class="dropdown action-label">
-                            <a class="dropdown-toggle status_leaves" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
-                            <i class="fa fa-dot-circle-o text-success"></i> Pending
+                            <a class="dropdown-toggle status_leaves" href="#" role="button" data-toggle="dropdown" aria-expanded="false" id='f_process_doc_toggle'>
+                            <i class="fa fa-dot-circle-o text-success" ></i><span id="f_process_doc_toggle">Pending</span>
                             </a>
-                            <div class="dropdown-menu dropdown-menu-right">
+                            <!-- <div class="dropdown-menu dropdown-menu-right">
                                <a class="dropdown-item" href="#"><i class="fa fa-dot-circle-o text-purple"></i> Uploaded</a>
                                <a class="dropdown-item" href="#"><i class="fa fa-dot-circle-o text-info"></i> Pending</a>
-                            </div>
+                            </div> -->
                          </div>
                       </td>
                    </tr>
                    <tr>
                       <td class="text-right">Model Sample File</td>
                       <td class="text-center">
-                         <button class="fileUploadBtn"><i class="far fa-upload"></i><input type="file" name="model_file" class="file_upload"   onchange="SaveData()" /></button>
+                         <button class="fileUploadBtn"><i class="far fa-upload"></i><input type="file" name="model_file" class="file_upload" data-myvar="model_file"   onchange="SaveData(this)" /></button>
                       </td>
                       <td class="text-center">
                          <div class="dropdown action-label">
@@ -65,7 +66,7 @@
                    <tr>
                       <td class="text-right">Accuracy Measurement / Result</td>
                       <td class="text-center">
-                         <button class="fileUploadBtn"><i class="far fa-upload"></i><input type="file" name="f_accurecy_file" class="file_upload"  onchange="SaveData()" /></button>
+                         <button class="fileUploadBtn"><i class="far fa-upload"></i><input type="file" name="f_accurecy_file" class="file_upload" data-myvar="f_accurecy_file"  onchange="SaveData(this)" /></button>
                       </td>
                       <td class="text-center">
                          <div class="dropdown action-label">
@@ -85,7 +86,7 @@
                    <tr>
                       <td class="text-right">Process Document</td>
                       <td class="text-center">
-                         <button class="fileUploadBtn"><i class="far fa-upload"></i><input type="file" name="sta_process_doc" class="file_upload"  onchange="SaveData()" /></button>
+                         <button class="fileUploadBtn"><i class="far fa-upload"></i><input type="file" name="sta_process_doc" class="file_upload" data-myvar="sta_process_doc"  onchange="SaveData(this)" /></button>
                       </td>
                       <td class="text-center">
                          <div class="dropdown action-label">
@@ -102,7 +103,7 @@
                    <tr>
                       <td class="text-right">Model Sample File</td>
                       <td class="text-center">
-                         <button class="fileUploadBtn"><i class="far fa-upload"></i><input type="file" name="sta_model_file" class="file_upload"  onchange="SaveData()" /></button>
+                         <button class="fileUploadBtn"><i class="far fa-upload"></i><input type="file" name="sta_model_file" class="file_upload" data-myvar="sta_model_file"  onchange="SaveData(this)" /></button>
                       </td>
                       <td class="text-center">
                          <div class="dropdown action-label">
@@ -119,7 +120,7 @@
                    <tr>
                       <td class="text-right">Staffing Forecast Accuracy Result</td>
                       <td class="text-center">
-                         <button class="fileUploadBtn"><i class="far fa-upload"></i><input type="file" name="sta_forecast_file" class="file_upload"  onchange="SaveData()" /></button>
+                         <button class="fileUploadBtn"><i class="far fa-upload"></i><input type="file" name="sta_forecast_file" class="file_upload" data-myvar="sta_forecast_file"  onchange="SaveData(this)" /></button>
                       </td>
                       <td class="text-center">
                          <div class="dropdown action-label">
@@ -139,7 +140,7 @@
                    <tr>
                       <td class="text-right">Process Document</td>
                       <td class="text-center">
-                         <button class="fileUploadBtn"><i class="far fa-upload"></i><input type="file" name="sche_p_doc" class="file_upload"  onchange="SaveData()" /></button>
+                         <button class="fileUploadBtn"><i class="far fa-upload"></i><input type="file" name="sche_p_doc" class="file_upload" data-myvar="sche_p_doc" onchange="SaveData(this)" /></button>
                       </td>
                       <td class="text-center">
                          <div class="dropdown action-label">
@@ -156,7 +157,7 @@
                    <tr>
                       <td class="text-right">Scheduling Model (only if done in Excel)</td>
                       <td class="text-center">
-                         <button class="fileUploadBtn"><i class="far fa-upload"></i><input type="file" name="sche_sched_file" class="file_upload"  onchange="SaveData()" /></button>
+                         <button class="fileUploadBtn"><i class="far fa-upload"></i><input type="file" name="sche_sched_file" class="file_upload" data-myvar="sche_sched_file"  onchange="SaveData(this)" /></button>
                       </td>
                       <td class="text-center">
                          <div class="dropdown action-label">
@@ -173,7 +174,7 @@
                    <tr>
                       <td class="text-right">Scheduling Forecast Accuracy Result</td>
                       <td class="text-center">
-                         <button class="fileUploadBtn"><i class="far fa-upload"></i><input type="file" name="sche_forecast_file" class="file_upload"  onchange="SaveData()" /></button>
+                         <button class="fileUploadBtn"><i class="far fa-upload"></i><input type="file" name="sche_forecast_file" class="file_upload" data-myvar="sche_forecast_file" onchange="SaveData(this)" /></button>
                       </td>
                       <td class="text-center">
                          <div class="dropdown action-label">
@@ -190,7 +191,7 @@
                    <tr>
                       <td class="text-right">IDP / Deviation File sample</td>
                       <td class="text-center">
-                         <button class="fileUploadBtn"><i class="far fa-upload"></i><input type="file" name="sche_idp_file" class="file_upload"  onchange="SaveData()" /></button>
+                         <button class="fileUploadBtn"><i class="far fa-upload"></i><input type="file" name="sche_idp_file" class="file_upload" data-myvar="sche_idp_file" onchange="SaveData(this)" /></button>
                       </td>
                       <td class="text-center">
                          <div class="dropdown action-label">
@@ -210,7 +211,7 @@
                    <tr>
                       <td class="text-right">Process Document</td>
                       <td class="text-center">
-                         <button class="fileUploadBtn"><i class="far fa-upload"></i><input type="file" name="rta_p_file" class="file_upload"  onchange="SaveData()" /></button>
+                         <button class="fileUploadBtn"><i class="far fa-upload"></i><input type="file" name="rta_p_file" class="file_upload" data-myvar="rta_p_file" onchange="SaveData(this)" /></button>
                       </td>
                       <td class="text-center">
                          <div class="dropdown action-label">
@@ -227,7 +228,7 @@
                    <tr>
                       <td class="text-right">Intraday Report Sample</td>
                       <td class="text-center">
-                         <button class="fileUploadBtn"><i class="far fa-upload"></i><input type="file" name="rta_intro_file" class="file_upload"  onchange="SaveData()" /></button>
+                         <button class="fileUploadBtn"><i class="far fa-upload"></i><input type="file" name="rta_intro_file" class="file_upload" data-myvar="rta_intro_file"  onchange="SaveData(this)" /></button>
                       </td>
                       <td class="text-center">
                          <div class="dropdown action-label">
@@ -244,7 +245,7 @@
                    <tr>
                       <td class="text-right">Day-End Report Sample</td>
                       <td class="text-center">
-                         <button class="fileUploadBtn"><i class="far fa-upload"></i><input type="file" name="rta_dayr_file" class="file_upload"  onchange="SaveData()" /></button>
+                         <button class="fileUploadBtn"><i class="far fa-upload"></i><input type="file" name="rta_dayr_file" class="file_upload" data-myvar="rta_dayr_file"  onchange="SaveData(this)" /></button>
                       </td>
                       <td class="text-center">
                          <div class="dropdown action-label">
@@ -261,7 +262,7 @@
                    <tr>
                       <td class="text-right">RCA / Post-Mortem Report Sample</td>
                       <td class="text-center">
-                         <button class="fileUploadBtn"><i class="far fa-upload"></i><input type="file" name=">" class="file_upload"  onchange="SaveData()" /></button>
+                         <button class="fileUploadBtn"><i class="far fa-upload"></i><input type="file" name="rta_rca_file" class="file_upload" data-myvar="rta_rca_file" onchange="SaveData(this)" /></button>
                       </td>
                       <td class="text-center">
                          <div class="dropdown action-label">
@@ -290,8 +291,12 @@
 
 @endforeach
 <script>
-   function SaveData(){ alert();
+   function SaveData(ids){
+      var toggleId = ids.dataset.myvar;
+      $("#toggleId").html("Uploaded");
+      $("#toggleId").text("Uploaded");
       $("#save_file_data").trigger('click');
+      $(".file_upload").val(null);
    }
    $(document).ready(function(e) {
 
@@ -303,7 +308,7 @@
                           'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                       }
                   });
-         $.ajax({
+         $.ajax({ 
               type: "POST",
               url: "{{route('channel_data')}}",
               data: channel_data, // serializes the form's elements.
@@ -311,13 +316,13 @@
               {
                   console.log(result);
                   if(result.success){
-
+                     $(".file_upload").val(null);
                   }
               }
          });
       })
 
-         $('#file_data').on('submit',(function(e) {
+      $('#file_data').on('submit',(function(e) {
          e.preventDefault();
          var formData = new FormData($('#file_data')[0]);
          $.ajax({
@@ -329,7 +334,8 @@
                processData: false,
                success:function(data){
                   if (data.status == 1) {
-                     alert("Image is Sucessfully Uploaded");
+                     alert("File is Sucessfully Uploaded");
+                     $(".file_upload").val("");
                   } else {
                      return false;
                   }
