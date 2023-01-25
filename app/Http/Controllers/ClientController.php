@@ -37,8 +37,10 @@ class ClientController extends Controller
     {
         $input=$request->all();
         $client=Client::updateOrCreate(['id'=>$request->client_id],$input);
+        
         if($client){
             $input['client_id']=$client->id;
+            $request->session()->put('client_id',$input['client_id']);
             return response()->json(['success' => true,'data'=>$input,'message' => 'Successfully']);
         }
         return response()->json(['success' => false,'data'=>$input,'message' =>'Somthing went wrong']);

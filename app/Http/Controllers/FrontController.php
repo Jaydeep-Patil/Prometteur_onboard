@@ -17,7 +17,8 @@ class FrontController extends Controller
         $country = Country::pluck('country_name','country_id');
         $city = City::pluck('city_name','city_id');
         $user_detail = User::where('id','f185596')->first();
-        $account_detail = Account::where('temp_id','f185596')->with('lobs')->with('processinfo')->with('fileimage')->get();
+       // $account_detail = Account::where('temp_id','f185596')->with('lobs')->with('processinfo')->with('fileimage')->get();
+        $account_detail = Account::where('temp_id','f185596')->with('lobs')->with(['channel.ChannelDatas','channel.processInfo','channel.countrydata','channel.citydata'])->with('fileimage')->get();   
         return view('index',compact('country','city','user_detail','account_detail'));
     }
     public function check_user_login(Request $request){

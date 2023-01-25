@@ -34,7 +34,7 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('/account_details/{id?}', [App\Http\Controllers\AccountController::class, 'account_details'])->name('account_details');
+
 
 Route::post('/adduser', [App\Http\Controllers\HomeController::class, 'adduser'])->name('adduser');
 Route::post('/edituser', [App\Http\Controllers\HomeController::class, 'update'])->name('edituser');
@@ -45,7 +45,14 @@ Route::post('/accountlist', [App\Http\Controllers\HomeController::class, 'accoun
 Route::post("getLobList", [ChannelController::class, "getLobList"])->name("getLobList"); 
 Route::post("getChannelList", [ChannelController::class, "getChannelList"])->name("getChannelList");
 Route::post("getCountryList", [ChannelController::class, "getCountryList"])->name("getCountryList");
+Route::post("getChannels", [ChannelController::class, "getChannels"])->name("getChannels");
+Route::post("addCopyData", [ChannelController::class, "addCopyData"])->name("addCopyData");
+Route::get('/account_details/{id?}', [App\Http\Controllers\AccountController::class, 'account_details'])->name('account_details');
+Route::post("getChannelData", [ChannelController::class, "getChannelData"])->name("getChannelData");
 
+
+
+//Temporarily addded for testing
 Route::get('summary_page/{id}', [App\Http\Controllers\AccountController::class, 'summary'])->name('summary');
 
 

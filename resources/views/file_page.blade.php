@@ -283,6 +283,8 @@
           <div class="saveChannel text-center mt-5">
               <button type="submit" id="save_file_data">Save </button>
               {{-- <input type="submit" class="btn btn-blue" id="save_file_data" value="Save"> --}}
+
+              
            </div>
        </div>
     </div>
@@ -299,28 +301,6 @@
       $(".file_upload").val(null);
    }
    $(document).ready(function(e) {
-
-      $('.add_channeldata').click(function(){
-         chan_id=$(this).attr('id');
-         channel_data=$('#channelTab'+chan_id+' :input,select,textarea').serialize();
-         $.ajaxSetup({
-                      headers: {
-                          'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                      }
-                  });
-         $.ajax({ 
-              type: "POST",
-              url: "{{route('channel_data')}}",
-              data: channel_data, // serializes the form's elements.
-              success: function(result)
-              {
-                  console.log(result);
-                  if(result.success){
-                     $(".file_upload").val(null);
-                  }
-              }
-         });
-      })
 
       $('#file_data').on('submit',(function(e) {
          e.preventDefault();

@@ -1,7 +1,4 @@
-<!-- need to remove -->
-<!-- @extends('layouts.front') -->
-<!-- @section('content') -->
-<!-- end remove code -->
+
    <div class="scrollbarbar">
       <div class="container">
          <div class="row">
@@ -51,7 +48,7 @@
                                        $acc_lob_cnt += count($account_detail[$key]['lobs']);
                                     ?>
                                     @foreach($account['lobs'] as $key2 => $lob)
-                                    <?php $acc_lob_ch_cnt += count($lob->channels); ?>
+                                    <?php $acc_lob_ch_cnt += count($lob->channel); ?>
                                     @endforeach
                                  
                                  <tr>
@@ -61,12 +58,12 @@
                                  </tr>
                                  
                                  @foreach ($account['lobs'] as $key => $lob)
-                                 <?php $ch = count($lob->channels); ?>
+                                 <?php $ch = count($lob->channel); ?>
                                  <tr>
                                     <td rowspan="{{$ch +1}}">{{$lob->lob_name}}</td>
                                  </tr>
                                  
-                                 @foreach ($lob->channels as $key => $channels)
+                                 @foreach ($lob->channel as $key => $channels)
                                  <tr>
                                     <td>{{ $channels->channel_name }}</td>
                                     <td>
@@ -109,14 +106,14 @@
                                  $acc_lob_cnt += count($account_detail[$key]['lobs']);
                               ?>
                               @foreach($account['lobs'] as $key2 => $lob)
-                                 <?php $ch = count($lob->channels); ?>
-                                 @foreach ($lob->channels as $key => $channels)
-                                 <!-- {{ $acc_lob_ch_cnt  }} -->
-                              <td colspan="{{$acc_lob_ch_cnt}}" style="text-align:center; justify-content:center;">
-                                  {{ $account->account_name }}
-                              </td>
+                                 <?php $ch = count($lob->channel); ?>
+                                 @foreach ($lob->channel as $key => $channels)
+                                 <?php ++$acc_lob_ch_cnt; ?>
                               @endforeach
                                  @endforeach
+                                 <td colspan="{{$acc_lob_ch_cnt}}" style="text-align:center; justify-content:center;">
+                                    {{ $account->account_name }}
+                                 </td>
                               @endforeach
                            </tr>
 
@@ -129,7 +126,7 @@
                                  $acc_lob_cnt += count($account_detail[$key]['lobs']);
                               ?>
                               @foreach($account['lobs'] as $key2 => $lob)
-                                 <?php $acc_lob_ch_cnt = count($lob->channels); ?>
+                                 <?php $acc_lob_ch_cnt = count($lob->channel); ?>
                               <td colspan="{{$acc_lob_ch_cnt}}" style="text-align:center; justify-content:center;">
                                   {{ $lob->lob_name }}
                               </td>
@@ -143,8 +140,8 @@
                               <th class="bg_light_th">Channels</th>
                               @foreach ($account_detail as $key => $account)
                               @foreach($account['lobs'] as $key2 => $lob)
-                              @foreach ($lob->channels as $key => $channels)
-                                 <?php $acc_lob_ch_cnt = count($lob->channels); ?>
+                              @foreach ($lob->channel as $key => $channels)
+                                 <?php $acc_lob_ch_cnt = count($lob->channel); ?>
                               <td>
                                   {{ $channels->channel_name }}
                               </td>
@@ -159,8 +156,8 @@
                               <th class="bg_light_th">Country</th>
                               @foreach ($account_detail as $key => $account)
                               @foreach($account['lobs'] as $key2 => $lob)
-                              @foreach ($lob->channels as $key => $channels)
-                                 <?php $acc_lob_ch_cnt = count($lob->channels); ?>
+                              @foreach ($lob->channel as $key => $channels)
+                                 <?php $acc_lob_ch_cnt = count($lob->channel); ?>
                                  <td>
                                     @if(isset($channels['countrydata']) && !empty($channels['countrydata']))
                                        @foreach($channels['countrydata'] as $cntry)
@@ -179,8 +176,8 @@
                               <th class="bg_light_th">City Name</th>
                               @foreach ($account_detail as $key => $account)
                               @foreach($account['lobs'] as $key2 => $lob)
-                              @foreach ($lob->channels as $key => $channels)
-                                 <?php $acc_lob_ch_cnt = count($lob->channels); ?>
+                              @foreach ($lob->channel as $key => $channels)
+                                 <?php $acc_lob_ch_cnt = count($lob->channel); ?>
                                  <td>
                                     @if(isset($channels['citydata']) && !empty($channels['citydata']))
                                        @foreach($channels['countrydata'] as $ct)
@@ -199,8 +196,8 @@
                               <th class="bg_light_th">Site Name</th>
                               @foreach ($account_detail as $key => $account)
                               @foreach($account['lobs'] as $key2 => $lob)
-                              @foreach ($lob->channels as $key => $channels)
-                                 <?php $acc_lob_ch_cnt = count($lob->channels); ?>
+                              @foreach ($lob->channel as $key => $channels)
+                                 <?php $acc_lob_ch_cnt = count($lob->channel); ?>
                               <td>
                                   {{ $channels->site_name }}
                               </td>
@@ -215,8 +212,8 @@
                               <th class="bg_light_th">FTEs</th>
                               @foreach ($account_detail as $key => $account)
                               @foreach($account['lobs'] as $key2 => $lob)
-                              @foreach ($lob->channels as $key => $channels)
-                                 <?php $acc_lob_ch_cnt = count($lob->channels); ?>
+                              @foreach ($lob->channel as $key => $channels)
+                                 <?php $acc_lob_ch_cnt = count($lob->channel); ?>
                               <td>
                                   {{ $channels->fte }}
                               </td>
@@ -233,7 +230,7 @@
                               <?php $acc_lob_ch_cnt=0; ?>
                               @foreach ($account_detail as $key => $account)
                               @foreach($account['lobs'] as $key2 => $lob)
-                              @foreach ($lob->channels as $key => $channels)
+                              @foreach ($lob->channel as $key => $channels)
                                  <?php ++$acc_lob_ch_cnt; ?>
                               @endforeach
                               @endforeach
@@ -247,11 +244,12 @@
                               <th>Billing Method</th>
                               @foreach ($account_detail as $key => $account)
                               @foreach($account['lobs'] as $key2 => $lob)
-                              @foreach ($lob->channels as $key => $channels)
+                              @foreach ($lob->channel as $key => $channels)
                               <td>
-                              @foreach($channels['ChannelDatas'] as $chd=>$chdata)
+                              <!-- @foreach($channels['ChannelDatas'] as $chd=>$chdata)
                                     {{ $billingType[$chdata->monthly_ftp] }}
-                              @endforeach
+                              @endforeach -->
+                             
                               </td>
                               @endforeach
                               @endforeach
@@ -264,7 +262,7 @@
                               <th>Billing Cap</th>
                               @foreach ($account_detail as $key => $account)
                               @foreach($account['lobs'] as $key2 => $lob)
-                              @foreach ($lob->channels as $key => $channels)
+                              @foreach ($lob->channel as $key => $channels)
                               <td>
                               @foreach($channels['ChannelDatas'] as $chd=>$chdata)
                                     {{ $billingCap[$chdata->billing_cap] }}
@@ -281,7 +279,7 @@
                               <th>Value for selected Billing Cap</th>
                               @foreach ($account_detail as $key => $account)
                               @foreach($account['lobs'] as $key2 => $lob)
-                              @foreach ($lob->channels as $key => $channels)
+                              @foreach ($lob->channel as $key => $channels)
                               <td>
                               
                               </td>
@@ -296,7 +294,7 @@
                               <th>Min Billing Guarantee</th>
                               @foreach ($account_detail as $key => $account)
                                  @foreach($account['lobs'] as $key2 => $lob)
-                                    @foreach ($lob->channels as $key => $channels)
+                                    @foreach ($lob->channel as $key => $channels)
                                     <td>
                                        @foreach($channels['ChannelDatas'] as $chd=>$chdata)
                                              {{ $minBillingGuarantee[$chdata->billing_guarantee] }}
@@ -313,7 +311,7 @@
                               <th>Min Billing Reference</th>
                               @foreach ($account_detail as $key => $account)
                                  @foreach($account['lobs'] as $key2 => $lob)
-                                    @foreach ($lob->channels as $key => $channels)
+                                    @foreach ($lob->channel as $key => $channels)
                                     <td>
                                        @foreach($channels['ChannelDatas'] as $chd=>$chdata)
                                              {{ $minBillingReference[$chdata->min_bill_ref] }}
@@ -330,7 +328,7 @@
                               <th>Max Billable Threshold</th>
                               @foreach ($account_detail as $key => $account)
                                  @foreach($account['lobs'] as $key2 => $lob)
-                                    @foreach ($lob->channels as $key => $channels)
+                                    @foreach ($lob->channel as $key => $channels)
                                     <td>
                                        @foreach($channels['ChannelDatas'] as $chd=>$chdata)
                                              {{ $maxBillingThres[$chdata->max_bill_thres] }}
@@ -347,7 +345,7 @@
                               <th>Min Billing Reference</th>
                               @foreach ($account_detail as $key => $account)
                                  @foreach($account['lobs'] as $key2 => $lob)
-                                    @foreach ($lob->channels as $key => $channels)
+                                    @foreach ($lob->channel as $key => $channels)
                                     <td>
                                        @foreach($channels['ChannelDatas'] as $chd=>$chdata)
                                              {{ $maxBillRef[$chdata->max_bill_ref] }}
@@ -366,7 +364,7 @@
                               <?php $acc_lob_ch_cnt=0; ?>
                               @foreach ($account_detail as $key => $account)
                                  @foreach($account['lobs'] as $key2 => $lob)
-                                    @foreach ($lob->channels as $key => $channels)
+                                    @foreach ($lob->channel as $key => $channels)
                                        <?php ++$acc_lob_ch_cnt; ?>
                                     @endforeach
                                  @endforeach
@@ -380,7 +378,7 @@
                               <th>SOW Max Staffing Req?</th>
                               @foreach ($account_detail as $key => $account)
                                  @foreach($account['lobs'] as $key2 => $lob)
-                                    @foreach ($lob->channels as $key => $channels)
+                                    @foreach ($lob->channel as $key => $channels)
                                     <td>
                                        @foreach($channels['ChannelDatas'] as $chd=>$chdata)
                                              {{ $maxBillingThres[$chdata->swo] }}
@@ -397,10 +395,12 @@
                               <th>Service KPI - 1 (If applicable)</th>
                               @foreach ($account_detail as $key => $account)
                                  @foreach($account['lobs'] as $key2 => $lob)
-                                    @foreach ($lob->channels as $key => $channels)
+                                    @foreach ($lob->channel as $key => $channels)
                                     <td>
-                                       @foreach($channels['ChannelDatas'] as $chd=>$chdata)
+                                       @foreach($channels['ChannelDatas'] as $chd=>$chdata) dd($channels['ChannelDatas']);
+                                          @if(isset($chdata->kpi1_app) && $chdata->kpi1_app != null)
                                              {{ $serviceApi[$chdata->kpi1_app] }}
+                                          @endif
                                        @endforeach
                                     </td>
                                     @endforeach
@@ -414,7 +414,7 @@
                               <th>Service KPI - 1 - Target (%/Sec)</th>
                               @foreach ($account_detail as $key => $account)
                                  @foreach($account['lobs'] as $key2 => $lob)
-                                    @foreach ($lob->channels as $key => $channels)
+                                    @foreach ($lob->channel as $key => $channels)
                                     <td>
                                        @foreach($channels['ChannelDatas'] as $chd=>$chdata)
                                              {{ $chdata->kpi1_target }}
@@ -428,10 +428,10 @@
 
                            <!-- Service KPI - 2 (If applicable) -->
                            <tr>
-                              <th>Service KPI - 1 (If applicable)</th>
+                              <th>Service KPI - 2 (If applicable)</th>
                               @foreach ($account_detail as $key => $account)
                                  @foreach($account['lobs'] as $key2 => $lob)
-                                    @foreach ($lob->channels as $key => $channels)
+                                    @foreach ($lob->channel as $key => $channels)
                                     <td>
                                        @foreach($channels['ChannelDatas'] as $chd=>$chdata)
                                              {{ $serviceApi[$chdata->kpi2_app] }}
@@ -448,7 +448,7 @@
                               <th>Service KPI - 2 - Target (%/Sec)</th>
                               @foreach ($account_detail as $key => $account)
                                  @foreach($account['lobs'] as $key2 => $lob)
-                                    @foreach ($lob->channels as $key => $channels)
+                                    @foreach ($lob->channel as $key => $channels)
                                     <td>
                                        @foreach($channels['ChannelDatas'] as $chd=>$chdata)
                                              {{ $chdata->kpi2_target }}
@@ -467,7 +467,7 @@
                               <?php $acc_lob_ch_cnt=0; ?>
                               @foreach ($account_detail as $key => $account)
                                  @foreach($account['lobs'] as $key2 => $lob)
-                                    @foreach ($lob->channels as $key => $channels)
+                                    @foreach ($lob->channel as $key => $channels)
                                        <?php ++$acc_lob_ch_cnt; ?>
                                     @endforeach
                                  @endforeach
@@ -481,7 +481,7 @@
                               <th>Classroom Training Duration (Weeks)</th>
                               @foreach ($account_detail as $key => $account)
                                  @foreach($account['lobs'] as $key2 => $lob)
-                                    @foreach ($lob->channels as $key => $channels)
+                                    @foreach ($lob->channel as $key => $channels)
                                     <td>
                                        @foreach($channels['ChannelDatas'] as $chd=>$chdata)
                                              {{ $chdata->class_duration }}
@@ -498,7 +498,7 @@
                               <th>Nesting / OJT Duration (Weeks)</th>
                               @foreach ($account_detail as $key => $account)
                                  @foreach($account['lobs'] as $key2 => $lob)
-                                    @foreach ($lob->channels as $key => $channels)
+                                    @foreach ($lob->channel as $key => $channels)
                                     <td>
                                        @foreach($channels['ChannelDatas'] as $chd=>$chdata)
                                              {{ $chdata->nesting_duration }}
@@ -517,7 +517,7 @@
                               <?php $acc_lob_ch_cnt=0; ?>
                               @foreach ($account_detail as $key => $account)
                                  @foreach($account['lobs'] as $key2 => $lob)
-                                    @foreach ($lob->channels as $key => $channels)
+                                    @foreach ($lob->channel as $key => $channels)
                                        <?php ++$acc_lob_ch_cnt; ?>
                                     @endforeach
                                  @endforeach
@@ -531,7 +531,7 @@
                               <th>Weekday Start Time</th>
                               @foreach ($account_detail as $key => $account)
                                  @foreach($account['lobs'] as $key2 => $lob)
-                                    @foreach ($lob->channels as $key => $channels)
+                                    @foreach ($lob->channel as $key => $channels)
                                     <td>
                                        @foreach($channels['ChannelDatas'] as $chd=>$chdata)
                                              {{ $chdata->weekday_start_time }}
@@ -548,7 +548,7 @@
                               <th>Weekday End Time</th>
                               @foreach ($account_detail as $key => $account)
                                  @foreach($account['lobs'] as $key2 => $lob)
-                                    @foreach ($lob->channels as $key => $channels)
+                                    @foreach ($lob->channel as $key => $channels)
                                     <td>
                                        @foreach($channels['ChannelDatas'] as $chd=>$chdata)
                                              {{ $chdata->weekday_end_time }}
@@ -565,7 +565,7 @@
                               <th>Sat Start Time</th>
                               @foreach ($account_detail as $key => $account)
                                  @foreach($account['lobs'] as $key2 => $lob)
-                                    @foreach ($lob->channels as $key => $channels)
+                                    @foreach ($lob->channel as $key => $channels)
                                     <td>
                                        @foreach($channels['ChannelDatas'] as $chd=>$chdata)
                                              {{ $chdata->sat_start_time }}
@@ -582,7 +582,7 @@
                               <th>Sat End Time</th>
                               @foreach ($account_detail as $key => $account)
                                  @foreach($account['lobs'] as $key2 => $lob)
-                                    @foreach ($lob->channels as $key => $channels)
+                                    @foreach ($lob->channel as $key => $channels)
                                     <td>
                                        @foreach($channels['ChannelDatas'] as $chd=>$chdata)
                                              {{ $chdata->sat_end_time }}
@@ -599,7 +599,7 @@
                               <th>Sun Start Time</th>
                               @foreach ($account_detail as $key => $account)
                                  @foreach($account['lobs'] as $key2 => $lob)
-                                    @foreach ($lob->channels as $key => $channels)
+                                    @foreach ($lob->channel as $key => $channels)
                                     <td>
                                        @foreach($channels['ChannelDatas'] as $chd=>$chdata)
                                              {{ $chdata->sun_start_time }}
@@ -616,7 +616,7 @@
                               <th>Sun End Time</th>
                               @foreach ($account_detail as $key => $account)
                                  @foreach($account['lobs'] as $key2 => $lob)
-                                    @foreach ($lob->channels as $key => $channels)
+                                    @foreach ($lob->channel as $key => $channels)
                                     <td>
                                        @foreach($channels['ChannelDatas'] as $chd=>$chdata)
                                              {{ $chdata->sun_end_time }}
@@ -635,7 +635,7 @@
                               <?php $acc_lob_ch_cnt=0; ?>
                               @foreach ($account_detail as $key => $account)
                                  @foreach($account['lobs'] as $key2 => $lob)
-                                    @foreach ($lob->channels as $key => $channels)
+                                    @foreach ($lob->channel as $key => $channels)
                                        <?php ++$acc_lob_ch_cnt; ?>
                                     @endforeach
                                  @endforeach
@@ -648,7 +648,7 @@
                               <th>Industry Segment</th>
                               @foreach ($account_detail as $key => $account)
                                  @foreach($account['lobs'] as $key2 => $lob)
-                                    @foreach ($lob->channels as $key => $channels)
+                                    @foreach ($lob->channel as $key => $channels)
                                     <td>
                                      @foreach($channels['ChannelDatas'] as $chd=>$chdata)
                                           @if(isset($chdata->industry_segment) && $chdata->industry_segment != null)
@@ -671,7 +671,7 @@
                               <?php $acc_lob_ch_cnt=0; ?>
                               @foreach ($account_detail as $key => $account)
                                  @foreach($account['lobs'] as $key2 => $lob)
-                                    @foreach ($lob->channels as $key => $channels)
+                                    @foreach ($lob->channel as $key => $channels)
                                        <?php ++$acc_lob_ch_cnt; ?>
                                     @endforeach
                                  @endforeach
@@ -685,7 +685,7 @@
                               <th>Full-Time Employees</th>
                               @foreach ($account_detail as $key => $account)
                                  @foreach($account['lobs'] as $key2 => $lob)
-                                    @foreach ($lob->channels as $key => $channels)
+                                    @foreach ($lob->channel as $key => $channels)
                                     <td>
                                        @foreach($channels['ChannelDatas'] as $chd=>$chdata)
                                              {{ $chdata->full_time_employee }}
@@ -702,7 +702,7 @@
                               <th>Part-Time Employees</th>
                               @foreach ($account_detail as $key => $account)
                                  @foreach($account['lobs'] as $key2 => $lob)
-                                    @foreach ($lob->channels as $key => $channels)
+                                    @foreach ($lob->channel as $key => $channels)
                                     <td>
                                        @foreach($channels['ChannelDatas'] as $chd=>$chdata)
                                              {{ $chdata->part_time_employee }}
@@ -719,7 +719,7 @@
                               <th>Contractual Employees</th>
                               @foreach ($account_detail as $key => $account)
                                  @foreach($account['lobs'] as $key2 => $lob)
-                                    @foreach ($lob->channels as $key => $channels)
+                                    @foreach ($lob->channel as $key => $channels)
                                     <td>
                                        @foreach($channels['ChannelDatas'] as $chd=>$chdata)
                                              {{ $chdata->contract_employee }}
@@ -738,7 +738,7 @@
                               <?php $acc_lob_ch_cnt=0; ?>
                               @foreach ($account_detail as $key => $account)
                                  @foreach($account['lobs'] as $key2 => $lob)
-                                    @foreach ($lob->channels as $key => $channels)
+                                    @foreach ($lob->channel as $key => $channels)
                                        <?php ++$acc_lob_ch_cnt; ?>
                                     @endforeach
                                  @endforeach
@@ -752,7 +752,7 @@
                               <th>Work in Office</th>
                               @foreach ($account_detail as $key => $account)
                                  @foreach($account['lobs'] as $key2 => $lob)
-                                    @foreach ($lob->channels as $key => $channels)
+                                    @foreach ($lob->channel as $key => $channels)
                                     <td>
                                        @foreach($channels['ChannelDatas'] as $chd=>$chdata)
                                              {{ $chdata->work_office }}
@@ -769,7 +769,7 @@
                               <th>Work from Home</th>
                               @foreach ($account_detail as $key => $account)
                                  @foreach($account['lobs'] as $key2 => $lob)
-                                    @foreach ($lob->channels as $key => $channels)
+                                    @foreach ($lob->channel as $key => $channels)
                                     <td>
                                        @foreach($channels['ChannelDatas'] as $chd=>$chdata)
                                              {{ $chdata->work_home }}
@@ -788,7 +788,7 @@
                               <?php $acc_lob_ch_cnt=0; ?>
                               @foreach ($account_detail as $key => $account)
                                  @foreach($account['lobs'] as $key2 => $lob)
-                                    @foreach ($lob->channels as $key => $channels)
+                                    @foreach ($lob->channel as $key => $channels)
                                        <?php ++$acc_lob_ch_cnt; ?>
                                     @endforeach
                                  @endforeach
@@ -802,7 +802,7 @@
                               <th>ACD Name</th>
                               @foreach ($account_detail as $key => $account)
                                  @foreach($account['lobs'] as $key2 => $lob)
-                                    @foreach ($lob->channels as $key => $channels)
+                                    @foreach ($lob->channel as $key => $channels)
                                     <td>
                                        @foreach($channels['ChannelDatas'] as $chd=>$chdata)
                                           @if(isset($chdata->acd_name) && $chdata->acd_name != null)
@@ -823,7 +823,7 @@
                               <th>WFM Tool</th>
                               @foreach ($account_detail as $key => $account)
                                  @foreach($account['lobs'] as $key2 => $lob)
-                                    @foreach ($lob->channels as $key => $channels)
+                                    @foreach ($lob->channel as $key => $channels)
                                     <td>
                                        @foreach($channels['ChannelDatas'] as $chdata)
                                        @if(isset($chdata->wfm_tool) && $chdata->wfm_tool != null)
@@ -844,7 +844,7 @@
                               <th>Back office Tool</th>
                               @foreach ($account_detail as $key => $account)
                                  @foreach($account['lobs'] as $key2 => $lob)
-                                    @foreach ($lob->channels as $key => $channels)
+                                    @foreach ($lob->channel as $key => $channels)
                                     <td>
                                        @foreach($channels['ChannelDatas'] as $chd=>$chdata)
                                           @if(isset($chdata->back_tool))
@@ -880,14 +880,14 @@
                                  $acc_lob_cnt += count($account_detail[$key]['lobs']);
                               ?>
                               @foreach($account['lobs'] as $key2 => $lob)
-                                 <?php $ch = count($lob->channels); ?>
-                                 @foreach ($lob->channels as $key => $channels)
-                                 <!-- {{ $acc_lob_ch_cnt  }} -->
-                              <td colspan="{{$acc_lob_ch_cnt}}" style="text-align:center; justify-content:center;">
-                                  {{ $account->account_name }}
-                              </td>
+                                 <?php $ch = count($lob->channel); ?>
+                                 @foreach ($lob->channel as $key => $channels)
+                                 <?php ++$acc_lob_ch_cnt;?>
                               @endforeach
                                  @endforeach
+                                 <td colspan="{{$acc_lob_ch_cnt}}" style="text-align:center; justify-content:center;">
+                               {{ $account->account_name }}
+                              </td>
                               @endforeach
                            </tr>
 
@@ -900,7 +900,7 @@
                                  $acc_lob_cnt += count($account_detail[$key]['lobs']);
                               ?>
                               @foreach($account['lobs'] as $key2 => $lob)
-                                 <?php $acc_lob_ch_cnt = count($lob->channels); ?>
+                                 <?php $acc_lob_ch_cnt = count($lob->channel); ?>
                               <td colspan="{{$acc_lob_ch_cnt}}" style="text-align:center; justify-content:center;">
                                   {{ $lob->lob_name }}
                               </td>
@@ -914,8 +914,8 @@
                               <th class="bg_light_th">Channels</th>
                               @foreach ($account_detail as $key => $account)
                               @foreach($account['lobs'] as $key2 => $lob)
-                              @foreach ($lob->channels as $key => $channels)
-                                 <?php $acc_lob_ch_cnt = count($lob->channels); ?>
+                              @foreach ($lob->channel as $key => $channels)
+                                 <?php $acc_lob_ch_cnt = count($lob->channel); ?>
                               <td>
                                   {{ $channels->channel_name }}
                               </td>
@@ -930,8 +930,8 @@
                               <th class="bg_light_th">Country</th>
                               @foreach ($account_detail as $key => $account)
                               @foreach($account['lobs'] as $key2 => $lob)
-                              @foreach ($lob->channels as $key => $channels)
-                                 <?php $acc_lob_ch_cnt = count($lob->channels); ?>
+                              @foreach ($lob->channel as $key => $channels)
+                                 <?php $acc_lob_ch_cnt = count($lob->channel); ?>
                                  <td>
                                        @if(isset($channels['countrydata']) && !empty($channels['countrydata']))
                                           @foreach($channels['countrydata'] as $cntry)
@@ -951,7 +951,7 @@
                               <?php $acc_lob_ch_cnt=0; ?>
                               @foreach ($account_detail as $key => $account)
                                  @foreach($account['lobs'] as $key2 => $lob)
-                                    @foreach ($lob->channels as $key => $channels)
+                                    @foreach ($lob->channel as $key => $channels)
                                        <?php ++$acc_lob_ch_cnt; ?>
                                     @endforeach
                                  @endforeach
@@ -965,8 +965,8 @@
                               <th>Which Forecasting tool / software package is being utilised?</th>
                               @foreach ($account_detail as $key => $account)
                               @foreach($account['lobs'] as $key2 => $lob)
-                              @foreach ($lob->channels as $key => $channels)
-                                 <?php $acc_lob_ch_cnt = count($lob->channels); ?>
+                              @foreach ($lob->channel as $key => $channels)
+                                 <?php $acc_lob_ch_cnt = count($lob->channel); ?>
                                  <td>
                                     @if(isset($channels['processInfo']))
                                     @foreach($channels['processInfo'] as $proInfo)
@@ -987,8 +987,8 @@
                               <th>Which Forecasting model is being used?</th>
                               @foreach ($account_detail as $key => $account)
                               @foreach($account['lobs'] as $key2 => $lob)
-                              @foreach ($lob->channels as $key => $channels)
-                                 <?php $acc_lob_ch_cnt = count($lob->channels); ?>
+                              @foreach ($lob->channel as $key => $channels)
+                                 <?php $acc_lob_ch_cnt = count($lob->channel); ?>
                                  <td>
                                     @if(isset($channels['processInfo']))
                                     @foreach($channels['processInfo'] as $proInfo)
@@ -1009,8 +1009,8 @@
                               <th>What are the key input parameters to the model?</th>
                               @foreach ($account_detail as $key => $account)
                               @foreach($account['lobs'] as $key2 => $lob)
-                              @foreach ($lob->channels as $key => $channels)
-                                 <?php $acc_lob_ch_cnt = count($lob->channels); ?>
+                              @foreach ($lob->channel as $key => $channels)
+                                 <?php $acc_lob_ch_cnt = count($lob->channel); ?>
                                  <td>
                                     @if(isset($channels['processInfo']))
                                        @foreach($channels['processInfo'] as $proInfo)
@@ -1031,8 +1031,8 @@
                               <th>How frequently is the model revisited for goodness of fit?</th>
                               @foreach ($account_detail as $key => $account)
                               @foreach($account['lobs'] as $key2 => $lob)
-                              @foreach ($lob->channels as $key => $channels)
-                                 <?php $acc_lob_ch_cnt = count($lob->channels); ?>
+                              @foreach ($lob->channel as $key => $channels)
+                                 <?php $acc_lob_ch_cnt = count($lob->channel); ?>
                                  
                                  <td>
                                     @if(isset($channels['processInfo']))
@@ -1054,8 +1054,8 @@
                               <th>How do you measure the accuracy of your Forecasting model?</th>
                               @foreach ($account_detail as $key => $account)
                               @foreach($account['lobs'] as $key2 => $lob)
-                              @foreach ($lob->channels as $key => $channels)
-                                 <?php $acc_lob_ch_cnt = count($lob->channels); ?>
+                              @foreach ($lob->channel as $key => $channels)
+                                 <?php $acc_lob_ch_cnt = count($lob->channel); ?>
                                  <td>
                                     @if(isset($channels['processInfo']))
                                        @foreach($channels['processInfo'] as $proInfo)
@@ -1078,7 +1078,7 @@
                               <?php $acc_lob_ch_cnt=0; ?>
                               @foreach ($account_detail as $key => $account)
                                  @foreach($account['lobs'] as $key2 => $lob)
-                                    @foreach ($lob->channels as $key => $channels)
+                                    @foreach ($lob->channel as $key => $channels)
                                        <?php ++$acc_lob_ch_cnt; ?>
                                     @endforeach
                                  @endforeach
@@ -1093,7 +1093,7 @@
                               <?php $acc_lob_ch_cnt=0; ?>
                               @foreach ($account_detail as $key => $account)
                                  @foreach($account['lobs'] as $key2 => $lob)
-                                    @foreach ($lob->channels as $key => $channels)
+                                    @foreach ($lob->channel as $key => $channels)
                                        <?php ++$acc_lob_ch_cnt; ?>
                                     @endforeach
                                  @endforeach
@@ -1107,8 +1107,8 @@
                               <th>Who provides the Forecast / Lock which forms the base of Staff Planning?</th>
                               @foreach ($account_detail as $key => $account)
                               @foreach($account['lobs'] as $key2 => $lob)
-                              @foreach ($lob->channels as $key => $channels)
-                                 <?php $acc_lob_ch_cnt = count($lob->channels); ?>
+                              @foreach ($lob->channel as $key => $channels)
+                                 <?php $acc_lob_ch_cnt = count($lob->channel); ?>
                                  <td>
                                     @if(isset($channels['processInfo']))
                                        @foreach($channels['processInfo'] as $proInfo)
@@ -1129,8 +1129,8 @@
                               <th>What is your staff locking model?</th>
                               @foreach ($account_detail as $key => $account)
                               @foreach($account['lobs'] as $key2 => $lob)
-                              @foreach ($lob->channels as $key => $channels)
-                                 <?php $acc_lob_ch_cnt = count($lob->channels); ?>
+                              @foreach ($lob->channel as $key => $channels)
+                                 <?php $acc_lob_ch_cnt = count($lob->channel); ?>
                                  <td>
                                     @if(isset($channels['processInfo']))
                                        @foreach($channels['processInfo'] as $proInfo)
@@ -1151,8 +1151,8 @@
                               <th>Do you generate Internal Forecast?</th>
                               @foreach ($account_detail as $key => $account)
                               @foreach($account['lobs'] as $key2 => $lob)
-                              @foreach ($lob->channels as $key => $channels)
-                                 <?php $acc_lob_ch_cnt = count($lob->channels); ?>
+                              @foreach ($lob->channel as $key => $channels)
+                                 <?php $acc_lob_ch_cnt = count($lob->channel); ?>
                                  <td>
                                  @if(isset($channels['processInfo']))
                                     @foreach($channels['processInfo'] as $proInfo)
@@ -1173,8 +1173,8 @@
                               <th>Which Forecast is used for Staff Planning?</th>
                               @foreach ($account_detail as $key => $account)
                               @foreach($account['lobs'] as $key2 => $lob)
-                              @foreach ($lob->channels as $key => $channels)
-                                 <?php $acc_lob_ch_cnt = count($lob->channels); ?>
+                              @foreach ($lob->channel as $key => $channels)
+                                 <?php $acc_lob_ch_cnt = count($lob->channel); ?>
                                  <td>
                                  @if(isset($channels['processInfo']))
                                     @foreach($channels['processInfo'] as $proInfo)
@@ -1191,13 +1191,13 @@
                            <!--  -->
 
                            <!-- ******************** AHT Details ******************** -->
-                           <!--AHT -->
+                           <!-- AHT -->
                            <tr>
                               <th class="bg_light_th">AHT</th>
                               <?php $acc_lob_ch_cnt=0; ?>
                               @foreach ($account_detail as $key => $account)
                                  @foreach($account['lobs'] as $key2 => $lob)
-                                    @foreach ($lob->channels as $key => $channels)
+                                    @foreach ($lob->channel as $key => $channels)
                                        <?php ++$acc_lob_ch_cnt; ?>
                                     @endforeach
                                  @endforeach
@@ -1211,8 +1211,8 @@
                               <th>What AHT is used for Staff Planning?</th>
                               @foreach ($account_detail as $key => $account)
                               @foreach($account['lobs'] as $key2 => $lob)
-                              @foreach ($lob->channels as $key => $channels)
-                                 <?php $acc_lob_ch_cnt = count($lob->channels); ?>
+                              @foreach ($lob->channel as $key => $channels)
+                                 <?php $acc_lob_ch_cnt = count($lob->channel); ?>
                                  <td>
                                     @if(isset($channels['processInfo']))
                                     @foreach($channels['processInfo'] as $proInfo)
@@ -1233,8 +1233,8 @@
                               <th>How do you calculate New Hire impact on the AHT?</th>
                               @foreach ($account_detail as $key => $account)
                               @foreach($account['lobs'] as $key2 => $lob)
-                              @foreach ($lob->channels as $key => $channels)
-                                 <?php $acc_lob_ch_cnt = count($lob->channels); ?>
+                              @foreach ($lob->channel as $key => $channels)
+                                 <?php $acc_lob_ch_cnt = count($lob->channel); ?>
                                  <td>
                                     @if(isset($channels['processInfo']))
                                     @foreach($channels['processInfo'] as $proInfo)
@@ -1257,7 +1257,7 @@
                               <?php $acc_lob_ch_cnt=0; ?>
                               @foreach ($account_detail as $key => $account)
                                  @foreach($account['lobs'] as $key2 => $lob)
-                                    @foreach ($lob->channels as $key => $channels)
+                                    @foreach ($lob->channel as $key => $channels)
                                        <?php ++$acc_lob_ch_cnt; ?>
                                     @endforeach
                                  @endforeach
@@ -1271,8 +1271,8 @@
                               <th>How do you generate FTE requirements?</th>
                               @foreach ($account_detail as $key => $account)
                               @foreach($account['lobs'] as $key2 => $lob)
-                              @foreach ($lob->channels as $key => $channels)
-                                 <?php $acc_lob_ch_cnt = count($lob->channels); ?>
+                              @foreach ($lob->channel as $key => $channels)
+                                 <?php $acc_lob_ch_cnt = count($lob->channel); ?>
                                  <td>
                                     @if(isset($channels['processInfo']))
                                     @foreach($channels['processInfo'] as $proInfo)
@@ -1295,7 +1295,7 @@
                               <?php $acc_lob_ch_cnt=0; ?>
                               @foreach ($account_detail as $key => $account)
                                  @foreach($account['lobs'] as $key2 => $lob)
-                                    @foreach ($lob->channels as $key => $channels)
+                                    @foreach ($lob->channel as $key => $channels)
                                        <?php ++$acc_lob_ch_cnt; ?>
                                     @endforeach
                                  @endforeach
@@ -1309,8 +1309,8 @@
                               <th>At what level are your In-Office Shrinkages planned?</th>
                               @foreach ($account_detail as $key => $account)
                               @foreach($account['lobs'] as $key2 => $lob)
-                              @foreach ($lob->channels as $key => $channels)
-                                 <?php $acc_lob_ch_cnt = count($lob->channels); ?>
+                              @foreach ($lob->channel as $key => $channels)
+                                 <?php $acc_lob_ch_cnt = count($lob->channel); ?>
                                  <td>
                                     @if(isset($channels['processInfo']))
                                     @foreach($channels['processInfo'] as $proInfo)
@@ -1331,8 +1331,8 @@
                               <th>Do you have set targets for each individual Aux/Activity code?</th>
                               @foreach ($account_detail as $key => $account)
                               @foreach($account['lobs'] as $key2 => $lob)
-                              @foreach ($lob->channels as $key => $channels)
-                                 <?php $acc_lob_ch_cnt = count($lob->channels); ?>
+                              @foreach ($lob->channel as $key => $channels)
+                                 <?php $acc_lob_ch_cnt = count($lob->channel); ?>
                                  <td>
                                     @if(isset($channels['processInfo']))
                                        @foreach($channels['processInfo'] as $proInfo)
@@ -1353,8 +1353,8 @@
                               <th>In-Office shrinkage Forecasts are modeled on (please select the appropriate)</th>
                               @foreach ($account_detail as $key => $account)
                               @foreach($account['lobs'] as $key2 => $lob)
-                              @foreach ($lob->channels as $key => $channels)
-                                 <?php $acc_lob_ch_cnt = count($lob->channels); ?>
+                              @foreach ($lob->channel as $key => $channels)
+                                 <?php $acc_lob_ch_cnt = count($lob->channel); ?>
                                  <td>
                                     @if(isset($channels['processInfo']))
                                        @foreach($channels['processInfo'] as $proInfo)
@@ -1377,7 +1377,7 @@
                               <?php $acc_lob_ch_cnt=0; ?>
                               @foreach ($account_detail as $key => $account)
                                  @foreach($account['lobs'] as $key2 => $lob)
-                                    @foreach ($lob->channels as $key => $channels)
+                                    @foreach ($lob->channel as $key => $channels)
                                        <?php ++$acc_lob_ch_cnt; ?>
                                     @endforeach
                                  @endforeach
@@ -1391,8 +1391,8 @@
                               <th>At what level are your Out-of-Office Shrinkages planned?</th>
                               @foreach ($account_detail as $key => $account)
                               @foreach($account['lobs'] as $key2 => $lob)
-                              @foreach ($lob->channels as $key => $channels)
-                                 <?php $acc_lob_ch_cnt = count($lob->channels); ?>
+                              @foreach ($lob->channel as $key => $channels)
+                                 <?php $acc_lob_ch_cnt = count($lob->channel); ?>
                               <td>
                                  @if(isset($channels['processInfo']))
                                     @foreach($channels['processInfo'] as $proInfo)
@@ -1414,8 +1414,8 @@
                               <th>Vacation Forecasts are modeled on (please select the appropriate)</th>
                               @foreach ($account_detail as $key => $account)
                               @foreach($account['lobs'] as $key2 => $lob)
-                              @foreach ($lob->channels as $key => $channels)
-                                 <?php $acc_lob_ch_cnt = count($lob->channels); ?>
+                              @foreach ($lob->channel as $key => $channels)
+                                 <?php $acc_lob_ch_cnt = count($lob->channel); ?>
                               <td>
                                  @if(isset($channels['processInfo']))
                                     @foreach($channels['processInfo'] as $proInfo)
@@ -1436,8 +1436,8 @@
                               <th>Absenteeism Forecasts are modeled on (please select the appropriate)</th>
                               @foreach ($account_detail as $key => $account)
                               @foreach($account['lobs'] as $key2 => $lob)
-                              @foreach ($lob->channels as $key => $channels)
-                                 <?php $acc_lob_ch_cnt = count($lob->channels); ?>
+                              @foreach ($lob->channel as $key => $channels)
+                                 <?php $acc_lob_ch_cnt = count($lob->channel); ?>
                               <td>
                                  @if(isset($channels['processInfo']))
                                     @foreach($channels['processInfo'] as $proInfo)
@@ -1460,7 +1460,7 @@
                               <?php $acc_lob_ch_cnt=0; ?>
                               @foreach ($account_detail as $key => $account)
                                  @foreach($account['lobs'] as $key2 => $lob)
-                                    @foreach ($lob->channels as $key => $channels)
+                                    @foreach ($lob->channel as $key => $channels)
                                        <?php ++$acc_lob_ch_cnt; ?>
                                     @endforeach
                                  @endforeach
@@ -1474,8 +1474,8 @@
                               <th>Is Schedule Inflex considered in Staff planning?</th>
                               @foreach ($account_detail as $key => $account)
                               @foreach($account['lobs'] as $key2 => $lob)
-                              @foreach ($lob->channels as $key => $channels)
-                                 <?php $acc_lob_ch_cnt = count($lob->channels); ?>
+                              @foreach ($lob->channel as $key => $channels)
+                                 <?php $acc_lob_ch_cnt = count($lob->channel); ?>
                               <td>
                                  @if(isset($channels['processInfo']))
                                     @foreach($channels['processInfo'] as $proInfo)
@@ -1496,8 +1496,8 @@
                               <th>How is the Schedule Inflex estimated / calculated?</th>
                               @foreach ($account_detail as $key => $account)
                               @foreach($account['lobs'] as $key2 => $lob)
-                              @foreach ($lob->channels as $key => $channels)
-                                 <?php $acc_lob_ch_cnt = count($lob->channels); ?>
+                              @foreach ($lob->channel as $key => $channels)
+                                 <?php $acc_lob_ch_cnt = count($lob->channel); ?>
                               <td>
                                  @if(isset($channels['processInfo']))
                                     @foreach($channels['processInfo'] as $proInfo)
@@ -1520,7 +1520,7 @@
                               <?php $acc_lob_ch_cnt=0; ?>
                               @foreach ($account_detail as $key => $account)
                                  @foreach($account['lobs'] as $key2 => $lob)
-                                    @foreach ($lob->channels as $key => $channels)
+                                    @foreach ($lob->channel as $key => $channel)
                                        <?php ++$acc_lob_ch_cnt; ?>
                                     @endforeach
                                  @endforeach
@@ -1534,8 +1534,8 @@
                               <th>How do you factor attrition in your staff plan?</th>
                               @foreach ($account_detail as $key => $account)
                               @foreach($account['lobs'] as $key2 => $lob)
-                              @foreach ($lob->channels as $key => $channels)
-                                 <?php $acc_lob_ch_cnt = count($lob->channels); ?>
+                              @foreach ($lob->channel as $key => $channels)
+                                 <?php $acc_lob_ch_cnt = count($lob->channel); ?>
                               <td>
                                  @if(isset($channels['processInfo']))
                                     @foreach($channels['processInfo'] as $proInfo)
@@ -1556,8 +1556,8 @@
                               <th>Do you plan for Involuntary Attrition as a separate line item? (BQM, Promotions, Transfers etc.)</th>
                               @foreach ($account_detail as $key => $account)
                               @foreach($account['lobs'] as $key2 => $lob)
-                              @foreach ($lob->channels as $key => $channels)
-                                 <?php $acc_lob_ch_cnt = count($lob->channels); ?>
+                              @foreach ($lob->channel as $key => $channels)
+                                 <?php $acc_lob_ch_cnt = count($lob->channel); ?>
                               <td>
                                  @if(isset($channels['processInfo']))
                                     @foreach($channels['processInfo'] as $proInfo)
@@ -1580,7 +1580,7 @@
                               <?php $acc_lob_ch_cnt=0; ?>
                               @foreach ($account_detail as $key => $account)
                                  @foreach($account['lobs'] as $key2 => $lob)
-                                    @foreach ($lob->channels as $key => $channels)
+                                    @foreach ($lob->channel as $key => $channels)
                                        <?php ++$acc_lob_ch_cnt; ?>
                                     @endforeach
                                  @endforeach
@@ -1594,8 +1594,8 @@
                               <th>Do you have Inter-departmental Staff planning discussions?</th>
                               @foreach ($account_detail as $key => $account)
                               @foreach($account['lobs'] as $key2 => $lob)
-                              @foreach ($lob->channels as $key => $channels)
-                                 <?php $acc_lob_ch_cnt = count($lob->channels); ?>
+                              @foreach ($lob->channel as $key => $channels)
+                                 <?php $acc_lob_ch_cnt = count($lob->channel); ?>
                               <td>
                                  @if(isset($channels['processInfo']))
                                     @foreach($channels['processInfo'] as $proInfo)
@@ -1616,8 +1616,8 @@
                               <th>What is the frequency?</th>
                               @foreach ($account_detail as $key => $account)
                               @foreach($account['lobs'] as $key2 => $lob)
-                              @foreach ($lob->channels as $key => $channels)
-                                 <?php $acc_lob_ch_cnt = count($lob->channels); ?>
+                              @foreach ($lob->channel as $key => $channels)
+                                 <?php $acc_lob_ch_cnt = count($lob->channel); ?>
                               <td>
                                  @if(isset($channels['processInfo']))
                                     @foreach($channels['processInfo'] as $proInfo)
@@ -1639,7 +1639,7 @@
                               <?php $acc_lob_ch_cnt=0; ?>
                               @foreach ($account_detail as $key => $account)
                                  @foreach($account['lobs'] as $key2 => $lob)
-                                    @foreach ($lob->channels as $key => $channels)
+                                    @foreach ($lob->channel as $key => $channels)
                                        <?php ++$acc_lob_ch_cnt; ?>
                                     @endforeach
                                  @endforeach
@@ -1653,8 +1653,8 @@
                               <th>Staffing Plan (Validation & Signing off key assumptions such as AHT, Shrinkage etc.</th>
                               @foreach ($account_detail as $key => $account)
                               @foreach($account['lobs'] as $key2 => $lob)
-                              @foreach ($lob->channels as $key => $channels)
-                                 <?php $acc_lob_ch_cnt = count($lob->channels); ?>
+                              @foreach ($lob->channel as $key => $channels)
+                                 <?php $acc_lob_ch_cnt = count($lob->channel); ?>
                               <td>
                                  @if(isset($channels['processInfo']))
                                     @foreach($channels['processInfo'] as $proInfo)
@@ -1675,8 +1675,8 @@
                               <th>Adding Batches</th>
                               @foreach ($account_detail as $key => $account)
                               @foreach($account['lobs'] as $key2 => $lob)
-                              @foreach ($lob->channels as $key => $channels)
-                                 <?php $acc_lob_ch_cnt = count($lob->channels); ?>
+                              @foreach ($lob->channel as $key => $channels)
+                                 <?php $acc_lob_ch_cnt = count($lob->channel); ?>
                               <td>
                                  @if(isset($channels['processInfo']))
                                     @foreach($channels['processInfo'] as $proInfo)
@@ -1697,8 +1697,8 @@
                               <th>Removing Batches</th>
                               @foreach ($account_detail as $key => $account)
                               @foreach($account['lobs'] as $key2 => $lob)
-                              @foreach ($lob->channels as $key => $channels)
-                                 <?php $acc_lob_ch_cnt = count($lob->channels); ?>
+                              @foreach ($lob->channel as $key => $channels)
+                                 <?php $acc_lob_ch_cnt = count($lob->channel); ?>
                               <td>
                                  @if(isset($channels['processInfo']))
                                     @foreach($channels['processInfo'] as $proInfo)
@@ -1719,8 +1719,8 @@
                               <th>Cross Skilling</th>
                               @foreach ($account_detail as $key => $account)
                               @foreach($account['lobs'] as $key2 => $lob)
-                              @foreach ($lob->channels as $key => $channels)
-                                 <?php $acc_lob_ch_cnt = count($lob->channels); ?>
+                              @foreach ($lob->channel as $key => $channels)
+                                 <?php $acc_lob_ch_cnt = count($lob->channel); ?>
                               <td>
                                  @if(isset($channels['processInfo']))
                                     @foreach($channels['processInfo'] as $proInfo)
@@ -1741,8 +1741,8 @@
                               <th>Is there a client dependency for hiring batches?</th>
                               @foreach ($account_detail as $key => $account)
                               @foreach($account['lobs'] as $key2 => $lob)
-                              @foreach ($lob->channels as $key => $channels)
-                                 <?php $acc_lob_ch_cnt = count($lob->channels); ?>
+                              @foreach ($lob->channel as $key => $channels)
+                                 <?php $acc_lob_ch_cnt = count($lob->channel); ?>
                               <td>
                                  @if(isset($channels['processInfo']))
                                     @foreach($channels['processInfo'] as $proInfo)
@@ -1763,8 +1763,8 @@
                               <th>Do you have a calibration calls with the Recruitment team</th>
                               @foreach ($account_detail as $key => $account)
                               @foreach($account['lobs'] as $key2 => $lob)
-                              @foreach ($lob->channels as $key => $channels)
-                                 <?php $acc_lob_ch_cnt = count($lob->channels); ?>
+                              @foreach ($lob->channel as $key => $channels)
+                                 <?php $acc_lob_ch_cnt = count($lob->channel); ?>
                               <td>
                                  @if(isset($channels['processInfo']))
                                     @foreach($channels['processInfo'] as $proInfo)
@@ -1785,8 +1785,8 @@
                               <th>If Yes – Weekly or Monthly</th>
                               @foreach ($account_detail as $key => $account)
                               @foreach($account['lobs'] as $key2 => $lob)
-                              @foreach ($lob->channels as $key => $channels)
-                                 <?php $acc_lob_ch_cnt = count($lob->channels); ?>
+                              @foreach ($lob->channel as $key => $channels)
+                                 <?php $acc_lob_ch_cnt = count($lob->channel); ?>
                               <td>
                                  @if(isset($channels['processInfo']))
                                     @foreach($channels['processInfo'] as $proInfo)
@@ -1810,7 +1810,7 @@
                               <?php $acc_lob_ch_cnt=0; ?>
                               @foreach ($account_detail as $key => $account)
                                  @foreach($account['lobs'] as $key2 => $lob)
-                                    @foreach ($lob->channels as $key => $channels)
+                                    @foreach ($lob->channel as $key => $channels)
                                        <?php ++$acc_lob_ch_cnt; ?>
                                     @endforeach
                                  @endforeach
@@ -1824,8 +1824,8 @@
                               <th>Do you do Call Curve Analysis before deciding the Schedule Pattern?</th>
                               @foreach ($account_detail as $key => $account)
                               @foreach($account['lobs'] as $key2 => $lob)
-                              @foreach ($lob->channels as $key => $channels)
-                                 <?php $acc_lob_ch_cnt = count($lob->channels); ?>
+                              @foreach ($lob->channel as $key => $channels)
+                                 <?php $acc_lob_ch_cnt = count($lob->channel); ?>
                               <td>
                                  @if(isset($channels['processInfo']))
                                     @foreach($channels['processInfo'] as $proInfo)
@@ -1846,8 +1846,8 @@
                               <th>Do you do Call Curve Analysis before deciding the Schedule Pattern?</th>
                               @foreach ($account_detail as $key => $account)
                               @foreach($account['lobs'] as $key2 => $lob)
-                              @foreach ($lob->channels as $key => $channels)
-                                 <?php $acc_lob_ch_cnt = count($lob->channels); ?>
+                              @foreach ($lob->channel as $key => $channels)
+                                 <?php $acc_lob_ch_cnt = count($lob->channel); ?>
                               <td>
                                  @if(isset($channels['processInfo']))
                                     @foreach($channels['processInfo'] as $proInfo)
@@ -1868,8 +1868,8 @@
                               <th>What is the frequency of the above?</th>
                               @foreach ($account_detail as $key => $account)
                               @foreach($account['lobs'] as $key2 => $lob)
-                              @foreach ($lob->channels as $key => $channels)
-                                 <?php $acc_lob_ch_cnt = count($lob->channels); ?>
+                              @foreach ($lob->channel as $key => $channels)
+                                 <?php $acc_lob_ch_cnt = count($lob->channel); ?>
                               <td>
                                  @if(isset($channels['processInfo']))
                                     @foreach($channels['processInfo'] as $proInfo)
@@ -1890,8 +1890,8 @@
                               <th>How do you create interval level Volume and AHT requirements?</th>
                               @foreach ($account_detail as $key => $account)
                               @foreach($account['lobs'] as $key2 => $lob)
-                              @foreach ($lob->channels as $key => $channels)
-                                 <?php $acc_lob_ch_cnt = count($lob->channels); ?>
+                              @foreach ($lob->channel as $key => $channels)
+                                 <?php $acc_lob_ch_cnt = count($lob->channel); ?>
                               <td>
                                  @if(isset($channels['processInfo']))
                                     @foreach($channels['processInfo'] as $proInfo)
@@ -1912,8 +1912,8 @@
                               <th>How do you manage the Headcount reconciliation process?</th>
                               @foreach ($account_detail as $key => $account)
                               @foreach($account['lobs'] as $key2 => $lob)
-                              @foreach ($lob->channels as $key => $channels)
-                                 <?php $acc_lob_ch_cnt = count($lob->channels); ?>
+                              @foreach ($lob->channel as $key => $channels)
+                                 <?php $acc_lob_ch_cnt = count($lob->channel); ?>
                               <td>
                                  @if(isset($channels['processInfo']))
                                     @foreach($channels['processInfo'] as $proInfo)
@@ -1934,8 +1934,8 @@
                               <th>Do you run Manpower Dimensionioning exercise frequently to arrive at optimal HC mix (FT/PT/Split/Flexi?</th>
                               @foreach ($account_detail as $key => $account)
                               @foreach($account['lobs'] as $key2 => $lob)
-                              @foreach ($lob->channels as $key => $channels)
-                                 <?php $acc_lob_ch_cnt = count($lob->channels); ?>
+                              @foreach ($lob->channel as $key => $channels)
+                                 <?php $acc_lob_ch_cnt = count($lob->channel); ?>
                               <td>
                                  @if(isset($channels['processInfo']))
                                     @foreach($channels['processInfo'] as $proInfo)
@@ -1956,8 +1956,8 @@
                               <th>What is the frequency of the above?</th>
                               @foreach ($account_detail as $key => $account)
                               @foreach($account['lobs'] as $key2 => $lob)
-                              @foreach ($lob->channels as $key => $channels)
-                                 <?php $acc_lob_ch_cnt = count($lob->channels); ?>
+                              @foreach ($lob->channel as $key => $channels)
+                                 <?php $acc_lob_ch_cnt = count($lob->channel); ?>
                               <td>
                                  @if(isset($channels['processInfo']))
                                     @foreach($channels['processInfo'] as $proInfo)
@@ -1978,8 +1978,8 @@
                               <th>Do you run & test different Schedule Patterns to identify best fit?</th>
                               @foreach ($account_detail as $key => $account)
                               @foreach($account['lobs'] as $key2 => $lob)
-                              @foreach ($lob->channels as $key => $channels)
-                                 <?php $acc_lob_ch_cnt = count($lob->channels); ?>
+                              @foreach ($lob->channel as $key => $channels)
+                                 <?php $acc_lob_ch_cnt = count($lob->channel); ?>
                               <td>
                                  @if(isset($channels['processInfo']))
                                     @foreach($channels['processInfo'] as $proInfo)
@@ -2000,8 +2000,8 @@
                               <th>What is the frequency of the above?</th>
                               @foreach ($account_detail as $key => $account)
                               @foreach($account['lobs'] as $key2 => $lob)
-                              @foreach ($lob->channels as $key => $channels)
-                                 <?php $acc_lob_ch_cnt = count($lob->channels); ?>
+                              @foreach ($lob->channel as $key => $channels)
+                                 <?php $acc_lob_ch_cnt = count($lob->channel); ?>
                               <td>
                                  @if(isset($channels['processInfo']))
                                     @foreach($channels['processInfo'] as $proInfo)
@@ -2022,8 +2022,8 @@
                               <th>Do you plot all In-office shrinkages in your Schedules at Interval Level? (Coaching, Team Meeting, Business Updates etc.)</th>
                               @foreach ($account_detail as $key => $account)
                               @foreach($account['lobs'] as $key2 => $lob)
-                              @foreach ($lob->channels as $key => $channels)
-                                 <?php $acc_lob_ch_cnt = count($lob->channels); ?>
+                              @foreach ($lob->channel as $key => $channels)
+                                 <?php $acc_lob_ch_cnt = count($lob->channel); ?>
                               <td>
                                  @if(isset($channels['processInfo']))
                                     @foreach($channels['processInfo'] as $proInfo)
@@ -2044,8 +2044,8 @@
                               <th>Do you plot Out-of-Office shrinkage in your Schedules at Interval Level? (Vacation)</th>
                               @foreach ($account_detail as $key => $account)
                               @foreach($account['lobs'] as $key2 => $lob)
-                              @foreach ($lob->channels as $key => $channels)
-                                 <?php $acc_lob_ch_cnt = count($lob->channels); ?>
+                              @foreach ($lob->channel as $key => $channels)
+                                 <?php $acc_lob_ch_cnt = count($lob->channel); ?>
                               <td>
                                  @if(isset($channels['processInfo']))
                                     @foreach($channels['processInfo'] as $proInfo)
@@ -2066,8 +2066,8 @@
                               <th>Do you review IDP/Schedule deviation prior to schedule release?</th>
                               @foreach ($account_detail as $key => $account)
                               @foreach($account['lobs'] as $key2 => $lob)
-                              @foreach ($lob->channels as $key => $channels)
-                                 <?php $acc_lob_ch_cnt = count($lob->channels); ?>
+                              @foreach ($lob->channel as $key => $channels)
+                                 <?php $acc_lob_ch_cnt = count($lob->channel); ?>
                               <td>
                                  @if(isset($channels['processInfo']))
                                     @foreach($channels['processInfo'] as $proInfo)
@@ -2088,8 +2088,8 @@
                               <th>Do you measure Schedule Efficiency?</th>
                               @foreach ($account_detail as $key => $account)
                               @foreach($account['lobs'] as $key2 => $lob)
-                              @foreach ($lob->channels as $key => $channels)
-                                 <?php $acc_lob_ch_cnt = count($lob->channels); ?>
+                              @foreach ($lob->channel as $key => $channels)
+                                 <?php $acc_lob_ch_cnt = count($lob->channel); ?>
                               <td>
                                  @if(isset($channels['processInfo']))
                                     @foreach($channels['processInfo'] as $proInfo)
@@ -2110,8 +2110,8 @@
                               <th>What is your target for Schedule Efficiency? (Please specify in %)</th>
                               @foreach ($account_detail as $key => $account)
                               @foreach($account['lobs'] as $key2 => $lob)
-                              @foreach ($lob->channels as $key => $channels)
-                                 <?php $acc_lob_ch_cnt = count($lob->channels); ?>
+                              @foreach ($lob->channel as $key => $channels)
+                                 <?php $acc_lob_ch_cnt = count($lob->channel); ?>
                               <td>
                                  @if(isset($channels['processInfo']))
                                     @foreach($channels['processInfo'] as $proInfo)
@@ -2132,8 +2132,8 @@
                               <th>How do you measure the Schedule Efficiency?</th>
                               @foreach ($account_detail as $key => $account)
                               @foreach($account['lobs'] as $key2 => $lob)
-                              @foreach ($lob->channels as $key => $channels)
-                                 <?php $acc_lob_ch_cnt = count($lob->channels); ?>
+                              @foreach ($lob->channel as $key => $channels)
+                                 <?php $acc_lob_ch_cnt = count($lob->channel); ?>
                               <td>
                                  @if(isset($channels['processInfo']))
                                     @foreach($channels['processInfo'] as $proInfo)
@@ -2154,8 +2154,8 @@
                               <th>What is your internal target for Scheduling accuracy? (Requirment to Scheduled - Day/Intervals)</th>
                               @foreach ($account_detail as $key => $account)
                               @foreach($account['lobs'] as $key2 => $lob)
-                              @foreach ($lob->channels as $key => $channels)
-                                 <?php $acc_lob_ch_cnt = count($lob->channels); ?>
+                              @foreach ($lob->channel as $key => $channels)
+                                 <?php $acc_lob_ch_cnt = count($lob->channel); ?>
                               <td>
                                  @if(isset($channels['processInfo']))
                                     @foreach($channels['processInfo'] as $proInfo)
@@ -2176,8 +2176,8 @@
                               <th>How do you measure the Schedule Accuracy?</th>
                               @foreach ($account_detail as $key => $account)
                               @foreach($account['lobs'] as $key2 => $lob)
-                              @foreach ($lob->channels as $key => $channels)
-                                 <?php $acc_lob_ch_cnt = count($lob->channels); ?>
+                              @foreach ($lob->channel as $key => $channels)
+                                 <?php $acc_lob_ch_cnt = count($lob->channel); ?>
                               <td>
                                  @if(isset($channels['processInfo']))
                                     @foreach($channels['processInfo'] as $proInfo)
@@ -2198,8 +2198,8 @@
                               <th>Do you measure the impact of various Scheduling Constraints on the account in terms or FTE & Cost?</th>
                               @foreach ($account_detail as $key => $account)
                               @foreach($account['lobs'] as $key2 => $lob)
-                              @foreach ($lob->channels as $key => $channels)
-                                 <?php $acc_lob_ch_cnt = count($lob->channels); ?>
+                              @foreach ($lob->channel as $key => $channels)
+                                 <?php $acc_lob_ch_cnt = count($lob->channel); ?>
                               <td>
                                  @if(isset($channels['processInfo']))
                                     @foreach($channels['processInfo'] as $proInfo)
@@ -2223,7 +2223,7 @@
                               <?php $acc_lob_ch_cnt=0; ?>
                               @foreach ($account_detail as $key => $account)
                                  @foreach($account['lobs'] as $key2 => $lob)
-                                    @foreach ($lob->channels as $key => $channels)
+                                    @foreach ($lob->channel as $key => $channels)
                                        <?php ++$acc_lob_ch_cnt; ?>
                                     @endforeach
                                  @endforeach
@@ -2237,8 +2237,8 @@
                               <th>Do you have a WFM Play book / Guide? E.g - Downtime Process, Calling Tree, Threshold & Skilling</th>
                               @foreach ($account_detail as $key => $account)
                               @foreach($account['lobs'] as $key2 => $lob)
-                              @foreach ($lob->channels as $key => $channels)
-                                 <?php $acc_lob_ch_cnt = count($lob->channels); ?>
+                              @foreach ($lob->channel as $key => $channels)
+                                 <?php $acc_lob_ch_cnt = count($lob->channel); ?>
                               <td>
                                  @if(isset($channels['processInfo']))
                                     @foreach($channels['processInfo'] as $proInfo)
@@ -2259,8 +2259,8 @@
                               <th>Does RTA have a daily read out call / RCA?</th>
                               @foreach ($account_detail as $key => $account)
                               @foreach($account['lobs'] as $key2 => $lob)
-                              @foreach ($lob->channels as $key => $channels)
-                                 <?php $acc_lob_ch_cnt = count($lob->channels); ?>
+                              @foreach ($lob->channel as $key => $channels)
+                                 <?php $acc_lob_ch_cnt = count($lob->channel); ?>
                               <td>
                                  @if(isset($channels['processInfo']))
                                     @foreach($channels['processInfo'] as $proInfo)
@@ -2281,8 +2281,8 @@
                               <th>Does the RTA do real time skill management?</th>
                               @foreach ($account_detail as $key => $account)
                               @foreach($account['lobs'] as $key2 => $lob)
-                              @foreach ($lob->channels as $key => $channels)
-                                 <?php $acc_lob_ch_cnt = count($lob->channels); ?>
+                              @foreach ($lob->channel as $key => $channels)
+                                 <?php $acc_lob_ch_cnt = count($lob->channel); ?>
                               <td>
                                  @if(isset($channels['processInfo']))
                                     @foreach($channels['processInfo'] as $proInfo)
@@ -2303,8 +2303,8 @@
                               <th>Does RTA do Intra-day Reforecasting?</th>
                               @foreach ($account_detail as $key => $account)
                               @foreach($account['lobs'] as $key2 => $lob)
-                              @foreach ($lob->channels as $key => $channels)
-                                 <?php $acc_lob_ch_cnt = count($lob->channels); ?>
+                              @foreach ($lob->channel as $key => $channels)
+                                 <?php $acc_lob_ch_cnt = count($lob->channel); ?>
                               <td>
                                  @if(isset($channels['processInfo']))
                                     @foreach($channels['processInfo'] as $proInfo)
@@ -2325,8 +2325,8 @@
                               <th>How do you manage customers resources up or down Realtime?</th>
                               @foreach ($account_detail as $key => $account)
                               @foreach($account['lobs'] as $key2 => $lob)
-                              @foreach ($lob->channels as $key => $channels)
-                                 <?php $acc_lob_ch_cnt = count($lob->channels); ?>
+                              @foreach ($lob->channel as $key => $channels)
+                                 <?php $acc_lob_ch_cnt = count($lob->channel); ?>
                               <td>
                                  @if(isset($channels['processInfo']))
                                     @foreach($channels['processInfo'] as $proInfo)
@@ -2347,8 +2347,8 @@
                               <th>How do you manage and report, variance to plan Realtime?</th>
                               @foreach ($account_detail as $key => $account)
                               @foreach($account['lobs'] as $key2 => $lob)
-                              @foreach ($lob->channels as $key => $channels)
-                                 <?php $acc_lob_ch_cnt = count($lob->channels); ?>
+                              @foreach ($lob->channel as $key => $channels)
+                                 <?php $acc_lob_ch_cnt = count($lob->channel); ?>
                               <td>
                                  @if(isset($channels['processInfo']))
                                     @foreach($channels['processInfo'] as $proInfo)
@@ -2376,7 +2376,7 @@
 
                      <table class="table table-bordered summary_table summary_procee_table fix_summary_table">
                         <tbody>
-                        <tr>
+                           <tr>
                               <th class="bg_dark_th">Account Name</th>
                               @foreach ($account_detail as $key => $account)
                               <?php 
@@ -2384,14 +2384,14 @@
                                  $acc_lob_cnt += count($account_detail[$key]['lobs']);
                               ?>
                               @foreach($account['lobs'] as $key2 => $lob)
-                                 <?php $ch = count($lob->channels); ?>
-                                 @foreach ($lob->channels as $key => $channels)
-                                 <!-- {{ $acc_lob_ch_cnt  }} -->
-                              <td colspan="{{$acc_lob_ch_cnt}}" style="text-align:center; justify-content:center;">
-                                  {{ $account->account_name }}
-                              </td>
+                                 <?php $ch = count($lob->channel); ?>
+                                 @foreach ($lob->channel as $key => $channels)
+                                 <?php ++$acc_lob_ch_cnt; ?>
                               @endforeach
                                  @endforeach
+                                 <td colspan="{{$acc_lob_ch_cnt}}" style="text-align:center; justify-content:center;">
+                                    {{ $account->account_name }}
+                                 </td>
                               @endforeach
                            </tr>
                            <!--  -->
@@ -2402,7 +2402,7 @@
                                  <?php $acc_lob_ch_cnt=0; ?>
                                  @foreach ($account_detail as $key => $account)
                                     @foreach($account['lobs'] as $key2 => $lob)
-                                       @foreach ($lob->channels as $key => $channels)
+                                       @foreach ($lob->channel as $key => $channels)
                                           <?php ++$acc_lob_ch_cnt; ?>
                                        @endforeach
                                     @endforeach
@@ -2415,7 +2415,13 @@
                            <tr>
                               <th class="text-right">Process Document</th>
                               @foreach ($account_detail as $key => $account)
-                                 <td class="text-center">
+                              <?php $acc_lob_ch_cnt=0; ?>
+                                 @foreach($account['lobs'] as $key2 => $lob)
+                                       @foreach ($lob->channel as $key => $channels)
+                                          <?php ++$acc_lob_ch_cnt; ?>
+                                       @endforeach
+                                    @endforeach
+                                 <td class="text-center" colspan="{{ $acc_lob_ch_cnt }}">
                                     @foreach($account['fileimage'] as $file)
                                        @if(isset($file->f_process_doc) && !empty($file->f_process_doc) && $file->f_process_doc !=null)
                                           <?php 
@@ -2436,7 +2442,13 @@
                            <tr>
                               <th class="text-right">Model Sample File</th>
                               @foreach ($account_detail as $key => $account)
-                                 <td class="text-center">
+                                 <?php $acc_lob_ch_cnt=0; ?>
+                                 @foreach($account['lobs'] as $key2 => $lob)
+                                       @foreach ($lob->channel as $key => $channels)
+                                          <?php ++$acc_lob_ch_cnt; ?>
+                                       @endforeach
+                                    @endforeach
+                                 <td class="text-center" colspan="{{$acc_lob_ch_cnt}}">
                                     @foreach($account['fileimage'] as $file)
                                        @if(isset($file->model_file) && !empty($file->model_file) && $file->model_file !=null)
                                           <?php 
@@ -2457,7 +2469,13 @@
                            <tr>
                               <th class="text-right">Accuracy Measurement / Result</th>
                               @foreach ($account_detail as $key => $account)
-                                 <td class="text-center">
+                              <?php $acc_lob_ch_cnt=0; ?>
+                                 @foreach($account['lobs'] as $key2 => $lob)
+                                       @foreach ($lob->channel as $key => $channels)
+                                          <?php ++$acc_lob_ch_cnt; ?>
+                                       @endforeach
+                                    @endforeach
+                                 <td class="text-center" colspan ="{{$acc_lob_ch_cnt}}">
                                     @foreach($account['fileimage'] as $file)
                                        @if(isset($file->f_accurecy_file) && !empty($file->f_accurecy_file) && $file->f_accurecy_file !=null)
                                           <?php 
@@ -2477,13 +2495,15 @@
                            <!-- Staffing / Resource Planning -->
                            <tr>
                               <th class="bg_light_th">Staffing / Resource Planning</th>
-                                 <?php $acc_lob_ch_cnt=0; ?>
+                                 
                                  @foreach ($account_detail as $key => $account)
-                                    @foreach($account['lobs'] as $key2 => $lob)
-                                       @foreach ($lob->channels as $key => $channels)
+                                 <?php $acc_lob_ch_cnt=0; ?>
+                                 @foreach($account['lobs'] as $key2 => $lob)
+                                       @foreach ($lob->channel as $key => $channels)
                                           <?php ++$acc_lob_ch_cnt; ?>
                                        @endforeach
                                     @endforeach
+                                    
                                  @endforeach
                               <td colspan ="{{$acc_lob_ch_cnt}}"></td>
                            </tr>
@@ -2493,7 +2513,13 @@
                            <tr>
                               <th class="text-right">Process Document</th>
                               @foreach ($account_detail as $key => $account)
-                                 <td class="text-center">
+                              <?php $acc_lob_ch_cnt=0; ?>
+                                 @foreach($account['lobs'] as $key2 => $lob)
+                                       @foreach ($lob->channel as $key => $channels)
+                                          <?php ++$acc_lob_ch_cnt; ?>
+                                       @endforeach
+                                    @endforeach
+                                 <td class="text-center" colspan ="{{$acc_lob_ch_cnt}}">
                                     @foreach($account['fileimage'] as $file)
                                        @if(isset($file->sta_process_doc) && !empty($file->sta_process_doc) && $file->sta_process_doc !=null)
                                           <?php 
@@ -2514,7 +2540,13 @@
                            <tr>
                               <th class="text-right">Model Sample File</th>
                               @foreach ($account_detail as $key => $account)
-                                 <td class="text-center">
+                              <?php $acc_lob_ch_cnt=0; ?>
+                                 @foreach($account['lobs'] as $key2 => $lob)
+                                       @foreach ($lob->channel as $key => $channels)
+                                          <?php ++$acc_lob_ch_cnt; ?>
+                                       @endforeach
+                                    @endforeach
+                                 <td class="text-center" colspan ="{{$acc_lob_ch_cnt}}">
                                     @foreach($account['fileimage'] as $file)
                                        @if(isset($file->sta_model_file) && !empty($file->sta_model_file) && $file->sta_model_file !=null)
                                           <?php 
@@ -2535,7 +2567,13 @@
                            <tr>
                               <th class="text-right">Staffing Forecast Accuracy Result</th>
                               @foreach ($account_detail as $key => $account)
-                                 <td class="text-center">
+                              <?php $acc_lob_ch_cnt=0; ?>
+                                 @foreach($account['lobs'] as $key2 => $lob)
+                                       @foreach ($lob->channel as $key => $channels)
+                                          <?php ++$acc_lob_ch_cnt; ?>
+                                       @endforeach
+                                    @endforeach
+                                 <td class="text-center" colspan ="{{$acc_lob_ch_cnt}}">
                                     @foreach($account['fileimage'] as $file)
                                        @if(isset($file->sta_forecast_file) && !empty($file->sta_forecast_file) && $file->sta_forecast_file !=null)
                                           <?php 
@@ -2555,10 +2593,10 @@
                             <!-- Scheduling -->
                             <tr>
                               <th class="bg_light_th">Scheduling</th>
-                                 <?php $acc_lob_ch_cnt=0; ?>
                                  @foreach ($account_detail as $key => $account)
+                                 <?php $acc_lob_ch_cnt=0; ?>
                                     @foreach($account['lobs'] as $key2 => $lob)
-                                       @foreach ($lob->channels as $key => $channels)
+                                       @foreach ($lob->channel as $key => $channels)
                                           <?php ++$acc_lob_ch_cnt; ?>
                                        @endforeach
                                     @endforeach
@@ -2571,7 +2609,13 @@
                            <tr>
                               <th class="text-right">Process Document</th>
                               @foreach ($account_detail as $key => $account)
-                                 <td class="text-center">
+                              <?php $acc_lob_ch_cnt=0; ?>
+                                 @foreach($account['lobs'] as $key2 => $lob)
+                                       @foreach ($lob->channel as $key => $channels)
+                                          <?php ++$acc_lob_ch_cnt; ?>
+                                       @endforeach
+                                    @endforeach
+                                 <td class="text-center" colspan ="{{$acc_lob_ch_cnt}}">
                                     @foreach($account['fileimage'] as $file)
                                        @if(isset($file->sche_p_doc) && !empty($file->sche_p_doc) && $file->sche_p_doc !=null)
                                           <?php 
@@ -2592,7 +2636,13 @@
                            <tr>
                               <th class="text-right">Scheduling Model (only if done in Excel)</th>
                               @foreach ($account_detail as $key => $account)
-                                 <td class="text-center">
+                              <?php $acc_lob_ch_cnt=0; ?>
+                                 @foreach($account['lobs'] as $key2 => $lob)
+                                       @foreach ($lob->channel as $key => $channels)
+                                          <?php ++$acc_lob_ch_cnt; ?>
+                                       @endforeach
+                                    @endforeach
+                                 <td class="text-center" colspan ="{{$acc_lob_ch_cnt}}">
                                     @foreach($account['fileimage'] as $file)
                                        @if(isset($file->sche_sched_file) && !empty($file->sche_sched_file) && $file->sche_sched_file !=null)
                                           <?php 
@@ -2613,7 +2663,13 @@
                            <tr>
                               <th class="text-right">Scheduling Forecast Accuracy Result</th>
                               @foreach ($account_detail as $key => $account)
-                                 <td class="text-center">
+                              <?php $acc_lob_ch_cnt=0; ?>
+                                 @foreach($account['lobs'] as $key2 => $lob)
+                                       @foreach ($lob->channel as $key => $channels)
+                                          <?php ++$acc_lob_ch_cnt; ?>
+                                       @endforeach
+                                    @endforeach
+                                 <td class="text-center" colspan ="{{$acc_lob_ch_cnt}}">
                                     @foreach($account['fileimage'] as $file)
                                        @if(isset($file->sche_forecast_file) && !empty($file->sche_forecast_file) && $file->sche_forecast_file !=null)
                                           <?php 
@@ -2634,7 +2690,13 @@
                            <tr>
                               <th class="text-right">IDP / Deviation File sample</th>
                               @foreach ($account_detail as $key => $account)
-                                 <td class="text-center">
+                              <?php $acc_lob_ch_cnt=0; ?>
+                                 @foreach($account['lobs'] as $key2 => $lob)
+                                       @foreach ($lob->channel as $key => $channels)
+                                          <?php ++$acc_lob_ch_cnt; ?>
+                                       @endforeach
+                                    @endforeach
+                                 <td class="text-center" colspan ="{{$acc_lob_ch_cnt}}">
                                     @foreach($account['fileimage'] as $file)
                                        @if(isset($file->sche_idp_file) && !empty($file->sche_idp_file) && $file->sche_idp_file !=null)
                                           <?php 
@@ -2654,10 +2716,10 @@
                            <!-- RTA / Intraday Management -->
                            <tr>
                               <th class="bg_light_th">RTA / Intraday Management</th>
-                                 <?php $acc_lob_ch_cnt=0; ?>
                                  @foreach ($account_detail as $key => $account)
+                                 <?php $acc_lob_ch_cnt=0; ?>
                                     @foreach($account['lobs'] as $key2 => $lob)
-                                       @foreach ($lob->channels as $key => $channels)
+                                       @foreach ($lob->channel as $key => $channels)
                                           <?php ++$acc_lob_ch_cnt; ?>
                                        @endforeach
                                     @endforeach
@@ -2670,7 +2732,13 @@
                            <tr>
                               <th class="text-right">Process Document</th>
                               @foreach ($account_detail as $key => $account)
-                                 <td class="text-center">
+                                 <?php $acc_lob_ch_cnt=0; ?>
+                                 @foreach($account['lobs'] as $key2 => $lob)
+                                       @foreach ($lob->channel as $key => $channels)
+                                          <?php ++$acc_lob_ch_cnt; ?>
+                                       @endforeach
+                                    @endforeach
+                                 <td class="text-center" colspan ="{{$acc_lob_ch_cnt}}">
                                     @foreach($account['fileimage'] as $file)
                                        @if(isset($file->rta_p_file) && !empty($file->rta_p_file) && $file->rta_p_file !=null)
                                           <?php 
@@ -2691,7 +2759,13 @@
                            <tr>
                               <th class="text-right">Intraday Report Sample</th>
                               @foreach ($account_detail as $key => $account)
-                                 <td class="text-center">
+                                 <?php $acc_lob_ch_cnt=0; ?>
+                                 @foreach($account['lobs'] as $key2 => $lob)
+                                       @foreach ($lob->channel as $key => $channels)
+                                          <?php ++$acc_lob_ch_cnt; ?>
+                                       @endforeach
+                                    @endforeach
+                                 <td class="text-center" colspan ="{{$acc_lob_ch_cnt}}">
                                     @foreach($account['fileimage'] as $file)
                                        @if(isset($file->rta_intro_file) && !empty($file->rta_intro_file) && $file->rta_intro_file !=null)
                                           <?php 
@@ -2712,7 +2786,13 @@
                            <tr>
                               <th class="text-right">Day-End Report Sample</th>
                               @foreach ($account_detail as $key => $account)
-                                 <td class="text-center">
+                                 <?php $acc_lob_ch_cnt=0; ?>
+                                 @foreach($account['lobs'] as $key2 => $lob)
+                                       @foreach ($lob->channel as $key => $channels)
+                                          <?php ++$acc_lob_ch_cnt; ?>
+                                       @endforeach
+                                    @endforeach
+                                 <td class="text-center" colspan ="{{$acc_lob_ch_cnt}}">
                                     @foreach($account['fileimage'] as $file)
                                        @if(isset($file->rta_dayr_file) && !empty($file->rta_dayr_file) && $file->rta_dayr_file !=null)
                                           <?php 
@@ -2733,7 +2813,13 @@
                            <tr>
                               <th class="text-right">RCA / Post-Mortem Report Sample</th>
                               @foreach ($account_detail as $key => $account)
-                                 <td class="text-center">
+                                 <?php $acc_lob_ch_cnt=0; ?>
+                                 @foreach($account['lobs'] as $key2 => $lob)
+                                       @foreach ($lob->channel as $key => $channels)
+                                          <?php ++$acc_lob_ch_cnt; ?>
+                                       @endforeach
+                                    @endforeach
+                                 <td class="text-center" colspan ="{{$acc_lob_ch_cnt}}">
                                     @foreach($account['fileimage'] as $file)
                                        @if(isset($file->rta_rca_file) && !empty($file->rta_rca_file) && $file->rta_rca_file !=null)
                                           <?php 
@@ -2754,8 +2840,6 @@
                   </div>
                </div>
                   <!-- ended by JD -->
-
-               
                         </tbody>
                      </table>
                   </div>
@@ -2768,7 +2852,4 @@
          <button type="submit" class="action-button">Submit</button>
       </div>
    </div>
-
-   <!-- need to remove -->
-   <!-- @endsection -->
-   <!-- ended need to remove -->
+   

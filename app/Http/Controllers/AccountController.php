@@ -30,6 +30,7 @@ class AccountController extends Controller
         // $result=Account::where('temp_id','655cc25')->with('lobs.channels')->get();
         // return view('detailed_information',compact('result'));
         $clients = User::get();
+        
         return view('accounts',compact('clients'));
     }
 
@@ -52,6 +53,7 @@ class AccountController extends Controller
     public function store(Request $request)
     { 
         $input=$request->all();
+        //dd($input);
         $ac_del=Account::where('temp_id',$request->temp_id);
         Lob::whereIn('account_id',$ac_del->pluck('id'))->delete();
         Channel::whereIn('account_id',$ac_del->pluck('id'))->delete();
@@ -82,8 +84,8 @@ class AccountController extends Controller
             }
 
         }
-        $result=Account::where('temp_id',$request->temp_id)->with('lobs.channels')->get();
-        $result1=Account::where('temp_id',$request->temp_id)->with('lobs.channels')->with('fileimage')->get();
+        $result=Account::where('temp_id',$request->temp_id)->with(['lobs.channel','lobs.channel.countrydata','lobs.channel.citydata'])->get();
+        $result1=Account::where('temp_id',$request->temp_id)->with('lobs.channel')->with('fileimage')->get();
         $country=Country::get();
 
         //Added by Jaydeep
@@ -105,11 +107,21 @@ class AccountController extends Controller
         ))->render();
         $result['file_page']=view('file_page',compact('result1'))->render();
         $user_detail = User::where('id',$request->temp_id)->first();
-        $account_detail = Account::where('temp_id',$request->temp_id)->with('lobs')->with('processinfo')->with('fileimage')->get();
+       // $account_detail = Account::where('temp_id',$request->temp_id)->with('lobs')->with('processinfo')->with('fileimage')->get();
         
-         $result['account_detail']=view('summary_page',compact('account_detail','user_detail'))->render();
+       // $result['account_detail']=view('summary_page',compact('account_detail','user_detail'))->render();
+        $account_detail = Account::where('temp_id',$request->temp_id)->with('lobs')->with(['channel.ChannelDatas','channel.processInfo','channel.countrydata','channel.citydata'])->with('fileimage')->get(); 
        
-        // dd($result);
+        // $acc_data = $this->summary($request->temp_id);
+        // if(!empty($acc_data)){
+        //     $account_detail = $acc_data;
+        // }
+        
+        $result['account_detail']=view('summary_page',compact('account_detail','user_detail', 'billingType', 'billingCap', 'minBillingGuarantee',
+                                'minBillingReference', 'maxBillingThres', 'maxBillingThres', 'maxBillRef', 'serviceApi', 'time', 'acdBillSystem', 'wfmSystem', 'processDetails'      
+                                ))->render();
+       
+        
         return response()->json(['success' => true,'data'=>$result,'message' => 'Successfully']);
     }
 
@@ -161,12 +173,37 @@ class AccountController extends Controller
     {   
         $user_detail = User::where('id',$id)->first();
         $account_detail = Account::where('temp_id',$id)->with('lobs')->with('processinfo')->with('fileimage')->get();
-        //d($account_detail[0]->name,$request->all());
+        
+        $acc_data = $this->summary($id);
+        if(!empty($acc_data)){
+            $account_detail = $acc_data;
+        }
+       
        return view('accoundetails',compact('account_detail','user_detail'))->render();
     }
     public function get_account(Request $request){
-       $result=Account::where('temp_id',$request->temp_id)->with('lobs.channels')->get();
-        return response()->json(['success' => true,'data'=>$result,'message' => 'Successfully']);
+        $result = Account::where('temp_id',$request->temp_id)->with('lobs')->with(['channel.ChannelDatas','channel.processInfo','channel.countrydata','channel.citydata'])->with('fileimage')->get();   
+       //$result=Account::where('temp_id',$request->temp_id)->with('lobs.channel')->get();
+       $account_detail = $result;
+       $user_detail = User::where('id',$request->temp_id)->first();
+        //Added by Jaydeep
+        $billingType =  Config::get("common.BILLING_TYPE");
+        $billingCap =  Config::get("common.BILLING_CAP");
+        $minBillingGuarantee = Config::get("common.MIN_BILLING_GUARANTEE");
+        $minBillingReference = Config::get("common.MIN_BILLING_REFERENCE");
+        $maxBillingThres = Config::get("common.MAX_BILLABLE_THRESHOLD");
+        $maxBillRef = Config::get("common.MAX_BILLABLE_REFERENCE");
+        $serviceApi = Config::get("common.SERVICE_API");
+        $time = Config::get("common.TIME");
+        $acdBillSystem = Config::get("common.ACD_Billing_SystemName");
+        $wfmSystem = Config::get("common.WFM_SYSTEM");
+        $processDetails = Config::get("common.PROCESS_DETAILS");
+
+        //ended here by jaydeep
+       $data['account_detail']=view('summary_page',compact('account_detail','user_detail', 'billingType', 'billingCap', 'minBillingGuarantee',
+       'minBillingReference', 'maxBillingThres', 'maxBillingThres', 'maxBillRef', 'serviceApi', 'time', 'acdBillSystem', 'wfmSystem', 'processDetails'      
+       ))->render();
+       return response()->json(['success' => true,'data'=>$data,'message' => 'Successfully']);
     }
     public function process_info(Request $request){
         $input =$request->all();
@@ -523,10 +560,10 @@ class AccountController extends Controller
     //
     public function summary($id=null)
     {   
-        $user_detail = User::where('id',$id)->first();
+        
+        $user_detail = User::where('id',1)->first();
        // $account_detail = Account::where('temp_id',$id)->with('lobs.channels.ChannelDatas')->with('processinfo')->with('fileimage')->first();
-       $account_detail = Account::where('temp_id',$id)->with('lobs')->with(['channel.ChannelDatas','channel.processInfo','channel.countrydata','channel.citydata'])->with('fileimage')->get(); 
-      
+        $account_detail = Account::where('temp_id',$id)->with('lobs')->with(['channel.ChannelDatas','channel.processInfo','channel.countrydata','channel.citydata'])->with('fileimage')->get();   
         $billingType =  Config::get("common.BILLING_TYPE");
         $billingCap =  Config::get("common.BILLING_CAP");
         $minBillingGuarantee = Config::get("common.MIN_BILLING_GUARANTEE");
@@ -538,7 +575,7 @@ class AccountController extends Controller
         $acdBillSystem = Config::get("common.ACD_Billing_SystemName");
         $wfmSystem = Config::get("common.WFM_SYSTEM");
         $processDetails = Config::get("common.PROCESS_DETAILS");
-
+               //return $account_detail;
         //ended here by jaydeep
        return view('summary_page',compact('account_detail','user_detail', 'billingType', 'billingCap', 'minBillingGuarantee',
                     'minBillingReference', 'maxBillingThres', 'maxBillingThres', 'maxBillRef', 'serviceApi', 'time', 'acdBillSystem', 'wfmSystem', 'processDetails'      

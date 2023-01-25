@@ -100,6 +100,11 @@
                      <button type="button" class="action-button previous previous_button">Back</button>
                      <button type="button" class="next action-button">Save & Continue</button>
                   </div>
+
+                  <?php if(isset($clients)){echo "<pre>"; print_r($clients);} 
+                  
+                  ?>
+
                </div>
             </fieldset>
             <!-- ========= General Overview Tab ======= -->
@@ -900,8 +905,9 @@
                      </div>
                   </div>
                   <div class="footerBtn-panel">
+                     <?php $value = session('client_id');?>
                      <button type="button" class="action-button previous previous_button">Back</button>
-                     <button type="button" class="next action-button">Save & Continue</button>
+                     <button type="button" class="next action-button" onclick="loadSummary({{session('client_id')}})">Save & Continue</button>
                   </div>
                </div>
             </fieldset>
@@ -921,7 +927,6 @@
 <script>
    
    $(document).ready(function(e) {
-      //account_names
       //Added By Jaydeep
       $(document).on('change','#account_names',function(){
             var val = $(this).val();
@@ -1072,11 +1077,11 @@
                   console.log(result);
                   if(result.status){
                      alert("Process Information Saved Successfully.");
-                     $("#f_1, #f_2, #f_3, #account_names").val("");
+                     $("#f_1, #f_2, #f_3,#f_5,#f_8, #f_9, #f_20, #f_24, #f_44, #f_45, #f_47, #f_53, #f_54, #account_names").val("");
                      $('.selectpicker').selectpicker('refresh');
-                     $('#f_6,#f_19, #f_23, #f_30, #f_32, #f_36, #f_43', '#account_names').val("").selectpicker('refresh');
-                     $("#f_8, #f_9, #f_20, #f_24, #f_31,#f_33, #f_37, #f_44, #f_45").val("").selectpicker('refresh');;
-                     $("#lob_names, #channelnames, #country").empty().selectpicker('refresh');
+                     //$('#f_6,#f_19, #f_23, #f_30, #f_32, #f_36, #f_43', '#account_names').val("").selectpicker('refresh');
+                     //$("#f_8, #f_9, #f_20, #f_24, #f_31,#f_33, #f_37, #f_44, #f_45").val("").selectpicker('refresh');;
+                     $("#lob_names, #channelnames, #country, #f_4, #f_6, #f_7, #f_8, #f_9, #f_10, #f_11, #f_12, #f_13, #f_14, #f_15, #f_16, #f_17, #f_18, #f_19, #f_20, #f_21, #f_22, #f_23, #f_24, #f_25, #f_26, #f_27, #f_28, #f_29, #f_30, #f_31, #f_32, #f_33, #f_34, #f_35, #f_36, #f_37, #f_38, #f_39, #f_40, #f_41, #f_42, #f_43, #f_46, #f_48, #f_49, #f_50, #f_51, #f_52  ").val("").selectpicker('refresh');
                   }
               }
          });
@@ -1211,7 +1216,7 @@
                               </td>
                               <td>
                                  <div class="form-group">
-                                    <select name="country[`+acc_count+`][`+lob_count+`][`+h+`]" id="country`+h+`" class="form-control selectpicker" data-live-search="true" required>
+                                    <select name="country[`+acc_count+`][`+lob_count+`][]" id="country`+h+`" data-id="`+h+`" class="form-control selectpicker" data-live-search="true" required>
                                        <option selected disabled>Select Country</option>
                                        @foreach($country as $key => $countries)
                                        <option value="{{ $key }}">{{ $countries }}</option>
@@ -1220,7 +1225,7 @@
                                  </div>
                               </td>
                               <td>
-                                 <select name="city_name[`+acc_count+`][`+lob_count+`][`+h+`]" id ="city_name`+h+`" class=" form-control selectpicker" data-live-search="true" required>
+                                 <select name="city_name[`+acc_count+`][`+lob_count+`][]" id ="city_name`+h+`" class=" form-control selectpicker" data-live-search="true" required>
                                     <option selected disabled>Select City</option>
                                  </select>
                               </td>
@@ -1391,10 +1396,9 @@
         // var mysearial1 =  $('#mysearial').val();
         // console.log(mysearial1,"mysearial1");
         for(j=0; j<=10; j++){
-            $(document).on('change','#country'+j,function(){
+            $(document).on('change','#country'+j,function(){ 
             var searial_id = $(this).attr('data-id');
             var val = $(this).val();
-           
             $.ajax({
                 type: "POST",
                 url: "{{ route('country_code') }}",
@@ -1422,7 +1426,7 @@
                             },
                 success: function (data){
                         $('#city_name0').empty();
-                        $('#city_name0').append('<option>Select City</option>');
+                        $('#city_name0').append('<option disabled>Select City</option>');
                             $.each(data,function(key,value){
                                 $('#city_name0').append('<option value="'+key+'">'+value+'</option>');
                             });
@@ -1497,12 +1501,12 @@
                            $('#country').empty();
                            $.each(result.data,function(i,v){
                               $('#account_names').append('<option value="'+v.id+'">'+v.account_name+'</option>');
-                               $.each(v.lobs,function(ii,vv){
-                                   $('#lob_names').html('<option value="'+vv.id+'">'+vv.lob_name+'</option>');
-                                   $.each(vv.channels,function(iii,vvv){
-                                       $('#channelnames').html('<option value="'+vvv.id+'">'+vvv.channel_name+'</option>');
-                                    });
-                               });
+                              //  $.each(v.lobs,function(ii,vv){
+                              //      $('#lob_names').html('<option value="'+vv.id+'">'+vv.lob_name+'</option>');
+                              //      $.each(vv.channels,function(iii,vvv){
+                              //          $('#channelnames').html('<option value="'+vvv.id+'">'+vvv.channel_name+'</option>');
+                              //       });
+                              //  });
                            })
                            $('#account_names').selectpicker('refresh');
                            $('#lob_names').selectpicker('refresh');
@@ -1511,12 +1515,13 @@
                   });
                }
                if($(current_fs).attr('data-route')){
+                  console.log('JD-'+current_fs);
                    $.ajax({
                        type: "POST",
                        url: $(current_fs).attr('data-route'),
                        data: $(current_fs).serialize(), // serializes the form's elements.
                        success: function(data)
-                       {
+                       { console.log(data);
                            if(data.success){
                               if(data.data.client_id){
                                  $('.client_id').val(data.data.client_id);
@@ -1531,6 +1536,7 @@
                                  $('.file_page').html(data.data.file_page);
                               }
                                if(data.data.account_detail){
+                                 //$('.summary_page').html(data.data.account_detail);
                                  $('.summary_page').html(data.data.account_detail);
                               }
                               
@@ -1627,7 +1633,22 @@
 </script>
  <script>
 
-   
+   function loadSummary(id){ alert(id);
+      $.ajax({
+                       type: "GET",
+                       url: "http://localhost:8000/get_account?temp_id=1",
+                      // data: {temp_id: 1}, // serializes the form's elements.
+                       success: function(data)
+                       { 
+                           if(data.success){
+                               if(data.data.account_detail){
+                                 $('.summary_page').html(data.data.account_detail);
+                              }
+                              
+                           }
+                       }
+                  });
+   }
  </script>
 
 @endsection

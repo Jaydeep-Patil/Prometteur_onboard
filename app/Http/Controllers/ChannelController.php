@@ -6,6 +6,7 @@ use App\Models\Channel;
 use Illuminate\Http\Request;
 use App\Models\ChannelDatas;
 use App\Models\Account;
+use App\Models\Lob;
 use App\Models\Country;
 use Illuminate\Support\Facades\DB;
 
@@ -114,6 +115,44 @@ class ChannelController extends Controller
 
         $countryData = Country::whereIn('country_id',$arr)->distinct()->get();
         return response()->json(['success' => true,'data'=>$countryData,'message' => 'Successfully']);
+    }
+
+    public function getChannels(Request $request){
+        $channelData = Channel::where('lob_id',$request->lob_id)->get();
+        return response()->json(['success' => true,'data'=>$channelData,'message' => 'Successfully']);
+    }
+    public function addCopyData(Request $request){
+        //$acc_id = 1;
+        $from_lob= $request->from_lob;
+        $to_lob = $request->to_lob_to_lobselect;
+        $from_channel = $request->from_channel;
+        $to_channel = $request->to_channel;
+
+        if(!empty($from_channel) && $from_channel != null){
+            $existingChanneldata = ChannelDatas::where('channel_id', $from_channel)->get()->toArray();
+            //dd($existingChanneldata);
+        }
+
+        if(!empty($existingChanneldata) && $existingChanneldata != null){
+            unset($existingChanneldata['id']);
+            $existingChanneldata[0]['channel_id'] = $to_channel;
+            $copiedChannelData = ChannelDatas::updateOrcreate(['channel_id'=>$to_channel],$existingChanneldata[0]);
+        }
+
+        if(!empty($copiedChannelData) && $copiedChannelData != null){
+            
+            return response()->json(["status" => 1, "data" => $copiedChannelData, "message"=>'Data Copied Successfully!']);
+        }else{
+            return response()->json(["status" => 0]);
+        }
+    }
+
+    public function getChannelData(Request $request){
+        $channelData = ChannelDatas::where('channel_id',$request->id)->get();
+        if(!empty($channelData) &&  $channelData != null){
+            return response()->json(["status" => 1, "data"=>$channelData[0]]);
+        }
+        
     }
 
 }

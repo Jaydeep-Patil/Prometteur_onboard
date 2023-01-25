@@ -10,7 +10,7 @@ class Lob extends Model
     use HasFactory;
     protected $fillable = ['client_id','account_id','lob_name'];
 
-    public function channels()
+    public function channel()
     {
         return $this->hasMany(Channel::class, 'lob_id');
     }

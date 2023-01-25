@@ -18,7 +18,7 @@ display: none !important;
       <div class="card-header" id="headingOne">
          <h2 class="mb-0">
             <button class="btn btn-link btn-block text-left d-flex align-items-center justify-content-between" type="button" data-toggle="collapse" data-target="#collapse{{$value1->id}}" aria-expanded="true" aria-controls="collapse{{$value1->id}}">
-               {{$value1->lob_name}} {{$key1+1}}
+               {{$value1->lob_name}}
                <div class="completion_div">
                   <small>Completion Percent</small>
                   <div class="progress">
@@ -31,17 +31,33 @@ display: none !important;
       <div id="collapse{{$value1->id}}" class="collapse" aria-labelledby="headingOne" data-parent="#accordionAccount{{$value->id}}">
          <div class="card-body">
             <ul class="nav nav-tabs md-tabs boxparent-tabs mb-2" role="tablist">
-               @foreach($value1->channels as $key2=>$value2)
-               <li role="presentation" class="nav-item"><a class="{{$key2==0?'active':''}} nav-link" href="#channelTab{{$value2->id}}" aria-controls="channelTab1" role="tab" data-toggle="tab">{{$value2->channel_name}}</a></li>
+               @foreach($value1->channel as $key2=>$value2)
+               <li role="presentation" class="nav-item"><a class="{{$key2==0?'active':''}} nav-link" href="#channelTab{{$value2->id}}" aria-controls="channelTab1" role="tab" data-toggle="tab"  id ="{{$value2->id}}" onclick="showChannelData({{$value2->id}})">{{$value2->channel_name}}</a></li>
                @endforeach
             </ul>
             <div class="tab-content">
-               @foreach($value1->channels as $key2=>$value2)
+               @foreach($value1->channel as $key2=>$value2)
                <div role="tabpanel" class="tab-pane tabRamp-pane fade {{$key2==0?'show active':''}}" id="channelTab{{$value2->id}}">
                   <div class="text-left accoutList">
                      <ul>
-                        <li><strong>Country -</strong> {{$value2->country}}</li>
-                        <li><strong>City Name -</strong> {{$value2->city_name}}</li>
+                        <li><strong>Country -</strong>
+                           @if(isset($value2['countrydata']) && !empty($value2['countrydata']))
+                              @foreach($value2['countrydata'] as $country)
+                              {{$country->country_name}}
+                              @endforeach
+                           @else
+                              {{""}}
+                           @endif
+                        </li>
+                        <li><strong>City Name -</strong>
+                           @if(isset($value2['citydata']) && !empty($value2['citydata']))
+                              @foreach($value2['citydata'] as $ct)
+                              {{$ct['city_name']}}
+                              @endforeach
+                           @else
+                              {{""}}
+                           @endif
+                        </li>
                         <li><strong>Site Name -</strong> {{$value2->site_name}}</li>
                         <li><strong>Language -</strong> English</li>
                      </ul>
@@ -55,7 +71,7 @@ display: none !important;
                            <div class="form-group mb-4">
                               <div class="fg-control">
                                  <button type="button" class="infoButton" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content="How is the billing done for the account"><i class="far fa-info-circle"></i></button>
-                                 <select class="selectpicker form-control" title="Billing Method" name="channel[{{$value2->id}}][monthly_ftp]">
+                                 <select class="selectpicker form-control" title="Billing Method" name="channel[{{$value2->id}}][monthly_ftp]" id="monthly_ftp">
                                     <!-- <option>Monthly FTE</option>
                                     <option>Incenter Hours</option>
                                     <option>Production Hour</option>
@@ -82,7 +98,7 @@ display: none !important;
                            <div class="form-group mb-4">
                               <div class="fg-control">
                                  <button type="button" class="infoButton" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content="Specify the parameter basis which the billing is capped. <br>Eg. <br> AHT @ 300 secs <br> Occ% @ 82%"><i class="far fa-info-circle"></i></button>
-                                 <select class="selectpicker form-control" title="Billing Cap" id="billingCapDrop" name="channel[{{$value2->id}}][billing_cap]">
+                                 <select class="selectpicker form-control" title="Billing Cap" id="billingCapDrop" name="channel[{{$value2->id}}][billing_cap]"  id="billing_cap">
                                     <!-- <option value="occupancy">Occupancy</option>
                                     <option value="aht">AHT</option>
                                     <option value="notapplicable">Not Applicable</option> -->
@@ -257,7 +273,7 @@ display: none !important;
                            <div class="form-group mb-0">
                               <div class="fg-control">
                                  <button type="button" class="infoButton" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content="Please clearly write exact description of the target <br>e.g.<br> 80% in 20 Sec"><i class="far fa-info-circle"></i></button>
-                                 <input type="text" class="form-control" placeholder="Service KPI - 2 - Target (%/Sec)" name="channel[{{$value2->id}}]['kpi2_target']">
+                                 <input type="text" class="form-control" placeholder="Service KPI - 2 - Target (%/Sec)" name="channel[{{$value2->id}}][kpi2_target]">
                               </div>
                            </div>
                         </div>
@@ -725,12 +741,7 @@ display: none !important;
                               <div class="fg-control">
                                  <button type="button" class="infoButton" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content="Name of WFM Scheduling Tool Verint, Nice"><i class="far fa-info-circle"></i></button>
                                  <select class="selectpicker form-control" title="WFM Tool" name="channel[{{$value2->id}}][wfm_tool]">
-                                    <!-- <option>NICE</option>
-                                    <option>VERINT</option>
-                                    <option>ASPECT</option>
-                                    <option>GENESYS</option>
-                                    <option>CALABRIO</option>
-                                    <option>Other</option> -->
+                                    
                                     @foreach($wfmSystem as $wfm=>$wfm_tool)
                                        <option value="{{ $wfm }}">{{ $wfm_tool }}</option>
                                     @endforeach
@@ -789,15 +800,7 @@ display: none !important;
                               <div class="fg-control">
                                  <button type="button" class="infoButton" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content="Select the program segment. <br>Eg. <br> Telecom, Retail etc."><i class="far fa-info-circle"></i></button>
                                  <select class="selectpicker form-control" title="Industry Segment (Eg : Finance, Retail, Insurance, Banking)" name="channel[{{$value2->id}}][industry_segment]">
-                                    <!-- <option>Retail</option>
-                                    <option>Telecom</option>
-                                    <option>Fintech</option>
-                                    <option>Bankng</option>
-                                    <option>e-Com</option>
-                                    <option>Insurance</option>
-                                    <option>Health Care</option>
-                                    <option>Customer Service</option>
-                                    <option>Others</option> -->
+                                    
                                     @foreach($processDetails as $pd=>$industry_segment)
                                     <option value="{{$pd}}">{{ $industry_segment }}</option>
                                     @endforeach
@@ -816,7 +819,7 @@ display: none !important;
                      </div>
                   </div>
                   <div class="saveChannel text-center mt-4">
-                     <button type="button" id="{{$value2->id}}" class="add_channeldata">Save Chaneel</button>
+                     <button type="button" id="{{$value2->id}}" class="add_channeldata">Save Channel</button>
                   </div>
                </div>
                @endforeach
@@ -848,9 +851,10 @@ display: none !important;
                      <div class="col col-md-6 col-12">
                         <div class="form-group">
                            <label>From LOB</label>
-                           <select class="selectpicker form-control" id="lob_select" title="Please Select">
+                           <select class="selectpicker form-control" id="from_lob_select" title="Please Select">
+                              <option value="">Select LOB</option>
                                @foreach($value->lobs as $key1=>$value1)
-                              <option value="{{$value1->lob_id}}" >{{$value1->lob_name}} {{$key1+1}}</option>
+                              <option value="{{$value1->id}}" >{{$value1->lob_name}}</option>
                               @endforeach
                            </select>
                         </div>
@@ -858,9 +862,10 @@ display: none !important;
                      <div class="col col-md-6 col-12">
                         <div class="form-group">
                            <label>To LOB</label>
-                           <select class="selectpicker form-control" title="Please Select">
+                           <select class="selectpicker form-control" title="Please Select" id="to_lob_select">
+                           <option value="">Select LOB</option>
                               @foreach($value->lobs as $key1=>$value1)
-                              <option value="{{$value1->lob_id}}" >{{$value1->lob_name}} {{$key1+1}}</option>
+                              <option value="{{$value1->id}}" >{{$value1->lob_name}}</option>
                               @endforeach
                               
                            </select>
@@ -871,20 +876,16 @@ display: none !important;
                      <div class="col col-md-6 col-12">
                         <div class="form-group">
                            <label>From Channel</label>
-                           <select class="selectpicker form-control" title="Please Select">
-                                @foreach($value1->channels as $key2=>$value2)
-                              <option value="{{ $value2->id }}">{{$value2->channel_name}}</option>
-                              @endforeach
+                           <select class="selectpicker form-control" title="Please Select" id="from_channels">
+                                
                            </select>
                         </div>
                      </div>
                      <div class="col col-md-6 col-12">
                         <div class="form-group">
                            <label>To Channel</label>
-                           <select class="selectpicker form-control" title="Please Select">
-                               @foreach($value1->channels as $key2=>$value2)
-                              <option value="{{ $value2->id }}">{{$value2->channel_name}}</option>
-                              @endforeach
+                           <select class="selectpicker form-control" title="Please Select" id="to_channels">
+                              
                            </select>
                         </div>
                      </div>
@@ -896,17 +897,15 @@ display: none !important;
                         <button type="button" class="btnWithLogo addcopyData">Copy Data</button>
                      </div>
                   </div>
+                  <div class="row">
+                     <span id="success_msg"></span>
+                  </div>
                </form>
             </div>
          </div>
       </div>
    </div>
 </div>
-
-
-
-
-
 
    @endforeach
 </div>
@@ -934,7 +933,8 @@ display: none !important;
               {
                   console.log(result);
                   if(result.success){
-
+                     alert("Channel Data Saved Successfully!");
+                     $("#collapse"+chan_id).collapse('hide');
                   }
               }
          });
@@ -984,26 +984,112 @@ display: none !important;
 
  <script>
  $(document).ready(function(e) {
-       $('#lob_select').click(function(){
-   
-        event.preventDefault();
-       alert('test');
-        
-        $.ajax({
-            type:'POST',
-            url:'{{route('get_channels')}}', //Make sure your URL is correct
-            data:{id:$(this).val()}, 
-            success:function(data){
-                console.log(data); //Please share cosnole data
-                if(data.msg) //Check the data.msg isset?
-                {
-                    $("#msg").html(data.msg); //replace html by data.msg
-                }
+         $(document).on('change','#from_lob_select',function(){
+            $("#success_msg").html("");
+            var val = $('#from_lob_select').val();
+            $.ajax({
+                type: "POST",
+                url: "{{ route('getChannels') }}",
+                    data: {
+                            lob_id: val,
+                            },
+                            error:function(error){
+                              alert(error);
+                            },
+                success: function (result){
+                        $('#from_channels').empty();
+                        $('#from_channels').append('<option disabled>Select Channel</option>');
+                            $.each(result.data,function(i,v){
+                             // $.each(v.lobs,function(ii,vv){
+                                $('#from_channels').append('<option value="'+v.id+'">'+v.channel_name+'</option>');
+                              });
+                            //});
+                            $('.selectpicker').selectpicker('refresh');
+                     }   
+                })
+            });
 
-            }
-        });
-   });
+            $(document).on('change','#to_lob_select',function(){ 
+               $("#success_msg").html("");
+            var val = $('#from_lob_select').val();
+            $.ajax({
+                type: "POST",
+                url: "{{ route('getChannels') }}",
+                    data: {
+                            lob_id: val,
+                            },
+                           
+                success: function (result){
+                        $('#to_channels').empty();
+                        $('#to_channels').append('<option disabled>Select Channel</option>');
+                            $.each(result.data,function(i,v){
+                                $('#to_channels').append('<option value="'+v.id+'">'+v.channel_name+'</option>');
+                              });
+                            $('.selectpicker').selectpicker('refresh');
+                     }   
+                })
+            });
+  
+
+// Added By Jaydeep on 17/01/2023
+
+   $('.addcopyData').click(function(){
+      var from_lob = $("#from_lob_select").val();
+      var from_channel = $("#from_channels").val();
+      var to_lob = $("#to_lob_select").val();
+      var to_channel = $("#to_channels").val();
+         //chan_id=$(this).attr('id');
+         //copy_data=$('#msform :input,select,textarea').serialize();
+         $.ajaxSetup({
+                      headers: {
+                          'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                      }
+                  });
+         $.ajax({
+              type: "POST",
+              url: "{{route('addCopyData')}}",
+              //data: copy_data,//channel_data, // serializes the form's elements.
+              data: { from_lob:from_lob, from_channel: from_channel,
+                      to_lob:to_lob, to_channel:to_channel
+                     },
+              success: function(result)
+              {
+                  console.log(result.success);
+                  if(result){
+                     $("#success_msg").html(result.message);
+                  }
+              }
+         });
+      })
+
      });
+
+function showChannelData(id) {
+   $.ajax({
+              type: "POST",
+              url: "{{route('getChannelData')}}",
+              //data: copy_data,//channel_data, // serializes the form's elements.
+              data: { id : id},
+              success: function(result)
+              {
+                  console.log(result.data);
+                  if(result){
+                     $("#monthly_ftp").val(1).attr('selected','selected');
+                     $('.selectpicker').selectpicker('refresh');
+                     if(!empty(result.data.billing_cap) && result.data.billing_cap != null){
+                        $("#billing_cap").value(result.data.billing_cap).change();
+                     }
+
+                     result.data.monthly_ftp
+
+                     if(!empty(result.data.monthly_ftp) && result.data.monthly_ftp != null){
+                        $("#monthly_ftp").val(result.data.monthly_ftp).change();
+                        $('#monthly_ftp option[value='+result.data.monthly_ftp+']').attr('selected','selected');
+                     }
+                  }
+              }
+         });
+}
  </script>
 
 
