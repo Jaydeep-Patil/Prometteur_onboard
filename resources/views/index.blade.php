@@ -1,5 +1,7 @@
+
 @extends('layouts.front')
 @section('content')
+
 <div class="wrapper-panel">
    <div class="login-comman login-right">
       <div class="bg-span"></div>
@@ -905,14 +907,16 @@
                      </div>
                   </div>
                   <div class="footerBtn-panel">
-                     <?php $value = session('client_id');?>
+                     <?php $value = session('client_id');
+                  //echo   $actual_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+                     ?>
                      <button type="button" class="action-button previous previous_button">Back</button>
-                     <button type="button" class="next action-button" onclick="loadSummary({{session('client_id')}})">Save & Continue</button>
+                     <button type="button" class="next action-button" onclick="loadSummary('{{session('client_id')}}')">Save & Continue</button>
                   </div>
                </div>
             </fieldset>
             <!-- ========= Summary Details Tab ======= -->
-            <fieldset class="fielset_panel fielset_height summary_page">
+            <fieldset class="fielset_panel fielset_height summary_page" >
                
             </fieldset>
          </form>
@@ -1498,8 +1502,8 @@
                            $('#account_names').empty();
                            $('#lob_names').empty();
                            $('#channelnames').empty();
-                           $('#country').empty();
-                           $.each(result.data,function(i,v){
+                           $('#country').empty(); 
+                           $.each(result.data.result,function(i,v){  console.log("Data--"+v);
                               $('#account_names').append('<option value="'+v.id+'">'+v.account_name+'</option>');
                               //  $.each(v.lobs,function(ii,vv){
                               //      $('#lob_names').html('<option value="'+vv.id+'">'+vv.lob_name+'</option>');
@@ -1634,9 +1638,13 @@
  <script>
 
    function loadSummary(id){ alert(id);
+      var actual_link = window.location.origin;
+      actual_link = actual_link+'/get_account?temp_id='+id;
+      alert(actual_link);
       $.ajax({
                        type: "GET",
-                       url: "http://localhost:8000/get_account?temp_id=1",
+                       //url: "http://localhost:8000/get_account?temp_id=1",
+                       url: actual_link,
                       // data: {temp_id: 1}, // serializes the form's elements.
                        success: function(data)
                        { 

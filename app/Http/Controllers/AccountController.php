@@ -182,6 +182,7 @@ class AccountController extends Controller
        return view('accoundetails',compact('account_detail','user_detail'))->render();
     }
     public function get_account(Request $request){
+       
         $result = Account::where('temp_id',$request->temp_id)->with('lobs')->with(['channel.ChannelDatas','channel.processInfo','channel.countrydata','channel.citydata'])->with('fileimage')->get();   
        //$result=Account::where('temp_id',$request->temp_id)->with('lobs.channel')->get();
        $account_detail = $result;
@@ -199,8 +200,10 @@ class AccountController extends Controller
         $wfmSystem = Config::get("common.WFM_SYSTEM");
         $processDetails = Config::get("common.PROCESS_DETAILS");
 
+        $country=Country::get();
         //ended here by jaydeep
-       $data['account_detail']=view('summary_page',compact('account_detail','user_detail', 'billingType', 'billingCap', 'minBillingGuarantee',
+        $data['result']=$result;
+       $data['account_detail']=view('summary_page',compact('account_detail','user_detail','result', 'billingType', 'billingCap', 'minBillingGuarantee',
        'minBillingReference', 'maxBillingThres', 'maxBillingThres', 'maxBillRef', 'serviceApi', 'time', 'acdBillSystem', 'wfmSystem', 'processDetails'      
        ))->render();
        return response()->json(['success' => true,'data'=>$data,'message' => 'Successfully']);

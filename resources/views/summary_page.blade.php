@@ -1,5 +1,5 @@
 
-   <div class="scrollbarbar">
+   <div class=" scroll-wrapper scrollbarbar">
       <div class="container">
          <div class="row">
             <div class="col col-12">
@@ -397,11 +397,13 @@
                                  @foreach($account['lobs'] as $key2 => $lob)
                                     @foreach ($lob->channel as $key => $channels)
                                     <td>
-                                       @foreach($channels['ChannelDatas'] as $chd=>$chdata) dd($channels['ChannelDatas']);
+                                       @if(isset($channels['ChannelDatas']) && $channels['ChannelDatas'] != null)
+                                       @foreach($channels['ChannelDatas'] as $chd=>$chdata)
                                           @if(isset($chdata->kpi1_app) && $chdata->kpi1_app != null)
                                              {{ $serviceApi[$chdata->kpi1_app] }}
                                           @endif
                                        @endforeach
+                                       @endif
                                     </td>
                                     @endforeach
                                  @endforeach
