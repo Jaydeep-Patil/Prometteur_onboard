@@ -10,7 +10,7 @@
           <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseF{{$value->id}}" aria-expanded="true" aria-controls="collapseF{{$value->id}}">{{ $value->account_name }}</button>
        </h2>
     </div>
-    <form id="file_data" enctype="multipart/form-data" action="{{ route('file_data') }}" method="POST">
+    <form id="file_data{{$value->id}}" enctype="multipart/form-data" action="" method="POST">
         @csrf
         <input type="hidden" id="account_id" name="account_id" value="{{ $value->id }}"/>
     <div id="collapseF{{$value->id}}" class="collapse show" aria-labelledby="headingF{{$value->id}}" data-parent="#accordionFileUpload">
@@ -31,7 +31,7 @@
                    <tr>
                       <td class="text-right">Process Document</td>
                       <td class="text-center">
-                         <button class="fileUploadBtn"><i class="far fa-upload"></i><input type="file" name="f_process_doc" id="f_process_doc" class="file_upload" data-myvar="f_process_doc_toggle"  onchange="SaveData(this)"/></button>
+                         <button class="fileUploadBtn"><i class="far fa-upload"></i><input type="file" name="f_process_doc" id="f_process_doc" class="file_upload" data-myvar="f_process_doc_toggle"  onchange="SaveData({{$value->id}})"/></button>
                       </td>
                       <td class="text-center">
                          <div class="dropdown action-label">
@@ -48,7 +48,7 @@
                    <tr>
                       <td class="text-right">Model Sample File</td>
                       <td class="text-center">
-                         <button class="fileUploadBtn"><i class="far fa-upload"></i><input type="file" name="model_file" class="file_upload" data-myvar="model_file"   onchange="SaveData(this)" /></button>
+                         <button class="fileUploadBtn"><i class="far fa-upload"></i><input type="file" name="model_file" class="file_upload" data-myvar="model_file"   onchange="SaveData({{$value->id}})" /></button>
                       </td>
                       <td class="text-center">
                          <div class="dropdown action-label">
@@ -66,7 +66,7 @@
                    <tr>
                       <td class="text-right">Accuracy Measurement / Result</td>
                       <td class="text-center">
-                         <button class="fileUploadBtn"><i class="far fa-upload"></i><input type="file" name="f_accurecy_file" class="file_upload" data-myvar="f_accurecy_file"  onchange="SaveData(this)" /></button>
+                         <button class="fileUploadBtn"><i class="far fa-upload"></i><input type="file" name="f_accurecy_file" class="file_upload" data-myvar="f_accurecy_file"  onchange="SaveData({{$value->id}})" /></button>
                       </td>
                       <td class="text-center">
                          <div class="dropdown action-label">
@@ -86,7 +86,7 @@
                    <tr>
                       <td class="text-right">Process Document</td>
                       <td class="text-center">
-                         <button class="fileUploadBtn"><i class="far fa-upload"></i><input type="file" name="sta_process_doc" class="file_upload" data-myvar="sta_process_doc"  onchange="SaveData(this)" /></button>
+                         <button class="fileUploadBtn"><i class="far fa-upload"></i><input type="file" name="sta_process_doc" class="file_upload" data-myvar="sta_process_doc"  onchange="SaveData({{$value->id}})" /></button>
                       </td>
                       <td class="text-center">
                          <div class="dropdown action-label">
@@ -103,7 +103,7 @@
                    <tr>
                       <td class="text-right">Model Sample File</td>
                       <td class="text-center">
-                         <button class="fileUploadBtn"><i class="far fa-upload"></i><input type="file" name="sta_model_file" class="file_upload" data-myvar="sta_model_file"  onchange="SaveData(this)" /></button>
+                         <button class="fileUploadBtn"><i class="far fa-upload"></i><input type="file" name="sta_model_file" class="file_upload" data-myvar="sta_model_file"  onchange="SaveData({{$value->id}})" /></button>
                       </td>
                       <td class="text-center">
                          <div class="dropdown action-label">
@@ -120,7 +120,7 @@
                    <tr>
                       <td class="text-right">Staffing Forecast Accuracy Result</td>
                       <td class="text-center">
-                         <button class="fileUploadBtn"><i class="far fa-upload"></i><input type="file" name="sta_forecast_file" class="file_upload" data-myvar="sta_forecast_file"  onchange="SaveData(this)" /></button>
+                         <button class="fileUploadBtn"><i class="far fa-upload"></i><input type="file" name="sta_forecast_file" class="file_upload" data-myvar="sta_forecast_file"  onchange="SaveData({{$value->id}})" /></button>
                       </td>
                       <td class="text-center">
                          <div class="dropdown action-label">
@@ -140,7 +140,7 @@
                    <tr>
                       <td class="text-right">Process Document</td>
                       <td class="text-center">
-                         <button class="fileUploadBtn"><i class="far fa-upload"></i><input type="file" name="sche_p_doc" class="file_upload" data-myvar="sche_p_doc" onchange="SaveData(this)" /></button>
+                         <button class="fileUploadBtn"><i class="far fa-upload"></i><input type="file" name="sche_p_doc" class="file_upload" data-myvar="sche_p_doc" onchange="SaveData({{$value->id}})" /></button>
                       </td>
                       <td class="text-center">
                          <div class="dropdown action-label">
@@ -157,7 +157,7 @@
                    <tr>
                       <td class="text-right">Scheduling Model (only if done in Excel)</td>
                       <td class="text-center">
-                         <button class="fileUploadBtn"><i class="far fa-upload"></i><input type="file" name="sche_sched_file" class="file_upload" data-myvar="sche_sched_file"  onchange="SaveData(this)" /></button>
+                         <button class="fileUploadBtn"><i class="far fa-upload"></i><input type="file" name="sche_sched_file" class="file_upload" data-myvar="sche_sched_file"  onchange="SaveData({{$value->id}})" /></button>
                       </td>
                       <td class="text-center">
                          <div class="dropdown action-label">
@@ -174,7 +174,7 @@
                    <tr>
                       <td class="text-right">Scheduling Forecast Accuracy Result</td>
                       <td class="text-center">
-                         <button class="fileUploadBtn"><i class="far fa-upload"></i><input type="file" name="sche_forecast_file" class="file_upload" data-myvar="sche_forecast_file" onchange="SaveData(this)" /></button>
+                         <button class="fileUploadBtn"><i class="far fa-upload"></i><input type="file" name="sche_forecast_file" class="file_upload" data-myvar="sche_forecast_file" onchange="SaveData({{$value->id}})" /></button>
                       </td>
                       <td class="text-center">
                          <div class="dropdown action-label">
@@ -191,7 +191,7 @@
                    <tr>
                       <td class="text-right">IDP / Deviation File sample</td>
                       <td class="text-center">
-                         <button class="fileUploadBtn"><i class="far fa-upload"></i><input type="file" name="sche_idp_file" class="file_upload" data-myvar="sche_idp_file" onchange="SaveData(this)" /></button>
+                         <button class="fileUploadBtn"><i class="far fa-upload"></i><input type="file" name="sche_idp_file" class="file_upload" data-myvar="sche_idp_file" onchange="SaveData({{$value->id}})" /></button>
                       </td>
                       <td class="text-center">
                          <div class="dropdown action-label">
@@ -211,7 +211,7 @@
                    <tr>
                       <td class="text-right">Process Document</td>
                       <td class="text-center">
-                         <button class="fileUploadBtn"><i class="far fa-upload"></i><input type="file" name="rta_p_file" class="file_upload" data-myvar="rta_p_file" onchange="SaveData(this)" /></button>
+                         <button class="fileUploadBtn"><i class="far fa-upload"></i><input type="file" name="rta_p_file" class="file_upload" data-myvar="rta_p_file" onchange="SaveData({{$value->id}})" /></button>
                       </td>
                       <td class="text-center">
                          <div class="dropdown action-label">
@@ -228,7 +228,7 @@
                    <tr>
                       <td class="text-right">Intraday Report Sample</td>
                       <td class="text-center">
-                         <button class="fileUploadBtn"><i class="far fa-upload"></i><input type="file" name="rta_intro_file" class="file_upload" data-myvar="rta_intro_file"  onchange="SaveData(this)" /></button>
+                         <button class="fileUploadBtn"><i class="far fa-upload"></i><input type="file" name="rta_intro_file" class="file_upload" data-myvar="rta_intro_file"  onchange="SaveData({{$value->id}})" /></button>
                       </td>
                       <td class="text-center">
                          <div class="dropdown action-label">
@@ -245,7 +245,7 @@
                    <tr>
                       <td class="text-right">Day-End Report Sample</td>
                       <td class="text-center">
-                         <button class="fileUploadBtn"><i class="far fa-upload"></i><input type="file" name="rta_dayr_file" class="file_upload" data-myvar="rta_dayr_file"  onchange="SaveData(this)" /></button>
+                         <button class="fileUploadBtn"><i class="far fa-upload"></i><input type="file" name="rta_dayr_file" class="file_upload" data-myvar="rta_dayr_file"  onchange="SaveData({{$value->id}})" /></button>
                       </td>
                       <td class="text-center">
                          <div class="dropdown action-label">
@@ -262,7 +262,7 @@
                    <tr>
                       <td class="text-right">RCA / Post-Mortem Report Sample</td>
                       <td class="text-center">
-                         <button class="fileUploadBtn"><i class="far fa-upload"></i><input type="file" name="rta_rca_file" class="file_upload" data-myvar="rta_rca_file" onchange="SaveData(this)" /></button>
+                         <button class="fileUploadBtn"><i class="far fa-upload"></i><input type="file" name="rta_rca_file" class="file_upload" data-myvar="rta_rca_file" onchange="SaveData({{$value->id}})" /></button>
                       </td>
                       <td class="text-center">
                          <div class="dropdown action-label">
@@ -294,20 +294,11 @@
 @endforeach
 <script>
    function SaveData(ids){
-      var toggleId = ids.dataset.myvar;
-      $("#toggleId").html("Uploaded");
-      $("#toggleId").text("Uploaded");
-      $("#save_file_data").trigger('click');
-      $(".file_upload").val(null);
-   }
-   $(document).ready(function(e) {
-
-      $('#file_data').on('submit',(function(e) {
-         e.preventDefault();
-         var formData = new FormData($('#file_data')[0]);
-         $.ajax({
+      var formData = new FormData($('#file_data'+ids)[0]);
+      console.log("formData:-"+formData);
+      $.ajax({
                type:'POST',
-               url: $(this).attr('action'),
+               url: "{{ route('file_data') }}",
                data:formData,
                cache:false,
                contentType: false,
@@ -320,12 +311,34 @@
                      return false;
                   }
                },
-               // error: function(data){
-               //     console.log("error");
-               //     console.log(data);
-               // }
-         });
-      }));
+            });
+   }
+   $(document).ready(function(e) {
+
+      // $('#file_data').on('submit',(function(e) {
+      //    e.preventDefault();
+      //    var formData = new FormData($('#file_data')[0]);
+      //    $.ajax({
+      //          type:'POST',
+      //          url: $(this).attr('action'),
+      //          data:formData,
+      //          cache:false,
+      //          contentType: false,
+      //          processData: false,
+      //          success:function(data){
+      //             if (data.status == 1) {
+      //                alert("File is Sucessfully Uploaded");
+      //                $(".file_upload").val("");
+      //             } else {
+      //                return false;
+      //             }
+      //          },
+      //          // error: function(data){
+      //          //     console.log("error");
+      //          //     console.log(data);
+      //          // }
+      //    });
+      // }));
 
 
     $("#ImageBrowse").on("change", function() {

@@ -10,8 +10,88 @@ display: none !important;
 @foreach($result as $key=>$value)
 <div class="d-flex align-items-center justify-content-between mb-3">
    <h2>Account - <span>{{$value->account_name}}</span></h2>
-   <button class="cloneBtn" type="button" data-toggle="modal" data-target="#cloneDataModal"><i class="far fa-clone"></i>Clone Data</button>
+   <button class="cloneBtn" type="button" data-toggle="modal" data-target="#cloneDataModal{{$value->id}}"><i class="far fa-clone"></i>Clone Data</button>
 </div>
+
+<!--  -->
+
+<div class="modal fare bd-example-modal-lg" id="cloneDataModal{{$value->id}}" tabindex="-1" role="dialog" aria-hidden="true">
+   <div class="modal-dialog modal-lg modal-dialog-scrollable" role="document">
+      <div class="modal-content">
+         <div class="modal-header">
+            <h5 class="modal-title" id="example-Modal3">Clone Data</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+               aria-hidden="true">&times;</span></button>
+         </div>
+         <div class="modal-body setup-content">
+            <div class="fielset_panel p-0" style="min-height:600px;">
+               <form id="msform" action="" method="post" class="text-left">
+                  <div class="row mb-4">
+                     <div class="col col-md-12">
+                        <h4>Account Name - <span style="font-weight:600;"></span>{{$value->account_name}}</h4>
+                     </div>
+                  </div>
+                  <div class="row">
+                     <div class="col col-md-6 col-12">
+                        <div class="form-group">
+                           <label>From LOB</label>
+                           <select class="selectpicker form-control from_lob_select{{$value->id}}" data-acc="{{$value->id}}" id="from_lob_select{{$value->id}}" title="Please Select" onchange="fromLobSelect({{$value->id}})">
+                              <option value="">Select LOB</option>
+                               @foreach($value->lobs as $key1=>$value1)
+                              <option value="{{$value1->id}}" >{{$value1->lob_name}}</option>
+                              @endforeach
+                           </select>
+                        </div>
+                     </div>
+                     <div class="col col-md-6 col-12">
+                        <div class="form-group">
+                           <label>To LOB</label>
+                           <select class="selectpicker form-control to_lob_select{{$value->id}}" data-acc="{{$value->id}}" title="Please Select" id="to_lob_select{{$value->id}}" onchange="toLobSelect({{$value->id}})">
+                           <option value="">Select LOB</option>
+                              @foreach($value->lobs as $key1=>$value1)
+                              <option value="{{$value1->id}}" >{{$value1->lob_name}}</option>
+                              @endforeach
+                              
+                           </select>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="row">
+                     <div class="col col-md-6 col-12">
+                        <div class="form-group">
+                           <label>From Channel</label>
+                           <select class="selectpicker form-control" title="Please Select" id="from_channels{{$value->id}}">
+                                
+                           </select>
+                        </div>
+                     </div>
+                     <div class="col col-md-6 col-12">
+                        <div class="form-group">
+                           <label>To Channel</label>
+                           <select class="selectpicker form-control" title="Please Select" id="to_channels{{$value->id}}">
+                              
+                           </select>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="row">
+                     <div class="col col-12 text-right mt-4">
+                        <!-- <button type="button" class="btnWithLogo btnActionPro mr-3" data-toggle="modal"
+                           data-target="#BatchReadyModal" data-dismiss="modal">Process</button> -->
+                        <button type="button" data-id="{{$value->id}}" class="btnWithLogo addcopyData">Copy Data</button>
+                     </div>
+                  </div>
+                  <div class="row">
+                     <span id="success_msg"></span>
+                  </div>
+               </form>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+<!--  -->
+
 <div class="accordion" id="accordionAccount{{$value->id}}">
    @foreach($value->lobs as $key1=>$value1)
    <div class="card">
@@ -72,23 +152,7 @@ display: none !important;
                               <div class="fg-control">
                                  <button type="button" class="infoButton" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content="How is the billing done for the account"><i class="far fa-info-circle"></i></button>
                                  <select class="selectpicker form-control" title="Billing Method" name="channel[{{$value2->id}}][monthly_ftp]" id="monthly_ftp">
-                                    <!-- <option>Monthly FTE</option>
-                                    <option>Incenter Hours</option>
-                                    <option>Production Hour</option>
-                                    <option>Productive Hour with interval compliance caps</option>
-                                    <option>Handle Minutes</option>
-                                    <option>Per Call</option>
-                                    <option>Per Call Tiered Pricing</option>
-                                    <option>Per Minute with Occupancy Adjustment</option>
-                                    <option>Per Minute with AHT Cap</option>
-                                    <option>Per Minute when only Talk Time and ACW are paid</option>
-                                    <option>Per Minute when only Talk Time and Hold are paid</option>
-                                    <option>Per Minute when only Talk Time is Paid</option>
-                                    <option>Per E-mail Processed</option>
-                                    <option>Per Workstation</option>
-                                    <option>Per Sale</option>
-                                    <option>Per Chat</option>
-                                    <option>Other</option> -->
+                                    
                                     @foreach($billingType as $key=>$monthly_ftp)
                                        <option value="{{ $key }}">{{ $monthly_ftp }}</option>
                                     @endforeach
@@ -99,9 +163,7 @@ display: none !important;
                               <div class="fg-control">
                                  <button type="button" class="infoButton" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content="Specify the parameter basis which the billing is capped. <br>Eg. <br> AHT @ 300 secs <br> Occ% @ 82%"><i class="far fa-info-circle"></i></button>
                                  <select class="selectpicker form-control" title="Billing Cap" id="billingCapDrop" name="channel[{{$value2->id}}][billing_cap]"  id="billing_cap">
-                                    <!-- <option value="occupancy">Occupancy</option>
-                                    <option value="aht">AHT</option>
-                                    <option value="notapplicable">Not Applicable</option> -->
+                                    
                                     @foreach($billingCap as $key1=>$bill_cap)
                                        <option value="{{ $key1 }}">{{ $bill_cap }}</option>
                                     @endforeach
@@ -128,18 +190,6 @@ display: none !important;
                               <div class="fg-control">
                                  <button type="button" class="infoButton" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content="Specify the minimun guarantee for Billing. <br>Eg. <br> 85% of locked forecast"><i class="far fa-info-circle"></i></button>
                                  <select class="selectpicker form-control" title="Min Billing Guarantee" name="channel[{{$value2->id}}][billing_guarantee]">
-                                    <!-- <option>100%</option>
-                                    <option>95%</option>
-                                    <option>90%</option>
-                                    <option>85%</option>
-                                    <option>80%</option>
-                                    <option>75%</option>
-                                    <option>70%</option>
-                                    <option>65%</option>
-                                    <option>60%</option>
-                                    <option>55%</option>
-                                    <option>50%</option>
-                                    <option>Not Applicable</option> -->
 
                                     @foreach($minBillingGuarantee as $bill_gur=>$billing_guarantee)
                                        <option value="{{ $bill_gur }}">{{ $billing_guarantee }}</option>
@@ -151,9 +201,7 @@ display: none !important;
                               <div class="fg-control">
                                  <button type="button" class="infoButton" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content="Select the reference parameter for min. guarantee. <br>Eg. <br> 80% of the locked forecast"><i class="far fa-info-circle"></i></button>
                                  <select class="selectpicker form-control" title="Min Billing Reference" name="channel[{{$value2->id}}][min_bill_ref]">
-                                    <!-- <option>Contractual Lock</option>
-                                    <option>Contractual FTE</option>
-                                    <option>Current Run Rate</option> -->
+                                    
                                     @foreach($minBillingReference as $min_ref=>$min_bill_ref)
                                        <option value="{{ $min_ref }}">{{ $min_bill_ref }}</option>
                                     @endforeach
@@ -166,27 +214,7 @@ display: none !important;
                               <div class="fg-control">
                                  <button type="button" class="infoButton" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content="Specify the maximum billing. <br>Eg. <br> 110% of locked FTE"><i class="far fa-info-circle"></i></button>
                                  <select class="selectpicker form-control" title="Max Billable Threshold" name="channel[{{$value2->id}}][max_bill_thres]">
-                                    <!-- <option>120%</option>
-                                    <option>119%</option>
-                                    <option>118%</option>
-                                    <option>117%</option>
-                                    <option>116%</option>
-                                    <option>115%</option>
-                                    <option>114%</option>
-                                    <option>113%</option>
-                                    <option>112%</option>
-                                    <option>111%</option>
-                                    <option>110%</option>
-                                    <option>109%</option>
-                                    <option>108%</option>
-                                    <option>107%</option>
-                                    <option>106%</option>
-                                    <option>105%</option>
-                                    <option>104%</option>
-                                    <option>103%</option>
-                                    <option>102%</option>
-                                    <option>101%</option>
-                                    <option>Not Applicable</option> -->
+                                    
                                     @foreach($maxBillingThres as $max_thres=>$max_bill_thres)
                                        <option value="{{ $max_thres }}">{{ $max_bill_thres }}</option>
                                     @endforeach
@@ -197,8 +225,7 @@ display: none !important;
                               <div class="fg-control">
                                  <button type="button" class="infoButton" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content="Select the input parameter for max billing. <br>Eg. <br> 110% of the locked FTE"><i class="far fa-info-circle"></i></button>
                                  <select class="selectpicker form-control" title="Max Billing Reference" name="channel[{{$value2->id}}][max_bill_ref]">
-                                    <!-- <option>Contractual Lock</option>
-                                    <option>Contractual FTE</option> -->
+                                    
                                     @foreach($maxBillRef as $max_ref=>$max_bill_ref)
                                        <option value="{{ $max_ref }}">{{ $max_bill_ref }}</option>
                                     @endforeach
@@ -222,18 +249,7 @@ display: none !important;
                               <div class="fg-control">
                                  <button type="button" class="infoButton" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content="Agreed KPI metrics as per SOW. <br>Eg. <br> 80/30 Service Level <br> Abandoned < 5%"><i class="far fa-info-circle"></i></button>
                                  <select class="selectpicker form-control" title="Service KPI - 1 (If applicable)" name="channel[{{$value2->id}}][kpi1_app]">
-                                    <!-- <option>Service Level</option>
-                                    <option>ASA</option>
-                                    <option>Abandon %</option>
-                                    <option>Answered %</option>
-                                    <option>Handle to Commit %</option>
-                                    <option>FTE Delivery</option>
-                                    <option>Production Hours</option>
-                                    <option>Occupancy %</option>
-                                    <option>Interval Compliance %</option>
-                                    <option>ISAR Delivery</option>
-                                    <option>Service Quality Index</option>
-                                    <option>AHT</option> -->
+                                    
                                     @foreach($serviceApi as $kpi1=>$kpi1_app)
                                        <option value="{{ $kpi1 }}">{{ $kpi1_app }}</option>
                                     @endforeach
@@ -252,18 +268,7 @@ display: none !important;
                               <div class="fg-control">
                                  <button type="button" class="infoButton" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content="Agreed KPI metrics as per SOW. <br>Eg. <br> 80/30 Service Level <br> Abandoned < 5%"><i class="far fa-info-circle"></i></button>
                                  <select class="selectpicker form-control" title="Service KPI - 2 (If applicable)" name="channel[{{$value2->id}}][kpi2_app]">
-                                    <!-- <option>Service Level</option>
-                                    <option>ASA</option>
-                                    <option>Abandon %</option>
-                                    <option>Answered %</option>
-                                    <option>Handle to Commit %</option>
-                                    <option>FTE Delivery</option>
-                                    <option>Production Hours</option>
-                                    <option>Occupancy %</option>
-                                    <option>Interval Compliance %</option>
-                                    <option>ISAR Delivery</option>
-                                    <option>Service Quality Index</option>
-                                    <option>AHT</option> -->
+                                    
                                     @foreach($serviceApi as $kpi2=>$kpi2_app)
                                        <option value="{{ $kpi2 }}">{{ $kpi2_app }}</option>
                                     @endforeach
@@ -282,27 +287,7 @@ display: none !important;
                               <div class="fg-control">
                                  <button type="button" class="infoButton" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content="Center is liable to staff upto 110% of the Interval / Daily Lock"><i class="far fa-info-circle"></i></button>
                                  <select class="selectpicker form-control" title="SOW Max Staffing Req?" name="channel[{{$value2->id}}][swo]">
-                                    <!-- <option>120%</option>
-                                    <option>119%</option>
-                                    <option>118%</option>
-                                    <option>117%</option>
-                                    <option>116%</option>
-                                    <option>115%</option>
-                                    <option>114%</option>
-                                    <option>113%</option>
-                                    <option>112%</option>
-                                    <option>111%</option>
-                                    <option>110%</option>
-                                    <option>109%</option>
-                                    <option>108%</option>
-                                    <option>107%</option>
-                                    <option>106%</option>
-                                    <option>105%</option>
-                                    <option>104%</option>
-                                    <option>103%</option>
-                                    <option>102%</option>
-                                    <option>101%</option>
-                                    <option>Not Applicable</option> -->
+                                   
                                     @foreach($maxBillingThres as $sw=>$swo)
                                        <option value="{{ $sw }}">{{ $swo }}</option>
                                     @endforeach
@@ -324,55 +309,7 @@ display: none !important;
                         <div class="col col-lg-3 col-md-4 col-12">
                            <div class="form-group mb-4">
                               <select class="selectpicker form-control" title="Weekday Start Time" name="channel[{{$value2->id}}][weekday_start_time]">
-                                 <!-- <option>0:00</option>
-                                 <option>0:30</option>
-                                 <option>1:00</option>
-                                 <option>1:30</option>
-                                 <option>2:00</option>
-                                 <option>2:30</option>
-                                 <option>3:00</option>
-                                 <option>3:30</option>
-                                 <option>4:00</option>
-                                 <option>4:30</option>
-                                 <option>5:00</option>
-                                 <option>5:30</option>
-                                 <option>6:00</option>
-                                 <option>6:30</option>
-                                 <option>7:00</option>
-                                 <option>7:30</option>
-                                 <option>8:00</option>
-                                 <option>8:30</option>
-                                 <option>9:00</option>
-                                 <option>9:30</option>
-                                 <option>10:00</option>
-                                 <option>10:30</option>
-                                 <option>11:00</option>
-                                 <option>11:30</option>
-                                 <option>12:00</option>
-                                 <option>12:30</option>
-                                 <option>13:00</option>
-                                 <option>13:30</option>
-                                 <option>14:00</option>
-                                 <option>14:30</option>
-                                 <option>15:00</option>
-                                 <option>15:30</option>
-                                 <option>16:00</option>
-                                 <option>16:30</option>
-                                 <option>17:00</option>
-                                 <option>17:30</option>
-                                 <option>18:00</option>
-                                 <option>18:30</option>
-                                 <option>19:00</option>
-                                 <option>19:30</option>
-                                 <option>20:00</option>
-                                 <option>20:30</option>
-                                 <option>21:00</option>
-                                 <option>21:30</option>
-                                 <option>22:00</option>
-                                 <option>22:30</option>
-                                 <option>23:00</option>
-                                 <option>23:30</option>
-                                 <option>No Operations</option> -->
+                                
                                  @foreach($time as $wst=>$weekday_start_time)
                                        <option value="{{ $wst }}">{{ $weekday_start_time }}</option>
                                  @endforeach
@@ -380,55 +317,7 @@ display: none !important;
                            </div>
                            <div class="form-group mb-0">
                               <select class="selectpicker form-control" title="Weekday End Time" name="channel[{{$value2->id}}][weekday_end_time]">
-                                 <!-- <option>0:00</option>
-                                 <option>0:30</option>
-                                 <option>1:00</option>
-                                 <option>1:30</option>
-                                 <option>2:00</option>
-                                 <option>2:30</option>
-                                 <option>3:00</option>
-                                 <option>3:30</option>
-                                 <option>4:00</option>
-                                 <option>4:30</option>
-                                 <option>5:00</option>
-                                 <option>5:30</option>
-                                 <option>6:00</option>
-                                 <option>6:30</option>
-                                 <option>7:00</option>
-                                 <option>7:30</option>
-                                 <option>8:00</option>
-                                 <option>8:30</option>
-                                 <option>9:00</option>
-                                 <option>9:30</option>
-                                 <option>10:00</option>
-                                 <option>10:30</option>
-                                 <option>11:00</option>
-                                 <option>11:30</option>
-                                 <option>12:00</option>
-                                 <option>12:30</option>
-                                 <option>13:00</option>
-                                 <option>13:30</option>
-                                 <option>14:00</option>
-                                 <option>14:30</option>
-                                 <option>15:00</option>
-                                 <option>15:30</option>
-                                 <option>16:00</option>
-                                 <option>16:30</option>
-                                 <option>17:00</option>
-                                 <option>17:30</option>
-                                 <option>18:00</option>
-                                 <option>18:30</option>
-                                 <option>19:00</option>
-                                 <option>19:30</option>
-                                 <option>20:00</option>
-                                 <option>20:30</option>
-                                 <option>21:00</option>
-                                 <option>21:30</option>
-                                 <option>22:00</option>
-                                 <option>22:30</option>
-                                 <option>23:00</option>
-                                 <option>23:30</option>
-                                 <option>No Operations</option> -->
+                                 
                                  @foreach($time as $wet=>$weekday_end_time)
                                        <option value="{{ $wet }}">{{ $weekday_end_time }}</option>
                                  @endforeach
@@ -438,55 +327,7 @@ display: none !important;
                         <div class="col col-lg-3 col-md-4 col-12">
                            <div class="form-group mb-4">
                               <select class="selectpicker form-control" title="Sat Start Time" name="channel[{{$value2->id}}][sat_start_time]">
-                                 <!-- <option>0:00</option>
-                                 <option>0:30</option>
-                                 <option>1:00</option>
-                                 <option>1:30</option>
-                                 <option>2:00</option>
-                                 <option>2:30</option>
-                                 <option>3:00</option>
-                                 <option>3:30</option>
-                                 <option>4:00</option>
-                                 <option>4:30</option>
-                                 <option>5:00</option>
-                                 <option>5:30</option>
-                                 <option>6:00</option>
-                                 <option>6:30</option>
-                                 <option>7:00</option>
-                                 <option>7:30</option>
-                                 <option>8:00</option>
-                                 <option>8:30</option>
-                                 <option>9:00</option>
-                                 <option>9:30</option>
-                                 <option>10:00</option>
-                                 <option>10:30</option>
-                                 <option>11:00</option>
-                                 <option>11:30</option>
-                                 <option>12:00</option>
-                                 <option>12:30</option>
-                                 <option>13:00</option>
-                                 <option>13:30</option>
-                                 <option>14:00</option>
-                                 <option>14:30</option>
-                                 <option>15:00</option>
-                                 <option>15:30</option>
-                                 <option>16:00</option>
-                                 <option>16:30</option>
-                                 <option>17:00</option>
-                                 <option>17:30</option>
-                                 <option>18:00</option>
-                                 <option>18:30</option>
-                                 <option>19:00</option>
-                                 <option>19:30</option>
-                                 <option>20:00</option>
-                                 <option>20:30</option>
-                                 <option>21:00</option>
-                                 <option>21:30</option>
-                                 <option>22:00</option>
-                                 <option>22:30</option>
-                                 <option>23:00</option>
-                                 <option>23:30</option>
-                                 <option>No Operations</option> -->
+                                
                                  @foreach($time as $sst=>$sat_start_time)
                                        <option value="{{ $sst }}">{{ $sat_start_time }}</option>
                                  @endforeach
@@ -494,55 +335,7 @@ display: none !important;
                            </div>
                            <div class="form-group mb-0">
                               <select class="selectpicker form-control" title="Sat End Time" name="channel[{{$value2->id}}][sat_end_time]">
-                                 <!-- <option>0:00</option>
-                                 <option>0:30</option>
-                                 <option>1:00</option>
-                                 <option>1:30</option>
-                                 <option>2:00</option>
-                                 <option>2:30</option>
-                                 <option>3:00</option>
-                                 <option>3:30</option>
-                                 <option>4:00</option>
-                                 <option>4:30</option>
-                                 <option>5:00</option>
-                                 <option>5:30</option>
-                                 <option>6:00</option>
-                                 <option>6:30</option>
-                                 <option>7:00</option>
-                                 <option>7:30</option>
-                                 <option>8:00</option>
-                                 <option>8:30</option>
-                                 <option>9:00</option>
-                                 <option>9:30</option>
-                                 <option>10:00</option>
-                                 <option>10:30</option>
-                                 <option>11:00</option>
-                                 <option>11:30</option>
-                                 <option>12:00</option>
-                                 <option>12:30</option>
-                                 <option>13:00</option>
-                                 <option>13:30</option>
-                                 <option>14:00</option>
-                                 <option>14:30</option>
-                                 <option>15:00</option>
-                                 <option>15:30</option>
-                                 <option>16:00</option>
-                                 <option>16:30</option>
-                                 <option>17:00</option>
-                                 <option>17:30</option>
-                                 <option>18:00</option>
-                                 <option>18:30</option>
-                                 <option>19:00</option>
-                                 <option>19:30</option>
-                                 <option>20:00</option>
-                                 <option>20:30</option>
-                                 <option>21:00</option>
-                                 <option>21:30</option>
-                                 <option>22:00</option>
-                                 <option>22:30</option>
-                                 <option>23:00</option>
-                                 <option>23:30</option>
-                                 <option>No Operations</option> -->
+                                 
                                  @foreach($time as $set=>$sat_end_time)
                                        <option value="{{ $set }}">{{ $sat_end_time }}</option>
                                  @endforeach
@@ -552,55 +345,7 @@ display: none !important;
                         <div class="col col-lg-3 col-md-4 col-12">
                            <div class="form-group mb-4">
                               <select class="selectpicker form-control" title="Sun Start Time" name="channel[{{$value2->id}}][sun_start_time]">
-                                 <!-- <option>0:00</option>
-                                 <option>0:30</option>
-                                 <option>1:00</option>
-                                 <option>1:30</option>
-                                 <option>2:00</option>
-                                 <option>2:30</option>
-                                 <option>3:00</option>
-                                 <option>3:30</option>
-                                 <option>4:00</option>
-                                 <option>4:30</option>
-                                 <option>5:00</option>
-                                 <option>5:30</option>
-                                 <option>6:00</option>
-                                 <option>6:30</option>
-                                 <option>7:00</option>
-                                 <option>7:30</option>
-                                 <option>8:00</option>
-                                 <option>8:30</option>
-                                 <option>9:00</option>
-                                 <option>9:30</option>
-                                 <option>10:00</option>
-                                 <option>10:30</option>
-                                 <option>11:00</option>
-                                 <option>11:30</option>
-                                 <option>12:00</option>
-                                 <option>12:30</option>
-                                 <option>13:00</option>
-                                 <option>13:30</option>
-                                 <option>14:00</option>
-                                 <option>14:30</option>
-                                 <option>15:00</option>
-                                 <option>15:30</option>
-                                 <option>16:00</option>
-                                 <option>16:30</option>
-                                 <option>17:00</option>
-                                 <option>17:30</option>
-                                 <option>18:00</option>
-                                 <option>18:30</option>
-                                 <option>19:00</option>
-                                 <option>19:30</option>
-                                 <option>20:00</option>
-                                 <option>20:30</option>
-                                 <option>21:00</option>
-                                 <option>21:30</option>
-                                 <option>22:00</option>
-                                 <option>22:30</option>
-                                 <option>23:00</option>
-                                 <option>23:30</option>
-                                 <option>No Operations</option> -->
+                                 
                                  @foreach($time as $sunst=>$sun_start_time)
                                        <option value="{{ $sunst }}">{{ $sun_start_time }}</option>
                                  @endforeach
@@ -608,55 +353,7 @@ display: none !important;
                            </div>
                            <div class="form-group mb-0">
                               <select class="selectpicker form-control" title="Sun End Time" name="channel[{{$value2->id}}][sun_end_time]">
-                                 <!-- <option>0:00</option>
-                                 <option>0:30</option>
-                                 <option>1:00</option>
-                                 <option>1:30</option>
-                                 <option>2:00</option>
-                                 <option>2:30</option>
-                                 <option>3:00</option>
-                                 <option>3:30</option>
-                                 <option>4:00</option>
-                                 <option>4:30</option>
-                                 <option>5:00</option>
-                                 <option>5:30</option>
-                                 <option>6:00</option>
-                                 <option>6:30</option>
-                                 <option>7:00</option>
-                                 <option>7:30</option>
-                                 <option>8:00</option>
-                                 <option>8:30</option>
-                                 <option>9:00</option>
-                                 <option>9:30</option>
-                                 <option>10:00</option>
-                                 <option>10:30</option>
-                                 <option>11:00</option>
-                                 <option>11:30</option>
-                                 <option>12:00</option>
-                                 <option>12:30</option>
-                                 <option>13:00</option>
-                                 <option>13:30</option>
-                                 <option>14:00</option>
-                                 <option>14:30</option>
-                                 <option>15:00</option>
-                                 <option>15:30</option>
-                                 <option>16:00</option>
-                                 <option>16:30</option>
-                                 <option>17:00</option>
-                                 <option>17:30</option>
-                                 <option>18:00</option>
-                                 <option>18:30</option>
-                                 <option>19:00</option>
-                                 <option>19:30</option>
-                                 <option>20:00</option>
-                                 <option>20:30</option>
-                                 <option>21:00</option>
-                                 <option>21:30</option>
-                                 <option>22:00</option>
-                                 <option>22:30</option>
-                                 <option>23:00</option>
-                                 <option>23:30</option>
-                                 <option>No Operations</option> -->
+                                 
                                  @foreach($time as $sunet=>$sun_end_time)
                                        <option value="{{ $sunet }}">{{ $sun_end_time }}</option>
                                  @endforeach
@@ -723,12 +420,7 @@ display: none !important;
                               <div class="fg-control">
                                  <button type="button" class="infoButton" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content="Name of the ACD- Avaya, Cisco, Aws etc."><i class="far fa-info-circle"></i></button>
                                  <select class="selectpicker form-control" title="ACD Name" name="channel[{{$value2->id}}][acd_name]">
-                                    <!-- <option>INCONTACT</option>
-                                    <option>AWS CONNECT</option>
-                                    <option>CISCO</option>
-                                    <option>AVAYA</option>
-                                    <option>GENESYS</option>
-                                    <option>Other</option> --> 
+                                   
                                     @foreach($acdBillSystem as $acd=>$acd_name)
                                        <option value="{{ $acd }}">{{ $acd_name }}</option>
                                     @endforeach
@@ -831,81 +523,6 @@ display: none !important;
 {{-- model popup --}}
 
 
-<div class="modal fare bd-example-modal-lg" id="cloneDataModal" tabindex="-1" role="dialog" aria-hidden="true">
-   <div class="modal-dialog modal-lg modal-dialog-scrollable" role="document">
-      <div class="modal-content">
-         <div class="modal-header">
-            <h5 class="modal-title" id="example-Modal3">Clone Data</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
-               aria-hidden="true">&times;</span></button>
-         </div>
-         <div class="modal-body setup-content">
-            <div class="fielset_panel p-0" style="min-height:600px;">
-               <form id="msform" action="" method="post" class="text-left">
-                  <div class="row mb-4">
-                     <div class="col col-md-12">
-                        <h4>Account Name - <span style="font-weight:600;"></span>{{$value->account_name}}</h4>
-                     </div>
-                  </div>
-                  <div class="row">
-                     <div class="col col-md-6 col-12">
-                        <div class="form-group">
-                           <label>From LOB</label>
-                           <select class="selectpicker form-control" id="from_lob_select" title="Please Select">
-                              <option value="">Select LOB</option>
-                               @foreach($value->lobs as $key1=>$value1)
-                              <option value="{{$value1->id}}" >{{$value1->lob_name}}</option>
-                              @endforeach
-                           </select>
-                        </div>
-                     </div>
-                     <div class="col col-md-6 col-12">
-                        <div class="form-group">
-                           <label>To LOB</label>
-                           <select class="selectpicker form-control" title="Please Select" id="to_lob_select">
-                           <option value="">Select LOB</option>
-                              @foreach($value->lobs as $key1=>$value1)
-                              <option value="{{$value1->id}}" >{{$value1->lob_name}}</option>
-                              @endforeach
-                              
-                           </select>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="row">
-                     <div class="col col-md-6 col-12">
-                        <div class="form-group">
-                           <label>From Channel</label>
-                           <select class="selectpicker form-control" title="Please Select" id="from_channels">
-                                
-                           </select>
-                        </div>
-                     </div>
-                     <div class="col col-md-6 col-12">
-                        <div class="form-group">
-                           <label>To Channel</label>
-                           <select class="selectpicker form-control" title="Please Select" id="to_channels">
-                              
-                           </select>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="row">
-                     <div class="col col-12 text-right mt-4">
-                        <!-- <button type="button" class="btnWithLogo btnActionPro mr-3" data-toggle="modal"
-                           data-target="#BatchReadyModal" data-dismiss="modal">Process</button> -->
-                        <button type="button" class="btnWithLogo addcopyData">Copy Data</button>
-                     </div>
-                  </div>
-                  <div class="row">
-                     <span id="success_msg"></span>
-                  </div>
-               </form>
-            </div>
-         </div>
-      </div>
-   </div>
-</div>
 
    @endforeach
 </div>
@@ -983,10 +600,10 @@ display: none !important;
 </script>
 
  <script>
- $(document).ready(function(e) {
-         $(document).on('change','#from_lob_select',function(){
-            $("#success_msg").html("");
-            var val = $('#from_lob_select').val();
+
+function fromLobSelect(id){
+   $("#success_msg").html("");
+            var val = $('#from_lob_select'+id).val();
             $.ajax({
                 type: "POST",
                 url: "{{ route('getChannels') }}",
@@ -997,21 +614,23 @@ display: none !important;
                               alert(error);
                             },
                 success: function (result){
-                        $('#from_channels').empty();
-                        $('#from_channels').append('<option disabled>Select Channel</option>');
+                        $('#from_channels'+id).empty();
+                        $('#from_channels'+id).append('<option disabled>Select Channel</option>');
                             $.each(result.data,function(i,v){
                              // $.each(v.lobs,function(ii,vv){
-                                $('#from_channels').append('<option value="'+v.id+'">'+v.channel_name+'</option>');
+                                $('#from_channels'+id).append('<option value="'+v.id+'">'+v.channel_name+'</option>');
                               });
                             //});
                             $('.selectpicker').selectpicker('refresh');
                      }   
                 })
-            });
 
-            $(document).on('change','#to_lob_select',function(){ 
+}
+
+function toLobSelect(id){
+   var acc = $(this).data("acc");
                $("#success_msg").html("");
-            var val = $('#from_lob_select').val();
+            var val = $('#to_lob_select'+id).val();
             $.ajax({
                 type: "POST",
                 url: "{{ route('getChannels') }}",
@@ -1020,24 +639,77 @@ display: none !important;
                             },
                            
                 success: function (result){
-                        $('#to_channels').empty();
-                        $('#to_channels').append('<option disabled>Select Channel</option>');
+                        $('#to_channels'+id).empty();
+                        $('#to_channels'+id).append('<option disabled>Select Channel</option>');
                             $.each(result.data,function(i,v){
-                                $('#to_channels').append('<option value="'+v.id+'">'+v.channel_name+'</option>');
+                                $('#to_channels'+id).append('<option value="'+v.id+'">'+v.channel_name+'</option>');
                               });
                             $('.selectpicker').selectpicker('refresh');
                      }   
                 })
-            });
+}
+
+ $(document).ready(function(e) {
+         // $(document).on('change','#from_lob_select',function(){
+           
+         //    var acc = $(this).data("acc");
+         //    $("#success_msg").html("");
+         //    var val = $('#from_lob_select'+acc).val();
+         //    alert(val);
+         //    $.ajax({
+         //        type: "POST",
+         //        url: "{{ route('getChannels') }}",
+         //            data: {
+         //                    lob_id: val,
+         //                    },
+         //                    error:function(error){
+         //                      alert(error);
+         //                    },
+         //        success: function (result){
+         //                $('#from_channels'+acc).empty();
+         //                $('#from_channels'+acc).append('<option disabled>Select Channel</option>');
+         //                    $.each(result.data,function(i,v){
+         //                     // $.each(v.lobs,function(ii,vv){
+         //                        $('#from_channels'+acc).append('<option value="'+v.id+'">'+v.channel_name+'</option>');
+         //                      });
+         //                    //});
+         //                    $('.selectpicker').selectpicker('refresh');
+         //             }   
+         //        })
+         //    });
+
+            // $(document).on('change','#to_lob_select',function(){ 
+            //    var acc = $(this).data("acc");
+            //    $("#success_msg").html("");
+            // var val = $('#to_lob_select'+acc).val();
+            // alert($('#to_lob_select'+acc).val());
+            // $.ajax({
+            //     type: "POST",
+            //     url: "{{ route('getChannels') }}",
+            //         data: {
+            //                 lob_id: val,
+            //                 },
+                           
+            //     success: function (result){
+            //             $('#to_channels'+acc).empty();
+            //             $('#to_channels'+acc).append('<option disabled>Select Channel</option>');
+            //                 $.each(result.data,function(i,v){
+            //                     $('#to_channels'+acc).append('<option value="'+v.id+'">'+v.channel_name+'</option>');
+            //                   });
+            //                 $('.selectpicker').selectpicker('refresh');
+            //          }   
+            //     })
+            // });
   
 
 // Added By Jaydeep on 17/01/2023
 
    $('.addcopyData').click(function(){
-      var from_lob = $("#from_lob_select").val();
-      var from_channel = $("#from_channels").val();
-      var to_lob = $("#to_lob_select").val();
-      var to_channel = $("#to_channels").val();
+      var acc = $(this).data("id");
+      var from_lob = $("#from_lob_select"+acc).val();
+      var from_channel = $("#from_channels"+acc).val();
+      var to_lob = $("#to_lob_select"+acc).val();
+      var to_channel = $("#to_channels"+acc).val();
          //chan_id=$(this).attr('id');
          //copy_data=$('#msform :input,select,textarea').serialize();
          $.ajaxSetup({

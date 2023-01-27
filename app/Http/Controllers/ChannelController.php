@@ -128,6 +128,9 @@ class ChannelController extends Controller
         $from_channel = $request->from_channel;
         $to_channel = $request->to_channel;
 
+        $data = "form_lob:".$from_lob."--To LOB :".$to_lob."</br> From Channel:".$from_channel."--To Channel :".$to_channel;
+        //dd($data);
+
         if(!empty($from_channel) && $from_channel != null){
             $existingChanneldata = ChannelDatas::where('channel_id', $from_channel)->get()->toArray();
             //dd($existingChanneldata);

@@ -84,7 +84,8 @@ class AccountController extends Controller
             }
 
         }
-        $result=Account::where('temp_id',$request->temp_id)->with(['lobs.channel','lobs.channel.countrydata','lobs.channel.citydata'])->get();
+        //$result=Account::where('temp_id',$request->temp_id)->with(['lobs.channel','lobs.channel.countrydata','lobs.channel.citydata'])->get();
+        $result=Account::where('temp_id',$request->temp_id)->with('lobs.channel')->with('fileimage')->get();
         $result1=Account::where('temp_id',$request->temp_id)->with('lobs.channel')->with('fileimage')->get();
         $country=Country::get();
 
@@ -107,19 +108,19 @@ class AccountController extends Controller
         ))->render();
         $result['file_page']=view('file_page',compact('result1'))->render();
         $user_detail = User::where('id',$request->temp_id)->first();
-       // $account_detail = Account::where('temp_id',$request->temp_id)->with('lobs')->with('processinfo')->with('fileimage')->get();
+        $account_detail = Account::where('temp_id',$request->temp_id)->with('lobs')->with('processinfo')->with('fileimage')->get();
         
-       // $result['account_detail']=view('summary_page',compact('account_detail','user_detail'))->render();
-        $account_detail = Account::where('temp_id',$request->temp_id)->with('lobs')->with(['channel.ChannelDatas','channel.processInfo','channel.countrydata','channel.citydata'])->with('fileimage')->get(); 
+        $result['account_detail']=view('summary_page',compact('account_detail','user_detail'))->render();
+        //$account_detail = Account::where('temp_id',$request->temp_id)->with('lobs')->with(['channel.ChannelDatas','channel.processInfo','channel.countrydata','channel.citydata'])->with('fileimage')->get(); 
        
         // $acc_data = $this->summary($request->temp_id);
         // if(!empty($acc_data)){
         //     $account_detail = $acc_data;
         // }
         
-        $result['account_detail']=view('summary_page',compact('account_detail','user_detail', 'billingType', 'billingCap', 'minBillingGuarantee',
-                                'minBillingReference', 'maxBillingThres', 'maxBillingThres', 'maxBillRef', 'serviceApi', 'time', 'acdBillSystem', 'wfmSystem', 'processDetails'      
-                                ))->render();
+        // $result['account_detail']=view('summary_page',compact('account_detail','user_detail', 'billingType', 'billingCap', 'minBillingGuarantee',
+        //                         'minBillingReference', 'maxBillingThres', 'maxBillingThres', 'maxBillRef', 'serviceApi', 'time', 'acdBillSystem', 'wfmSystem', 'processDetails'      
+        //                         ))->render();
        
         
         return response()->json(['success' => true,'data'=>$result,'message' => 'Successfully']);
@@ -293,6 +294,7 @@ class AccountController extends Controller
         $imagename14 = null;
 
         $acc_id =$request->account_id;
+        //dd($acc_id);
         $accountData = Account::where('id',$acc_id)->get();
         if(!empty($accountData)){
             $clientId = $accountData[0]['client_id'];
@@ -375,7 +377,7 @@ class AccountController extends Controller
             //Staffing / Resource Planning Model Sample File
             if($request->sta_model_file != null){
                 //check file already exist or not  
-                if(!empty($filesData) && $filesData->sta_process_doc != null){
+                if(!empty($filesData) && $filesData->sta_model_file != null){
                     //if file already exist then remove from folder
                     unlink(public_path($path.'/'.$filesData['sta_model_file']));
                 }
