@@ -890,7 +890,7 @@
                   </div>
                   <div class="footerBtn-panel">
                      <button type="button" class="action-button previous previous_button">Back</button>
-                     <button type="button" class="next action-button">Save & Continue</button>
+                     <button type="button" class="next action-button" onclick="loadSummary('{{session('client_id')}}')">Save & Continue</button>
                   </div>
                </div>
             </fieldset>
@@ -1637,10 +1637,10 @@
 </script>
  <script>
 
-   function loadSummary(id){ alert(id);
+   function loadSummary(id){ 
       var actual_link = window.location.origin;
       actual_link = actual_link+'/get_account?temp_id='+id;
-      alert(actual_link);
+      //alert(actual_link);
       $.ajax({
                        type: "GET",
                        //url: "http://localhost:8000/get_account?temp_id=1",
@@ -1657,6 +1657,8 @@
                        }
                   });
    }
+
+   jQuery('#mydiv').css("overflow-y", "scroll");
  </script>
 
 @endsection
